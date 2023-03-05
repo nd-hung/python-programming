@@ -48,4 +48,5 @@ Các chủ đề chính:
 <li><a href="https://www.w3schools.com/cs/index.php">C# Tutorial - W3Schools</a></li>
 </ol>
 
-https://github.com/nd-hung/oop/blob/main/docs/overview/code/sorting-sequential/Program.cs
+
+https://github.com/nd-hung/oop/blob/b71967e628a4f2b96dd1f95fe1eb32914d3423a2/docs/overview/code/sorting-sequential/Program.cs
