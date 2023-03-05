@@ -15,6 +15,8 @@ Dựa theo "mô thức lập trình" (programming paradigms - phương pháp lu�
 
 - Các phương pháp lập trình tuần tự, hướng thủ tục/cấu trúc (procedural/structured programming), lập trình hướng đối tượng (object-oriented programming) đều thuộc mô thức lập trình hướng mệnh lệnh.
 
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fnd-hung%2Foop%2Fblob%2Fmain%2Fdocs%2Foverview%2Fcode%2Fsorting-sequential%2FProgram.cs&style=default&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+
 ### Lập trình khai báo (Declarative Programming)
 
 Các ngôn ngữ lập trình khai báo diễn đạt các câu lệnh theo kiểu *"what to do"* - yêu cầu máy tính làm gì để đạt được kết quả mà không cần quan tâm đến cách thức thực hiện chi tiết. Các phân hệ của lập trình khai báo gồm có: Lập trình logic (như Prolog), hướng chức năng (như Haskell, Scala, F#), các ngôn ngữ chuyên biệt (domain-specific) như SQL, HTML.
@@ -32,9 +34,6 @@ Các ngôn ngữ lập trình khai báo diễn đạt các câu lệnh theo ki�
 
 #### Lập trình tuần tự
 - Chương trình là một dãy tuần tự các câu lệnh.
-
-https://github.com/nd-hung/oop/blob/main/docs/overview/code/sorting-sequential/Program.cs
-
 
 #### Lập trình hướng thủ tục/cấu trúc (procedural/structured programming)
 - Là phương pháp lập trình dựa trên cách tiếp cận từ trên xuống (top-down development), từ tổng quát đến chi tiết. Theo đó, chương trình được chia thành các khối chức năng, các chức năng này nếu cần lại được phân chia tiếp thành các khối chức năng nhỏ hơn, cho đến khi các chức năng nhỏ nhất đủ đơn giản để cài đặt thành các chương trình con (thủ tục/hàm).

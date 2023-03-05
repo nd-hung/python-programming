@@ -11,7 +11,5 @@ Email: hungnd {at} ntu.edu.vn
 ## Acknowledgement
 <div>
 This document is built with <a href="mkdocs.org">MkDocs</a> and powered by <a href="github.com">GitHub</a>. 
-<br>
- inherits various books, lecture notes, and materials; I'm grateful to the authors for sharing.
 </div>
 
