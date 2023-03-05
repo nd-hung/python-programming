@@ -10,7 +10,7 @@ nav:
       - Thừa kế và đa hình: inheritance\index.md
       - Phát triển ứng dụng GUI với .NET và C#: gui-development\index.md
       - Thực hành: labs\index.md
-    - Tác giả: author\about.md 
+    - Giảng viên: author\about.md 
 
 theme:
     name: mkdocs
