@@ -47,6 +47,3 @@ Các chủ đề chính:
 <li><a href="https://learn.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code?pivots=dotnet-6-0">Create .NET console applications using Visual Studio Code<a></li>
 <li><a href="https://www.w3schools.com/cs/index.php">C# Tutorial - W3Schools</a></li>
 </ol>
-
-
-https://github.com/nd-hung/oop/blob/b71967e628a4f2b96dd1f95fe1eb32914d3423a2/docs/overview/code/sorting-sequential/Program.cs#L1-L6
