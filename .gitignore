@@ -1,0 +1,44 @@
+# Object files
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+
+# Executables
+*.exe
+
+# Debug files
+*.pdb
+
+# Powerpoint files
+*.Powerpoint
+*.pptx
+*.ppt
+
+# PDF files
+*.pdf
+
+# Lyx, LaTeX
+*.lyx
+*.sty
+*.bib
+*.bbl
+*.aux
+*.blg
+*.log
+*.tex
+
+# c# and .net
+*.csproj
+bin/
+obj/
+.vscode/
+lib/
+*.log
+# local folder
+local/
