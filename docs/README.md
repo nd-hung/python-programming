@@ -6,7 +6,7 @@ Object Oriented Programming
 
 ## Giới thiệu
 
-**Lập trình** có vai trò quan trọng trong ngành Công nghệ thông tin, bởi đây là hoạt động thực hành kết hợp **trí thông minh của con người** với sức mạnh tính toán của **máy tính điện tử** để tạo ra các chương trình máy tính. Vì thế, nắm vững và vận dụng thành thạo các nguyên lý, phương pháp và công cụ lập trình là yêu cầu bắt buộc đối với sinh viên của ngành.
+Lập trình có vai trò quan trọng trong ngành Công nghệ thông tin, bởi đây là hoạt động thực hành kết hợp trí thông minh của con người với sức mạnh tính toán của máy tính điện tử** để tạo ra các chương trình máy tính. Vì thế, nắm vững và vận dụng thành thạo các nguyên lý, phương pháp và công cụ lập trình là yêu cầu bắt buộc đối với sinh viên của ngành.
 
 Lập trình hướng đối tượng được xem là phương pháp lập trình ưu việt nhất hiện nay. Phương pháp này giúp quá trình xây dựng phần mềm theo cách gần gũi với thế giới thực, sản phẩm dễ bảo trì và nâng cấp, mã nguồn có khả năng tái sử dụng cao.
 
@@ -47,3 +47,5 @@ Các chủ đề chính:
 <li><a href="https://learn.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code?pivots=dotnet-6-0">Create .NET console applications using Visual Studio Code<a></li>
 <li><a href="https://www.w3schools.com/cs/index.php">C# Tutorial - W3Schools</a></li>
 </ol>
+
+https://github.com/nd-hung/oop/blob/main/docs/overview/code/sorting-sequential/Program.cs

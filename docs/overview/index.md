@@ -1,79 +1,39 @@
-# Giới thiệu về lập trình hướng đối tượng
+# Tổng quan về lập trình hướng đối tượng
 ---
 
-## Sơ lược các phương pháp lập trình 
+## Sơ lược các phương pháp lập trình
 
-- Các ứng dụng ngày càng đa dạng và phức tạp hơn, do đó các phương pháp và công cụ lập trình cũng cần có sự cải tiến để giải quyết hiệu quả.
-- Dựa theo "mô thức lập trình" (programming paradigms - phương pháp luận hay nguyên tắc chung cơ bản trong lập trình), các ngôn ngữ lập trình được chia thành hai nhóm chính: 
-    * Lập trình hướng mệnh lệnh (imperative programming)
-    * Lập trình khai báo (declarative programming)
+
+Các ứng dụng ngày càng đa dạng và phức tạp hơn, do đó các phương pháp và công cụ lập trình cũng cần có sự cải tiến để giải quyết hiệu quả.
+Dựa theo "mô thức lập trình" (programming paradigms - phương pháp luận hay nguyên tắc chung cơ bản trong lập trình), các ngôn ngữ lập trình được chia thành hai nhóm chính: Lập trình hướng mệnh lệnh (imperative programming) và Lập trình khai báo (declarative programming).
 
 ### Lập trình hướng mệnh lệnh (Imperative Programming)
+
+- Nguyên lý lập trình mệnh lệnh là *"how to do"* - ra lệnh máy tính thực hiện từng bước xử lý theo một trình tự xác định để đạt kết quả mong muốn, tương đồng với cách máy tính thực hiện ở mức mã máy (machine code).
+
+- Chương trình được cài đặt theo trình tự của giải thuật, vì thế kiểu lập trình này còn gọi là lập trình giải thuật (algorithmic programming).
+
+- Các phương pháp lập trình tuần tự, hướng thủ tục/cấu trúc (procedural/structured programming), lập trình hướng đối tượng (object-oriented programming) đều thuộc mô thức lập trình hướng mệnh lệnh.
+
 ### Lập trình khai báo (Declarative Programming)
 
+Các ngôn ngữ lập trình khai báo diễn đạt các câu lệnh theo kiểu *"what to do"* - yêu cầu máy tính làm gì để đạt được kết quả mà không cần quan tâm đến cách thức thực hiện chi tiết. Các phân hệ của lập trình khai báo gồm có: Lập trình logic (như Prolog), hướng chức năng (như Haskell, Scala, F#), các ngôn ngữ chuyên biệt (domain-specific) như SQL, HTML.
 ## Phương pháp lập trình hướng đối tượng
 ### Cách tiếp cận hướng đối tượng</h4>
 ### Lập trình hướng đối tượng</h4>
-### Lập trình hướng đối tượng vs Lập trình cấu trúc
+## Lập trình hướng đối tượng vs Lập trình cấu trúc
 
 
 
 <img src="figs/programming-paradigms-vi.png" alt="Programming paradigms" width="75%"> 
 
 
-### Lập trình hướng mệnh lệnh (Imperative Programming)
 
-- Nguyên lý lập trình mệnh lệnh là **"how to do"** - ra lệnh máy tính thực hiện từng bước xử lý theo một trình tự xác định để đạt kết quả mong muốn, tương đồng với cách máy tính thực hiện ở mức mã máy (machine code). 
-- Chương trình được cài đặt theo trình tự của giải thuật, vì thế kiểu lập trình này còn gọi là lập trình giải thuật (algorithmic programming). 
-- Các phương pháp lập trình tuần tự, hướng thủ tục/cấu trúc (procedural/structured programming), lập trình hướng đối tượng (object-oriented programming) đều thuộc mô thức lập trình hướng mệnh lệnh.
 
 #### Lập trình tuần tự
 - Chương trình là một dãy tuần tự các câu lệnh.
 
-<details>
-<summary> Ví dụ </summary>
-<p>
-
-```c#
-/*
-Minh họa lập trình tuần tự với C#
-Sắp xếp dãy số tăng dần 
-Input: Dãy số nguyên
-Output: Dãy số được sắp xếp tăng dần
-*/
-
-using System;
-
-// Khởi tạo dãy số
-int n=6;
-int[] numbers = new int[] {3,8,2,1,6,5};
-
-// Sắp xếp dãy tăng dần
-int i=0;
-OUTER_LOOP:
-    int j=i+1;
-    INNER_LOOP:
-        if(numbers[i] > numbers[j])
-            {
-                int t = numbers[i];
-                numbers[i] = numbers[j];
-                numbers[j] = t;
-            }
-        j += 1;
-        if(j < n) goto INNER_LOOP;
-    i += 1;
-    if(i < n-1) goto OUTER_LOOP;
-
-// In ra dãy đã sắp xếp
-Console.WriteLine("Day tang dan:");
-i = 0;
-LOOP:
-    Console.Write("{0} ", numbers[i]);
-    i += 1;
-    if(i < n) goto LOOP;
-```
-</p>
-</details>
+https://github.com/nd-hung/oop/blob/main/docs/overview/code/sorting-sequential/Program.cs
 
 
 #### Lập trình hướng thủ tục/cấu trúc (procedural/structured programming)
@@ -128,9 +88,7 @@ static void InMang(int[] a, int n)
 </details>
 
 
-### Lập trình khai báo (Declarative Programming)
 
-Các ngôn ngữ lập trình khai báo diễn đạt các câu lệnh theo kiểu **"what to do"** - yêu cầu máy tính làm gì để đạt được kết quả mà không cần quan tâm đến cách thức thực hiện chi tiết. Các phân hệ của lập trình khai báo gồm có: Lập trình logic (như Prolog), hướng chức năng (như Haskell, Scala, F#), các ngôn ngữ chuyên biệt (domain-specific) như SQL, HTML.
 
 <details>
 <summary>Ví dụ</summary>

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Nền tảng .NET và ngôn ngữ C# - Lập trình hướng đối tượng</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../css/extra.css" rel="stylesheet">
+
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/django.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Lập trình hướng đối tượng</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Các chủ đề <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../overview/" class="dropdown-item">Tổng quan về lập trình hướng đối tượng</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Nền tảng .NET và ngôn ngữ C#</a>
+</li>
+                                    
+<li>
+    <a href="../object-oriented-modeling/index.md" class="dropdown-item">Mô hình hóa hướng đối tượng</a>
+</li>
+                                    
+<li>
+    <a href="../classes-and-objects/index.md" class="dropdown-item">Lớp và đối tượng</a>
+</li>
+                                    
+<li>
+    <a href="../inheritance/index.md" class="dropdown-item">Thừa kế và đa hình</a>
+</li>
+                                    
+<li>
+    <a href="../gui-development/index.md" class="dropdown-item">Phát triển ứng dụng GUI với .NET và C#</a>
+</li>
+                                    
+<li>
+    <a href="../labs/index.md" class="dropdown-item">Thực hành</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../author/about/" class="nav-link">Giảng viên</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../overview/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../author/about/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#gioi-thieu-ve-lap-trinh-huong-oi-tuong" class="nav-link">Giới thiệu về lập trình hướng đối tượng</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#so-luoc-cac-phuong-phap-lap-trinh" class="nav-link">Sơ lược các phương pháp lập trình</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#phuong-phap-lap-trinh-huong-oi-tuong" class="nav-link">Phương pháp lập trình hướng đối tượng</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#tai-lieu-tham-khao" class="nav-link">Tài liệu tham khảo</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="gioi-thieu-ve-lap-trinh-huong-oi-tuong">Giới thiệu về lập trình hướng đối tượng</h1>
+<hr />
+<h2 id="so-luoc-cac-phuong-phap-lap-trinh">Sơ lược các phương pháp lập trình</h2>
+<ul>
+<li>Các ứng dụng ngày càng đa dạng và phức tạp hơn, do đó các phương pháp và công cụ lập trình cũng cần có sự cải tiến để giải quyết hiệu quả.</li>
+<li>Dựa theo "mô thức lập trình" (programming paradigms - phương pháp luận hay nguyên tắc chung cơ bản trong lập trình), các ngôn ngữ lập trình được chia thành hai nhóm chính: <ul>
+<li>Lập trình hướng mệnh lệnh (imperative programming)</li>
+<li>Lập trình khai báo (declarative programming)</li>
+</ul>
+</li>
+</ul>
+<h3 id="lap-trinh-huong-menh-lenh-imperative-programming">Lập trình hướng mệnh lệnh (Imperative Programming)</h3>
+<h3 id="lap-trinh-khai-bao-declarative-programming">Lập trình khai báo (Declarative Programming)</h3>
+<h2 id="phuong-phap-lap-trinh-huong-oi-tuong">Phương pháp lập trình hướng đối tượng</h2>
+<h3 id="cach-tiep-can-huong-oi-tuong">Cách tiếp cận hướng đối tượng</h4></h3>
+<h3 id="lap-trinh-huong-oi-tuong">Lập trình hướng đối tượng</h4></h3>
+<h3 id="lap-trinh-huong-oi-tuong-vs-lap-trinh-cau-truc">Lập trình hướng đối tượng vs Lập trình cấu trúc</h3>
+<p><img src="figs/programming-paradigms-vi.png" alt="Programming paradigms" width="75%"> </p>
+<h3 id="lap-trinh-huong-menh-lenh-imperative-programming_1">Lập trình hướng mệnh lệnh (Imperative Programming)</h3>
+<ul>
+<li>Nguyên lý lập trình mệnh lệnh là <strong>"how to do"</strong> - ra lệnh máy tính thực hiện từng bước xử lý theo một trình tự xác định để đạt kết quả mong muốn, tương đồng với cách máy tính thực hiện ở mức mã máy (machine code). </li>
+<li>Chương trình được cài đặt theo trình tự của giải thuật, vì thế kiểu lập trình này còn gọi là lập trình giải thuật (algorithmic programming). </li>
+<li>Các phương pháp lập trình tuần tự, hướng thủ tục/cấu trúc (procedural/structured programming), lập trình hướng đối tượng (object-oriented programming) đều thuộc mô thức lập trình hướng mệnh lệnh.</li>
+</ul>
+<h4 id="lap-trinh-tuan-tu">Lập trình tuần tự</h4>
+<ul>
+<li>Chương trình là một dãy tuần tự các câu lệnh.</li>
+</ul>
+<details>
+<summary> Ví dụ </summary>
+<p>
+
+
+<pre><code class="language-c#">/*
+Minh họa lập trình tuần tự với C#
+Sắp xếp dãy số tăng dần 
+Input: Dãy số nguyên
+Output: Dãy số được sắp xếp tăng dần
+*/
+
+using System;
+
+// Khởi tạo dãy số
+int n=6;
+int[] numbers = new int[] {3,8,2,1,6,5};
+
+// Sắp xếp dãy tăng dần
+int i=0;
+OUTER_LOOP:
+    int j=i+1;
+    INNER_LOOP:
+        if(numbers[i] &gt; numbers[j])
+            {
+                int t = numbers[i];
+                numbers[i] = numbers[j];
+                numbers[j] = t;
+            }
+        j += 1;
+        if(j &lt; n) goto INNER_LOOP;
+    i += 1;
+    if(i &lt; n-1) goto OUTER_LOOP;
+
+// In ra dãy đã sắp xếp
+Console.WriteLine(&quot;Day tang dan:&quot;);
+i = 0;
+LOOP:
+    Console.Write(&quot;{0} &quot;, numbers[i]);
+    i += 1;
+    if(i &lt; n) goto LOOP;
+</code></pre>
+
+</p>
+</details>
+
+<h4 id="lap-trinh-huong-thu-tuccau-truc-proceduralstructured-programming">Lập trình hướng thủ tục/cấu trúc (procedural/structured programming)</h4>
+<ul>
+<li>Là phương pháp lập trình dựa trên cách tiếp cận từ trên xuống (top-down development), từ tổng quát đến chi tiết. Theo đó, chương trình được chia thành các khối chức năng, các chức năng này nếu cần lại được phân chia tiếp thành các khối chức năng nhỏ hơn, cho đến khi các chức năng nhỏ nhất đủ đơn giản để cài đặt thành các chương trình con (thủ tục/hàm).</li>
+<li>Chương trình là sự kết hợp của các cấu trúc điều khiển: tuần tự (sequence), chọn lựa (selection) và lặp (repetition).</li>
+<li>Dữ liệu và xử lý tách rời nhau.</li>
+</ul>
+<details>
+<summary>Ví dụ</summary>
+
+<p>
+
+
+<pre><code class="language-c#">/*
+Minh họa lập trình cấu trúc với C#
+Input: Dãy số nguyên
+Output: Dãy số được sắp xếp tăng dần
+*/
+
+// Khởi tạo một mảng số nguyên
+int n=6;
+int[] numbers = new int[] {3,8,2,1,6,5};
+
+// Gọi hàm sắp xếp tăng dần
+SapXepTD(numbers, n);
+
+// Gọi hàm in mảng
+InMang(numbers, n);
+
+// Hàm sắp xếp mảng tăng dần
+static void SapXepTD(int[] a, int n)
+{
+for(int i=0; i &lt; n-1; i++)
+    for(int j=i+1; j &lt; n; j++)
+        if(a[i] &gt; a[j])
+        {
+            int t = a[i];
+            a[i] = a[j];
+            a[j] = t;
+        }
+}
+
+// Hàm in mảng
+static void InMang(int[] a, int n)
+{
+    for(int i=0; i &lt; n; i++)
+        Console.Write(&quot;{0} &quot;, a[i]);
+}
+</code></pre>
+
+
+</p>
+</details>
+
+<h3 id="lap-trinh-khai-bao-declarative-programming_1">Lập trình khai báo (Declarative Programming)</h3>
+<p>Các ngôn ngữ lập trình khai báo diễn đạt các câu lệnh theo kiểu <strong>"what to do"</strong> - yêu cầu máy tính làm gì để đạt được kết quả mà không cần quan tâm đến cách thức thực hiện chi tiết. Các phân hệ của lập trình khai báo gồm có: Lập trình logic (như Prolog), hướng chức năng (như Haskell, Scala, F#), các ngôn ngữ chuyên biệt (domain-specific) như SQL, HTML.</p>
+<details>
+<summary>Ví dụ</summary>
+<p>
+
+
+<pre><code class="language-c#">/*
+Minh họa lập trình khai báo với C#
+Input: Dãy số nguyên
+Output: Dãy số được sắp xếp tăng dần
+*/
+
+using System;
+using System.Collections.Generic;
+
+// Tạo một danh sách
+List&lt;int&gt; numbers = new List&lt;int&gt; { 3, 8, 2, 1, 5, 6 };
+
+// Gọi phương thức sắp xếp (tăng dần)
+// Người lập trình không cần cài đặt hàm Sort()
+numbers.Sort();
+
+// Print the sorted list
+Console.WriteLine(&quot;Day tang dan:&quot;);
+Console.WriteLine(&quot;{0}&quot;, string.Join(&quot;, &quot;, numbers));
+</code></pre>
+
+
+</p>
+</details>
+<p><br></p>
+<div class="info">
+  <p>
+  <ul>
+    <li>
+        Nhiều ngôn ngữ hỗ trợ đa mô thức (multi-paradigm), như: C++, Java, JavaScript, C#, PHP, Python.
+    </li>
+    <li>
+        Một số ngôn ngữ chỉ hỗ trợ một mô thức lập trình (single-paradigm), như Smalltalk, Haskell.
+    </li>
+  </ul>
+  </p>
+</div>
+
+<h2 id="oop"> Phương pháp lập trình hướng đối tượng </h2>
+
+<h3 id="cach-tiep-can-huong-oi-tuong-object-oriented-approach">Cách tiếp cận hướng đối tượng (Object Oriented Approach)</h3>
+<ul>
+<li>Cách tiếp cận hướng đối tượng kết hợp dữ liệu và xử lý có liên quan với nhau vào một module.</li>
+<li>
+<p>Thích hợp cho phát triển các hệ thống phức tạp và thay đổi nhanh chóng do:</p>
+<ul>
+<li>Đáp ứng các thay đổi của hệ thống với chi phí thấp.</li>
+<li>Khả năng tái sử dụng cao.</li>
+<li>Tính module hóa cao, giúp đơn giản hóa việc phát triển các hệ thống lớn từ các thành phần đã có.</li>
+</ul>
+</li>
+<li>
+<p>Các thành phần của hệ thống hướng đối tượng:</p>
+<ul>
+<li>Đối tượng (objects). Một đối tượng là một thực thể được xác định bởi các thuộc tính và hành vi của nó. Các thực thể hữu hình (như sinh viên, giảng viên) hay vô hình (như tài khoản ngân hàng) đều có thể mô hình hóa dưới dạng đối tượng.</li>
+<li>Thuộc tính (attributes): là các trường thông tin mô tả đối tượng.</li>
+<li>Hành vi (behaviour): là cách đối tượng ứng xử với môi trường xung quanh. </li>
+<li>Lớp (class): là một nhóm các đối tượng có thuộc tính và hành vi tương tự nhau.</li>
+<li>Phương thức (methods): là hành động xác định hành vi của một lớp đối tượng - là những hành động mà đối tượng có thể làm.</li>
+<li>Thông điệp (message): là một phương thức tác động lên đối tượng để yêu cầu thực hiện hành động cụ thể. </li>
+</ul>
+</li>
+</ul>
+<h3 id="lap-trinh-huong-oi-tuong-object-oriented-programming">Lập trình hướng đối tượng (Object Oriented Programming)</h3>
+<ul>
+<li>Là phương pháp lập trình dựa trên cách tiếp cận hướng đối tượng.</li>
+<li>Chương trình là tập hợp các đối tượng. Đối tượng thực hiện các yêu cầu xử lý thông qua cơ chế truyền thông điệp (message passing). <ul>
+<li>Thuộc tính: Là các thông tin mô tả đối tượng. Về mặt lập trình, việc khai báo các thuộc tính tương tự như khai báo biến, vì thế chúng còn được gọi là biến thành viên (member variables).</li>
+<li>Phương thức: Là các hành vi mà đối tượng có thể thực hiện. Việc cài đặt các phương thức tương tự như các hàm, vì thế chúng còn được gọi là hàm thành viên (member functions).</li>
+</ul>
+</li>
+</ul>
+<details>
+<summary>Ví dụ</summary>
+<p>
+
+
+<pre><code class="language-c#">/*
+Minh họa lập trình hướng đối tượng
+Input: Mảng các số nguyên
+Output: Mảng sắp xếp tăng dần
+*/
+using System;
+
+// Khai báo lớp Array chứa mảng số nguyên và các xử lý trên mảng
+public class Array{
+    private int[] numbers; // Dữ liệu/biến thành viên
+
+    // Phương thức (hàm) thiết lập (constructor)
+    // Tạo một dãy n phần tử có giá trị ngẫu nhiên trong đoạn [Min, Max]
+    public Array(int n, int min=0, int max=50)
+    {
+        numbers = new int[n];
+        Random randNum = new Random();
+        for(int i=0; i &lt; numbers.Length; i++)
+            numbers[i] = randNum.Next(min, max);
+    }
+
+    // Phương thức/Hàm thành viên
+    public void Print()
+    {
+        Console.WriteLine(&quot;{0}&quot;, string.Join(&quot;, &quot;, numbers));
+    }
+
+    // Sắp xếp tăng dần
+    public void Sort()
+    {   
+        for(int i=0; i &lt; numbers.Length - 1; i++)
+            for(int j=i+1; j &lt; numbers.Length; j++)
+                if(numbers[i] &gt; numbers[j])
+                {
+                    int t = numbers[i];
+                    numbers[i] = numbers[j];
+                    numbers[j] = t;
+                }
+    }
+}
+
+// Chương trình chính    
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Gọi phương thức thiết lập (constructor)
+        // tạo mảng ngẫu nhiên các số nguyên trong khoảng [0, 30]
+        Array myNumbers = new Array(6, 0, 30);
+
+        // In mảng - gọi phương thức Print()
+        Console.WriteLine(&quot;Random numbers:&quot;);
+        myNumbers.Print();
+
+        // Sắp xếp tăng dần - gọi phương thức Sort()
+        myNumbers.Sort();
+
+        // In mảng sau sắp xếp - gọi phương thức Print()
+        Console.WriteLine(&quot;The numbers in ascending order:&quot;);
+        myNumbers.Print();
+    }
+}
+</code></pre>
+
+
+<img src="src/OOPExample/result.PNG">
+
+</p>
+</details>
+
+<h3 id="so-sanh-lap-trinh-huong-oi-tuong-va-lap-trinh-cau-truc">So sánh lập trình hướng đối tượng và lập trình cấu trúc</h3>
+<h4 id="bai-toan-minh-hoa">Bài toán minh họa</h4>
+<p>Để so sánh các cách tiếp cận lập trình, ta xét bài toán - đã đơn giản hóa - sau đây:</p>
+<p>Một trường học cần xây dựng phần mềm quản lý đào tạo. Hệ thống này quản lý dữ liệu của sinh viên (Students), giảng viên (Lecturers), các môn học (Courses), và các kỳ thi (Exams). 
+Phần mềm cần có các chức năng: thêm sinh viên (AddStudent), xóa sinh viên (RemoveStudent), dự thi (TakeExams), xem điểm (ViewGrades). </p>
+<p>Sau khi phân tích, mô hình hệ thống quản lý đào tạo được thiết kế theo sơ đồ sau:</p>
+<p><img src="figs/academicsystem.PNG" width="75%"></p>
+<p>Hệ thống quản lý gồm có dữ liệu (data) và các chức năng (functions) thao tác trên dữ liệu. Trong đó, đường nét đứt thể hiện sự phụ thuộc của một tập dữ liệu vào một tập dữ liệu khác; chẳng hạn, mỗi sinh viên học nhiều môn học, mỗi môn học lại có nhiều sinh viên. Đường mũi tên thể hiện sự tác động của các chức năng lên một hoặc một số tập dữ liệu; ví dụ, chức năng thêm sinh viên (AddStudent) sẽ thay đổi nội dung của tập dữ liệu sinh viên (Students), còn chức năng dự thi (TakeExams) cần truy cập dữ liệu của cả sinh viên và kỳ thi (Exams). </p>
+<p><strong>Theo cách tiếp cận lập trình hướng thủ tục/cấu trúc</strong>, mỗi chức năng được tổ chức thành một chương trình con (hàm) tương ứng. Các hàm thực hiện xử lý dữ liệu thông qua truyền tham số và trả về kết quả cho lời gọi hàm. </p>
+<p>Xét vài tình huống sau:
+- <em>Tình huống 1</em>: Giả sử dữ liệu đang lưu trữ năm sinh là số có 2 chữ số, nay cần chuyển đổi thành số có 4 chữ số (ví dụ: 97 -&gt; 1997).</p>
+<p>Giải pháp hiển nhiên là cần thay đổi trường dữ liệu ngày sinh của sinh viên và giảng viên thành số có 4 chữ số. Khi đó, tất cả các hàm có tác động lên sinh viên và giảng viên sẽ không hoạt động được, trừ khi phải chỉnh sửa lại mã nguồn. Bên cạnh đó, tập dữ liệu sinh viên có mối quan hệ phụ thuộc với các tập dữ liệu khác, vì thế việc thay đổi này có thể gây ra lỗi cho hệ thống.</p>
+<ul>
+<li><em>Tình huống 2</em>: Hệ thống cần quản lý thêm một thành phần dữ liệu mới là sinh viên hệ vừa làm vừa học.</li>
+</ul>
+<p>Với phương pháp lập trình cấu trúc, cần thiết kế lại mô hình dữ liệu để bổ sung tập dữ liệu sinh viên vừa làm vừa học, sau đó viết các hàm xử lý tương ứng với mỗi chức năng cần có với tập dữ liệu mới này. </p>
+<p>Các tình huống trên cho thấy nhược điểm của phương pháp lập trình cấu trúc khi giải quyết những bài toán phức tạp. Khi đó, việc nâng cấp hay mở rộng trở nên khó khăn. Đồng thời, khả năng <em>tái sử dụng mã nguồn</em> và <em>sự che chắn dữ liệu</em> cũng hạn chế.</p>
+<p><strong>Với cách tiếp cận hướng đối tượng</strong>, các chức năng thêm sinh viên (AddStudent), xóa sinh viên (RemoveStudent) sẽ được đóng gói cùng với dữ liệu sinh viên (Students) trong một module. Với mỗi sinh viên, lớp Student sẽ tạo ra một thực thể tương ứng để lưu trữ, quản lý dữ liệu và các xử lý liên quan. Tương tự như vậy với các chức năng và tập dữ liệu khác.</p>
+<p><img src="figs/academicsystemoop.png" width="50%"></p>
+<ul>
+<li>Để yêu cầu một đối tượng thực hiện một hành động nào đó, cần truyền thông điệp cho nó (chính là gọi hàm tác động lên đối tượng). Chẳng hạn, khi một đối tượng sinh viên gọi chức năng "Add()",  chương trình sẽ tạo mới một đối tượng sinh viên, sau đó chức năng "AddAttendee()" sẽ được gọi từ một đối tượng của lớp môn học (Course). </li>
+</ul>
+<h2 id="tai-lieu-tham-khao">Tài liệu tham khảo</h2>
+<h4 id="lectures-on-high-performance-computing-for-economists-university-of-pennsylvania-2020">Lectures on High-performance Computing for Economists, University of Pennsylvania, 2020</h4>
+<h4 id="programming-languages-stanford-university-2018">Programming Languages, Stanford University, 2018</h4>
+<h4 id="object-oriented-analysis-and-design-using-the-uml-university-of-calgary-2000">Object Oriented Analysis and Design using the UML, University of Calgary, 2000</h4></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
