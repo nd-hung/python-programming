@@ -32,10 +32,10 @@ Các chủ đề chính:
 
 <ol>
     <li>Lập trình hướng đối tượng - Trần Đan Thư, Đinh Bá Tiến, Nguyễn Tấn Trần Minh Khang - NXB Khoa học kỹ thuật, 2010</li>
-    <li>C# Programming Yellow Book - Rob Miles</li>
-    <li>Beginning C# Object-Oriented Programming - Dan Clark</li>
-    <li>Lập trình hướng đối tượng với C++ - Lê Đăng Hưng, Tạ Tuấn Anh, Nguyễn Hữu Đức, Nguyễn Thanh Thủy, NXB Khoa học kỹ thuật, 2005</li>
-    <li>C++ How to Program, 10th edition - Paul Dietel, Pearson, 2017</li>
+    <li>C# Programming Yellow Book - Rob Miles, 2016</li>
+    <li>Beginning C# Object-Oriented Programming - Dan Clark, 2015</li>
+    <li>Lập trình hướng đối tượng với C++ - Lê Đăng Hưng, Tạ Tuấn Anh, Nguyễn Hữu Đức, Nguyễn Thanh Thủy - NXB Khoa học kỹ thuật, 2005</li>
+    <li>C++ How to Program, 10th edition - Paul Dietel - Pearson, 2017</li>
 </ol>
 
 ### Tài nguyên trực tuyến
