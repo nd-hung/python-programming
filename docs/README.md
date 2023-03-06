@@ -26,7 +26,6 @@ Học phần này giới thiệu phương pháp lập trình hướng đối tư
 </div>
 
 ## Tài liệu tham khảo
-
 ### Sách, giáo trình
 
 <ol>
@@ -38,7 +37,6 @@ Học phần này giới thiệu phương pháp lập trình hướng đối tư
 </ol>
 
 ### Tài nguyên trực tuyến
-
 <ol>
 <li><a href="https://learn.microsoft.com/en-us/dotnet/">Microsoft .NET documentation</a>
 <li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/">Microsoft C# documentation</a></li>
