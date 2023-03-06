@@ -12,17 +12,16 @@ Lập trình hướng đối tượng được xem là phương pháp lập trì
 
 Học phần này giới thiệu phương pháp lập trình hướng đối tượng từ mức độ cơ bản đến nâng cao. Để học tốt học phần này, người học cần nắm vững các kiến thức, phương pháp, kỹ năng lập trình căn bản và giải thuật. Công cụ lập trình sử dụng để minh họa trong học phần này là .NET và C#.
 
-Các chủ đề chính:
-
-- Tổng quan về lập trình hướng đối tượng
-- Nền tảng .NET và ngôn ngữ C#
-- Mô hình hóa hướng đối tượng với UML
-- Lớp và đối tượng
-- Thừa kế và đa hình
-- Phát triển ứng dụng GUI với .NET và C#
+## Các chủ đề chính
+- #### [Tổng quan về lập trình hướng đối tượng](topics/overview)
+- #### [Nền tảng .NET và ngôn ngữ C#](topics/dotnet-and-csharp)
+- #### [Mô hình hóa hướng đối tượng với UML](topics/object-oriented-modeling)
+- #### [Lớp và đối tượng](topics/classes-and-objects)
+- #### [Thừa kế và đa hình](topics/inheritance)
+- #### [Phát triển ứng dụng GUI với .NET và C#](topics/gui-development)
 
 <div class="text-center">
-    <a href="topics/" class="btn btn-primary" role="button">Lý thuyết tóm tắt</a>
+    <a href="topics/overview/" class="btn btn-primary" role="button">Lý thuyết tóm tắt</a>
     <a href="labs/" class="btn btn-primary" role="button">Thực hành</a>
 </div>
 

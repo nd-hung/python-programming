@@ -2,5 +2,4 @@
 
 ---
 
-
-This document is built with [MkDocs](mkdocs.org) and powered by [Github](github.com).
+This document was built with [MkDocs](mkdocs.org) and powered by [Github](github.com).
