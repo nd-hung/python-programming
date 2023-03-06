@@ -3,12 +3,12 @@ site_description: Object Oriented Programming
   
 nav:
     - Các chủ đề:
-      - Tổng quan về lập trình hướng đối tượng: overview\index.md
-      - Nền tảng .NET và ngôn ngữ C#: dotnet-and-csharp\index.md
-      - Mô hình hóa hướng đối tượng: object-oriented-modeling\index.md
-      - Lớp và đối tượng: classes-and-objects\index.md
-      - Thừa kế và đa hình: inheritance\index.md
-      - Phát triển ứng dụng GUI với .NET và C#: gui-development\index.md
+      - Tổng quan về lập trình hướng đối tượng: topics\overview\index.md
+      - Nền tảng .NET và ngôn ngữ C#: topics\dotnet-and-csharp\index.md
+      - Mô hình hóa hướng đối tượng: topics\object-oriented-modeling\index.md
+      - Lớp và đối tượng: topics\classes-and-objects\index.md
+      - Thừa kế và đa hình: topics\inheritance\index.md
+      - Phát triển ứng dụng GUI với .NET và C#: topics\gui-development\index.md
       - Thực hành: labs\index.md
     - Giảng viên: author\about.md 
 

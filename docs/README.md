@@ -22,7 +22,7 @@ Các chủ đề chính:
 - Phát triển ứng dụng GUI với .NET và C#
 
 <div class="text-center">
-    <a href="topics.md/" class="btn btn-primary" role="button">Lý thuyết tóm tắt</a>
+    <a href="topics/" class="btn btn-primary" role="button">Lý thuyết tóm tắt</a>
     <a href="labs/" class="btn btn-primary" role="button">Thực hành</a>
 </div>
 
