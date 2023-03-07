@@ -1,15 +1,15 @@
 # Thiết lập môi trường lập trình C# #
 
-## [Visual Studio](#vs)
+## [Cài đặt Visual Studio](#vs)
 
 - Về Visual Studio
-- Cài đặt
+- Cài đặt Visual Studio
 - Tạo ứng dụng C# với Visual Studio
 
-## [Visual Studio Code](#vscode) ##
+## [Cài đặt Visual Studio Code](#vscode) ##
 
 - Về VS Code
-- Cài đặt
+- Cài đặt VS Code
 - Tạo ứng dụng C# với VS Code
 
 ## SplashKit ##
