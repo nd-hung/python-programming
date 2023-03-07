@@ -4,8 +4,8 @@ Viết chương trình tính tiền điện phải trả dựa vào số kWh ti�
 Bảng giá:
 Số kWh <= 100: 2000 đ/kWh
 Từ kWh thứ 101 đến 150: 2500 đ/kWh
-Từ kWh thứ 151 trở đi 3000 đ/kWh
-Nếu số kWh tiêu thụ vượt quá 300 thì cộng thêm 10% tiền phải trả.
+Từ kWh thứ 151 trở đi: 3000 đ/kWh
+Nếu số kWh tiêu thụ vượt quá 300: cộng thêm 10% tổng tiền phải trả.
 
 Input: Số kWh tiêu thụ
 Output: Số tiền phải thanh toán (VND)
@@ -34,9 +34,11 @@ namespace TinhTienDien
             if (sokWh <= 0) sotien = 0;
             else if (sokWh <= Muc1) sotien = sokWh * Gia1;
             else if (sokWh <= Muc2) sotien = Muc1 * Gia1 + (sokWh - Muc1) * Gia2;
-            else if (sokWh <= Muc3) sotien = Muc1 * Gia1 + Muc2 * Gia2 + (sokWh - Muc2) * Gia3;
+            else if (sokWh <= Muc3)
+                sotien = Muc1 * Gia1 + (Muc2 - Muc1) * Gia2 + (sokWh - Muc2) * Gia3;
             // Nếu tiêu thụ quá 300 thì cộng thêm 10%
-            if (sokWh > 300) sotien = Muc1 * Gia1 + Muc2 * Gia2 + (sokWh - Muc2) * Gia3 * 1.1;
+            else
+                sotien = (Muc1 * Gia1 + (Muc2 - Muc1) * Gia2 + (sokWh - Muc2) * Gia3) * 1.1;
 
             // Output
             Console.WriteLine("So kWh tieu thu: {0}, so tien: {1}\n", sokWh, sotien);
