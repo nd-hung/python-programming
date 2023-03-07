@@ -33,7 +33,6 @@ namespace Calculator
                     break;
                 default: Console.WriteLine("Khong biet phep toan!"); break;
             }
-
         }
     }
 }
