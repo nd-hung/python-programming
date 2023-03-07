@@ -8,7 +8,7 @@ Object Oriented Programming
 
 Lập trình có vai trò quan trọng trong ngành Công nghệ thông tin, bởi đây là hoạt động thực hành kết hợp trí thông minh của con người với sức mạnh tính toán của máy tính điện tử để tạo ra các chương trình máy tính. Vì thế, nắm vững và vận dụng thành thạo các nguyên lý, phương pháp và công cụ lập trình là yêu cầu bắt buộc đối với sinh viên của ngành.
 
-Lập trình hướng đối tượng được xem là phương pháp lập trình ưu việt nhất hiện nay. Phương pháp này giúp quá trình xây dựng phần mềm theo cách gần gũi với thế giới thực, sản phẩm dễ bảo trì và nâng cấp, mã nguồn có khả năng tái sử dụng cao.
+Lập trình hướng đối tượng được xem là phương pháp lập trình ưu việt nhất hiện nay. Phương pháp lập trình này giúp quá trình xây dựng phần mềm hiệu quả theo cách tiếp cận gần gũi với thế giới thực, sản phẩm dễ bảo trì và nâng cấp, mã nguồn có khả năng tái sử dụng cao.
 
 Học phần này giới thiệu phương pháp lập trình hướng đối tượng từ mức độ cơ bản đến nâng cao. Để học tốt học phần này, người học cần nắm vững các kiến thức, phương pháp, kỹ năng lập trình căn bản và giải thuật. Công cụ lập trình sử dụng để minh họa trong học phần này là .NET và C#.
 
