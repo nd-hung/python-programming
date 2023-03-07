@@ -13,7 +13,10 @@ Lập trình hướng đối tượng được xem là phương pháp lập trì
 Học phần này giới thiệu phương pháp lập trình hướng đối tượng từ mức độ cơ bản đến nâng cao. Để học tốt học phần này, người học cần nắm vững các kiến thức, phương pháp, kỹ năng lập trình căn bản và giải thuật. Công cụ lập trình sử dụng để minh họa trong học phần này là .NET và C#.
 
 <div class="text-center">
-    <a href="topics/overview/" class="btn btn-primary" role="button">Lý thuyết tóm tắt</a>
+    <a href="topics/overview/" class="btn btn-primary" role="button">
+    Lý thuyết tóm tắt
+    </a>
+    &nbsp;&nbsp;&nbsp;
     <a href="labs/" class="btn btn-primary" role="button">Thực hành</a>
 </div>
 

@@ -1,13 +1,12 @@
-# Tổng quan về lập trình hướng đối tượng
+# Tổng quan
 ---
 
 ## Sơ lược các phương pháp lập trình
 
-
 Các ứng dụng ngày càng đa dạng và phức tạp hơn, do đó các phương pháp và công cụ lập trình cũng cần có sự cải tiến để giải quyết hiệu quả.
 Dựa theo "mô thức lập trình" (programming paradigms - phương pháp luận hay nguyên tắc chung cơ bản trong lập trình), các ngôn ngữ lập trình được chia thành hai nhóm chính: Lập trình hướng mệnh lệnh (imperative programming) và Lập trình khai báo (declarative programming).
 
-### Lập trình hướng mệnh lệnh (Imperative Programming)
+### Lập trình hướng mệnh lệnh (imperative programming)
 
 - Nguyên lý lập trình mệnh lệnh là *"how to do"* - ra lệnh máy tính thực hiện từng bước xử lý theo một trình tự xác định để đạt kết quả mong muốn, tương đồng với cách máy tính thực hiện ở mức mã máy (machine code).
 
@@ -15,14 +14,12 @@ Dựa theo "mô thức lập trình" (programming paradigms - phương pháp lu�
 
 - Các phương pháp lập trình tuần tự, hướng thủ tục/cấu trúc (procedural/structured programming), lập trình hướng đối tượng (object-oriented programming) đều thuộc mô thức lập trình hướng mệnh lệnh.
 
-<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fnd-hung%2Foop%2Fblob%2Fmain%2Fdocs%2Foverview%2Fcode%2Fsorting-sequential%2FProgram.cs&style=default&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
-
 ### Lập trình khai báo (Declarative Programming)
 
 Các ngôn ngữ lập trình khai báo diễn đạt các câu lệnh theo kiểu *"what to do"* - yêu cầu máy tính làm gì để đạt được kết quả mà không cần quan tâm đến cách thức thực hiện chi tiết. Các phân hệ của lập trình khai báo gồm có: Lập trình logic (như Prolog), hướng chức năng (như Haskell, Scala, F#), các ngôn ngữ chuyên biệt (domain-specific) như SQL, HTML.
 ## Phương pháp lập trình hướng đối tượng
-### Cách tiếp cận hướng đối tượng</h4>
-### Lập trình hướng đối tượng</h4>
+### Cách tiếp cận hướng đối tượng
+### Lập trình hướng đối tượng
 ## Lập trình hướng đối tượng vs Lập trình cấu trúc
 
 
