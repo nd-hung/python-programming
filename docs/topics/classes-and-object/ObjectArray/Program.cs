@@ -1,8 +1,8 @@
 ﻿/*
 Viết chương trình xử lý danh sách phân số
-Nhập danh sách
-Xuất danh sách
-Tìm phân số lớn nhất
+- Nhập danh sách
+- Xuất danh sách
+- Tìm phân số lớn nhất
 Sắp xếp tăng dần
 */
 namespace DSPhanSo
@@ -25,11 +25,8 @@ namespace DSPhanSo
             set { if (value != 0) mauSo = value; }
         }
         // Constructor
-        public PhanSo()
-        {
 
-        }
-        public PhanSo(int ts, int ms)
+        public PhanSo(int ts = 0, int ms = 1)
         {
             tuSo = ts;
             mauSo = ms;
@@ -50,6 +47,12 @@ namespace DSPhanSo
         {
             Console.WriteLine("{0}/{1}", tuSo, mauSo);
         }
+        // Hàm trả về giá trị thực của phân số
+        public double GetValue()
+        {
+            return (double)tuSo / mauSo;
+        }
+
     }
     // Lớp quản lý danh sách phân số
     public class DSPhanSo
@@ -79,6 +82,22 @@ namespace DSPhanSo
             for (int i = 0; i < SoLuong; i++)
                 PhanSoList[i].Xuat();
         }
+
+        // Tìm phân số lớn nhất
+        public void PhanSoMax()
+        {
+            double max = PhanSoList[0].GetValue();
+            int maxIndex = 0;
+            for (int i = 1; i < SoLuong; i++)
+                if (PhanSoList[i].GetValue() > max)
+                {
+                    max = PhanSoList[i].GetValue();
+                    maxIndex = i;
+                }
+            // In ra phân số lớn nhất
+            Console.WriteLine("Phan so lon nhat la: ");
+            PhanSoList[maxIndex].Xuat();
+        }
     }
 
     // Main program
@@ -86,10 +105,13 @@ namespace DSPhanSo
     {
         public static void Main()
         {
-            // Nhap ds phan so
+            // Tạo & nhập danh sách phân số 
             DSPhanSo ds = new DSPhanSo();
             ds.Nhap();
+            // In danh sách phân số
             ds.Xuat();
+            // In phân số lớn nhất
+            ds.PhanSoMax();
         }
     }
 
