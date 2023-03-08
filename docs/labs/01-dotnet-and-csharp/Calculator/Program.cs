@@ -4,10 +4,13 @@
     {
         public static void Main()
         {
+            int a, b;
             Console.Write("Nhap a = ");
-            int a = Int32.Parse(Console.ReadLine());
+            string st = Console.ReadLine();
+            if(st is null) st="0";
+            a = int.Parse(Con)
             Console.Write("Nhap b = ");
-            int b = Int32.Parse(Console.ReadLine());
+            b = Int32.Parse(Console.ReadLine());
             Console.Write("Nhap ky hieu phep toan (+,-,*,/) = ");
             string op = Console.ReadLine();
 
