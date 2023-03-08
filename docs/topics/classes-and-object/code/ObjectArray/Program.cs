@@ -3,7 +3,7 @@ Viết chương trình xử lý danh sách phân số
 - Nhập danh sách
 - Xuất danh sách
 - Tìm phân số lớn nhất
-Sắp xếp tăng dần
+- Sắp xếp danh sách phân số dần
 */
 namespace DSPhanSo
 {
