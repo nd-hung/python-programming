@@ -14,13 +14,15 @@ namespace DSPhanSo
         private int tuSo;
         private int mauSo;
         // properties
-        public int TuSo {
-            get{return tuSo;}
-            set{tuSo = value;}
+        public int TuSo
+        {
+            get { return tuSo; }
+            set { tuSo = value; }
         }
-        public int MauSo{
-            get{return mauSo; }
-            set{if(value !=0) mauSo = value;}
+        public int MauSo
+        {
+            get { return mauSo; }
+            set { if (value != 0) mauSo = value; }
         }
         // Constructor
         public PhanSo()
@@ -37,10 +39,11 @@ namespace DSPhanSo
         {
             Console.Write("Tu so = ");
             tuSo = int.Parse(Console.ReadLine());
-            do{
-            Console.Write("Mau so = ");
-            mauSo = int.Parse(Console.ReadLine());
-            }while(mauSo == 0);
+            do
+            {
+                Console.Write("Mau so = ");
+                mauSo = int.Parse(Console.ReadLine());
+            } while (mauSo == 0);
         }
         // Ham in phan so
         public void Xuat()
@@ -51,9 +54,9 @@ namespace DSPhanSo
     // Lớp quản lý danh sách phân số
     public class DSPhanSo
     {
-        public int SoLuong{get; set;} // So luong phan so
-        PhanSo[] PhanSoList; 
-        
+        public int SoLuong { get; set; } // So luong phan so
+        PhanSo[] PhanSoList;
+
         // Ham nhap danh sach phan so
         public void Nhap()
         {
@@ -62,17 +65,18 @@ namespace DSPhanSo
             SoLuong = int.Parse(Console.ReadLine());
             // Nhap mang phan so
             PhanSoList = new PhanSo[SoLuong];
-            for(int i=0; i<SoLuong; i++)
+            for (int i = 0; i < SoLuong; i++)
             {
-                Console.WriteLine("Phan so thu {0}\n", i+1);
+                Console.WriteLine("Phan so thu {0}\n", i + 1);
                 PhanSoList[i] = new PhanSo();
                 PhanSoList[i].Nhap();
             }
         }
         // Ham in danh sach phan so
         public void Xuat()
-        {   Console.WriteLine("\nDanh sach phan so:\n");
-            for(int i=0; i<SoLuong; i++)
+        {
+            Console.WriteLine("\nDanh sach phan so:\n");
+            for (int i = 0; i < SoLuong; i++)
                 PhanSoList[i].Xuat();
         }
     }
