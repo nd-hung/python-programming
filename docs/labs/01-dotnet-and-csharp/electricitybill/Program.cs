@@ -17,6 +17,7 @@
             Console.Write("Nhap so kWh tieu thu: ");
             sokWh = int.Parse(Console.ReadLine()); 
             // Hãy sửa lại đoạn code trên để chương trình kiểm soát được số liệu nhập vào hợp lệ (là số nguyên và giá trị >= 0)
+            // HD: Sử dụng điều khiển do .. while và phương thức int.TryParse()
 
             // Tính tiền điện dựa vào số kWh tiêu thụ và Bảng giá
             if (sokWh <= 0) sotien = 0;
