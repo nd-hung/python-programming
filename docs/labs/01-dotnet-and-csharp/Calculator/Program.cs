@@ -40,7 +40,6 @@ namespace SimpleCalculator
                     break;
                 default: Console.WriteLine("\nKhong biet phep toan!"); break;
             }
-
         }
     }
 }
