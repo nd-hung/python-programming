@@ -1,7 +1,8 @@
 # Tính tiền điện 
 
 ## Input: 
-- Số kWh tiêu thụ (Nhập từ bàn phím)
+- Số kWh tiêu thụ: Là số nguyên dương nhập từ bàn phím
+
 - Bảng giá:
 
 |Mức tiêu thụ|Đơn giá (đồng/kWh)|
