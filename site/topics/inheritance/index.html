@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Giảng viên - Lập trình hướng đối tượng</title>
+        <title>Thừa kế và đa hình - Lập trình hướng đối tượng</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -36,32 +36,32 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Các chủ đề <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../topics/overview/" class="dropdown-item">Tổng quan về lập trình hướng đối tượng</a>
+    <a href="../overview/" class="dropdown-item">Tổng quan về lập trình hướng đối tượng</a>
 </li>
                                     
 <li>
-    <a href="../../topics/dotnet-and-csharp/" class="dropdown-item">Nền tảng .NET và ngôn ngữ C#</a>
+    <a href="../dotnet-and-csharp/" class="dropdown-item">Nền tảng .NET và ngôn ngữ C#</a>
 </li>
                                     
 <li>
-    <a href="../../topics/object-oriented-modeling/" class="dropdown-item">Mô hình hóa hướng đối tượng</a>
+    <a href="../object-oriented-modeling/" class="dropdown-item">Mô hình hóa hướng đối tượng</a>
 </li>
                                     
 <li>
-    <a href="../../topics/classes-and-objects/" class="dropdown-item">Lớp và đối tượng</a>
+    <a href="../classes-and-objects/" class="dropdown-item">Lớp và đối tượng</a>
 </li>
                                     
 <li>
-    <a href="../../topics/inheritance/" class="dropdown-item">Thừa kế và đa hình</a>
+    <a href="./" class="dropdown-item active">Thừa kế và đa hình</a>
 </li>
                                     
 <li>
-    <a href="../../topics/gui-development/" class="dropdown-item">Phát triển ứng dụng GUI với .NET và C#</a>
+    <a href="../gui-development/" class="dropdown-item">Phát triển ứng dụng GUI với .NET và C#</a>
 </li>
                                     
 <li>
@@ -69,8 +69,8 @@
 </li>
                                 </ul>
                             </li>
-                            <li class="navitem active">
-                                <a href="./" class="nav-link">Giảng viên</a>
+                            <li class="navitem">
+                                <a href="../../author/about/" class="nav-link">Giảng viên</a>
                             </li>
                         </ul>
 
@@ -81,12 +81,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../../labs/" class="nav-link">
+                                <a rel="prev" href="../classes-and-objects/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" class="nav-link disabled">
+                                <a rel="next" href="../gui-development/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -108,13 +108,17 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#lecturer-infomation" class="nav-link">Lecturer Infomation</a>
+            <li class="nav-item" data-level="1"><a href="#thua-ke-va-a-hinh" class="nav-link">Thừa kế và đa hình</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#lecturer" class="nav-link">Lecturer</a>
+            <li class="nav-item" data-level="2"><a href="#ky-thuat-thua-ke-inheritance" class="nav-link">Kỹ thuật thừa kế (Inheritance)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#acknowledgement" class="nav-link">Acknowledgement</a>
+            <li class="nav-item" data-level="2"><a href="#a-hinh-polymorphism" class="nav-link">Đa hình (Polymorphism)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#lop-giao-dien-interface" class="nav-link">Lớp giao diện (Interface)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -125,18 +129,15 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="lecturer-infomation">Lecturer Infomation</h1>
+<h1 id="thua-ke-va-a-hinh">Thừa kế và đa hình</h1>
 <hr />
-<h2 id="lecturer">Lecturer</h2>
-<div>
-<a href="nd-hung.github.io">Dr. Hung Nguyen</a>, Dept. of Software Engineering, Nha Trang University.<br>
-Email: hungnd {at} ntu.edu.vn 
-</div>
-
-<h2 id="acknowledgement">Acknowledgement</h2>
-<div>
-This document is built with <a href="mkdocs.org">MkDocs</a> and powered by <a href="github.com">GitHub</a>. 
-</div></div>
+<h2 id="ky-thuat-thua-ke-inheritance">Kỹ thuật thừa kế (Inheritance)</h2>
+<h3 id="quan-he-ke-thua">Quan hệ kế thừa</h3>
+<h3 id="cai-at-quan-he-ke-thua">Cài đặt quan hệ kế thừa</h3>
+<h2 id="a-hinh-polymorphism">Đa hình (Polymorphism)</h2>
+<h3 id="dan-nhap">Dẫn nhập</h3>
+<h3 id="cai-at-phuong-thuc-a-hinh">Cài đặt phương thức đa hình</h3>
+<h2 id="lop-giao-dien-interface">Lớp giao diện (Interface)</h2></div>
             </div>
         </div>
 
