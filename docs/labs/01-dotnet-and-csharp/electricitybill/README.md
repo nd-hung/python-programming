@@ -17,5 +17,5 @@ Nếu số kWh tiêu thụ vượt quá 300 thì cộng thêm 10% tổng tiền 
 
 ## Ví dụ chạy chương trình
 
-<img src="ElectricityBillRun.PNG" alt="Run example" style="height: 100px;"/>
+<img src="ElectricityBillRun.PNG" alt="Run example"/>
 
