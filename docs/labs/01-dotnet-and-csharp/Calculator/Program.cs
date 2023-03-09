@@ -6,21 +6,21 @@ namespace SimpleCalculator
         public static void Main()
         {
             int a, b;   // Khai báo 2 biến chứa giá trị đọc từ bàn phím
-            bool readNumber1OK = false, readNumber2OK = false; // Dùng để kiểm tra giá trị đọc vào 
+            bool readNumberOK = false; // Dùng để kiểm tra giá trị đọc vào có hợp lệ không
 
             // Lặp lại việc đọc số thứ nhất cho đến khi giá trị hợp lệ
             do
             {
                 Console.Write("Nhap so thu nhat = ");
-                readNumber1OK = int.TryParse(Console.ReadLine(), out a);
-            } while (!readNumber1OK);
+                readNumberOK = int.TryParse(Console.ReadLine(), out a);
+            } while (!readNumberOK);
 
             // Lặp lại việc đọc số thứ hai đến khi giá trị hợp lệ
             do
             {
                 Console.Write("Nhap so thu hai = ");
-                readNumber2OK = int.TryParse(Console.ReadLine(), out b);
-            } while (!readNumber2OK);
+                readNumberOK = int.TryParse(Console.ReadLine(), out b);
+            } while (!readNumberOK);
 
             // Đọc ký hiệu phép toán (đọc 1 ký tự)
             Console.Write("Nhap ky hieu phep toan (+,-,*,/) = ");
