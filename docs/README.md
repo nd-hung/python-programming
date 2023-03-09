@@ -1,6 +1,6 @@
 # Lập trình hướng đối tượng
 
-Object Oriented Programming
+Object Oriented Programming (with C#)
 
 ---
 
@@ -26,8 +26,7 @@ Học phần này giới thiệu phương pháp lập trình hướng đối tư
 - #### [Thừa kế và đa hình](topics/inheritance)
 - #### [Phát triển ứng dụng GUI với .NET và C#](topics/gui-development)
 
-
-
+`
 ## Tài liệu tham khảo
 ### Sách, giáo trình
 
