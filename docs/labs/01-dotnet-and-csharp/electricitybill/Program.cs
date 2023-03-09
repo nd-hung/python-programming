@@ -14,7 +14,7 @@
             double sotien = 0;
 
             // Nhập số kWh tiêu thụ 
-            Console.Write("Nhap so kWh tieu thu:");
+            Console.Write("Nhap so kWh tieu thu: ");
             sokWh = int.Parse(Console.ReadLine()); 
             // Hãy sửa lại đoạn code trên để chương trình kiểm soát được số liệu nhập vào hợp lệ
 
@@ -27,7 +27,7 @@
             else sotien = (Muc1 * Gia1 + (Muc2 - Muc1) * Gia2 + (sokWh - Muc2) * Gia3) * 1.1;
 
             // Output
-            Console.WriteLine("So kWh tieu thu: {0}, so tien: {1}\n", sokWh, sotien);
+            Console.WriteLine("So kWh tieu thu: {0}, so tien: {1:#.00} (vnd)", sokWh, sotien);
         }
     }
 }

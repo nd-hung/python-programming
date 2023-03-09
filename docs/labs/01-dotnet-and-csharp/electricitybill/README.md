@@ -14,3 +14,8 @@
 Nếu số kWh tiêu thụ vượt quá 300 thì cộng thêm 10% tổng tiền phải trả.
 
 ## Output: Số tiền phải thanh toán (đ)
+
+## Ví dụ chạy chương trình
+
+<img src="ElectricityBillRun.PNG" alt="Run example" style="height: 100px;"/>
+
