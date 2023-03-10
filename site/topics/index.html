@@ -7,16 +7,16 @@
         
         <meta name="author" content="Hung Nguyen">
         
-        <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Tổng quan về lập trình hướng đối tượng - Lập trình hướng đối tượng</title>
-        <link href="../../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Các chủ đề chính - Lập trình hướng đối tượng</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
-        <link href="../../css/extra.css" rel="stylesheet">
+        <link href="../css/extra.css" rel="stylesheet">
 
-        <script src="../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/django.min.js"></script>
@@ -26,7 +26,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="../..">Lập trình hướng đối tượng</a>
+                <a class="navbar-brand" href="..">Lập trình hướng đối tượng</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -36,41 +36,41 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Các chủ đề <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="./" class="dropdown-item active">Tổng quan về lập trình hướng đối tượng</a>
+    <a href="overview/" class="dropdown-item">Tổng quan về lập trình hướng đối tượng</a>
 </li>
                                     
 <li>
-    <a href="../dotnet-and-csharp/" class="dropdown-item">Nền tảng .NET và ngôn ngữ C#</a>
+    <a href="dotnet-and-csharp/" class="dropdown-item">Nền tảng .NET và ngôn ngữ C#</a>
 </li>
                                     
 <li>
-    <a href="../object-oriented-modeling/" class="dropdown-item">Mô hình hóa hướng đối tượng</a>
+    <a href="object-oriented-modeling/" class="dropdown-item">Mô hình hóa hướng đối tượng</a>
 </li>
                                     
 <li>
-    <a href="../classes-and-objects/" class="dropdown-item">Lớp và đối tượng</a>
+    <a href="classes-and-objects/" class="dropdown-item">Lớp và đối tượng</a>
 </li>
                                     
 <li>
-    <a href="../inheritance/" class="dropdown-item">Thừa kế và đa hình</a>
+    <a href="inheritance/" class="dropdown-item">Thừa kế và đa hình</a>
 </li>
                                     
 <li>
-    <a href="../gui-development/" class="dropdown-item">Phát triển ứng dụng GUI với .NET và C#</a>
+    <a href="gui-development/" class="dropdown-item">Phát triển ứng dụng GUI với .NET và C#</a>
 </li>
                                     
 <li>
-    <a href="../../labs/" class="dropdown-item">Thực hành</a>
+    <a href="../labs/" class="dropdown-item">Thực hành</a>
 </li>
                                 </ul>
                             </li>
                             <li class="navitem">
-                                <a href="../../author/about/" class="nav-link">Giảng viên</a>
+                                <a href="../author/about/" class="nav-link">Giảng viên</a>
                             </li>
                         </ul>
 
@@ -81,17 +81,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" class="nav-link disabled">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../dotnet-and-csharp/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="https://github.com/nd-hung/oop/tree/main/docs/topics/overview/README.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/nd-hung/oop/tree/main/docs/topics/README.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -111,21 +101,33 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#tong-quan" class="nav-link">Tổng quan</a>
+            <li class="nav-item" data-level="1"><a href="#cac-chu-e-chinh" class="nav-link">Các chủ đề chính</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#so-luoc-cac-phuong-phap-lap-trinh" class="nav-link">Sơ lược các phương pháp lập trình</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#phuong-phap-lap-trinh-huong-oi-tuong" class="nav-link">Phương pháp lập trình hướng đối tượng</a>
+            <li class="nav-item" data-level="2"><a href="#tong-quan-ve-lap-trinh-huong-oi-tuong" class="nav-link">Tổng quan về lập trình hướng đối tượng</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#lap-trinh-huong-oi-tuong-vs-lap-trinh-cau-truc" class="nav-link">Lập trình hướng đối tượng vs Lập trình cấu trúc</a>
+            <li class="nav-item" data-level="2"><a href="#nen-tang-net-va-ngon-ngu-c" class="nav-link">Nền tảng .NET và ngôn ngữ C#</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#tai-lieu-tham-khao" class="nav-link">Tài liệu tham khảo</a>
+            <li class="nav-item" data-level="2"><a href="#mo-hinh-hoa-huong-oi-tuong-voi-uml" class="nav-link">Mô hình hóa hướng đối tượng với UML</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#lop-va-oi-tuong" class="nav-link">Lớp và đối tượng</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#thua-ke-va-a-hinh" class="nav-link">Thừa kế và đa hình</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#phat-trien-ung-dung-gui-voi-net-va-c" class="nav-link">Phát triển ứng dụng GUI với .NET và C#</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#bai-thuc-hanh" class="nav-link">Bài thực hành</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -136,33 +138,40 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="tong-quan">Tổng quan</h1>
+<h1 id="cac-chu-e-chinh">Các chủ đề chính</h1>
 <hr />
-<h2 id="so-luoc-cac-phuong-phap-lap-trinh">Sơ lược các phương pháp lập trình</h2>
-<p>Các ứng dụng ngày càng đa dạng và phức tạp hơn, do đó các phương pháp và công cụ lập trình cũng cần có sự cải tiến để giải quyết hiệu quả.
-Dựa theo "mô thức lập trình" (programming paradigms - phương pháp luận hay nguyên tắc chung cơ bản trong lập trình), các ngôn ngữ lập trình được chia thành hai nhóm chính: Lập trình hướng mệnh lệnh (imperative programming) và Lập trình khai báo (declarative programming).</p>
-<h3 id="lap-trinh-huong-menh-lenh-imperative-programming">Lập trình hướng mệnh lệnh (imperative programming)</h3>
+<h2 id="tong-quan-ve-lap-trinh-huong-oi-tuong"><a href="overview">Tổng quan về lập trình hướng đối tượng</a></h2>
 <ul>
-<li>
-<p>Nguyên lý lập trình mệnh lệnh là <em>"how to do"</em> - ra lệnh máy tính thực hiện từng bước xử lý theo một trình tự xác định để đạt kết quả mong muốn, tương đồng với cách máy tính thực hiện ở mức mã máy (machine code).</p>
-</li>
-<li>
-<p>Chương trình được cài đặt theo trình tự của giải thuật, vì thế kiểu lập trình này còn gọi là lập trình giải thuật (algorithmic programming).</p>
-</li>
-<li>
-<p>Các phương pháp lập trình tuần tự, hướng thủ tục/cấu trúc (procedural/structured programming), lập trình hướng đối tượng (object-oriented programming) đều thuộc mô thức lập trình hướng mệnh lệnh.</p>
-</li>
+<li>Sơ lược các phương pháp lập trình</li>
+<li>Cách tiếp cận hướng đối tượng</li>
 </ul>
-<h3 id="lap-trinh-khai-bao-declarative-programming">Lập trình khai báo (Declarative Programming)</h3>
-<p>Các ngôn ngữ lập trình khai báo diễn đạt các câu lệnh theo kiểu <em>"what to do"</em> - yêu cầu máy tính làm gì để đạt được kết quả mà không cần quan tâm đến cách thức thực hiện chi tiết. Các phân hệ của lập trình khai báo gồm có: Lập trình logic (như Prolog), hướng chức năng (như Haskell, Scala, F#), các ngôn ngữ chuyên biệt (domain-specific) như SQL, HTML.</p>
-<h2 id="phuong-phap-lap-trinh-huong-oi-tuong">Phương pháp lập trình hướng đối tượng</h2>
-<h3 id="cach-tiep-can-huong-oi-tuong">Cách tiếp cận hướng đối tượng</h3>
-<h3 id="lap-trinh-huong-oi-tuong">Lập trình hướng đối tượng</h3>
-<h2 id="lap-trinh-huong-oi-tuong-vs-lap-trinh-cau-truc">Lập trình hướng đối tượng vs Lập trình cấu trúc</h2>
-<h2 id="tai-lieu-tham-khao">Tài liệu tham khảo</h2>
-<h4 id="lectures-on-high-performance-computing-for-economists-university-of-pennsylvania-2020">Lectures on High-performance Computing for Economists, University of Pennsylvania, 2020</h4>
-<h4 id="programming-languages-stanford-university-2018">Programming Languages, Stanford University, 2018</h4>
-<h4 id="object-oriented-analysis-and-design-using-the-uml-university-of-calgary-2000">Object Oriented Analysis and Design using the UML, University of Calgary, 2000</h4></div>
+<h2 id="nen-tang-net-va-ngon-ngu-c"><a href="dotnet-and-csharp">Nền tảng .NET và ngôn ngữ C#</a></h2>
+<ul>
+<li>Nền tảng .NET</li>
+<li>Ngôn ngữ C#</li>
+</ul>
+<h2 id="mo-hinh-hoa-huong-oi-tuong-voi-uml"><a href="object-oriented-modeling">Mô hình hóa hướng đối tượng với UML</a></h2>
+<ul>
+<li>Phân tích thiết kế hướng đối tượng</li>
+<li>Mô hình hóa hướng đối tượng với UML</li>
+</ul>
+<h2 id="lop-va-oi-tuong"><a href="classes-and-objects">Lớp và đối tượng</a></h2>
+<ul>
+<li>Cài đặt lớp</li>
+<li>Đối tượng, thuộc tính và phương thức</li>
+</ul>
+<h2 id="thua-ke-va-a-hinh"><a href="inheritance">Thừa kế và đa hình</a></h2>
+<ul>
+<li>Quan hệ tổng quát hóa, đặc biệt hóa</li>
+<li>Cài đặt lớp thừa kế</li>
+<li>Đa hình</li>
+</ul>
+<h2 id="phat-trien-ung-dung-gui-voi-net-va-c"><a href="gui-development">Phát triển ứng dụng GUI với .NET và C#</a></h2>
+<ul>
+<li>Windows Forms App</li>
+<li>Tạo ứng dụng Desktop với .NET và C#</li>
+</ul>
+<h2 id="bai-thuc-hanh"><a href="../../labs/">Bài thực hành</a></h2></div>
             </div>
         </div>
 
@@ -171,11 +180,11 @@ Dựa theo "mô thức lập trình" (programming paradigms - phương pháp lu�
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = "../..",
+            var base_url = "..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../../js/base.js" defer></script>
-        <script src="../../search/main.js" defer></script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">

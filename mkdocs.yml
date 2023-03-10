@@ -1,5 +1,7 @@
 site_name: Lập trình hướng đối tượng
 site_description: Object Oriented Programming
+site_author: Hung Nguyen
+
 repo_url: https://github.com/nd-hung/oop
 edit_uri: tree/main/docs
 

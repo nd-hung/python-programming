@@ -10,7 +10,7 @@ Lập trình có vai trò quan trọng trong ngành Công nghệ thông tin, b�
 
 Lập trình hướng đối tượng được xem là phương pháp lập trình ưu việt nhất hiện nay. Phương pháp lập trình này giúp quá trình xây dựng phần mềm hiệu quả theo cách tiếp cận gần gũi với thế giới thực, sản phẩm dễ bảo trì và nâng cấp, mã nguồn có khả năng tái sử dụng cao.
 
-Học phần này giới thiệu phương pháp lập trình hướng đối tượng từ mức độ cơ bản đến nâng cao. Để học tốt học phần này, người học cần nắm vững các kiến thức, phương pháp, kỹ năng lập trình căn bản và giải thuật. Công cụ lập trình sử dụng để minh họa trong học phần này là .NET và C#.
+Học phần này giới thiệu phương pháp lập trình hướng đối tượng từ mức độ cơ bản đến nâng cao. Để học tốt học phần này, người học cần nắm vững kiến thức về giải thuật và phương pháp, kỹ năng lập trình căn bản. Công cụ lập trình sử dụng để minh họa trong học phần này là .NET và C#.
 
 <div class="text-center">
     <a href="topics/" class="btn btn-primary" role="button">Lý thuyết tóm tắt</a>
