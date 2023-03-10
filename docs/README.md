@@ -6,13 +6,15 @@ Object Oriented Programming (with C#)
 
 ## Giới thiệu
 
-Học phần này giới thiệu phương pháp lập trình hướng đối tượng từ mức độ cơ bản đến nâng cao. Để học tốt học phần này, người học cần nắm vững kiến thức về giải thuật và phương pháp, kỹ năng lập trình căn bản. Công cụ lập trình sử dụng để minh họa trong học phần này là .NET và C#.
+Tài liệu này giới thiệu phương pháp lập trình hướng đối tượng từ mức độ cơ bản đến nâng cao. Để tiếp thu hiệu quả, người học cần nắm vững kiến thức về giải thuật và phương pháp, kỹ năng lập trình căn bản. Công cụ lập trình sử dụng để minh họa trong học phần này là .NET và C#.
 
 <div class="text-center">
     <a href="topics/" class="btn btn-primary" role="button">Lý thuyết tóm tắt</a>
     &nbsp;&nbsp;&nbsp;
     <a href="labs/" class="btn btn-primary" role="button">Bài thực hành</a>
 </div>
+
+<br>
 
 ## Các chủ đề chính
 - #### [Tổng quan về lập trình hướng đối tượng](topics/overview)
