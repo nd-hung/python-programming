@@ -19,12 +19,15 @@ Có 3 phiên bản Visual Studio: Community, Professional, Enterprise. Trong đ�
 <img src="figs/license-terms.png">
 
 - Chọn công cụ phù hợp với loại ứng dụng (workloads) cài đặt. Chỉ nên chọn thành phần cần thiết, ví dụ `.NET desktop development` để tạo các ứng dụng console, Windows Forms,... với .NET và .NET Framework.
-<img src="figs/vs-installer-workloads.png">
+
+<img src="figs/vs-installer-install-workloads.png">
 
 - Chọn các thành phần cài đặt
+
 <img src="figs/vs-installer-individual-components.png">
 
 - Chọn vị trí cài đặt
+
 <img src="figs/vs-installer-install-location.PNG">
 
 - Nhấn **Install** để tiến hành cài đặt Visual Studio.
@@ -48,12 +51,14 @@ Chọn loại project là **ConsoleApp** để tạo ứng dụng dạng giao ti
 - Chọn phiên bản .NET
 <img src="figs/vs-create-app-04.PNG">
 
-Chọn *Do not use top-level statements* để tạo ứng dụng "chuẩn" với đầy đủ khai báo namespace, các lớp, hàm Main(). 
+Chọn *Do not use top-level statements* để tạo ứng dụng "chuẩn" với đầy đủ khai báo namespace, các lớp, hàm Main(). Nhấn **Create** để tạo ứng dụng.
 
 - Viết code
 <img src="figs/vs-create-app-05.PNG">
 
 - Chạy thử ứng dụng
-<img src="figs/vs-create-app-06.PNG">
 
+Nhấn **Ctrl+F5**, hoặc chọn **Debug > Start without debugging**, hoặc nhấn nút **Start** (hình mũi tên màu xanh).
+
+<img src="figs/vs-create-app-06.PNG">
 

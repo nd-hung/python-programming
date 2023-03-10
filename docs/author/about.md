@@ -5,9 +5,9 @@
 ## Lecturer
 <div style="text-align: justify">
 
-<a href="https://nd-hung.github.io">Dr. Hung Nguyen</a>, Deparment of Software Engineering, Nha Faculty of Information Technology, Nha Trang University
+<a href="https://nd-hung.github.io">Dr. Hung Nguyen</a>, Deparment of Software Engineering, Faculty of Information Technology, Nha Trang University
 <br>
-Email: hungnd {at} ntu.edu.vn 
+Email: hungnd {at} ntu.edu.vn
 </div>
 
 ## Acknowledgement

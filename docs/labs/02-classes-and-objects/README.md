@@ -1,7 +1,15 @@
-# Bài thực hành
+# Lớp và đối tượng
+
+Classes and Objects
+
 ---
 
-## [Lab 00 - Cài đặt Visual Studio](00-installation)
-## Lab 01 - Lớp và đối tượng
-## Lab 02 - Thừa thừa kế và đa hình
-## Lab 03 - Phát triển ứng dụng GUI
+## Cài đặt lớp
+## Thiết lập tính bao đóng 
+## Tạo, sử dụng và hủy đối tượng
+## Hàm thiết lập, hàm hủy
+## Thành phần tĩnh
+## Thành phần dữ liệu có kiểu là lớp
+## Con trỏ this
+## Mảng các đối tượng
+## Định nghĩa toán tử trên lớp

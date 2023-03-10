@@ -8,7 +8,7 @@
         <meta name="author" content="Hung Nguyen">
         
         <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>Index - Lập trình hướng đối tượng</title>
+        <title>Lập trình C# với Visual Studio - Lập trình hướng đối tượng</title>
         <link href="../../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
@@ -57,7 +57,11 @@
 </li>
                                     
 <li>
-    <a href="../../../topics/inheritance/" class="dropdown-item">Thừa kế và đa hình</a>
+    <a href="../../../topics/inheritance/" class="dropdown-item">Thừa kế</a>
+</li>
+                                    
+<li>
+    <a href="../../../topics/polymorphism/" class="dropdown-item">Đa hình</a>
 </li>
                                     
 <li>
@@ -101,8 +105,20 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="2"><a href="#lap-trinh-c-voi-visual-studio" class="nav-link">Lập trình C# với Visual Studio</a>
+            <li class="nav-item" data-level="1"><a href="#lap-trinh-c-voi-visual-studio" class="nav-link">Lập trình C# với Visual Studio</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#so-luoc-ve-visual-studio" class="nav-link">Sơ lược về Visual Studio</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#cai-at-visual-studio-community-2022" class="nav-link">Cài đặt Visual Studio Community 2022</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#tao-ung-dung-c-voi-visual-studio" class="nav-link">Tạo ứng dụng C# với Visual Studio</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -110,26 +126,70 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h2 id="lap-trinh-c-voi-visual-studio">Lập trình C# với Visual Studio</h2>
+<h1 id="lap-trinh-c-voi-visual-studio">Lập trình C# với Visual Studio</h1>
+<hr />
+<h2 id="so-luoc-ve-visual-studio">Sơ lược về Visual Studio</h2>
+<p>Micosoft Visual Studio là môi trường phát triển tích hợp (IDE) có đầy đủ tính năng dùng cho phát triển đa dạng các ứng dụng trên môi trường Windows, iOS, Android, ứng dụng web và dịch vụ đám mây (cloud services).</p>
+<p>Có 3 phiên bản Visual Studio: Community, Professional, Enterprise. Trong đó bản Community miễn phí, cung cấp đầy đủ tính năng đối với người dùng cá nhân.</p>
+<h2 id="cai-at-visual-studio-community-2022">Cài đặt Visual Studio Community 2022</h2>
+<p>(<a href="https://learn.microsoft.com/en-us/visualstudio/install/install-visual-studio?view=vs-2022">Xem hướng dẫn cài đặt từ Microsoft</a>)</p>
 <ul>
+<li><a href="https://visualstudio.microsoft.com/vs/community/">Tải chương trình cài đặt bản Community</a></li>
+<li>Mở file vừa tải xuống (có tên là <code>VisualStudioSetup.exe</code>) để tiến hành cài Visual Studio.</li>
 <li>
-<h4 id="ac-iem"><a href="#specs">Đặc điểm</a></h4>
+<p>Chọn <strong>Continue</strong> để đồng ý thỏa thuận giấy phép phần mềm với Microsoft
+<img src="figs/license-terms.png"></p>
 </li>
 <li>
-<h4 id="cai-at"><a href="#install">Cài đặt</a></h4>
-</li>
-<li>
-<h4 id="su-dung"><a href="#use">Sử dụng</a></h4>
+<p>Chọn công cụ phù hợp với loại ứng dụng (workloads) cài đặt. Chỉ nên chọn thành phần cần thiết, ví dụ <code>.NET desktop development</code> để tạo các ứng dụng console, Windows Forms,... với .NET và .NET Framework.</p>
 </li>
 </ul>
-<h3 id="ac-iem-cua-visual-studio">Đặc điểm của Visual Studio <a name="specs"/></h3>
-<h3 id="cai-at-visual-studio">Cài đặt Visual Studio <a name="install"/></h3>
-<h4 id="tai-nguon-cai-at">Tải nguồn cài đặt</h4>
-<h4 id="cai-at-visual-studio_1">Cài đặt Visual Studio</h4>
-<h3 id="su-dung-visual-studio">Sử dụng Visual Studio <a name="use"/></h3>
-<h4 id="buoc-1-viet-chuong-trinh-edit">Bước 1: Viết chương trình (Edit)</h4>
-<h4 id="buoc-2-bien-dich-build">Bước 2: Biên dịch (Build)</h4>
-<h4 id="buoc-3-chay-chuong-trinh-run">Bước 3: Chạy chương trình (Run)</h4></div>
+<p><img src="figs/vs-installer-install-workloads.png"></p>
+<ul>
+<li>Chọn các thành phần cài đặt</li>
+</ul>
+<p><img src="figs/vs-installer-individual-components.png"></p>
+<ul>
+<li>Chọn vị trí cài đặt</li>
+</ul>
+<p><img src="figs/vs-installer-install-location.PNG"></p>
+<ul>
+<li>Nhấn <strong>Install</strong> để tiến hành cài đặt Visual Studio.</li>
+</ul>
+<h2 id="tao-ung-dung-c-voi-visual-studio">Tạo ứng dụng C# với Visual Studio</h2>
+<ul>
+<li>Khởi động Visual Studio
+<img src="figs/vs-create-app-01.PNG"></li>
+</ul>
+<p>Chọn <strong>Create a new project</strong> để tạo ứng dụng mới.</p>
+<ul>
+<li>Thiết lập ứng dụng
+<img src="figs/vs-create-app-02.PNG"></li>
+</ul>
+<p>Chọn <strong>Create a new project</strong> để tạo ứng dụng mới.
+Chọn loại project là <strong>ConsoleApp</strong> để tạo ứng dụng dạng giao tiếp dòng lệnh trên nền tảng .NET. </p>
+<ul>
+<li>
+<p>Đặt tên ứng dụng
+<img src="figs/vs-create-app-03.PNG"></p>
+</li>
+<li>
+<p>Chọn phiên bản .NET
+<img src="figs/vs-create-app-04.PNG"></p>
+</li>
+</ul>
+<p>Chọn <em>Do not use top-level statements</em> để tạo ứng dụng "chuẩn" với đầy đủ khai báo namespace, các lớp, hàm Main(). Nhấn <strong>Create</strong> để tạo ứng dụng.</p>
+<ul>
+<li>
+<p>Viết code
+<img src="figs/vs-create-app-05.PNG"></p>
+</li>
+<li>
+<p>Chạy thử ứng dụng</p>
+</li>
+</ul>
+<p>Nhấn <strong>Ctrl+F5</strong>, hoặc chọn <strong>Debug &gt; Start without debugging</strong>, hoặc nhấn nút <strong>Start</strong> (hình mũi tên màu xanh).</p>
+<p><img src="figs/vs-create-app-06.PNG"></p></div>
             </div>
         </div>
 
