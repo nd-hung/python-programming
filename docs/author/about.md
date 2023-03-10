@@ -3,12 +3,14 @@
 ---
 
 ## Lecturer
+<div style="text-align: justify">
 
-[Dr. Hung Nguyen](https://nd-hung.github.io), Dept. of Software Engineering, Nha Trang University.
-
+<a href="https://nd-hung.github.io">Dr. Hung Nguyen</a>, Deparment of Software Engineering, Nha Faculty of Information Technology, Nha Trang University
+<br>
 Email: hungnd {at} ntu.edu.vn 
+</div>
 
 ## Acknowledgement
-<div>
-This document is built with <a href="mkdocs.org">MkDocs</a> and powered by <a href="github.com">GitHub</a>. 
+<div style="text-align: justify">
+This document was built with <a href="https://mkdocs.org">MkDocs</a> and powered by <a href="https://github.com">GitHub</a>. 
 </div>
