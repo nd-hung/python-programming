@@ -18,10 +18,17 @@
 - Cài đặt lớp
 - Đối tượng, thuộc tính và phương thức
 
-## [Thừa kế và đa hình](inheritance)
+## [Kỹ thuật thừa kế](inheritance)
 - Quan hệ tổng quát hóa, đặc biệt hóa
 - Cài đặt lớp thừa kế
-- Đa hình
+
+## [Đa hình](polymorphism)
+- Dẫn nhập
+- Phương thức
+
+## [Xử lý file](filehandling)
+- Xử lý file trong C#
+
 
 ## [Phát triển ứng dụng GUI với .NET và C#](gui-development)
 - Windows Forms App

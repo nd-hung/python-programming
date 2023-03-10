@@ -21,7 +21,8 @@ Tài liệu này giới thiệu phương pháp lập trình hướng đối tư�
 - #### [Nền tảng .NET và ngôn ngữ C#](topics/dotnet-and-csharp)
 - #### [Mô hình hóa hướng đối tượng với UML](topics/object-oriented-modeling)
 - #### [Lớp và đối tượng](topics/classes-and-objects)
-- #### [Thừa kế và đa hình](topics/inheritance)
+- #### [Thừa kế ](topics/inheritance)
+- #### [Đa hình](topics/polymorphism)
 - #### [Phát triển ứng dụng GUI với .NET và C#](topics/gui-development)
 
 ## Tài liệu tham khảo
