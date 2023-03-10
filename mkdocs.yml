@@ -1,6 +1,7 @@
 site_name: Lập trình hướng đối tượng
 site_description: Object Oriented Programming
-repo_url: https://github.com/nd-hung/oop/
+repo_url: https://github.com/nd-hung/oop
+edit_uri: tree/main/docs
 
 nav:
     - Các chủ đề:
