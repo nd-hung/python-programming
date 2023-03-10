@@ -7,3 +7,6 @@ Nếu:
 - ch là "–" thì thực hiện phép tính a - b và in kết quả lên màn hình.
 - ch là "*" thì thực hiện phép tính a * b và in kết quả lên màn hình.
 - ch là "/" thì thực hiện phép tính a / b và in kết quả lên màn hình. Lưu ý kiểm tra điều kiện của phép chia.
+
+## Ví dụ chạy chương trình
+<img src="run_example.PNG">
