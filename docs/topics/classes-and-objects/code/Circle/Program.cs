@@ -38,6 +38,7 @@ namespace CircleProject
             Y = y;
             if (r >= 0) banKinh = r;
             else Console.WriteLine("Ban kinh phai >= 0.");
+            // Nếu hình tròn được tạo ra thì tăng số lượng 
             SoLuong++;
         }
 
@@ -47,6 +48,7 @@ namespace CircleProject
             X = c.X;
             Y = c.Y;
             banKinh = c.banKinh;
+            // Nếu hình tròn được tạo ra bằng cách này (sao chép) thì tăng số lượng 
             SoLuong++;
         }
 
@@ -79,13 +81,17 @@ namespace CircleProject
 
             // Tạo hình tròn thứ 2 bằng cách sao chép (sử dụng hàm thiết lập sao chép)
             HinhTron c2 = new HinhTron(c1);
+            // Thay đổi bán kính của c2
+            c2.BanKinh = 21;
             // In thông tin hình tròn thứ 2
             Console.WriteLine("Hinh tron thu 2:");
             c2.Xuat();
             Console.WriteLine("Dien tich = {0:0.000}", c2.DienTich());
 
-            // Tạo đối tượng hình tròn 3
+            // Tạo đối tượng hình tròn 3 (gán giá trị bán kính không hợp lệ và kiểm tra kết quả)
+            Console.WriteLine("Hinh tron thu 3:");
             HinhTron c3 = new HinhTron(4, 5, -10);
+
             // In diện tích hình tròn, làm tròn đến 3 chữ số phần thập phân
             Console.WriteLine("Dien tich = {0:0.000}", c3.DienTich());
 
