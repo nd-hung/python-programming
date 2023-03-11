@@ -8,7 +8,7 @@ namespace CircleProject
     public static class MyConstants
     {
         // Khai báo hằng số PI
-        public static double PI = 3.1416;
+        public const double PI = 3.1416;
     }
 
     // Cài đặt lớp hình tròn
@@ -22,12 +22,13 @@ namespace CircleProject
             get { return banKinh; }
             set
             {
-                // Nếu giá trị >= 0 mới thực hiện lệnh gán giá trị
+                // Nếu giá trị >= 0 mới thực hiện lệnh gán giá trị cho trường banKinh
                 if (value >= 0) banKinh = value;
-                else Console.WriteLine("Invalid value.");
+                else Console.WriteLine("Ban kinh phai >= 0.");
             }
         }
 
+        // Khai báo biến tĩnh dùng để lưu tổng số đối tượng được tạo ra
         public static int SoLuong = 0;
 
         // Hàm thiết lập
@@ -36,7 +37,7 @@ namespace CircleProject
             X = x;
             Y = y;
             if (r >= 0) banKinh = r;
-            else Console.WriteLine("Invalid value.");
+            else Console.WriteLine("Ban kinh phai >= 0.");
             SoLuong++;
         }
 
@@ -89,6 +90,7 @@ namespace CircleProject
             Console.WriteLine("Dien tich = {0:0.000}", c3.DienTich());
 
             // In số lượng hình tròn được tạo ra
+            // Lưu ý truy cập thuộc tính tĩnh theo cú pháp <Tên lớp>.<Tên thuộc tính>
             Console.WriteLine("So hinh tron = {0}", HinhTron.SoLuong);
         }
     }
