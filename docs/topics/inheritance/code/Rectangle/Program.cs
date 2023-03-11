@@ -28,7 +28,6 @@ public class Square: Rectangle
     // Hàm thiết lập
     public Square(double w=0):base(w,w)
     {
-        
     }
 }
 
@@ -39,6 +38,7 @@ class Program
     {
         // Tạo đối tượng hình vuông
         Square s1 = new Square(5);
+        
         // Tính & in diện tích hình vuông
         double area = s1.Area();
         Console.WriteLine("Dien tich hinh vuong = {0}", area);
