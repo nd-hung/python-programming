@@ -4,6 +4,11 @@ Xử lý hình tròn
 
 namespace CircleProject
 {
+    // Cài đặt lớp tĩnh chứa các hằng số (PI)
+    public static class MyConstants
+    {
+        public static double PI = 3.1416;
+    }
     // Cài đặt lớp hình tròn
     class HinhTron
     {
@@ -49,7 +54,8 @@ namespace CircleProject
         // Hàm trả về diện tích hình tròn
         public double DienTich()
         {
-            return Math.PI * banKinh * banKinh;
+            return MyConstants.PI* banKinh * banKinh;
+            // return Math.PI * banKinh * banKinh;
         }
     }
 
@@ -73,6 +79,7 @@ namespace CircleProject
             HinhTron c3 = new HinhTron(4, 5, 10);
             // In diện tích hình tròn, làm tròn đến 3 chữ số phần thập phân
             Console.WriteLine("Dien tich = {0:#.000}", c3.DienTich());
+            
             // In số lượng hình tròn được tạo ra
             Console.WriteLine("So hinh tron = {0}", HinhTron.SoLuong);
         }
