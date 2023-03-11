@@ -10,20 +10,21 @@ namespace CircleProject
         // Khai báo hằng số PI
         public static double PI = 3.1416;
     }
-    
+
     // Cài đặt lớp hình tròn
     class HinhTron
     {
         public double X { get; set; }  // Hoành độ tâm
         public double Y { get; set; }  // Tung độ tâm
         private double banKinh; // Trường (field)
-        public double BanKinh
+        public double BanKinh   // Thuộc tính (property)
         {
             get { return banKinh; }
             set
             {
                 // Nếu giá trị >= 0 mới thực hiện lệnh gán giá trị
                 if (value >= 0) banKinh = value;
+                else Console.WriteLine("Invalid value.");
             }
         }
 
@@ -35,6 +36,7 @@ namespace CircleProject
             X = x;
             Y = y;
             if (r >= 0) banKinh = r;
+            else Console.WriteLine("Invalid value.");
             SoLuong++;
         }
 
@@ -56,7 +58,9 @@ namespace CircleProject
         // Hàm trả về diện tích hình tròn
         public double DienTich()
         {
-            return MyConstants.PI* banKinh * banKinh;
+            // Tính diện tích hình tròn sử dụng hằng số tự khai báo trong lớp tĩnh
+            return MyConstants.PI * banKinh * banKinh;
+            // Hoặc sử dụng hằng số PI của lớp tĩnh dựng sẵn Math.PI
             // return Math.PI * banKinh * banKinh;
         }
     }
@@ -66,22 +70,24 @@ namespace CircleProject
     {
         public static void Main()
         {
-            // Tạo 1 hình tròn
-            HinhTron c1 = new HinhTron(1, 2, 3);
+            // Tạo 1 hình tròn với các thuộc tính khởi tạo (sử dụng hàm thiết lập có tham số)
+            HinhTron c1 = new HinhTron(1, 2, 3);    // Tâm = (1,2) bán kính = 3
             // In thông tin hình tròn
             Console.WriteLine("Hinh tron thu 1:");
             c1.Xuat();
 
-            // Tạo hình tròn thứ 2 bằng cách sao chép 
+            // Tạo hình tròn thứ 2 bằng cách sao chép (sử dụng hàm thiết lập sao chép)
             HinhTron c2 = new HinhTron(c1);
             // In thông tin hình tròn thứ 2
             Console.WriteLine("Hinh tron thu 2:");
             c2.Xuat();
+            Console.WriteLine("Dien tich = {0:0.000}", c2.DienTich());
 
-            HinhTron c3 = new HinhTron(4, 5, 10);
+            // Tạo đối tượng hình tròn 3
+            HinhTron c3 = new HinhTron(4, 5, -10);
             // In diện tích hình tròn, làm tròn đến 3 chữ số phần thập phân
-            Console.WriteLine("Dien tich = {0:#.000}", c3.DienTich());
-            
+            Console.WriteLine("Dien tich = {0:0.000}", c3.DienTich());
+
             // In số lượng hình tròn được tạo ra
             Console.WriteLine("So hinh tron = {0}", HinhTron.SoLuong);
         }
