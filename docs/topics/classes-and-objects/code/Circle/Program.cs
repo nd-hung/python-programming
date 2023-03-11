@@ -4,11 +4,13 @@ Xử lý hình tròn
 
 namespace CircleProject
 {
-    // Cài đặt lớp tĩnh chứa các hằng số (PI)
+    // Cài đặt lớp tĩnh 
     public static class MyConstants
     {
+        // Khai báo hằng số PI
         public static double PI = 3.1416;
     }
+    
     // Cài đặt lớp hình tròn
     class HinhTron
     {
