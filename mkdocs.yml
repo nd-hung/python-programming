@@ -27,3 +27,9 @@ theme:
 extra_css:
   - css/extra.css
 
+markdown_extensions:
+    - toc:
+        permalink: 
+    - attr_list
+    - def_list
+    - tables
