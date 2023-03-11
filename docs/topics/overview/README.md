@@ -10,7 +10,7 @@
 
 > Phương pháp lập trình cấu trúc vận dụng cách tiếp cận từ trên xuống (top-down), theo đó, chương trình được phân rã thành các chức năng riêng biệt, các chức năng này nếu cần lại có thể được chia nhỏ thành các chức năng nhỏ hơn. Mỗi chức năng con này được cài đặt thành một chương trình con tương ứng. Mỗi chương trình con có thể được gọi nhiều lần với các dữ liệu vào (đối số) khác nhau.
 
-
+<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fnd-hung%2Foop%2Fblob%2Fmain%2Fdocs%2Ftopics%2Foverview%2Fcode%2Fstructured-programming%2FProgram.cs&style=default&type=code&showBorder=on&showLineNumbers=on&showFullPath=on"></script>
 
 
 
