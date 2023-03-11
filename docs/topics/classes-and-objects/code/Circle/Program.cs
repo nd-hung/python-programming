@@ -16,14 +16,26 @@ namespace CircleProject
                 // Nếu giá trị >= 0 mới thực hiện lệnh gán giá trị
                 if(value>=0) banKinh = value;
             }
-        }   
+        }
+
+        public static int SoLuong=0;    
 
         // Hàm thiết lập
         public HinhTron(double x=0, double y=0, double r=0)
         {
             X = x;
             Y = y;
-            banKinh = r;
+            if(r>=0) banKinh = r;
+            SoLuong++;
+        }
+
+        // Hàm thiết lập sao chép (copy constructor)
+        public HinhTron(HinhTron c)
+        {
+            X = c.X;
+            Y = c.Y;
+            banKinh = c.banKinh;
+            SoLuong++;
         }
 
         // Hàm in thông tin hình tròn
@@ -41,7 +53,18 @@ namespace CircleProject
             // Tạo 1 hình tròn
             HinhTron c1 = new HinhTron(1,2,3);
             // In thông tin hình tròn
+            Console.WriteLine("Hinh tron thu 1:");
             c1.Xuat();
+            
+            // Tạo hình tròn thứ 2 bằng cách sao chép 
+            HinhTron c2 = new HinhTron(c1);
+            // In thông tin hình tròn thứ 2
+            Console.WriteLine("Hinh tron thu 2:");
+            c2.Xuat();    
+            
+            HinhTron c3 = new HinhTron(4,5, 10);
+            // In số lượng hình tròn được tạo ra
+            Console.WriteLine("So hinh tron = {0}", HinhTron.SoLuong);
         }
     }
 }
