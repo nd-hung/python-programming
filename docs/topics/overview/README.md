@@ -15,7 +15,7 @@
 
 ## Phương pháp lập trình hướng đối tượng
 
-https://github.com/nd-hung/oop/blob/12020ceec35fdfa8ef79d8d365d76395a5647fea/docs/topics/overview/code/structured-programming/Program.cs#
+https://github.com/nd-hung/oop/blob/12020ceec35fdfa8ef79d8d365d76395a5647fea/docs/topics/overview/code/structured-programming/Program.cs#L1-L20
 
 ### Cách tiếp cận hướng đối tượng
 ### Lập trình hướng đối tượng
