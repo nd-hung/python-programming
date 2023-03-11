@@ -8,7 +8,7 @@ public class Nguoi
     public bool GioiTinh { get; set; }
 
     // Phương thức thiết lập
-    public Nguoi() { }    // PT thiết lập không tham số
+    public Nguoi() {HoTen="";}    // PT thiết lập không tham số
     public Nguoi(string ht = "", bool gt = false)   // PT thiết lập có tham số
     {
         HoTen = ht;
@@ -38,15 +38,15 @@ public class Nguoi
 }
 
 // Cài đặt lớp SinhVien kế thừa lớp Nguoi
-public class SinhVien: Nguoi
+public class SinhVien : Nguoi
 {
-    public string MSSV{get; set;}
-    public double DTB{get; set;}
+    public string MSSV { get; set; }
+    public double DTB { get; set; }
 
     // Phương thức thiết lập không tham số
-    public SinhVien():base(){}
+    public SinhVien() : base() {MSSV="";}
     // Phương thức thiết lập có tham số
-    public SinhVien(string ht, bool gt, string ms, double dtb):base(ht, gt)
+    public SinhVien(string ht, bool gt, string ms, double dtb) : base(ht, gt)
     {
         MSSV = ms;
         DTB = dtb;
