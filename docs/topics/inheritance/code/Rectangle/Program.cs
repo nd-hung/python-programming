@@ -9,7 +9,7 @@ public class Rectangle
 {
     public double Width { get; set; }
     public double Height { get; set; }
-    // Hàm thiết lập có tham số
+    // Hàm thiết lập 
     public Rectangle(double w = 0, double h = 0)
     {
         Width = w;

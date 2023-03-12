@@ -1,6 +1,6 @@
-// Cài đặt các lớp 
-// Lớp Người
+// Cài đặt các lớp Người và Sinh viên, trong đó lớp Sinh viên kế thừa lớp Người
 
+// Lớp Người
 public class Nguoi
 {
     // Các thuộc tính cho phép kế thừa
