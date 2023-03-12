@@ -160,18 +160,71 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="lop-va-oi-tuong">Lớp và đối tượng<a class="headerlink" href="#lop-va-oi-tuong" title="Permanent link"></a></h1>
+<h1 id="lop-va-oi-tuong">Lớp và đối tượng<a class="headerlink" href="#lop-va-oi-tuong" title="Permanent link">&para;</a></h1>
 <p>Classes and Objects</p>
 <hr />
-<h2 id="cai-at-lop">Cài đặt lớp<a class="headerlink" href="#cai-at-lop" title="Permanent link"></a></h2>
-<h2 id="thiet-lap-tinh-bao-ong">Thiết lập tính bao đóng<a class="headerlink" href="#thiet-lap-tinh-bao-ong" title="Permanent link"></a></h2>
-<h2 id="tao-su-dung-va-huy-oi-tuong">Tạo, sử dụng và hủy đối tượng<a class="headerlink" href="#tao-su-dung-va-huy-oi-tuong" title="Permanent link"></a></h2>
-<h2 id="ham-thiet-lap-ham-huy">Hàm thiết lập, hàm hủy<a class="headerlink" href="#ham-thiet-lap-ham-huy" title="Permanent link"></a></h2>
-<h2 id="thanh-phan-tinh">Thành phần tĩnh<a class="headerlink" href="#thanh-phan-tinh" title="Permanent link"></a></h2>
-<h2 id="thanh-phan-du-lieu-co-kieu-la-lop">Thành phần dữ liệu có kiểu là lớp<a class="headerlink" href="#thanh-phan-du-lieu-co-kieu-la-lop" title="Permanent link"></a></h2>
-<h2 id="con-tro-this">Con trỏ this<a class="headerlink" href="#con-tro-this" title="Permanent link"></a></h2>
-<h2 id="mang-cac-oi-tuong">Mảng các đối tượng<a class="headerlink" href="#mang-cac-oi-tuong" title="Permanent link"></a></h2>
-<h2 id="inh-nghia-toan-tu-tren-lop">Định nghĩa toán tử trên lớp<a class="headerlink" href="#inh-nghia-toan-tu-tren-lop" title="Permanent link"></a></h2></div>
+<p>Hai khái niệm cơ bản của lập trình hướng đối tượng là lớp và đối tượng. Phần này tóm lược kỹ thuật cài đặt và sử dụng lớp và đối tượng với C#.</p>
+<h2 id="cai-at-lop">Cài đặt lớp<a class="headerlink" href="#cai-at-lop" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Cú pháp</li>
+</ul>
+<pre><code class="language-csharp">[Thuộc tính truy cập] class &lt;Tên lớp&gt;
+{
+    // Khai báo các thuộc tính và phương thức
+}
+</code></pre>
+<h2 id="thiet-lap-tinh-bao-ong">Thiết lập tính bao đóng<a class="headerlink" href="#thiet-lap-tinh-bao-ong" title="Permanent link">&para;</a></h2>
+<p>Thuộc tính truy cập (access modifier) thể hiện mức độ che chắn (encapsulation) đến lớp và thành viên của lớp.</p>
+<p><strong>public</strong>: Mức độ này cho phép truy cập đến lớp hoặc thành viên của lớp (thuộc tính, phương thức) trong cùng một assembly (là tập hợp các khai báo và tài nguyên tạo thành một file thi hành được (.exe hoặc .dll)), hoặc từ một assembly khác tham chiếu đến nó.</p>
+<p>Khi một thành viên của lớp có thuộc tính truy cập là public thì mức độ truy cập đến thành viên đó được xác định bằng thuộc tính truy cập của lớp.</p>
+<p>Ví dụ:</p>
+<pre><code class="language-cs">// Khai báo lớp mô tả loài chó 
+public class Dog
+{
+    public string Name;
+}
+
+// Chương trình chính
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Tạo đối tượng của lớp 
+        Dog dog = new Dog();
+        // Thay đổi giá trị thuộc tính 
+        dog.Name = &quot;Cau Vang&quot;;
+        // Đọc thuộc tính
+        Console.WriteLine(&quot;The dog's name is &quot; + dog.Name);
+    }
+}
+</code></pre>
+<p>Trong đoạn code trên, lớp <code>Dog</code> được khai báo là <code>public</code>, thuộc tính <code>Name</code> cũng được khai báo <code>public</code>. Vì thế, trong lớp Program có thể sử dụng lớp Dog và có toàn quyền truy cập đến thuộc tính Name (đọc/ghi).</p>
+<ul>
+<li><strong>private</strong>: Chỉ có thể truy xuất đến lớp và thành viên của lớp từ bên trong lớp đó.</li>
+</ul>
+<p>Trong ví dụ trên, nếu đổi mức độ truy cập của lớp <code>Dog</code> thành <code>private</code> thì khi biên dịch, lệnh <code>Dog dog = new Dog()</code> sẽ báo lỗi là <code>'Dog' is inaccessible due to its protection level</code> và lệnh <code>dog.Name = "Cau Vang"</code> sẽ báo lỗi <code>Dog.Name' is inaccessible due to its protection level</code>.</p>
+<p>Nếu đổi mức độ truy cập của lớp <code>Dog</code> thành <code>public</code> và của thuộc tính <code>Name</code> thành <code>private</code> thì khi biên dịch, lệnh <code>Dog dog = new Dog()</code> hợp lệ, nhưng lệnh <code>dog.Name = "Cau Vang"</code> sẽ báo lỗi <code>'Dog.Name' is inaccessible due to its protection level</code>.</p>
+<ul>
+<li>
+<p><strong>protected</strong>: Có thể truy xuất đến lớp và thành viên của lớp từ bên trong lớp đó hoặc từ lớp thừa kế nó.</p>
+</li>
+<li>
+<p><strong>internal</strong>: Khi được đặt cấp độ này, chỉ có thể truy xuất đến lớp và thành viên của lớp từ bên trong một assembly.</p>
+</li>
+<li>
+<p><strong>protected internal</strong>: Có thể truy xuất đến lớp và thành viên của lớp từ bên trong assembly, hoặc từ một lớp thừa kế nó nằm trong một assembly khác.</p>
+</li>
+<li>
+<p><strong>private protected</strong>: Chỉ có thể truy xuất đến lớp và thành viên của lớp từ lớp thừa kế trong cùng một assembly.</p>
+</li>
+</ul>
+<h2 id="tao-su-dung-va-huy-oi-tuong">Tạo, sử dụng và hủy đối tượng<a class="headerlink" href="#tao-su-dung-va-huy-oi-tuong" title="Permanent link">&para;</a></h2>
+<h2 id="ham-thiet-lap-ham-huy">Hàm thiết lập, hàm hủy<a class="headerlink" href="#ham-thiet-lap-ham-huy" title="Permanent link">&para;</a></h2>
+<h2 id="thanh-phan-tinh">Thành phần tĩnh<a class="headerlink" href="#thanh-phan-tinh" title="Permanent link">&para;</a></h2>
+<h2 id="thanh-phan-du-lieu-co-kieu-la-lop">Thành phần dữ liệu có kiểu là lớp<a class="headerlink" href="#thanh-phan-du-lieu-co-kieu-la-lop" title="Permanent link">&para;</a></h2>
+<h2 id="con-tro-this">Con trỏ this<a class="headerlink" href="#con-tro-this" title="Permanent link">&para;</a></h2>
+<h2 id="mang-cac-oi-tuong">Mảng các đối tượng<a class="headerlink" href="#mang-cac-oi-tuong" title="Permanent link">&para;</a></h2>
+<h2 id="inh-nghia-toan-tu-tren-lop">Định nghĩa toán tử trên lớp<a class="headerlink" href="#inh-nghia-toan-tu-tren-lop" title="Permanent link">&para;</a></h2></div>
             </div>
         </div>
 
