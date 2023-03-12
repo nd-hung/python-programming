@@ -30,7 +30,7 @@ public class Dog
 }
 
 // Chương trình chính
-internal class Program
+class Program
 {
     static void Main(string[] args)
     {
