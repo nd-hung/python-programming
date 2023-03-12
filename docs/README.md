@@ -12,8 +12,7 @@ Tài liệu này cung cấp lý thuyết tóm tắt và các bài thực hành c
     <a href="topics/" class="btn btn-primary" role="button">Lý thuyết tóm tắt</a>
     &nbsp;&nbsp;&nbsp;
     <a href="labs/" class="btn btn-primary" role="button">Bài thực hành</a>
-</div>
-
+</div><br>
 
 ## Các chủ đề chính
 - #### [Tổng quan về lập trình hướng đối tượng](topics/overview)
