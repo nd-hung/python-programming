@@ -198,7 +198,7 @@ class Program
     }
 }
 </code></pre>
-<p>Trong đoạn code trên, lớp <code>Dog</code> được khai báo là <code>public</code>, thuộc tính <code>Name</code> cũng được khai báo <code>public</code>. Vì thế, trong lớp Program có thể sử dụng lớp Dog và có toàn quyền truy cập đến thuộc tính Name (đọc/ghi).</p>
+<p>Trong đoạn code trên, lớp <code>Dog</code> được khai báo là <code>public</code>, thuộc tính <code>Name</code> cũng được khai báo <code>public</code>. Vì thế, các dòng lệnh trong lớp <code>Program</code> có thể sử dụng lớp <code>Dog</code> và có toàn quyền truy cập (đọc/ghi) đến thuộc tính <code>Name</code>.</p>
 <ul>
 <li><strong>private</strong>: Chỉ có thể truy xuất đến lớp và thành viên của lớp từ bên trong lớp đó.</li>
 </ul>
@@ -209,7 +209,7 @@ class Program
 <p><strong>protected</strong>: Có thể truy xuất đến lớp và thành viên của lớp từ bên trong lớp đó hoặc từ lớp thừa kế nó.</p>
 </li>
 <li>
-<p><strong>internal</strong>: Khi được đặt cấp độ này, chỉ có thể truy xuất đến lớp và thành viên của lớp từ bên trong một assembly.</p>
+<p><strong>internal</strong>: Chỉ có thể truy xuất đến lớp và thành viên của lớp từ bên trong một assembly.</p>
 </li>
 <li>
 <p><strong>protected internal</strong>: Có thể truy xuất đến lớp và thành viên của lớp từ bên trong assembly, hoặc từ một lớp thừa kế nó nằm trong một assembly khác.</p>
