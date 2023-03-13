@@ -11,9 +11,12 @@ mà không cần đưa vào các lớp hay phương thức.
 
 
 /*----------- Chương trình chính ---------- */
-// Khởi tạo một mảng số nguyên
-int n = 6;
-int[] numbers = new int[] { 3, 8, 2, 1, 6, 5 };
+// Khai báo mảng số nguyên
+int n = 6;                  // n: số phần tử
+int[] numbers = new int[n]; // number: mảng chứa các phần tử
+
+// Gọi hàm tạo mảng
+TaoMang(numbers, n);
 
 // Gọi hàm in ra danh sách ban đầu
 Console.WriteLine("\nMang ban dau:");
@@ -28,7 +31,16 @@ InMang(numbers, n);
 /*----------- Kết thúc chương trình chính ---------- */
 
 
-/*----------- Cài đặt các hàm ---------- */
+/*-------------- Cài đặt các hàm ------------------ */
+// Hàm tạo mảng có n số nguyên ngẫu nhiên 
+void TaoMang(int[] array, int n)
+{
+    // Khởi tạo bộ tạo số ngẫu nhiên
+    Random rnd = new Random();
+    for (int i = 0; i < n; i++)
+        array[i] = rnd.Next(100);
+}
+
 // Hàm sắp xếp mảng tăng dần
 void SapXepTD(int[] a, int n)
 {
