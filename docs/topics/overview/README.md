@@ -12,6 +12,8 @@
 
 Ví dụ sau đây minh họa phương pháp lập trình cấu trúc. Cho một mảng số nguyên, sắp xếp mảng tăng dần và in mảng đã sắp xếp. Theo đó, chương trình được phân rã thành các chức năng: tạo mảng, sắp xếp mảng, in mảng.
 
+<img src="code/structured-programming/img/top-down-approach.PNG" class="center">
+
 <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fnd-hung%2Foop%2Fblob%2Fmain%2Fdocs%2Ftopics%2Foverview%2Fcode%2Fstructured-programming%2FProgram.cs&style=default&type=code&showBorder=on&showLineNumbers=on&showFullPath=on"></script>
 
 ## Phương pháp lập trình hướng đối tượng
