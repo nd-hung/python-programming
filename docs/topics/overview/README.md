@@ -2,7 +2,7 @@
 
 ---
 
-> Yêu cầu về phần mềm ngày càng trở nên đa dạng và phức tạp, đòi hỏi phương pháp lập trình phù hợp để tạo ra các ứng dụng hiệu quả. Cho đến nay có hai phương pháp lập trình phổ biến nhất là **lập trình cấu trúc** và **lập trình hướng đối tượng**.
+> Yêu cầu về phần mềm ngày càng trở nên đa dạng và phức tạp, đòi hỏi phương pháp lập trình hiệu quả để đáp ứng. Cho đến nay có hai phương pháp lập trình phổ biến nhất là **lập trình cấu trúc** và **lập trình hướng đối tượng**.
 
 ## Lập trình cấu trúc (structured programming)
 
