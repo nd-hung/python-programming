@@ -23,6 +23,8 @@ theme:
     hljs_languages:
         - yaml
         - django
+    features:
+        - content.action.view
 
 extra_css:
   - css/extra.css
