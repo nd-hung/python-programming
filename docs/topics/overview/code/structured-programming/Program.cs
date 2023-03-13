@@ -13,7 +13,7 @@ mà không cần đưa vào các lớp hay phương thức.
 /*----------- Chương trình chính ---------- */
 // Khai báo mảng số nguyên
 int n = 6;                  // n: số phần tử
-int[] numbers = new int[n]; // number: mảng chứa các phần tử
+int[] numbers = new int[n]; // numbers: mảng chứa các phần tử
 
 // Gọi hàm tạo mảng
 TaoMang(numbers, n);
