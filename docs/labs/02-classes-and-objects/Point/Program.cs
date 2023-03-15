@@ -14,9 +14,9 @@ public class Point
     // Phương thức nhập
     public void Nhap()
     {
-        Console.Write("Nhap hoanh do X");
+        Console.Write("Nhap hoanh do X: ");
         X = double.Parse(Console.ReadLine());
-        Console.Write("Nhap tung do do Y");
+        Console.Write("Nhap tung do do Y: ");
         Y = double.Parse(Console.ReadLine());
     }
 
@@ -27,7 +27,7 @@ public class Point
     }
 
     // Phương thức di chuyển
-    public void Move(double dx=0, double dy=0)
+    public void Move(double dx = 0, double dy = 0)
     {
         X += dx;
         Y += dy;
@@ -36,7 +36,7 @@ public class Point
     // Phương thức tính khoảng cách đến gốc tọa độ
     public double Distance()
     {
-        return Math.Sqrt(X*X+Y*Y);
+        return Math.Sqrt(X * X + Y * Y);
     }
 
 }
@@ -46,21 +46,22 @@ public class PointList
 {
     // Khai báo các thuộc tính
     public int SoLuong;
-    public Point[] DS; 
+    public Point[] DS;
 
     // Phương thức nhập danh sách điểm
     public void Nhap()
     {
-        do{
+        do
+        {
             Console.Write("Nhap so diem: ");
             SoLuong = int.Parse(Console.ReadLine());
-        }while(SoLuong <= 0);
+        } while (SoLuong <= 0);
 
         DS = new Point[SoLuong];
-        for(int i=0; i< SoLuong; i++)
+        for (int i = 0; i < SoLuong; i++)
         {
             DS[i] = new Point();
-            Console.Write("Nhap toa do diem thu {0}:", i+1);
+            Console.WriteLine("Nhap toa do diem thu {0}:", i + 1);
             DS[i].Nhap();
         }
     }
@@ -68,9 +69,9 @@ public class PointList
     // Phương thức xuat danh sách điểm
     public void Xuat()
     {
-        for(int i=0; i< SoLuong; i++)
+        for (int i = 0; i < SoLuong; i++)
         {
-            Console.Write("Toa toa do diem thu {0}:", i+1);
+            Console.Write("Toa toa do diem thu {0}:", i + 1);
             DS[i].Xuat();
         }
     }
@@ -80,16 +81,38 @@ public class PointList
     {
         double min = DS[0].Distance();
         int minIndex = 0;
-        for(int i=1; i<SoLuong; i++)
-        if(DS[i].Distance() < min)
-        {
-            min = DS[i].Distance();
-            minIndex = i;
-        }
+        for (int i = 1; i < SoLuong; i++)
+            if (DS[i].Distance() < min)
+            {
+                min = DS[i].Distance();
+                minIndex = i;
+            }
         Console.WriteLine("Diem gan nhat la: ");
         DS[minIndex].Xuat();
     }
 
+    // Tìm cặp điểm gần nhau nhất
+    public void CapDiemGanNhat()
+    {
+        // Tính khoảng cách từng cặp điểm -> tìm cặp gần nhất
+        int index0 = 0, index1 = 1; // Cặp điểm đầu tiên
+        // Tính khoảng cách
+        double min = Math.Sqrt(Math.Pow(DS[index0].X - DS[index1].X, 2) + Math.Pow(DS[index0].Y - DS[index1].Y, 2));
+        for (int i = 0; i < SoLuong - 1; i++)
+            for (int j = i + 1; j < SoLuong; j++)
+            {
+                double d = Math.Sqrt(Math.Pow(DS[i].X - DS[j].X, 2) + Math.Pow(DS[i].Y - DS[j].Y, 2));
+                if (d < min)
+                {
+                    min = d;
+                    index0 = i; index1 = j;
+                }
+            }
+        // In ra cặp điểm gần nhất
+        Console.WriteLine("Cap diem gan nhau nhat la:");
+        DS[index0].Xuat();
+        DS[index1].Xuat();
+    }
 }
 
 // Chương trình chính
@@ -101,5 +124,6 @@ class Program
         pl.Nhap();
         pl.Xuat();
         pl.DiemGanNhat();
+        pl.CapDiemGanNhat();
     }
 }
