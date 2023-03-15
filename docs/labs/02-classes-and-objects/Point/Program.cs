@@ -1,5 +1,5 @@
 ﻿// Cài đặt lớp Point
-class Point
+public class Point
 {
     // Khai báo thuộc tính (X, Y) là tọa độ điểm trong mặt phẳng
     public double X { get; set; }
@@ -26,6 +26,13 @@ class Point
         Console.WriteLine("({0},{1})", X, Y);
     }
 
+    // Phương thức di chuyển
+    public void Move(double dx=0, double dy=0)
+    {
+        X += dx;
+        Y += dy;
+    }
+
 }
 
 // Chương trình chính
@@ -33,7 +40,11 @@ class Program
 {
     public static void Main()
     {
-        Point p1 = new Point(1, 2);
+        Point p1 = new Point(5, 8);
+        p1.Xuat();
+        // Thay đổi vị trí của điểm p1
+        p1.Move(1,2);
+        // In ra vị trí sau khi di chuyển
         p1.Xuat();
     }
 }

@@ -15,6 +15,7 @@
 - Thiết lập
 - Nhập
 - Xuất
+- Di chuyển
 
 ### Lớp PointList mô tả danh sách các điểm
 #### Các thuộc tính
