@@ -33,6 +33,63 @@ public class Point
         Y += dy;
     }
 
+    // Phương thức tính khoảng cách đến gốc tọa độ
+    public double Distance()
+    {
+        return Math.Sqrt(X*X+Y*Y);
+    }
+
+}
+
+// Lớp PointList quản lý danh sách điểm
+public class PointList
+{
+    // Khai báo các thuộc tính
+    public int SoLuong;
+    public Point[] DS; 
+
+    // Phương thức nhập danh sách điểm
+    public void Nhap()
+    {
+        do{
+            Console.Write("Nhap so diem: ");
+            SoLuong = int.Parse(Console.ReadLine());
+        }while(SoLuong <= 0);
+
+        DS = new Point[SoLuong];
+        for(int i=0; i< SoLuong; i++)
+        {
+            DS[i] = new Point();
+            Console.Write("Nhap toa do diem thu {0}:", i+1);
+            DS[i].Nhap();
+        }
+    }
+
+    // Phương thức xuat danh sách điểm
+    public void Xuat()
+    {
+        for(int i=0; i< SoLuong; i++)
+        {
+            Console.Write("Toa toa do diem thu {0}:", i+1);
+            DS[i].Xuat();
+        }
+    }
+
+    // Tìm điểm gần gốc tọa độ nhất
+    public void DiemGanNhat()
+    {
+        double min = DS[0].Distance();
+        int minIndex = 0;
+        for(int i=1; i<SoLuong; i++)
+        if(DS[i].Distance() < min)
+        {
+            min = DS[i].Distance();
+            minIndex = i;
+        }
+        Console.WriteLine("Diem gan nhat la: ");
+        DS[minIndex].Xuat();
+    }
+
 }
 
 // Chương trình chính
@@ -40,11 +97,9 @@ class Program
 {
     public static void Main()
     {
-        Point p1 = new Point(5, 8);
-        p1.Xuat();
-        // Thay đổi vị trí của điểm p1
-        p1.Move(1,2);
-        // In ra vị trí sau khi di chuyển
-        p1.Xuat();
+        PointList pl = new PointList();
+        pl.Nhap();
+        pl.Xuat();
+        pl.DiemGanNhat();
     }
 }
