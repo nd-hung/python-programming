@@ -40,5 +40,6 @@ obj/
 .vscode/
 lib/
 *.log
+vs/
 # local folder
 local/
