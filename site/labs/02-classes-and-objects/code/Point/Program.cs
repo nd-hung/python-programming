@@ -19,7 +19,7 @@
         Random rnd = new Random();
         for (int i = 0; i < nPoints; i++)
         {
-            // Tạo điểm có tọa độ ngẫu nhiên trong khoảng Max và thêm vào danh sách
+            // Tạo điểm có tọa độ ngẫu nhiên trong khoảng 100
             pointList.Add(new Point(rnd.Next(Max), rnd.Next(Max)));
 
             // Nếu muốn nhập tọa độ các điểm từ bàn phím thì dùng các lệnh sau
@@ -48,14 +48,11 @@
         double minDistance = pointList[0].Distance(GocToaDo);
         Point nearestPoint = pointList[0];
         for (int i = 1; i < pointList.Count; i++)
-        {
-            double distance = pointList[i].Distance(GocToaDo);
-            if (distance < minDistance)
+            if (pointList[i].Distance(GocToaDo) < minDistance)
             {
-                minDistance = distance;
+                minDistance = pointList[i].Distance(GocToaDo);
                 nearestPoint = pointList[i];
             }
-        }
 
         Console.WriteLine("Diem gan goc toa do nhat: ");
         nearestPoint.Xuat();

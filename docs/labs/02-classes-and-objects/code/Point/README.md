@@ -7,7 +7,7 @@
 <img src="img/point2d.png">
 
 ## Yêu cầu
-### Lớp Point mô tả 1 điểm trong mặt phẳng
+### Cài đặt lớp Point mô tả 1 điểm trong mặt phẳng
 #### Các thuộc tính
 - Tọa độ X, Y
 #### Các phương thức

@@ -121,11 +121,11 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#phuong-phap-lap-trinh-huong-oi-tuong" class="nav-link">Phương pháp lập trình hướng đối tượng</a>
+            <li class="nav-item" data-level="2"><a href="#phuong-phap-lap-trinh-huong-oi-tuong-object-oriented-programming" class="nav-link">Phương pháp lập trình hướng đối tượng (Object Oriented Programming)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#lap-trinh-huong-oi-tuong-vs-lap-trinh-cau-truc" class="nav-link">Lập trình hướng đối tượng vs Lập trình cấu trúc</a>
+            <li class="nav-item" data-level="2"><a href="#so-sanh-lap-trinh-huong-oi-tuong-va-lap-trinh-cau-truc" class="nav-link">So sánh Lập trình hướng đối tượng và Lập trình cấu trúc</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -139,12 +139,12 @@
 <h1 id="tong-quan">Tổng quan<a class="headerlink" href="#tong-quan" title="Permanent link">&para;</a></h1>
 <hr />
 <blockquote>
-<p>Yêu cầu về phần mềm ngày càng trở nên đa dạng và phức tạp, đòi hỏi phương pháp lập trình phù hợp để tạo ra các ứng dụng hiệu quả. Cho đến nay có hai phương pháp lập trình phổ biến nhất là <strong>lập trình cấu trúc</strong> và <strong>lập trình hướng đối tượng</strong>.</p>
+<p>Yêu cầu về phần mềm ngày càng trở nên đa dạng và phức tạp, đòi hỏi phương pháp lập trình hiệu quả để đáp ứng. Cho đến nay có hai phương pháp lập trình phổ biến nhất là <strong>lập trình cấu trúc</strong> và <strong>lập trình hướng đối tượng</strong>.</p>
 </blockquote>
 <h2 id="lap-trinh-cau-truc-structured-programming">Lập trình cấu trúc (structured programming)<a class="headerlink" href="#lap-trinh-cau-truc-structured-programming" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p>Phương pháp lập trình cấu trúc vận dụng cách tiếp cận từ trên xuống (top-down), theo đó, chương trình được phân rã thành các chức năng riêng biệt, các chức năng này nếu cần lại có thể được chia nhỏ thành các chức năng nhỏ hơn. Mỗi chức năng con này được cài đặt thành một chương trình con tương ứng. Mỗi chương trình con có thể được gọi nhiều lần với các dữ liệu vào (đối số) khác nhau.</p>
-<p>Ví dụ sau đây minh họa phương pháp lập trình cấu trúc. Cho một mảng số nguyên, sắp xếp mảng tăng dần và in mảng đã sắp xếp. Theo đó, chương trình được phân rã thành các chức năng: tạo mảng, sắp xếp mảng, in mảng.</p>
+<p>Phương pháp lập trình cấu trúc vận dụng cách tiếp cận từ trên xuống (top-down development), từ tổng quát đến chi tiết. Theo đó, chương trình được phân rã thành các chức năng riêng biệt, các chức năng này nếu cần lại có thể được chia nhỏ thành các chức năng nhỏ hơn. Mỗi chức năng con này được cài đặt thành một chương trình con tương ứng. Mỗi chương trình con có thể được gọi nhiều lần với các dữ liệu vào khác nhau.</p>
+<p>Ví dụ sau đây minh họa phương pháp lập trình cấu trúc. Cho một mảng số nguyên, sắp xếp mảng tăng dần, in mảng đã sắp xếp. Theo yêu cầu bài toán, chương trình được phân rã thành các chức năng: tạo mảng, sắp xếp mảng, in mảng.</p>
 </blockquote>
 <p><img src="code/structured-programming/img/top-down-approach.png" class="center"></p>
 <details>
@@ -154,10 +154,18 @@
 </p>
 </details>
 <p><br></p>
-<h2 id="phuong-phap-lap-trinh-huong-oi-tuong">Phương pháp lập trình hướng đối tượng<a class="headerlink" href="#phuong-phap-lap-trinh-huong-oi-tuong" title="Permanent link">&para;</a></h2>
-<h3 id="cach-tiep-can-huong-oi-tuong">Cách tiếp cận hướng đối tượng<a class="headerlink" href="#cach-tiep-can-huong-oi-tuong" title="Permanent link">&para;</a></h3>
-<h3 id="lap-trinh-huong-oi-tuong">Lập trình hướng đối tượng<a class="headerlink" href="#lap-trinh-huong-oi-tuong" title="Permanent link">&para;</a></h3>
-<h2 id="lap-trinh-huong-oi-tuong-vs-lap-trinh-cau-truc">Lập trình hướng đối tượng vs Lập trình cấu trúc<a class="headerlink" href="#lap-trinh-huong-oi-tuong-vs-lap-trinh-cau-truc" title="Permanent link">&para;</a></h2></div>
+<h2 id="phuong-phap-lap-trinh-huong-oi-tuong-object-oriented-programming">Phương pháp lập trình hướng đối tượng (Object Oriented Programming)<a class="headerlink" href="#phuong-phap-lap-trinh-huong-oi-tuong-object-oriented-programming" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Là phương pháp lập trình dựa trên cách tiếp cận hướng đối tượng.</li>
+<li>
+<p>Chương trình là tập hợp các đối tượng. Đối tượng thực hiện các yêu cầu xử lý thông qua cơ chế truyền thông điệp (message passing).</p>
+<ul>
+<li>Thuộc tính: Là các thông tin mô tả đối tượng. Về mặt lập trình, việc khai báo các thuộc tính tương tự như khai báo biến, vì thế chúng còn được gọi là biến thành viên (member variables).</li>
+<li>Phương thức: Là các hành vi mà đối tượng có thể thực hiện. Việc cài đặt các phương thức tương tự như các hàm, vì thế chúng còn được gọi là hàm thành viên (member functions).</li>
+</ul>
+</li>
+</ul>
+<h2 id="so-sanh-lap-trinh-huong-oi-tuong-va-lap-trinh-cau-truc">So sánh Lập trình hướng đối tượng và Lập trình cấu trúc<a class="headerlink" href="#so-sanh-lap-trinh-huong-oi-tuong-va-lap-trinh-cau-truc" title="Permanent link">&para;</a></h2></div>
             </div>
         </div>
 
