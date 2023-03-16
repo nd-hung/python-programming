@@ -1,5 +1,13 @@
 # Calculator
 
+---
+
+## Mục đích:
+
+Làm quen với nền tảng .NET và ngôn ngữ C#.
+
+## Yêu cầu
+
 Viết chương trình nhập từ bàn phím hai số nguyên a, b và một ký tự ch.
 
 Nếu:
@@ -10,3 +18,8 @@ Nếu:
 
 ## Ví dụ chạy chương trình
 <img src="run_example.PNG">
+
+## Mã nguồn gợi ý
+
+[Xem trên GitHub](https://github.com/nd-hung/oop/tree/main/docs/labs/01-dotnet-and-csharp/Calculator)
+
