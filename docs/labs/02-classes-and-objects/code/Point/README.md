@@ -16,14 +16,10 @@
 - Nhập
 - Xuất
 - Di chuyển
-
-### Lớp PointList mô tả danh sách các điểm
-#### Các thuộc tính
-- int SoLuong (số điểm)
-- Point[] PList (danh sách điểm)
+- Tính khoảng cách đến một điểm khác
 
 ### Chương trình chính
 
-- Nhập danh sách n điểm trong mặt phẳng.
+- Tạo danh sách n điểm trong mặt phẳng.
 - Tìm điểm gần/xa gốc tọa độ nhất.
 - Tìm cặp điểm gần nhau/xa nhau nhất.
