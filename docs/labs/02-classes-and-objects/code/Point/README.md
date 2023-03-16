@@ -4,10 +4,12 @@
 
 - Giải quyết bài toán đơn giản theo phương pháp hướng đối tượng.
 
-<img src="img/point2d.png">
+<img src="img/point2d.png" class="center">
 
 ## Yêu cầu
 ### Cài đặt lớp Point mô tả 1 điểm trong mặt phẳng
+
+![Sơ đồ lớp](img/Point_UML.png)
 #### Các thuộc tính
 - Tọa độ X, Y
 #### Các phương thức
