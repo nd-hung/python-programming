@@ -1,6 +1,5 @@
 # Lập trình C# với Visual Studio
 
-
 ---
 
 ## Sơ lược về Visual Studio
@@ -20,7 +19,7 @@ Có 3 phiên bản Visual Studio: Community, Professional, Enterprise. Trong đ�
 
 - Chọn công cụ phù hợp với loại ứng dụng (workloads) cài đặt. Chỉ nên chọn thành phần cần thiết, ví dụ `.NET desktop development` để tạo các ứng dụng console, Windows Forms,... với .NET và .NET Framework.
 
-<img src="figs/vs-installer-install-workloads.png">
+<img src="figs/vs-installer-install-workloads.PNG">
 
 - Chọn các thành phần cài đặt
 

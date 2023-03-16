@@ -27,10 +27,12 @@
 </div>
 
 ## Cài C# extension
+
 - Khởi động VS Code.
 - Chọn biểu tượng "Extensions" (Ctrl+Shift+X), nhập C# vào ô tìm kiếm, chọn gói "C# for Visual Studio Code (powered by OmniSharp)" của Microsoft và nhấn "Install".
 
 ## Liên kết VS Code với tài khoản Github
+
 - Chọn biểu tượng "Extensions" (Ctrl+Shift+X), nhập Github vào ô tìm kiếm, chọn gói "GitHub Pull Requests and Issues" của Github và nhấn "Install".
 - 
 
