@@ -1,5 +1,7 @@
 # Xây dựng lớp Point biểu diễn các điểm trong mặt phẳng
 
+---
+
 ## Mục tiêu
 
 - Giải quyết bài toán đơn giản theo phương pháp hướng đối tượng.
