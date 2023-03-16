@@ -1,6 +1,6 @@
 # Xây dựng lớp Point biểu diễn các điểm trong mặt phẳng
 
-## Mục đích
+## Mục tiêu
 
 - Giải quyết bài toán đơn giản theo phương pháp hướng đối tượng.
 
@@ -22,3 +22,7 @@
 - Tạo danh sách n điểm trong mặt phẳng.
 - Tìm điểm gần/xa gốc tọa độ nhất.
 - Tìm cặp điểm gần nhau/xa nhau nhất.
+
+## Mã nguồn gợi ý
+
+[Xem trên Github](https://github.com/nd-hung/oop/tree/main/docs/labs/02-classes-and-objects/code/Point)
