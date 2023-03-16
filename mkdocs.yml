@@ -5,6 +5,9 @@ site_author: Hung Nguyen
 repo_url: https://github.com/nd-hung/oop
 edit_uri: tree/main/docs
 
+copyright: Copyright &copy; 2023 <a href="https://nd-hung.github.io/">Hung Nguyen</a>
+
+
 nav:
     - Các chủ đề:
       - Tổng quan về lập trình hướng đối tượng: topics\overview\README.md
