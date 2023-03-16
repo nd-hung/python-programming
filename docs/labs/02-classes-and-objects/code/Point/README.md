@@ -7,7 +7,7 @@
 <img src="img/point2d.png" class="center">
 
 ## Yêu cầu
-### Cài đặt lớp Point mô tả 1 điểm trong mặt phẳng
+### Cài đặt lớp Point mô tả các điểm trong mặt phẳng
 
 ![Sơ đồ lớp](img/Point_UML.png)
 #### Các thuộc tính
