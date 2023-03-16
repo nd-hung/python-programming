@@ -2,7 +2,7 @@
 
 ---
 
-## Mục đích:
+## Mục đích
 
 Làm quen với nền tảng .NET và ngôn ngữ C#.
 
