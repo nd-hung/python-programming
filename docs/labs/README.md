@@ -5,9 +5,9 @@ Labs
 ---
 
 ## [Cài đặt Visual Studio](00-installation)
-## [.NET và C#](01-dotnet-and-csharp)
-## [Lớp và đối tượng](02-classes-and-objects)
-## [Thừa kế](03-inheritance)
-## [Đa hình](04-polymorphism)
-## [Xử lý file](05-filehandling)
-## [Phát triển ứng dụng GUI](06-gui-development)
+## [1 - .NET và C#](01-dotnet-and-csharp)
+## [2 - Lớp và đối tượng](02-classes-and-objects)
+## [3 - Thừa kế](03-inheritance)
+## [4 - Đa hình](04-polymorphism)
+## [5 - Xử lý file](05-filehandling)
+## [6 - Phát triển ứng dụng GUI](06-gui-development)

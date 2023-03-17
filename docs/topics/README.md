@@ -34,4 +34,3 @@
 - Windows Forms App
 - Tạo ứng dụng Desktop với .NET và C#
 
-## [Bài thực hành](../../labs/)

@@ -1,5 +1,9 @@
 # Tính tiền điện 
 
+---
+
+## Yêu cầu
+
 Viết chương trình tính tiền điện dựa vào số kWh tiêu thụ và bảng giá. 
 ## Input: 
 - Số kWh tiêu thụ: Là số nguyên dương nhập từ bàn phím
