@@ -27,4 +27,6 @@
 - Tìm điểm gần/xa gốc tọa độ nhất.
 - Tìm cặp điểm gần nhau/xa nhau nhất.
 
-## [Mã nguồn gợi ý](https://github.com/nd-hung/oop/tree/main/docs/labs/02-classes-and-objects/code/Point)
+## Mã nguồn
+
+[Xem trên GitHub](https://github.com/nd-hung/oop/tree/main/docs/labs/02-classes-and-objects/code/Point)
