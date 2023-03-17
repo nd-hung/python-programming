@@ -7,6 +7,7 @@ Classes and Objects
 Hai khái niệm cơ bản của lập trình hướng đối tượng là lớp và đối tượng. Phần này tóm lược kỹ thuật cài đặt và sử dụng lớp và đối tượng với C#.
 
 ## Cài đặt lớp
+
 - Cú pháp
 
 ```csharp
@@ -18,7 +19,7 @@ Hai khái niệm cơ bản của lập trình hướng đối tượng là lớp
 
 ## Thiết lập tính bao đóng
 
-Thuộc tính truy cập (access modifier) thể hiện mức độ che chắn (encapsulation) đến lớp và thành viên của lớp.
+Thuộc tính truy cập (access modifier) thể hiện mức độ che chắn đến lớp và các thành viên của lớp.
 
 **public**: Mức độ này cho phép truy cập đến lớp hoặc thành viên của lớp (thuộc tính, phương thức) trong cùng một assembly (là tập hợp các khai báo và tài nguyên tạo thành một file thi hành được (.exe hoặc .dll)), hoặc từ một assembly khác tham chiếu đến nó.
 
@@ -65,9 +66,15 @@ Nếu đổi mức độ truy cập của lớp `Dog` thành `public` và của 
 - **private protected**: Chỉ có thể truy xuất đến lớp và thành viên của lớp từ lớp thừa kế trong cùng một assembly.
 
 ## Tạo, sử dụng và hủy đối tượng
+
 ## Hàm thiết lập, hàm hủy
+
 ## Thành phần tĩnh
+
 ## Thành phần dữ liệu có kiểu là lớp
+
 ## Con trỏ this
+
 ## Mảng các đối tượng
+
 ## Định nghĩa toán tử trên lớp

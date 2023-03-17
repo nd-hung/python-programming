@@ -12,12 +12,7 @@
 
 <img src="code/structured-programming/img/top-down-approach.png" class="center">
 
-<details>
-<summary>Mã nguồn</summary>
-<p>
-<script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Fnd-hung%2Foop%2Fblob%2Fmain%2Fdocs%2Ftopics%2Foverview%2Fcode%2Fstructured-programming%2FProgram.cs&style=default&type=code&showBorder=on&showLineNumbers=on&showFullPath=on"></script>
-</p>
-</details><br>
+[Mã nguồn](https://github.com/nd-hung/oop/blob/main/docs/topics/overview/code/structured-programming/Program.cs)
 
 ## Phương pháp lập trình hướng đối tượng (Object Oriented Programming)
 
