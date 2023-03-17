@@ -4,5 +4,4 @@ Polymorphism
 
 ---
 
-## 1 - [Ngăn xếp](code/Stack 2.0)
-
+## 1 - [Ngăn xếp](code/Stack2/)
