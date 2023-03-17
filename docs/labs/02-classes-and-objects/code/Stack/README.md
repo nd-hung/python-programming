@@ -1,4 +1,4 @@
-# Cài đặt cấu trúc ngăn xếp (Stack) - version 1.0
+# Cài đặt cấu trúc ngăn xếp (Stack)
 ---
 
 ## Giới thiệu
