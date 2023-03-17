@@ -56,7 +56,7 @@ public class PhanSo
 // Lớp chứa thư viện các hàm toán học tự định nghĩa (lớp tĩnh)
 public static class MyMath
 {
-    // Phương thức tìm UCLN của 2 số nguyên dương (phương thức tĩnh)
+    // Phương thức tìm UCLN của 2 số nguyên (phương thức tĩnh)
     public static int UCLN(int a, int b)
     {
         a = Math.Abs(a);
