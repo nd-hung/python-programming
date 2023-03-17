@@ -2,7 +2,7 @@
 
 ## Đặt vấn đề
 
-- Ở [Lab 2 - Lớp và Đối tượng](https://github.com/nd-hung/oop/tree/main/labs/02-classes-and-objects/code/Stack) đã xây dựng lớp ngăn xếp (Stack) version 1.0, trong đó các đối tượng của lớp Stack được sử dụng cho 2 bài toán khác nhau: phân tích thừa số nguyên tố và đổi số thập phân (decimal) sang hệ 16 (Hexa).
+- Ở [Lab 2 - Lớp và Đối tượng](https://github.com/nd-hung/oop/tree/main/docs/labs/02-classes-and-objects/code/Stack/) đã xây dựng lớp ngăn xếp (Stack) version 1.0, trong đó các đối tượng của lớp Stack được sử dụng cho 2 bài toán khác nhau: phân tích thừa số nguyên tố và đổi số thập phân (decimal) sang hệ 16 (Hexa).
 
 - Do đặc điểm của mỗi bài toán, phương thức in ra các giá trị trong ngăn xếp cần phải được cài đặt phù hợp. Ví dụ, với số tự nhiên n = 12, bài toán phân tích thừa số cần in ra tích `3*2*2`, còn với bài toán đổi sang hệ 16 cần in ra ký số `C`. Để giải quyết yêu cầu này, trong lớp Stack version 1.0 phải cài đặt hai phương thức có tên riêng biệt: Print() và PrintHex(). Điều này dẫn đến sự thiếu thống nhất trong việc gọi phương thức xuất dữ liệu, cho dù hành vi của chúng là giống nhau.
 
@@ -52,4 +52,4 @@
 
 ## Mã nguồn
 
-[Xem trên GitHub]()
+[Xem trên GitHub](https://github.com/nd-hung/oop/blob/main/docs/labs/04-polymorphism/code/Stack2)
