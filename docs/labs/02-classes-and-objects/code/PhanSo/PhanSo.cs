@@ -2,42 +2,54 @@
 
 public class PhanSo
 {
-    // Khai báo các thuộc tính
-    public int TuSo { get; set; }
-    public int MauSo { get; set; }
+    // Khai báo các trường (fields)
+    private int tuSo;
+    private int mauSo;
+
+    // Các thuộc tính (properties)
+    public int TuSo
+    {
+        get { return tuSo; }
+        set { tuSo = value; }
+    }
+    public int MauSo
+    {
+        get { return tuSo; }
+        set { if (value != 0) mauSo = value; }
+    }
 
     // Phương thức thiết lập
     public PhanSo(int ts = 0, int ms = 1)
     {
-        TuSo = ts;
-        if (ms != 0) MauSo = ms;
+        tuSo = ts;
+        if (ms != 0) mauSo = ms;
     }
 
     // Phương thức nhập phân số từ bàn phím
     public void Nhap()
     {
         Console.Write("Tu so = ");
-        TuSo = int.Parse(Console.ReadLine());
+        tuSo = int.Parse(Console.ReadLine());
         do
         {
             Console.Write("Mau so = ");
-            MauSo = int.Parse(Console.ReadLine());
-        } while (MauSo == 0);
+            mauSo = int.Parse(Console.ReadLine());
+        } while (mauSo == 0);
     }
 
     // Phương thức in phân số
     public void Xuat()
     {
-        Console.WriteLine("{0}/{1}", TuSo, MauSo);
+        Console.WriteLine("{0}/{1}", tuSo, mauSo);
     }
 
     // Phương thức tối giản phân số
     public void ToiGian()
     {
         // Tìm UCLN của tử số và mẫu số
-        int ucln = MyMath.UCLN(TuSo, MauSo);
-        TuSo /= ucln;
-        MauSo /= ucln;
+        int ucln = MyMath.UCLN(tuSo, mauSo);
+        tuSo /= ucln;
+        mauSo /= ucln;
     }
 }
 

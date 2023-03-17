@@ -4,29 +4,29 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Object Oriented Programming">
+        
         <meta name="author" content="Hung Nguyen">
         
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>Lập trình hướng đối tượng</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>Xử lý phân số - Lập trình hướng đối tượng</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
-        <link href="css/extra.css" rel="stylesheet">
+        <link href="../../../../css/extra.css" rel="stylesheet">
 
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap.min.js" defer></script>
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/django.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
-    <body class="homepage">
+    <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href=".">Lập trình hướng đối tượng</a>
+                <a class="navbar-brand" href="../../../..">Lập trình hướng đối tượng</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -41,40 +41,40 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="topics/overview/" class="dropdown-item">Tổng quan về lập trình hướng đối tượng</a>
+    <a href="../../../../topics/overview/" class="dropdown-item">Tổng quan về lập trình hướng đối tượng</a>
 </li>
                                     
 <li>
-    <a href="topics/dotnet-and-csharp/" class="dropdown-item">Nền tảng .NET và ngôn ngữ C#</a>
+    <a href="../../../../topics/dotnet-and-csharp/" class="dropdown-item">Nền tảng .NET và ngôn ngữ C#</a>
 </li>
                                     
 <li>
-    <a href="topics/object-oriented-modeling/" class="dropdown-item">Mô hình hóa hướng đối tượng</a>
+    <a href="../../../../topics/object-oriented-modeling/" class="dropdown-item">Mô hình hóa hướng đối tượng</a>
 </li>
                                     
 <li>
-    <a href="topics/classes-and-objects/" class="dropdown-item">Lớp và đối tượng</a>
+    <a href="../../../../topics/classes-and-objects/" class="dropdown-item">Lớp và đối tượng</a>
 </li>
                                     
 <li>
-    <a href="topics/inheritance/" class="dropdown-item">Thừa kế</a>
+    <a href="../../../../topics/inheritance/" class="dropdown-item">Thừa kế</a>
 </li>
                                     
 <li>
-    <a href="topics/polymorphism/" class="dropdown-item">Đa hình</a>
+    <a href="../../../../topics/polymorphism/" class="dropdown-item">Đa hình</a>
 </li>
                                     
 <li>
-    <a href="topics/gui-development/" class="dropdown-item">Phát triển ứng dụng GUI với .NET và C#</a>
+    <a href="../../../../topics/gui-development/" class="dropdown-item">Phát triển ứng dụng GUI với .NET và C#</a>
 </li>
                                     
 <li>
-    <a href="labs/" class="dropdown-item">Thực hành</a>
+    <a href="../../../" class="dropdown-item">Thực hành</a>
 </li>
                                 </ul>
                             </li>
                             <li class="navitem">
-                                <a href="author/about/" class="nav-link">Giảng viên</a>
+                                <a href="../../../../author/about/" class="nav-link">Giảng viên</a>
                             </li>
                         </ul>
 
@@ -85,7 +85,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a href="https://github.com/nd-hung/oop/tree/main/docs/README.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/nd-hung/oop/tree/main/docs/labs/02-classes-and-objects/code/PhanSo/README.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -105,17 +105,17 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#lap-trinh-huong-oi-tuong" class="nav-link">Lập trình hướng đối tượng</a>
+            <li class="nav-item" data-level="1"><a href="#xu-ly-phan-so" class="nav-link">Xử lý phân số</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#gioi-thieu" class="nav-link">Giới thiệu</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#cac-chu-e-chinh" class="nav-link">Các chủ đề chính</a>
+            <li class="nav-item" data-level="2"><a href="#muc-ich" class="nav-link">Mục đích</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#tai-lieu-tham-khao" class="nav-link">Tài liệu tham khảo</a>
+            <li class="nav-item" data-level="2"><a href="#yeu-cau" class="nav-link">Yêu cầu</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ma-nguon" class="nav-link">Mã nguồn</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -126,59 +126,27 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="lap-trinh-huong-oi-tuong">Lập trình hướng đối tượng<a class="headerlink" href="#lap-trinh-huong-oi-tuong" title="Permanent link">&para;</a></h1>
-<p>Object Oriented Programming (with C#)</p>
+<h1 id="xu-ly-phan-so">Xử lý phân số<a class="headerlink" href="#xu-ly-phan-so" title="Permanent link">&para;</a></h1>
 <hr />
-<h2 id="gioi-thieu">Giới thiệu<a class="headerlink" href="#gioi-thieu" title="Permanent link">&para;</a></h2>
-<p>Tài liệu này trình bày lý thuyết tóm tắt và các bài thực hành của học phần Lập trình hướng đối tượng. Công cụ lập trình sử dụng để minh họa trong học phần này là .NET và C#.</p>
-<div class="text-center">
-    <a href="topics/" class="btn btn-primary" role="button">Lý thuyết tóm tắt</a>
-    &nbsp;&nbsp;&nbsp;
-    <a href="labs/" class="btn btn-primary" role="button">Bài thực hành</a>
-</div>
-<p><br></p>
-<h2 id="cac-chu-e-chinh">Các chủ đề chính<a class="headerlink" href="#cac-chu-e-chinh" title="Permanent link">&para;</a></h2>
+<h2 id="muc-ich">Mục đích<a class="headerlink" href="#muc-ich" title="Permanent link">&para;</a></h2>
 <ul>
-<li>
-<h4 id="tong-quan-ve-lap-trinh-huong-oi-tuong"><a href="topics/overview">Tổng quan về lập trình hướng đối tượng</a><a class="headerlink" href="#tong-quan-ve-lap-trinh-huong-oi-tuong" title="Permanent link">&para;</a></h4>
-</li>
-<li>
-<h4 id="nen-tang-net-va-ngon-ngu-c"><a href="topics/dotnet-and-csharp">Nền tảng .NET và ngôn ngữ C#</a><a class="headerlink" href="#nen-tang-net-va-ngon-ngu-c" title="Permanent link">&para;</a></h4>
-</li>
-<li>
-<h4 id="mo-hinh-hoa-huong-oi-tuong-voi-uml"><a href="topics/object-oriented-modeling">Mô hình hóa hướng đối tượng với UML</a><a class="headerlink" href="#mo-hinh-hoa-huong-oi-tuong-voi-uml" title="Permanent link">&para;</a></h4>
-</li>
-<li>
-<h4 id="lop-va-oi-tuong"><a href="topics/classes-and-objects">Lớp và đối tượng</a><a class="headerlink" href="#lop-va-oi-tuong" title="Permanent link">&para;</a></h4>
-</li>
-<li>
-<h4 id="thua-ke"><a href="topics/inheritance">Thừa kế </a><a class="headerlink" href="#thua-ke" title="Permanent link">&para;</a></h4>
-</li>
-<li>
-<h4 id="a-hinh"><a href="topics/polymorphism">Đa hình</a><a class="headerlink" href="#a-hinh" title="Permanent link">&para;</a></h4>
-</li>
-<li>
-<h4 id="phat-trien-ung-dung-gui-voi-net-va-c"><a href="topics/gui-development">Phát triển ứng dụng GUI với .NET và C#</a><a class="headerlink" href="#phat-trien-ung-dung-gui-voi-net-va-c" title="Permanent link">&para;</a></h4>
-</li>
+<li>Vận dụng phương pháp lập trình HĐT cài đặt các xử lý cơ bản với phân số.</li>
 </ul>
-<h2 id="tai-lieu-tham-khao">Tài liệu tham khảo<a class="headerlink" href="#tai-lieu-tham-khao" title="Permanent link">&para;</a></h2>
-<h3 id="sach-giao-trinh">Sách, giáo trình<a class="headerlink" href="#sach-giao-trinh" title="Permanent link">&para;</a></h3>
-<ol>
-    <li>Lập trình hướng đối tượng - Trần Đan Thư, Đinh Bá Tiến, Nguyễn Tấn Trần Minh Khang - NXB Khoa học kỹ thuật, 2010</li>
-    <li>C# Programming Yellow Book - Rob Miles, 2016</li>
-    <li>Beginning C# Object-Oriented Programming - Dan Clark, 2015</li>
-    <li>Lập trình hướng đối tượng với C++ - Lê Đăng Hưng, Tạ Tuấn Anh, Nguyễn Hữu Đức, Nguyễn Thanh Thủy - NXB Khoa học kỹ thuật, 2005</li>
-    <li>C++ How to Program, 10th edition - Paul Dietel - Pearson, 2017</li>
-</ol>
-
-<h3 id="tai-nguyen-truc-tuyen">Tài nguyên trực tuyến<a class="headerlink" href="#tai-nguyen-truc-tuyen" title="Permanent link">&para;</a></h3>
-<ol>
-<li><a href="https://learn.microsoft.com/en-us/dotnet/">Microsoft .NET documentation</a>
-<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/">Microsoft C# documentation</a></li>
-<li><a href="https://visualstudio.microsoft.com/vs/getting-started/">Learn to code in Visual Studio - Microsoft<a></li>
-<li><a href="https://learn.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code?pivots=dotnet-6-0">Create .NET console applications using Visual Studio Code<a></li>
-<li><a href="https://www.w3schools.com/cs/index.php">C# Tutorial - W3Schools</a></li>
-</ol></div>
+<h2 id="yeu-cau">Yêu cầu<a class="headerlink" href="#yeu-cau" title="Permanent link">&para;</a></h2>
+<h3 id="cai-at-cac-lop">Cài đặt các lớp<a class="headerlink" href="#cai-at-cac-lop" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Cài đặt lớp phân số với các thành phần như mô hình sau.</li>
+</ul>
+<p><img src="img/phanso.png"></p>
+<h3 id="chuong-trinh-chinh">Chương trình chính<a class="headerlink" href="#chuong-trinh-chinh" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Tạo một danh sách các phân số (có thể tạo danh sách tĩnh hoặc động).</li>
+<li>In ra danh sách phân số dạng tối giản.</li>
+<li>Tìm phân số lớn nhất, nhỏ nhất.</li>
+<li>Sắp xếp danh sách theo thứ tự tăng dần, in ra danh sách sau khi sắp xếp.</li>
+</ul>
+<h2 id="ma-nguon">Mã nguồn<a class="headerlink" href="#ma-nguon" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/nd-hung/oop/blob/main/docs/labs/02-classes-and-objects/code/PhanSo/">Xem trên GitHub</a></p></div>
             </div>
         </div>
 
@@ -188,11 +156,11 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = ".",
+            var base_url = "../../../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -257,8 +225,3 @@
 
     </body>
 </html>
-
-<!--
-MkDocs version : 1.3.0
-Build Date UTC : 2023-03-17 02:50:15.917965+00:00
--->
