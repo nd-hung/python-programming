@@ -1,6 +1,6 @@
 # Lập trình hướng đối tượng
 
-Object Oriented Programming (with C#)
+Object Oriented Programming
 
 ---
 
