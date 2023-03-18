@@ -1,12 +1,14 @@
 # Lập trình hướng đối tượng
 
-Object Oriented Programming (with C#)
+Object Oriented Programming
 
 ---
 
 ## Giới thiệu
 
-Tài liệu này trình bày lý thuyết tóm tắt và các bài thực hành của học phần Lập trình hướng đối tượng. Công cụ lập trình sử dụng để minh họa trong học phần này là .NET và C#.
+Tài liệu này trình bày lý thuyết tóm tắt và các bài thực hành của học phần Lập trình hướng đối tượng.
+
+Công cụ lập trình sử dụng để minh họa trong học phần này là .NET và C#.
 
 <div class="text-center">
     <a href="topics/" class="btn btn-primary" role="button">Lý thuyết tóm tắt</a>
