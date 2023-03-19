@@ -29,7 +29,10 @@ và giữ lại những tính chất, hành vi chung của chúng.
 
 ### Tính bao đóng (Encapsulation)
 
-Trong phương pháp lập trình cấu trúc, dữ liệu và các chức năng xử lý tách rời nhau. Trong lập trình hướng đối tượng, dữ liệu và các xử lý xoay quanh dữ liệu đó được tích hợp trong một thực thể gọi là đối tượng. Đặc điểm này gọi là tính bao đóng.
+Trong phương pháp lập trình cấu trúc, dữ liệu và các chức năng xử lý tách rời nhau. Trong lập trình hướng đối tượng, dữ liệu và các xử lý xoay quanh dữ liệu đó được tích hợp trong một thực thể gọi là đối tượng.
+
+Tính bao đóng cho phép người lập trình xác định mức độ truy cập đến thành viên của một lớp từ bên ngoài.
+Theo đó, có thể chủ động ẩn đi các dữ liệu hoặc phương thức nhằm hạn chế những tác động không mong muốn từ bên ngoài lớp.
 
 ### Thừa kế (Inheritance)
 
