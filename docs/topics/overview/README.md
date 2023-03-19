@@ -24,11 +24,8 @@ Ví dụ sau đây minh họa phương pháp lập trình cấu trúc. Cho một
 
 ### Trừu tượng hóa (Abstraction)
 
-Trừu tượng hóa là quá trình loại bỏ đi các thông tin/tính chất cụ thể
-và giữ lại những thông tin/tính chất chung.
-n Tập trung vào các đặc điểm cơ bản của thực thể,
-các đặc điểm phân biệt nó với các loại thực thể
-khác.
+Trừu tượng hóa là quá trình loại bỏ đi các thông tin, tính chất cụ thể của sự vật, hiện tượng và
+và giữ lại những tính chất, hành vi chung của chúng.
 
 ### Tính bao đóng (Encapsulation)
 
@@ -42,7 +39,7 @@ Khi lập trình áp dụng kỹ thuật thừa kế, lớp đặc biệt hóa s
 
 ### Đa hình (Polymorphism)
 
+Kỹ thuật đa hình xuất hiện khi sử dụng thừa kế trong lập trình. Kỹ thuật này cho phép xây dựng lớp cơ sở có những thành phần được viết ở mức tổng quát, sau đó các thành phần này được cài đặt chi tiết ở các lớp kế thừa. Đa hình cho phép cài đặt các phương thức cùng tên nhưng tùy theo loại đối tượng mà đoạn mã nguồn phù hợp sẽ được thực thi một cách linh hoạt.
+
 ## Các khái niệm cơ bản của lập trình hướng đối tượng
 
-## So sánh Lập trình hướng đối tượng và Lập trình cấu trúc
-The main advantages and goals of OOP are to make complex software faster to develop and easier to maintain. OOP enables the easy reuse of code by applying simple and widely accepted rules (principles). Let’s check them out.
