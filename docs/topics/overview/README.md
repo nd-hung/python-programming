@@ -29,6 +29,8 @@ và giữ lại những tính chất, hành vi chung của chúng.
 
 ### Tính bao đóng (Encapsulation)
 
+Trong phương pháp lập trình cấu trúc, dữ liệu và các chức năng xử lý tách rời nhau. Trong lập trình hướng đối tượng, dữ liệu và các xử lý xoay quanh dữ liệu đó được tích hợp trong một thực thể gọi là đối tượng. Đặc điểm này gọi là tính bao đóng.
+
 ### Thừa kế (Inheritance)
 
 Kỹ thuật thừa kế cho phép tạo một lớp mới kế thừa (sử dụng lại) các thành phần (thuộc tính, phương thức) của một lớp đã có. Kỹ thuật thừa kế thể hiện mối quan hệ tổng quát hóa - đặc biệt hóa trong thế giới thực. Ví dụ, hình vuông là một trường hợp đặc biệt của hình chữ nhật khi nó có 4 cạnh bằng nhau, khi đó ta nói hình vuông là trường hợp đặc biệt hóa của hình chữ nhật, hay nói cách khác, hình chữ nhật là trường hợp tổng quát hóa của hình vuông.
@@ -39,7 +41,4 @@ Khi lập trình áp dụng kỹ thuật thừa kế, lớp đặc biệt hóa s
 
 ### Đa hình (Polymorphism)
 
-Kỹ thuật đa hình xuất hiện khi sử dụng thừa kế trong lập trình. Kỹ thuật này cho phép xây dựng lớp cơ sở có những thành phần được viết ở mức tổng quát, sau đó các thành phần này được cài đặt chi tiết ở các lớp kế thừa. Đa hình cho phép cài đặt các phương thức cùng tên nhưng tùy theo loại đối tượng mà đoạn mã nguồn phù hợp sẽ được thực thi một cách linh hoạt.
-
-## Các khái niệm cơ bản của lập trình hướng đối tượng
-
+Kỹ thuật đa hình xuất hiện khi sử dụng thừa kế trong lập trình. Đa hình cho phép xây dựng lớp cơ sở có những thành phần được viết ở mức tổng quát, sau đó các thành phần này được cài đặt chi tiết ở các lớp kế thừa. Đa hình cho phép cài đặt các phương thức cùng tên nhưng tùy theo loại đối tượng mà đoạn mã nguồn phù hợp sẽ được thực thi một cách linh hoạt.

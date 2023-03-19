@@ -67,6 +67,28 @@ Nếu đổi mức độ truy cập của lớp `Dog` thành `public` và của 
 
 ## Tạo, sử dụng và hủy đối tượng
 
+### Tạo đối tượng
+
+- Cú pháp
+
+```c#
+<Tên lớp> <Tên đối tượng> = new <Tên lớp>([<Các tham số khởi tạo>]);
+```
+
+- Cần tạo đối tượng trước khi sử dụng.
+- Có thể xem lớp là kiểu dữ liệu tự định nghĩa, và mỗi đối tượng là một biến thuộc kiểu dữ liệu đó.
+- Có thể tạo nhiều đối tượng của cùng một lớp.
+
+Ví dụ:
+
+```c#
+Dog vnDog = new Dog();
+vnDog.Name = "Cau Vang";
+
+Dog jpDog = new Dog();
+jpDog.Name = "Shiba";
+```
+
 ## Hàm thiết lập, hàm hủy
 
 ## Thành phần tĩnh
