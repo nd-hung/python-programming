@@ -7,16 +7,16 @@
         
         <meta name="author" content="Hung Nguyen">
         
-        <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Lớp và đối tượng - Lập trình hướng đối tượng</title>
-        <link href="../../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../../../../img/favicon.ico">
+        <title>Cài đặt đa hình - Lập trình hướng đối tượng</title>
+        <link href="../../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
-        <link href="../../css/extra.css" rel="stylesheet">
+        <link href="../../../../css/extra.css" rel="stylesheet">
 
-        <script src="../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="../../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/django.min.js"></script>
@@ -26,7 +26,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="../..">Lập trình hướng đối tượng</a>
+                <a class="navbar-brand" href="../../../..">Lập trình hướng đối tượng</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -41,40 +41,40 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../topics/overview/" class="dropdown-item">Tổng quan về lập trình hướng đối tượng</a>
+    <a href="../../../../topics/overview/" class="dropdown-item">Tổng quan về lập trình hướng đối tượng</a>
 </li>
                                     
 <li>
-    <a href="../../topics/dotnet-and-csharp/" class="dropdown-item">Nền tảng .NET và ngôn ngữ C#</a>
+    <a href="../../../../topics/dotnet-and-csharp/" class="dropdown-item">Nền tảng .NET và ngôn ngữ C#</a>
 </li>
                                     
 <li>
-    <a href="../../topics/object-oriented-modeling/" class="dropdown-item">Mô hình hóa hướng đối tượng</a>
+    <a href="../../../../topics/object-oriented-modeling/" class="dropdown-item">Mô hình hóa hướng đối tượng</a>
 </li>
                                     
 <li>
-    <a href="../../topics/classes-and-objects/" class="dropdown-item">Lớp và đối tượng</a>
+    <a href="../../../../topics/classes-and-objects/" class="dropdown-item">Lớp và đối tượng</a>
 </li>
                                     
 <li>
-    <a href="../../topics/inheritance/" class="dropdown-item">Thừa kế</a>
+    <a href="../../../../topics/inheritance/" class="dropdown-item">Thừa kế</a>
 </li>
                                     
 <li>
-    <a href="../../topics/polymorphism/" class="dropdown-item">Đa hình</a>
+    <a href="../../../../topics/polymorphism/" class="dropdown-item">Đa hình</a>
 </li>
                                     
 <li>
-    <a href="../../topics/gui-development/" class="dropdown-item">Phát triển ứng dụng GUI với .NET và C#</a>
+    <a href="../../../../topics/gui-development/" class="dropdown-item">Phát triển ứng dụng GUI với .NET và C#</a>
 </li>
                                     
 <li>
-    <a href="../" class="dropdown-item">Thực hành</a>
+    <a href="../../../" class="dropdown-item">Thực hành</a>
 </li>
                                 </ul>
                             </li>
                             <li class="navitem">
-                                <a href="../../author/about/" class="nav-link">Giảng viên</a>
+                                <a href="../../../../author/about/" class="nav-link">Giảng viên</a>
                             </li>
                         </ul>
 
@@ -85,7 +85,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a href="https://github.com/nd-hung/oop/tree/main/docs/labs/02-classes-and-objects/README.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/nd-hung/oop/tree/main/docs/labs/04-polymorphism/code/Animal/README.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -105,17 +105,17 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#lop-va-oi-tuong" class="nav-link">Lớp và đối tượng</a>
+            <li class="nav-item" data-level="1"><a href="#cai-at-a-hinh" class="nav-link">Cài đặt đa hình</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#1-iem-trong-mat-phang" class="nav-link">1 - Điểm trong mặt phẳng</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#2-phan-so" class="nav-link">2 - Phân số</a>
+            <li class="nav-item" data-level="2"><a href="#muc-tieu" class="nav-link">Mục tiêu</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#3-ngan-xep" class="nav-link">3 - Ngăn xếp</a>
+            <li class="nav-item" data-level="2"><a href="#ma-nguon" class="nav-link">Mã nguồn</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#chay-chuong-trinh" class="nav-link">Chạy chương trình</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -126,12 +126,69 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="lop-va-oi-tuong">Lớp và đối tượng<a class="headerlink" href="#lop-va-oi-tuong" title="Permanent link">&para;</a></h1>
-<p>Classes and Objects</p>
+<h1 id="cai-at-a-hinh">Cài đặt đa hình<a class="headerlink" href="#cai-at-a-hinh" title="Permanent link">&para;</a></h1>
 <hr />
-<h2 id="1-iem-trong-mat-phang">1 - <a href="code/Point">Điểm trong mặt phẳng</a><a class="headerlink" href="#1-iem-trong-mat-phang" title="Permanent link">&para;</a></h2>
-<h2 id="2-phan-so">2 - <a href="code/PhanSo">Phân số</a><a class="headerlink" href="#2-phan-so" title="Permanent link">&para;</a></h2>
-<h2 id="3-ngan-xep">3 - <a href="code/Stack">Ngăn xếp</a><a class="headerlink" href="#3-ngan-xep" title="Permanent link">&para;</a></h2></div>
+<h2 id="muc-tieu">Mục tiêu<a class="headerlink" href="#muc-tieu" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Vận dụng kỹ thuật đa hình trong cài đặt thừa kế.</li>
+</ul>
+<h2 id="ma-nguon">Mã nguồn<a class="headerlink" href="#ma-nguon" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/nd-hung/oop/tree/main/docs/labs/04-polymorphism/code/Animal">Xem trên GitHub</a></p>
+<pre><code class="language-c#">namespace PolymorphismDemo
+{
+    // Tạo lớp tổng quát Animal
+    public class Animal
+    {
+        // Cài đặt phương thức ảo cho lớp tổng quát
+        // Lưu ý sử dụng từ khóa virtual
+        public virtual void Speak()
+        {
+            Console.WriteLine(&quot;Halo, I'm an animal.&quot;);
+        }
+    }
+
+    // Tạo lớp Dog kế thừa lớp Animal
+    class Dog : Animal
+    {
+        // Viết lại phương thức Speak phù hợp với lớp Dog
+        // Lưu ý sử dụng từ khóa override
+        public override void Speak()
+        {
+            Console.WriteLine(&quot;Go go! I'm a dog.&quot;);
+        }
+    }
+
+    // Tạo lớp Cat kế thừa lớp Animal
+    class Cat : Animal
+    {
+        // Viết lại phương thức Speak phù hợp với lớp Cat
+        // Lưu ý sử dụng từ khóa override
+        public override void Speak()
+        {
+            Console.WriteLine(&quot;Meow! I'm a cat.&quot;);
+        }
+    }
+
+    // Chương trình chính
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Animal myAnimal = new Animal();  // Tạo đối tượng của lớp cơ sở Animal
+            Animal myDog = new Dog();        // Tạo đối tượng của lớp dẫn xuất Dog
+            Animal myCat = new Cat();        // Tạo đối tượng của lớp dẫn xuất Cat
+
+            // Cả 3 đối tượng trên đều gọi phương thức cùng tên,
+            // nhưng cách xử lý của các phương thức này khác nhau:
+            myAnimal.Speak();
+            myDog.Speak();
+            myCat.Speak();
+        }
+    }
+}
+</code></pre>
+<h2 id="chay-chuong-trinh">Chạy chương trình<a class="headerlink" href="#chay-chuong-trinh" title="Permanent link">&para;</a></h2>
+<p><img alt="Run example" src="img/run_example.PNG" /></p></div>
             </div>
         </div>
 
@@ -141,11 +198,11 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = "../..",
+            var base_url = "../../../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../../js/base.js" defer></script>
-        <script src="../../search/main.js" defer></script>
+        <script src="../../../../js/base.js" defer></script>
+        <script src="../../../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">

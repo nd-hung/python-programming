@@ -129,11 +129,15 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#ham-thiet-lap-ham-huy" class="nav-link">Hàm thiết lập, hàm hủy</a>
+            <li class="nav-item" data-level="2"><a href="#ham-thiet-lap-constructor" class="nav-link">Hàm thiết lập (constructor)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#thanh-phan-tinh" class="nav-link">Thành phần tĩnh</a>
+            <li class="nav-item" data-level="2"><a href="#ham-huy-destructorfinalizer" class="nav-link">Hàm hủy (destructor/finalizer)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#lop-tinh-thanh-phan-tinh" class="nav-link">Lớp tĩnh, thành phần tĩnh</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -219,8 +223,114 @@ class Program
 </li>
 </ul>
 <h2 id="tao-su-dung-va-huy-oi-tuong">Tạo, sử dụng và hủy đối tượng<a class="headerlink" href="#tao-su-dung-va-huy-oi-tuong" title="Permanent link">&para;</a></h2>
-<h2 id="ham-thiet-lap-ham-huy">Hàm thiết lập, hàm hủy<a class="headerlink" href="#ham-thiet-lap-ham-huy" title="Permanent link">&para;</a></h2>
-<h2 id="thanh-phan-tinh">Thành phần tĩnh<a class="headerlink" href="#thanh-phan-tinh" title="Permanent link">&para;</a></h2>
+<h3 id="tao-oi-tuong">Tạo đối tượng<a class="headerlink" href="#tao-oi-tuong" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Cần tạo đối tượng trước khi sử dụng.</p>
+</li>
+<li>
+<p>Cú pháp</p>
+</li>
+</ul>
+<pre><code class="language-c#">&lt;Tên lớp&gt; &lt;Tên đối tượng&gt; = new &lt;Tên lớp&gt;([&lt;Các tham số khởi tạo&gt;]);
+</code></pre>
+<ul>
+<li>Có thể xem lớp là kiểu dữ liệu tự định nghĩa, và mỗi đối tượng là một biến thuộc kiểu dữ liệu đó.</li>
+<li>Có thể tạo nhiều đối tượng của cùng một lớp, hoặc tạo mảng hoặc tập hợp các đối tượng.</li>
+<li>Có thể tạo đối tượng kết hợp với khởi tạo các thuộc tính cho nó. Cần viết các hàm thiết lập (constructor) phù hợp để áp dụng tính năng này.</li>
+</ul>
+<p>Ví dụ:</p>
+<pre><code class="language-c#">Dog vnDog = new Dog();
+vnDog.Name = &quot;Cau Vang&quot;;
+
+Dog jpDog = new Dog();
+jpDog.Name = &quot;Shiba&quot;;
+</code></pre>
+<h2 id="ham-thiet-lap-constructor">Hàm thiết lập (constructor)<a class="headerlink" href="#ham-thiet-lap-constructor" title="Permanent link">&para;</a></h2>
+<p>Phương thức thiết lập (constructor) là một hàm đặc biệt dùng để khởi tạo đối tượng. Khi một đối tượng được tạo ra, một hàm thiết lập phù hợp sẽ được gọi.</p>
+<p>Hàm thiết lập trùng tên lớp, không có kiểu trả về, có thể có các tham số để khởi tạo giá trị cho các thuộc tính của đối tượng, phạm vi truy cập thường là public.</p>
+<p>Một lớp có thể có nhiều hàm thiết lập khác nhau.</p>
+<ul>
+<li>Cú pháp</li>
+</ul>
+<pre><code class="language-c#">[public] &lt;Tên lớp&gt;([Danh sách tham số])
+{
+    // Các lệnh khởi tạo giá trị cho đối tượng
+}
+</code></pre>
+<ul>
+<li>Ví dụ</li>
+</ul>
+<pre><code class="language-c#">// Khai báo lớp mô tả xe hơi
+public class Car
+{
+    public string? Manufacturer;    // Tên hãng sản xuất
+
+    // Hàm thiết lập không tham số
+    public Car()
+    {
+        Manufacturer = &quot;Toyota&quot;;
+    }
+
+    // Hàm thiết lập có tham số
+    public Car(string? mnf = &quot;&quot;)
+    {
+        Manufacturer = mnf;
+    }
+
+    // Hàm in thông tin hãng xe
+    public void Print()
+    {
+        Console.WriteLine(&quot;Manufacturer: &quot; + Manufacturer);
+
+    }
+}
+
+// Chương trình chính
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Tạo đối tượng xe, gọi hàm thiết lập không tham số
+        Car car1 = new Car();
+        car1.Print();
+
+        // Tạo đối tượng xe, gọi hàm thiết lập có tham số
+        Car car2 = new Car(&quot;Ford&quot;);
+        car2.Print();
+    }
+}
+</code></pre>
+<p><img alt="Kết quả chạy chương trình" src="code/Car/img/run_example.PNG" /></p>
+<h2 id="ham-huy-destructorfinalizer">Hàm hủy (destructor/finalizer)<a class="headerlink" href="#ham-huy-destructorfinalizer" title="Permanent link">&para;</a></h2>
+<p>Hàm hủy (destructor, trong C# gọi là finalizer) được gọi tự động khi đối tượng bị hủy.
+Hàm hủy có chức năng dọn dẹp bộ nhớ, giải phóng tài nguyên.</p>
+<p>Hàm hủy trùng tên lớp và có ký tự <code>~</code> ở trước, không có kiểu trả về, không có tham số, không có phạm vi truy cập.</p>
+<p>Một lớp chỉ có một hàm hủy duy nhất.</p>
+<ul>
+<li>Cú pháp</li>
+</ul>
+<pre><code class="language-c#">~&lt;Tên lớp&gt;()
+{
+    // Các lệnh của hàm hủy
+}
+</code></pre>
+<blockquote>
+<p>Chú ý: NET 5 (gồm cả .NET Core) trở về sau không gọi hàm hủy khi kết thúc ứng dụng. Bạn có thể tạo ứng dụng với .NET Framework để kiểm nghiệm hoạt động của hàm hủy.</p>
+</blockquote>
+<h2 id="lop-tinh-thanh-phan-tinh">Lớp tĩnh, thành phần tĩnh<a class="headerlink" href="#lop-tinh-thanh-phan-tinh" title="Permanent link">&para;</a></h2>
+<p>Khác với lớp thường, một lớp tĩnh (static class) không cho phép tạo ra các đối tượng (không thể dùng toán tử <code>new</code> để tạo đối tượng của lớp tĩnh).</p>
+<p>Truy xuất thành viên của lớp tĩnh theo cú pháp <code>&lt;Tên lớp&gt;.&lt;Tên thành viên&gt;</code>.</p>
+<p>Lớp tĩnh phù hợp cho việc cài đặt thư viện các hàm xử lý với dữ liệu vào mà không cần truy xuất đến dữ liệu của lớp.</p>
+<p>Ví dụ, trong thư viện lớp của .NET có lớp System.Math cài đặt sẵn nhiều hàm toán học để thuận tiện cho lập trình viên.</p>
+<pre><code class="language-c#">// Tính diện tích hình tròn, sử dụng hằng số PI và hàm lũy thừa Pow từ lớp tĩnh System.Math
+double radius = 1.23;
+double circleArea = Math.Pow(radius, 2) * Math.PI;
+</code></pre>
+<ul>
+<li>Khai báo lớp tĩnh</li>
+</ul>
+<p><a href="https://github.com/nd-hung/oop/blob/main/docs/topics/classes-and-objects/code/TemperatureConverter/Program.cs">Xem ví dụ trên GitHub</a></p>
 <h2 id="thanh-phan-du-lieu-co-kieu-la-lop">Thành phần dữ liệu có kiểu là lớp<a class="headerlink" href="#thanh-phan-du-lieu-co-kieu-la-lop" title="Permanent link">&para;</a></h2>
 <h2 id="con-tro-this">Con trỏ this<a class="headerlink" href="#con-tro-this" title="Permanent link">&para;</a></h2>
 <h2 id="mang-cac-oi-tuong">Mảng các đối tượng<a class="headerlink" href="#mang-cac-oi-tuong" title="Permanent link">&para;</a></h2>

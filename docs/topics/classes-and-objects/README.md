@@ -176,6 +176,8 @@ Một lớp chỉ có một hàm hủy duy nhất.
  
 ## Lớp tĩnh, thành phần tĩnh
 
+### Lớp tĩnh
+
 Khác với lớp thường, một lớp tĩnh (static class) không cho phép tạo ra các đối tượng (không thể dùng toán tử `new` để tạo đối tượng của lớp tĩnh).
 
 Truy xuất thành viên của lớp tĩnh theo cú pháp `<Tên lớp>.<Tên thành viên>`.
@@ -190,9 +192,49 @@ double radius = 1.23;
 double circleArea = Math.Pow(radius, 2) * Math.PI;
 ```
 
-- Khai báo lớp tĩnh
+- Tạo lớp tĩnh
 
 [Xem ví dụ trên GitHub](https://github.com/nd-hung/oop/blob/main/docs/topics/classes-and-objects/code/TemperatureConverter/Program.cs)
+
+### Thành phần tĩnh
+
+Một lớp có thể chứa các thành phần (thuộc tính, phương thức) tĩnh. Có thể gọi đến thành phần tĩnh của lớp không tĩnh cả khi chưa tạo đối tượng.
+
+Cú pháp truy cập thành viên tĩnh: `<Tên_lớp>.<Tên_thành_viên_tĩnh>`
+
+Chỉ có một bản sao duy nhất của thành phần tĩnh, bất kể có bao nhiêu đối tượng được tạo ra.
+
+Việc khai báo một lớp không tĩnh có một số thành viên tĩnh phổ biến hơn trường hợp khai báo toàn bộ lớp là tĩnh. Hai cách sử dụng phổ biến của thành phần tĩnh là để lưu số lượng đối tượng đã được khởi tạo hoặc để lưu trữ một giá trị phải được chia sẻ chung cho tất cả đối tượng trong lớp.
+
+Ví dụ:
+
+```c#
+// Minh họa thành phần tĩnh của lớp không tĩnh
+public class Dog    // Khai báo lớp mô tả loài chó
+{
+    public string Name { get; set; }      // Tên
+    public static int Count = 0;          // Biến tĩnh để chứa tổng số đối tượng (chó) được tạo ra
+
+    public Dog(string name = "")          // Hàm thiết lập
+    {
+        Name = name; 
+        Count++;                          // Mỗi khi một đối tượng được tạo thì tăng số lượng thêm 1
+    }
+}
+
+// Chương trình chính
+class Program
+{
+    static void Main()
+    {
+        Dog dog1 = new Dog("Shiba");
+        Dog dog2 = new Dog("Poodle");
+        Dog dog3 = new Dog("Shepherd");
+        // Truy xuất đến thành phần tĩnh theo cú pháp <Tên lớp>.<Tên thành phần tĩnh>
+        Console.WriteLine("Total number of dogs: {0}", Dog.Count);
+    }
+}
+```
 
 ## Thành phần dữ liệu có kiểu là lớp
 
