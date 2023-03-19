@@ -192,7 +192,7 @@ double circleArea = Math.Pow(radius, 2) * Math.PI;
 
 - Khai báo lớp tĩnh
 
-[Xem ví dụ trên GitHub]()
+[Xem ví dụ trên GitHub](https://github.com/nd-hung/oop/blob/main/docs/topics/classes-and-objects/code/TemperatureConverter/Program.cs)
 
 ## Thành phần dữ liệu có kiểu là lớp
 
