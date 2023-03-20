@@ -240,9 +240,25 @@ class Program
 }
 ```
 
-## Thành phần dữ liệu có kiểu là lớp
-
 ## Con trỏ this
+
+Từ khóa `this` tham chiếu đến đối tượng đang được xử lý.
+
+Từ khóa `this` thường được dùng để phân biệt các thành phần cùng tên. Ví dụ:
+
+```c#
+public class NhanVien
+{
+    private string maNV;
+    private string hoTenNV;
+
+    public NhanVien(string maNV, string hoTenNV)
+    {
+        this.maNV = maNV;
+        this.hoTenNV = hoTenNV;
+    }
+}
+```
 
 ## Mảng các đối tượng
 
