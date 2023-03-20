@@ -182,6 +182,10 @@ Khác với lớp thường, một lớp tĩnh (static class) không cho phép t
 
 Truy xuất thành viên của lớp tĩnh theo cú pháp `<Tên lớp>.<Tên thành viên>`.
 
+Lớp tĩnh chỉ chứa các thành phần tĩnh.
+
+Lớp tĩnh là lớp niêm phong (sealed), tức không cho phép thừa kế.
+
 Lớp tĩnh phù hợp cho việc cài đặt thư viện các hàm xử lý với dữ liệu vào mà không cần truy xuất đến dữ liệu của lớp.
 
 Ví dụ, trong thư viện lớp của .NET có lớp System.Math cài đặt sẵn nhiều hàm toán học để thuận tiện cho lập trình viên.
@@ -204,7 +208,7 @@ Cú pháp truy cập thành viên tĩnh: `<Tên_lớp>.<Tên_thành_viên_tĩnh>
 
 Chỉ có một bản sao duy nhất của thành phần tĩnh, bất kể có bao nhiêu đối tượng được tạo ra.
 
-Việc khai báo một lớp không tĩnh có một số thành viên tĩnh phổ biến hơn trường hợp khai báo toàn bộ lớp là tĩnh. Hai cách sử dụng phổ biến của thành phần tĩnh là để lưu số lượng đối tượng đã được khởi tạo hoặc để lưu trữ một giá trị phải được chia sẻ chung cho tất cả đối tượng trong lớp.
+Việc khai báo một lớp không tĩnh có một số thành viên tĩnh phổ biến hơn trường hợp khai báo toàn bộ lớp là tĩnh. Hai trường hợp sử dụng phổ biến của thành phần tĩnh là để lưu số lượng đối tượng đã được khởi tạo hoặc để lưu trữ một giá trị được chia sẻ chung cho tất cả đối tượng trong lớp.
 
 Ví dụ:
 
