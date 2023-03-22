@@ -184,11 +184,11 @@ Truy xuất thành viên của lớp tĩnh theo cú pháp `<Tên lớp>.<Tên th
 
 Lớp tĩnh chỉ chứa các thành phần tĩnh.
 
-Lớp tĩnh là lớp niêm phong (sealed), tức không cho phép thừa kế.
+Không thể sử dụng lớp tĩnh làm lớp cơ sở cho một lớp khác.
 
 Lớp tĩnh phù hợp cho việc cài đặt thư viện các hàm xử lý với dữ liệu vào mà không cần truy xuất đến dữ liệu của lớp.
 
-Ví dụ, trong thư viện lớp của .NET có lớp System.Math cài đặt sẵn nhiều hàm toán học để thuận tiện cho lập trình viên.
+Ví dụ sau đây sử dụng lớp tĩnh System.Math có sẵn trong thư viện lớp của .NET:
 
 ```c#
 // Tính diện tích hình tròn, sử dụng hằng số PI và hàm lũy thừa Pow từ lớp tĩnh System.Math
@@ -202,13 +202,13 @@ double circleArea = Math.Pow(radius, 2) * Math.PI;
 
 ### Thành phần tĩnh
 
-Một lớp có thể chứa các thành phần (thuộc tính, phương thức) tĩnh. Có thể gọi đến thành phần tĩnh của lớp không tĩnh cả khi chưa tạo đối tượng.
+Một lớp thường có thể chứa các thành phần (thuộc tính, phương thức) tĩnh. Có thể gọi đến thành phần tĩnh của lớp không tĩnh cả khi chưa tạo đối tượng.
 
 Cú pháp truy cập thành viên tĩnh: `<Tên_lớp>.<Tên_thành_viên_tĩnh>`
 
 Chỉ có một bản sao duy nhất của thành phần tĩnh, bất kể có bao nhiêu đối tượng được tạo ra.
 
-Việc khai báo một lớp không tĩnh có một số thành viên tĩnh phổ biến hơn trường hợp khai báo toàn bộ lớp là tĩnh. Hai trường hợp sử dụng phổ biến của thành phần tĩnh là để lưu số lượng đối tượng đã được khởi tạo hoặc để lưu trữ một giá trị được chia sẻ chung cho tất cả đối tượng trong lớp.
+Thông thường, thành phần tĩnh được sử dụng để lưu số lượng đối tượng đã được khởi tạo hoặc để lưu trữ một giá trị được chia sẻ chung cho tất cả đối tượng trong lớp.
 
 Ví dụ:
 

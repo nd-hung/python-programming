@@ -1,7 +1,7 @@
 ﻿// Minh họa cài đặt lớp tĩnh (static class)
 
 // Tạo lớp tĩnh TemperatureConverter dùng để chuyển đổi qua lại giữa độ C/độ F
-public class TemperatureConverter
+public static class TemperatureConverter
 {
     // Phương thức tĩnh đổi độ C sang độ F
     public static double CelsiusToFahrenheit(double celsius)
