@@ -28,7 +28,7 @@ Khi một thành viên của lớp có thuộc tính truy cập là public thì 
 Ví dụ:
 
 ```cs
-// Khai báo lớp mô tả loài chó 
+// Khai báo lớp mô tả loài chó
 public class Dog
 {
     public string Name;
@@ -39,9 +39,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Tạo đối tượng của lớp 
+        // Tạo đối tượng của lớp
         Dog dog = new Dog();
-        // Thay đổi giá trị thuộc tính 
+        // Thay đổi giá trị thuộc tính
         dog.Name = "Cau Vang";
         // Đọc thuộc tính
         Console.WriteLine("The dog's name is " + dog.Name);
@@ -173,7 +173,7 @@ Một lớp chỉ có một hàm hủy duy nhất.
 ```
 
 > Chú ý: NET 5 (gồm cả .NET Core) trở về sau không gọi hàm hủy khi kết thúc ứng dụng. Bạn có thể tạo ứng dụng với .NET Framework để kiểm nghiệm hoạt động của hàm hủy.
- 
+
 ## Lớp tĩnh, thành phần tĩnh
 
 ### Lớp tĩnh
@@ -216,12 +216,12 @@ Ví dụ:
 // Minh họa thành phần tĩnh của lớp không tĩnh
 public class Dog    // Khai báo lớp mô tả loài chó
 {
-    public string Name { get; set; }      // Tên
+    public string Name { get; set; }      // Thuộc tính lưu tên loài
     public static int Count = 0;          // Biến tĩnh để chứa tổng số đối tượng (chó) được tạo ra
 
     public Dog(string name = "")          // Hàm thiết lập
     {
-        Name = name; 
+        Name = name;
         Count++;                          // Mỗi khi một đối tượng được tạo thì tăng số lượng thêm 1
     }
 }
@@ -261,5 +261,74 @@ public class NhanVien
 ```
 
 ## Mảng các đối tượng
+
+Thông thường, cấu trúc mảng là một tập hợp các phần tử có cùng kiểu được lưu trữ liên tiếp nhau trong bộ nhớ. Vì thế có thể truy xuất đến một phần tử trong mảng thông qua chỉ số (vị trí) của phần tử đó.
+
+Trong C#, có thể tổ chức danh sách các đối tượng theo hai cách: mảng tĩnh và mảng động (danh sách).
+
+### Mảng tĩnh (array)
+
+- Tạo mảng
+
+```c#
+<Kiểu dữ liệu>[] <Tên biến mảng> = new <Kiểu dữ liệu>[<Số phần tử>];
+```
+
+- Truy xuất phần tử của mảng
+
+```c#
+<Tên biến mảng>[<Chỉ số>];
+```
+
+- Ví dụ:
+
+```c#
+// Tạo mảng các chuỗi
+string[] cars = { "Vinfast", "Toyota", "Ford", "Mazda", "Honda"};
+for (int i = 0; i < cars.Length; ++i)
+{
+    Console.Write("{0} ", cars[i]);
+}
+
+// Tạo mảng các đối tượng thuộc lớp
+// Tạo lớp
+class Point
+{
+    // Properties
+    public int X{get;}  
+    public int Y{get;}
+
+    // Constructor
+    public Point(int x=0, int y=0)
+    {
+        X = x;
+        Y = y;
+    }
+}
+
+// Tạo mảng các đối tượng của lớp 
+Point[] myPoints = new Point[] { new Point(1, 2), new Point(3, 4)};
+
+// Truy xuất phần tử của mảng
+foreach (Point p in myPoints)
+{
+    Console.Write("({0},{1}) ", p.X, p.Y);
+}
+```
+
+> Do mọi lớp của C# đều có lớp cơ sở chung là `Object`, nên có thể tạo mảng các đối tượng có kiểu khác nhau như sau:
+
+```c#
+object[] myObjects = new object[] {69, "Halo", 1.23};
+foreach (var obj in myObjects)
+{
+    Console.Write("{0} ", obj );
+}
+```
+
+### Mảng động (list)
+
+
+
 
 ## Định nghĩa toán tử trên lớp
