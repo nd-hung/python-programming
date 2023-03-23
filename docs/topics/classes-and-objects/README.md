@@ -268,6 +268,8 @@ Trong C#, có thể tổ chức danh sách các đối tượng theo hai cách: 
 
 ### Mảng tĩnh (array)
 
+Mảng tĩnh là tập số lượng cố định các phần tử cùng kiểu. Kích thước của mảng được xác định lúc khai báo và không thể thay đổi trong thời gian chạy chương trình. Truy xuất đến từng phần tử của mảng thông qua chỉ số (index) bắt đầu từ 0.
+
 - Tạo mảng
 
 ```c#
@@ -283,6 +285,8 @@ Trong C#, có thể tổ chức danh sách các đối tượng theo hai cách: 
 - Ví dụ:
 
 ```c#
+// Khai báo mảng số nguyên
+int[] numbers = new int[5];
 // Tạo mảng các chuỗi
 string[] cars = { "Vinfast", "Toyota", "Ford", "Mazda", "Honda"};
 for (int i = 0; i < cars.Length; ++i)
@@ -326,9 +330,9 @@ foreach (var obj in myObjects)
 }
 ```
 
-### Mảng động (list)
+### Mảng động - Danh sách (list)
 
-
+Một danh sách là tập các phần tử cùng kiểu, tuy nhiên kích thước của nó có thể thay đổi được trong khi chạy chương trình. Truy xuất đến từng phần tử của mdanh sách thông qua chỉ số (index) bắt đầu từ 0.
 
 
 ## Định nghĩa toán tử trên lớp
