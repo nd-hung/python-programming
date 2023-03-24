@@ -26,7 +26,7 @@
 - Tạo và nhập danh sách n nhân viên (0 < n < 100) từ bàn phím.
 - In danh sách nhân viên vừa nhập, mỗi nhân viên trên một dòng.
 - In ra thông tin (các) nhân viên có hệ số lương cao nhất. 
-- Sắp xếp danh sách sinh viên theo thứ tự giảm dần của tiền lương, biết tiền lương = hệ số lương * lương cơ bản. in ra danh sách sau khi sắp xếp.
+- Sắp xếp danh sách sinh viên theo thứ tự giảm dần của tiền lương, biết tiền lương = hệ số lương * lương cơ bản. In ra danh sách sau khi sắp xếp.
 
 ## Mã nguồn
 
