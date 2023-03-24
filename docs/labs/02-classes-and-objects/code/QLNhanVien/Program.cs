@@ -135,7 +135,7 @@ namespace Test1
             foreach (var nv in nvList)
                 if (nv.HSLuong == maxHSL) nv.Xuat();
 
-            // Sắp xếp danh sách giảm dần theo liền lương
+            // Sắp xếp danh sách giảm dần theo tiền lương
             for (int i = 0; i < soNV - 1; i++)
                 for (int j = i + 1; j < soNV; j++)
                     if (nvList[i].TinhLuong() < nvList[j].TinhLuong())
