@@ -43,6 +43,7 @@ namespace Test1
           }
         }
 
+        // Methods
         // Hàm thiết lập
         public NhanVien(string ms="", string ht = "", double hsl=0)
         {
@@ -127,7 +128,10 @@ namespace Test1
 
             // In danh sách nhân viên
             Console.WriteLine("Danh sach nhan vien: ");
-            foreach(var nv in nvList) nv.Xuat();      
+            foreach(var nv in nvList)
+            {
+                nv.Xuat();
+            }
 
             // Tìm hệ số lương cao nhất
             double maxHSL = nvList[0].HSLuong;
