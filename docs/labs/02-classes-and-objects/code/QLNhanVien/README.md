@@ -30,4 +30,4 @@
 
 ## Mã nguồn
 
-[Xem trên GitHub](https://github.com/nd-hung/oop/tree/main/docs/labs/02-classes-and-objects/code/QLNhanVien)
+[Xem trên GitHub](https://github.com/nd-hung/oop/blob/main/docs/labs/02-classes-and-objects/code/QLNhanVien/Program.cs)
