@@ -378,9 +378,9 @@ class Program
 }
 </code></pre>
 <h2 id="mang-cac-oi-tuong">Mảng các đối tượng<a class="headerlink" href="#mang-cac-oi-tuong" title="Permanent link">&para;</a></h2>
-<p>Trong C#, có thể tổ chức danh sách các đối tượng theo hai cách: tĩnh và động.</p>
-<h3 id="danh-sach-tinh-array">Danh sách tĩnh (array)<a class="headerlink" href="#danh-sach-tinh-array" title="Permanent link">&para;</a></h3>
-<p>Mảng tĩnh là tập số lượng cố định các phần tử cùng kiểu. Kích thước của mảng được xác định lúc khai báo và không thể thay đổi trong thời gian chạy chương trình. Truy xuất đến từng phần tử của mảng thông qua chỉ số (index) bắt đầu từ 0.</p>
+<p>Thông thường, cấu trúc mảng là một tập hợp các phần tử có cùng kiểu được lưu trữ liên tiếp nhau trong bộ nhớ. Vì thế có thể truy xuất đến một phần tử trong mảng thông qua chỉ số (vị trí) của phần tử đó.</p>
+<p>Trong C#, có thể tổ chức danh sách các đối tượng theo hai cách: mảng tĩnh và mảng động (danh sách).</p>
+<h3 id="mang-tinh-array">Mảng tĩnh (array)<a class="headerlink" href="#mang-tinh-array" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Tạo mảng</li>
 </ul>
@@ -394,9 +394,7 @@ class Program
 <ul>
 <li>Ví dụ:</li>
 </ul>
-<pre><code class="language-c#">// Khai báo mảng số nguyên
-int[] numbers = new int[5];
-// Tạo mảng các chuỗi
+<pre><code class="language-c#">// Tạo mảng các chuỗi
 string[] cars = { &quot;Vinfast&quot;, &quot;Toyota&quot;, &quot;Ford&quot;, &quot;Mazda&quot;, &quot;Honda&quot;};
 for (int i = 0; i &lt; cars.Length; ++i)
 {
@@ -437,8 +435,7 @@ foreach (var obj in myObjects)
     Console.Write(&quot;{0} &quot;, obj );
 }
 </code></pre>
-<h3 id="danh-sach-ong-list">Danh sách động (list)<a class="headerlink" href="#danh-sach-ong-list" title="Permanent link">&para;</a></h3>
-<p>Một danh sách là tập các phần tử cùng kiểu, tuy nhiên kích thước của nó có thể thay đổi được trong khi chạy chương trình. Truy xuất đến từng phần tử của mdanh sách thông qua chỉ số (index) bắt đầu từ 0.</p>
+<h3 id="mang-ong-list">Mảng động (list)<a class="headerlink" href="#mang-ong-list" title="Permanent link">&para;</a></h3>
 <h2 id="inh-nghia-toan-tu-tren-lop">Định nghĩa toán tử trên lớp<a class="headerlink" href="#inh-nghia-toan-tu-tren-lop" title="Permanent link">&para;</a></h2></div>
             </div>
         </div>

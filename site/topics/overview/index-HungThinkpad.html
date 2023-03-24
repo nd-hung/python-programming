@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Hung Nguyen">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Tổng quan về lập trình hướng đối tượng - Lập trình hướng đối tượng</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
+        <link href="../../css/extra.css" rel="stylesheet">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/django.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Lập trình hướng đối tượng</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Các chủ đề <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Tổng quan về lập trình hướng đối tượng</a>
+</li>
+                                    
+<li>
+    <a href="../dotnet-and-csharp/" class="dropdown-item">Nền tảng .NET và ngôn ngữ C#</a>
+</li>
+                                    
+<li>
+    <a href="../object-oriented-modeling/" class="dropdown-item">Mô hình hóa hướng đối tượng</a>
+</li>
+                                    
+<li>
+    <a href="../classes-and-objects/" class="dropdown-item">Lớp và đối tượng</a>
+</li>
+                                    
+<li>
+    <a href="../inheritance/" class="dropdown-item">Thừa kế</a>
+</li>
+                                    
+<li>
+    <a href="../polymorphism/" class="dropdown-item">Đa hình</a>
+</li>
+                                    
+<li>
+    <a href="../gui-development/" class="dropdown-item">Phát triển ứng dụng GUI với .NET và C#</a>
+</li>
+                                    
+<li>
+    <a href="../../labs/" class="dropdown-item">Thực hành</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="navitem">
+                                <a href="../../author/about/" class="nav-link">Giảng viên</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" class="nav-link disabled">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../dotnet-and-csharp/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/nd-hung/oop/tree/main/docs/topics/overview/README.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#tong-quan-ve-lap-trinh-huong-oi-tuong" class="nav-link">Tổng quan về lập trình hướng đối tượng</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#lap-trinh-cau-truc-structural-programming" class="nav-link">Lập trình cấu trúc (structural programming)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#phuong-phap-lap-trinh-huong-oi-tuong-object-oriented-programming" class="nav-link">Phương pháp lập trình hướng đối tượng (Object Oriented Programming)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#cac-nguyen-ly-co-ban-cua-lap-trinh-huong-oi-tuong" class="nav-link">Các nguyên lý cơ bản của lập trình hướng đối tượng</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="tong-quan-ve-lap-trinh-huong-oi-tuong">Tổng quan về lập trình hướng đối tượng<a class="headerlink" href="#tong-quan-ve-lap-trinh-huong-oi-tuong" title="Permanent link">&para;</a></h1>
+<p>Overview</p>
+<hr />
+<p>Yêu cầu về phần mềm ngày càng trở nên đa dạng và phức tạp, đòi hỏi phương pháp lập trình hiệu quả để đáp ứng. Cho đến nay có hai phương pháp lập trình phổ biến nhất là <strong>lập trình cấu trúc</strong> và <strong>lập trình hướng đối tượng</strong>.</p>
+<h2 id="lap-trinh-cau-truc-structural-programming">Lập trình cấu trúc (structural programming)<a class="headerlink" href="#lap-trinh-cau-truc-structural-programming" title="Permanent link">&para;</a></h2>
+<p>Phương pháp lập trình cấu trúc, còn gọi là lập trình hướng thủ tục (procedural programming) vận dụng cách tiếp cận từ trên xuống (top-down development), từ tổng quát đến chi tiết. Theo đó, chương trình được phân rã thành các chức năng riêng biệt, các chức năng này nếu cần lại có thể được chia nhỏ thành các chức năng nhỏ hơn. Mỗi chức năng con này được cài đặt thành một chương trình con tương ứng. Mỗi chương trình con có thể được gọi nhiều lần với các dữ liệu vào khác nhau.</p>
+<p>Ví dụ sau đây minh họa phương pháp lập trình cấu trúc. Cho một mảng số nguyên, sắp xếp mảng tăng dần, in mảng đã sắp xếp. Theo yêu cầu bài toán, chương trình được phân rã thành các chức năng: tạo mảng, sắp xếp mảng, in mảng.</p>
+<p><img src="code/structured-programming/img/top-down-approach.png" class="center"></p>
+<p><a href="https://github.com/nd-hung/oop/blob/main/docs/topics/overview/code/structured-programming/Program.cs">Xem mã nguồn trên GitHub</a></p>
+<h2 id="phuong-phap-lap-trinh-huong-oi-tuong-object-oriented-programming">Phương pháp lập trình hướng đối tượng (Object Oriented Programming)<a class="headerlink" href="#phuong-phap-lap-trinh-huong-oi-tuong-object-oriented-programming" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Là phương pháp lập trình dựa trên cách tiếp cận hướng đối tượng. Theo đó, chương trình là tập hợp các đối tượng. Đối tượng là sự kết hợp giữa dữ liệu (thuộc tính) và các xử lý (phương thức) xoay quanh dữ liệu đó. Đối tượng thực hiện các yêu cầu xử lý thông qua cơ chế truyền thông điệp (message passing).</li>
+</ul>
+<h2 id="cac-nguyen-ly-co-ban-cua-lap-trinh-huong-oi-tuong">Các nguyên lý cơ bản của lập trình hướng đối tượng<a class="headerlink" href="#cac-nguyen-ly-co-ban-cua-lap-trinh-huong-oi-tuong" title="Permanent link">&para;</a></h2>
+<h3 id="truu-tuong-hoa-abstraction">Trừu tượng hóa (Abstraction)<a class="headerlink" href="#truu-tuong-hoa-abstraction" title="Permanent link">&para;</a></h3>
+<p>Trừu tượng hóa là quá trình loại bỏ đi các thông tin, tính chất cụ thể của sự vật, hiện tượng và
+và giữ lại những tính chất, hành vi chung của chúng.</p>
+<h3 id="tinh-bao-ong-encapsulation">Tính bao đóng (Encapsulation)<a class="headerlink" href="#tinh-bao-ong-encapsulation" title="Permanent link">&para;</a></h3>
+<p>Trong phương pháp lập trình cấu trúc, dữ liệu và các chức năng xử lý tách rời nhau. Trong lập trình hướng đối tượng, dữ liệu và các xử lý xoay quanh dữ liệu đó được tích hợp trong một thực thể gọi là đối tượng.</p>
+<p>Tính bao đóng cho phép người lập trình xác định mức độ truy cập đến thành viên của một lớp từ bên ngoài.
+Theo đó, có thể chủ động ẩn đi các dữ liệu hoặc phương thức nhằm hạn chế những tác động không mong muốn từ bên ngoài lớp.</p>
+<h3 id="thua-ke-inheritance">Thừa kế (Inheritance)<a class="headerlink" href="#thua-ke-inheritance" title="Permanent link">&para;</a></h3>
+<p>Kỹ thuật thừa kế cho phép tạo một lớp mới kế thừa (sử dụng lại) các thành phần (thuộc tính, phương thức) của một lớp đã có. Kỹ thuật thừa kế thể hiện mối quan hệ tổng quát hóa - đặc biệt hóa trong thế giới thực. Ví dụ, hình vuông là một trường hợp đặc biệt của hình chữ nhật khi nó có 4 cạnh bằng nhau, khi đó ta nói hình vuông là trường hợp đặc biệt hóa của hình chữ nhật, hay nói cách khác, hình chữ nhật là trường hợp tổng quát hóa của hình vuông.</p>
+<p>Khi lập trình áp dụng kỹ thuật thừa kế, lớp đặc biệt hóa sẽ kế thừa các thành phần của lớp tổng quát. Lớp tổng quát được gọi là lớp cơ sở/lớp cha (base/parent/super class), lớp đặc biệt hóa được gọi là lớp dẫn xuất/lớp con (derived/child/sub class).</p>
+<blockquote>
+<p>Chú ý: Lớp dẫn xuất chỉ được sử dụng các thành phần mà lớp cơ sở chia sẻ.</p>
+</blockquote>
+<h3 id="a-hinh-polymorphism">Đa hình (Polymorphism)<a class="headerlink" href="#a-hinh-polymorphism" title="Permanent link">&para;</a></h3>
+<p>Kỹ thuật đa hình xuất hiện khi sử dụng thừa kế trong lập trình. Đa hình cho phép xây dựng lớp cơ sở có những thành phần được viết ở mức tổng quát, sau đó các thành phần này được cài đặt chi tiết ở các lớp kế thừa. Đa hình cho phép cài đặt các phương thức cùng tên nhưng tùy theo loại đối tượng mà đoạn mã nguồn phù hợp sẽ được thực thi một cách linh hoạt.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2023 <a href="https://nd-hung.github.io/">Hung Nguyen</a></p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
