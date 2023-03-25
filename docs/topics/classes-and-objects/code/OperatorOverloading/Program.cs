@@ -47,7 +47,5 @@ public static class TestOperatorOverloading
         Console.WriteLine(-a);     // output: -5 / 4
         Console.WriteLine(a + b);  // output: 14 / 8
         Console.WriteLine(a - b);  // output: 6 / 8
-        PhanSo c = a + b;
-        Console.WriteLine(c);  // output: 6 / 8
     }
 }
