@@ -332,5 +332,39 @@ foreach (var obj in myObjects)
 
 Một danh sách là tập các phần tử cùng kiểu, tuy nhiên kích thước của nó có thể thay đổi được trong khi chạy chương trình. Truy xuất đến từng phần tử của mdanh sách thông qua chỉ số (index) bắt đầu từ 0.
 
+- Tạo danh sách động
+
+```c#
+List<Kiểu dữ liệu> <Biến danh sách> = new List<Kiểu dữ liệu>();
+```
+
+- Ví dụ:
+
+```c#
+// Tạo danh sách động các số nguyên
+List<int> ints = new List<int>();
+
+// Thêm các phần tử (trong khi chạy chương trình)
+ints.Add(1);
+ints.Add(3);    
+ints.Add(2);
+ints.Add(4);
+ints.Add(2);
+
+// Sắp xếp tăng dần
+ints.Sort();
+
+// In danh sách sau khi sắp xếp                   
+foreach (int i in ints)
+{
+    Console.Write("{0} ", i);
+}
+
+// In danh sách sau khi sắp xếp                   
+foreach (int i in ints)
+{
+    Console.Write("{0} ", i);
+}
+```
 
 ## Định nghĩa toán tử trên lớp
