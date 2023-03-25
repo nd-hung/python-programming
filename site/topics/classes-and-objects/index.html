@@ -145,11 +145,11 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#mang-cac-oi-tuong" class="nav-link">Mảng các đối tượng</a>
+            <li class="nav-item" data-level="2"><a href="#danh-sach-oi-tuong" class="nav-link">Danh sách đối tượng</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#inh-nghia-toan-tu-tren-lop" class="nav-link">Định nghĩa toán tử trên lớp</a>
+            <li class="nav-item" data-level="2"><a href="#inh-nghia-toan-tu-tren-lop-operator-overloading" class="nav-link">Định nghĩa toán tử trên lớp (operator overloading)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -377,7 +377,7 @@ class Program
     }
 }
 </code></pre>
-<h2 id="mang-cac-oi-tuong">Mảng các đối tượng<a class="headerlink" href="#mang-cac-oi-tuong" title="Permanent link">&para;</a></h2>
+<h2 id="danh-sach-oi-tuong">Danh sách đối tượng<a class="headerlink" href="#danh-sach-oi-tuong" title="Permanent link">&para;</a></h2>
 <p>Trong C#, có thể tổ chức danh sách các đối tượng theo hai cách: tĩnh và động.</p>
 <h3 id="danh-sach-tinh-array">Danh sách tĩnh (array)<a class="headerlink" href="#danh-sach-tinh-array" title="Permanent link">&para;</a></h3>
 <p>Mảng tĩnh là tập số lượng cố định các phần tử cùng kiểu. Kích thước của mảng được xác định lúc khai báo và không thể thay đổi trong thời gian chạy chương trình. Truy xuất đến từng phần tử của mảng thông qua chỉ số (index) bắt đầu từ 0.</p>
@@ -439,7 +439,72 @@ foreach (var obj in myObjects)
 </code></pre>
 <h3 id="danh-sach-ong-list">Danh sách động (list)<a class="headerlink" href="#danh-sach-ong-list" title="Permanent link">&para;</a></h3>
 <p>Một danh sách là tập các phần tử cùng kiểu, tuy nhiên kích thước của nó có thể thay đổi được trong khi chạy chương trình. Truy xuất đến từng phần tử của mdanh sách thông qua chỉ số (index) bắt đầu từ 0.</p>
-<h2 id="inh-nghia-toan-tu-tren-lop">Định nghĩa toán tử trên lớp<a class="headerlink" href="#inh-nghia-toan-tu-tren-lop" title="Permanent link">&para;</a></h2></div>
+<ul>
+<li>Tạo danh sách động</li>
+</ul>
+<pre><code class="language-c#">List&lt;Kiểu dữ liệu&gt; &lt;Biến danh sách&gt; = new List&lt;Kiểu dữ liệu&gt;();
+</code></pre>
+<ul>
+<li>Ví dụ:</li>
+</ul>
+<pre><code class="language-c#">// Tạo danh sách động các số nguyên
+List&lt;int&gt; ints = new List&lt;int&gt;();
+
+// Thêm các phần tử (trong khi chạy chương trình)
+ints.Add(1);
+ints.Add(3);    
+ints.Add(2);
+ints.Add(4);
+ints.Add(2);
+
+// In danh sách
+foreach (int i in ints)
+{
+    Console.Write(&quot;{0} &quot;, i);
+}
+
+// Sắp xếp danh sách tăng dần
+ints.Sort();
+
+// In danh sách sau khi sắp xếp                   
+foreach (int i in ints)
+{
+    Console.Write(&quot;{0} &quot;, i);
+}
+</code></pre>
+<h2 id="inh-nghia-toan-tu-tren-lop-operator-overloading">Định nghĩa toán tử trên lớp (operator overloading)<a class="headerlink" href="#inh-nghia-toan-tu-tren-lop-operator-overloading" title="Permanent link">&para;</a></h2>
+<p>Các ngôn ngữ lập trình đều có sẵn các toán tử số học một ngôi, hai ngôi như: cộng, trừ, nhân, chia, so sánh, tăng giảm. Tuy nhiên, trong lập trình hướng đối tượng, các đối tượng do người dùng khai báo không thể sử dụng các toán tử trên một cách trực tiếp được (vì chúng thuộc kiểu dữ liệu tự định nghĩa).</p>
+<p>C# cho phép nạp cài đặt lại (nạp chồng) một số toán tử đã được định nghĩa giúp cho các phép toán trên đối tượng trở nên quen thuộc hơn.</p>
+<h3 id="cu-phap-inh-nghia-lai-toan-tu">Cú pháp định nghĩa lại toán tử<a class="headerlink" href="#cu-phap-inh-nghia-lai-toan-tu" title="Permanent link">&para;</a></h3>
+<pre><code class="language-c#">public static &lt;T&gt; operator &lt;O&gt;(&lt;T&gt; [&lt;T&gt;])
+{
+    // Các lệnh
+    return &lt;T&gt;;
+}
+</code></pre>
+<p>Trong đó <T> là tên kiểu dữ liệu tự định nghĩa (lớp/cấu trúc), <O> là toán tử nạp chồng được (<a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading#overloadable-operators">Xem danh sách toán tử có thể nạp chồng</a>.).</p>
+<ul>
+<li>Định nghĩa lại toán tử phải có các từ khóa <code>public static</code>.</li>
+<li>Toán tử một ngôi có một tham số đầu vào, toán tử hai ngôi có hai tham số đầu vào. Ít nhất một toán tử phải cùng kiểu với kiểu trả về của phép toán.</li>
+</ul>
+<h3 id="vi-du">Ví dụ<a class="headerlink" href="#vi-du" title="Permanent link">&para;</a></h3>
+<p>Đoạn code sau định nghĩa lại toán tử <code>+</code> thực hiện cộng hai phân số (<a href="">Xem mã nguồn đầy đủ trên GitHub</a>).</p>
+<pre><code class="language-C#">public static PhanSo operator +(PhanSo a, PhanSo b)
+{
+    return new PhanSo(a.tuSo * b.mauSo + b.tuSo * a.mauSo, a.mauSo * b.mauSo);
+}
+
+// Chương trình chính
+public static class TestOperatorOverloading
+{
+    public static void Main()
+    {
+        var a = new PhanSo(5, 4);
+        var b = new PhanSo(1, 2);
+        Console.WriteLine(a + b);  // output: 14 / 8
+    }
+}
+</code></pre></div>
             </div>
         </div>
 
