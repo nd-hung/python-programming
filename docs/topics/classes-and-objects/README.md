@@ -260,7 +260,7 @@ public class NhanVien
 }
 ```
 
-## Mảng các đối tượng
+## Danh sách đối tượng
 
 Trong C#, có thể tổ chức danh sách các đối tượng theo hai cách: tĩnh và động.
 
@@ -351,14 +351,14 @@ ints.Add(2);
 ints.Add(4);
 ints.Add(2);
 
-// Sắp xếp tăng dần
-ints.Sort();
-
-// In danh sách sau khi sắp xếp                   
+// In danh sách
 foreach (int i in ints)
 {
     Console.Write("{0} ", i);
 }
+
+// Sắp xếp danh sách tăng dần
+ints.Sort();
 
 // In danh sách sau khi sắp xếp                   
 foreach (int i in ints)
@@ -367,4 +367,45 @@ foreach (int i in ints)
 }
 ```
 
-## Định nghĩa toán tử trên lớp
+## Định nghĩa toán tử trên lớp (operator overloading)
+
+Các ngôn ngữ lập trình đều có sẵn các toán tử số học một ngôi, hai ngôi như: cộng, trừ, nhân, chia, so sánh, tăng giảm. Tuy nhiên, trong lập trình hướng đối tượng, các đối tượng do người dùng khai báo không thể sử dụng các toán tử trên một cách trực tiếp được (vì chúng thuộc kiểu dữ liệu tự định nghĩa).
+
+C# cho phép nạp cài đặt lại (nạp chồng) một số toán tử đã được định nghĩa giúp cho các phép toán trên đối tượng trở nên quen thuộc hơn.
+
+### Cú pháp định nghĩa lại toán tử
+
+```c#
+public static <T> operator <O>(<T> [, <T>])
+{
+    // Các lệnh
+    return <T>;
+}
+```
+
+Trong đó `<T>` là tên kiểu dữ liệu tự định nghĩa (lớp/cấu trúc), `<O>` là toán tử nạp chồng được ([Xem danh sách toán tử có thể nạp chồng](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading#overloadable-operators).).
+
+- Định nghĩa lại toán tử phải có các từ khóa `public static`.
+- Toán tử một ngôi có một tham số đầu vào, toán tử hai ngôi có hai tham số đầu vào. Ít nhất một toán tử phải cùng kiểu với kiểu trả về của phép toán.
+
+### Ví dụ
+
+Đoạn code sau định nghĩa lại toán tử `+` thực hiện cộng hai phân số ([Xem mã nguồn đầy đủ trên GitHub](https://github.com/nd-hung/oop/blob/main/docs/topics/classes-and-objects/code/OperatorOverloading/Program.cs)).
+
+```C#
+public static PhanSo operator +(PhanSo a, PhanSo b)
+{
+    return new PhanSo(a.tuSo * b.mauSo + b.tuSo * a.mauSo, a.mauSo * b.mauSo);
+}
+
+// Chương trình chính
+public static class TestOperatorOverloading
+{
+    public static void Main()
+    {
+        var a = new PhanSo(5, 4);
+        var b = new PhanSo(1, 2);
+        PhanSo c = a + b;   // c = 14 / 8
+    }
+}
+```
