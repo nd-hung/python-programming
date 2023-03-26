@@ -476,19 +476,19 @@ foreach (int i in ints)
 <p>Các ngôn ngữ lập trình đều có sẵn các toán tử số học một ngôi, hai ngôi như: cộng, trừ, nhân, chia, so sánh, tăng giảm. Tuy nhiên, trong lập trình hướng đối tượng, các đối tượng do người dùng khai báo không thể sử dụng các toán tử trên một cách trực tiếp được (vì chúng thuộc kiểu dữ liệu tự định nghĩa).</p>
 <p>C# cho phép nạp cài đặt lại (nạp chồng) một số toán tử đã được định nghĩa giúp cho các phép toán trên đối tượng trở nên quen thuộc hơn.</p>
 <h3 id="cu-phap-inh-nghia-lai-toan-tu">Cú pháp định nghĩa lại toán tử<a class="headerlink" href="#cu-phap-inh-nghia-lai-toan-tu" title="Permanent link">&para;</a></h3>
-<pre><code class="language-c#">public static &lt;T&gt; operator &lt;O&gt;(&lt;T&gt; [&lt;T&gt;])
+<pre><code class="language-c#">public static &lt;T&gt; operator &lt;O&gt;(&lt;T&gt; [, &lt;T&gt;])
 {
     // Các lệnh
     return &lt;T&gt;;
 }
 </code></pre>
-<p>Trong đó <T> là tên kiểu dữ liệu tự định nghĩa (lớp/cấu trúc), <O> là toán tử nạp chồng được (<a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading#overloadable-operators">Xem danh sách toán tử có thể nạp chồng</a>.).</p>
+<p>Trong đó <code>&lt;T&gt;</code> là tên kiểu dữ liệu tự định nghĩa (lớp/cấu trúc), <code>&lt;O&gt;</code> là toán tử nạp chồng được (<a href="https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading#overloadable-operators">Xem danh sách toán tử có thể nạp chồng</a>.).</p>
 <ul>
 <li>Định nghĩa lại toán tử phải có các từ khóa <code>public static</code>.</li>
 <li>Toán tử một ngôi có một tham số đầu vào, toán tử hai ngôi có hai tham số đầu vào. Ít nhất một toán tử phải cùng kiểu với kiểu trả về của phép toán.</li>
 </ul>
 <h3 id="vi-du">Ví dụ<a class="headerlink" href="#vi-du" title="Permanent link">&para;</a></h3>
-<p>Đoạn code sau định nghĩa lại toán tử <code>+</code> thực hiện cộng hai phân số (<a href="">Xem mã nguồn đầy đủ trên GitHub</a>).</p>
+<p>Đoạn code sau định nghĩa lại toán tử <code>+</code> thực hiện cộng hai phân số (<a href="https://github.com/nd-hung/oop/blob/main/docs/topics/classes-and-objects/code/OperatorOverloading/Program.cs">Xem mã nguồn đầy đủ trên GitHub</a>).</p>
 <pre><code class="language-C#">public static PhanSo operator +(PhanSo a, PhanSo b)
 {
     return new PhanSo(a.tuSo * b.mauSo + b.tuSo * a.mauSo, a.mauSo * b.mauSo);
@@ -501,7 +501,7 @@ public static class TestOperatorOverloading
     {
         var a = new PhanSo(5, 4);
         var b = new PhanSo(1, 2);
-        Console.WriteLine(a + b);  // output: 14 / 8
+        PhanSo c = a + b;   // c = 14 / 8
     }
 }
 </code></pre></div>

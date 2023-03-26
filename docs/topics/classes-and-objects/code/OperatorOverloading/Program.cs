@@ -3,8 +3,8 @@
 // Định nghĩa lớp phân số
 public class PhanSo
 {
-    private readonly int tuSo;
-    private readonly int mauSo;
+    private int tuSo;
+    private int mauSo;
 
     // Hàm thiết lập
     public PhanSo(int ts, int ms)
@@ -18,22 +18,22 @@ public class PhanSo
     }
 
     // Định nghĩa toán tử + 
-    public static PhanSo operator +(PhanSo p) => p; 
+    public static PhanSo operator +(PhanSo p) => p;
     // Định nghĩa toán tử -
     public static PhanSo operator -(PhanSo p) => new PhanSo(-p.tuSo, p.mauSo);
-    
+
     // Định nghĩa toán tử cộng 2 phân số
     public static PhanSo operator +(PhanSo a, PhanSo b)
     {
         return new PhanSo(a.tuSo * b.mauSo + b.tuSo * a.mauSo, a.mauSo * b.mauSo);
     }
-    
+
     // Định nghĩa toán tử trừ 2 phân số
     public static PhanSo operator -(PhanSo a, PhanSo b)
     {
         return a + (-b);
     }
- 
+
     public override string ToString() => $"{tuSo} / {mauSo}";
 }
 
