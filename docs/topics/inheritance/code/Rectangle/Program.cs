@@ -7,8 +7,8 @@ Xây dựng lớp hình vuông (Square).
 // Cài đặt lớp Rectangle
 public class Rectangle
 {
-    public double Width { get; set; }
-    public double Height { get; set; }
+    protected double Width { get; set; }
+    protected double Height { get; set; }
     // Hàm thiết lập 
     public Rectangle(double w = 0, double h = 0)
     {

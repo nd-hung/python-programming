@@ -1,5 +1,7 @@
 # Thiết lập môi trường lập trình C# #
 
+---
+
 ## [Cài đặt Visual Studio](vs)
 
 - Về Visual Studio
@@ -12,11 +14,8 @@
 - Cài đặt VS Code
 - Tạo ứng dụng C# với VS Code
 
-## SplashKit
+## [SplashKit](#)
 
 - Về SplashKit
 - Cài đặt
 - Tạo ứng dụng đồ họa với C# và SplashKit
-
-## <a name="vs"> Microsoft Visual Studio </a>
-

@@ -60,4 +60,3 @@ Chọn *Do not use top-level statements* để tạo ứng dụng "chuẩn" vớ
 Nhấn **Ctrl+F5**, hoặc chọn **Debug > Start without debugging**, hoặc nhấn nút **Start** (hình mũi tên màu xanh).
 
 <img src="figs/vs-create-app-06.PNG">
-

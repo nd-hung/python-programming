@@ -4,8 +4,6 @@ Object Oriented Programming
 
 ---
 
-<br>
-
 Tài liệu này trình bày lý thuyết tóm tắt và các bài thực hành của học phần Lập trình hướng đối tượng.
 Công cụ lập trình sử dụng để minh họa trong học phần này là .NET và C#.
 
@@ -18,7 +16,6 @@ Công cụ lập trình sử dụng để minh họa trong học phần này là
 ## Các chủ đề chính
 - #### [Tổng quan về lập trình hướng đối tượng](topics/overview)
 - #### [Nền tảng .NET và ngôn ngữ C#](topics/dotnet-and-csharp)
-- #### [Mô hình hóa hướng đối tượng với UML](topics/object-oriented-modeling)
 - #### [Lớp và đối tượng](topics/classes-and-objects)
 - #### [Thừa kế ](topics/inheritance)
 - #### [Đa hình](topics/polymorphism)

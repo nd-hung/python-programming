@@ -115,9 +115,13 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#thua-ke-va-a-hinh" class="nav-link">Thừa kế và đa hình</a>
+            <li class="nav-item" data-level="1"><a href="#thua-ke" class="nav-link">Thừa kế</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#ky-thuat-thua-ke-inheritance" class="nav-link">Kỹ thuật thừa kế (Inheritance)</a>
+            <li class="nav-item" data-level="2"><a href="#tong-quat-hoa-ac-biet-hoa" class="nav-link">Tổng quát hóa, đặc biệt hóa</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ky-thuat-thua-ke" class="nav-link">Kỹ thuật thừa kế</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -136,11 +140,70 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="thua-ke-va-a-hinh">Thừa kế và đa hình<a class="headerlink" href="#thua-ke-va-a-hinh" title="Permanent link">&para;</a></h1>
+<h1 id="thua-ke">Thừa kế<a class="headerlink" href="#thua-ke" title="Permanent link">&para;</a></h1>
+<p>Inheritance</p>
 <hr />
-<h2 id="ky-thuat-thua-ke-inheritance">Kỹ thuật thừa kế (Inheritance)<a class="headerlink" href="#ky-thuat-thua-ke-inheritance" title="Permanent link">&para;</a></h2>
-<h3 id="quan-he-ke-thua">Quan hệ kế thừa<a class="headerlink" href="#quan-he-ke-thua" title="Permanent link">&para;</a></h3>
-<h3 id="cai-at-quan-he-ke-thua">Cài đặt quan hệ kế thừa<a class="headerlink" href="#cai-at-quan-he-ke-thua" title="Permanent link">&para;</a></h3>
+<h2 id="tong-quat-hoa-ac-biet-hoa">Tổng quát hóa, đặc biệt hóa<a class="headerlink" href="#tong-quat-hoa-ac-biet-hoa" title="Permanent link">&para;</a></h2>
+<p>Mối quan hệ tổng quát hóa hay đặc biệt hóa rất quen thuộc trong thế giới thực. Đối tượng đặc biệt hóa của một dạng đối tượng tổng quát sẽ có đầy đủ tính chất của lớp tổng quát đó, đồng thời có thêm các tính chất riêng của nó. Ví dụ, hình vuông là trường hợp đặc biệt của hình chữ nhật, hay nói ngược lại hình chữ nhật là trường hợp tổng quát của hình vuông. Trong lập trình hướng đối tượng, mối quan hệ tổng quát hóa, đặc biệt hóa được cài đặt thông qua kỹ thuật thừa kế (inheritance).</p>
+<h2 id="ky-thuat-thua-ke">Kỹ thuật thừa kế<a class="headerlink" href="#ky-thuat-thua-ke" title="Permanent link">&para;</a></h2>
+<p>Thừa kế là một đặc điểm chính của lập trình hướng đối tượng, cho phép tạo lớp mới tái sử dụng các lớp đã có. Lớp cho phép thừa kế gọi là <strong>lớp cơ sở (base class)</strong> hay lớp cha (parent class), lớp hưởng thừa kế gọi là <strong>lớp dẫn xuất (derived class)</strong> hay lớp con (child class). Lớp thừa kế có thể sử dụng lại, sửa đổi hay mở rộng các thành phần của lớp cơ sở.</p>
+<ul>
+<li>Trong C# một lớp dẫn xuất chỉ được kế thừa một lớp cơ sở. Một lớp cơ sở có thể có nhiều lớp dẫn xuất.</li>
+<li>Có thể cài đặt thừa kế chuyển tiếp (transitive inheritance). Nếu lớp C kế thừa lớp B, lớp B kế thừa lớp A thì lớp C được sử dụng các thành viên (thuộc tính, phương thức) của lớp B và lớp A.</li>
+<li>Lớp dẫn xuất không được phép thừa kế phương thức thiết lập (constructor), hủy (finalizer) của lớp cơ sở.</li>
+</ul>
+<h3 id="cu-phap">Cú pháp<a class="headerlink" href="#cu-phap" title="Permanent link">&para;</a></h3>
+<pre><code class="language-C#">&lt;Phạm vi&gt; class &lt;Tên lớp dẫn xuất&gt;: &lt;Tên lớp cơ sở&gt; 
+{ 
+  // Các thành phần dữ liệu
+  // Các thành phần phương thức
+}
+</code></pre>
+<h3 id="vi-du">Ví dụ<a class="headerlink" href="#vi-du" title="Permanent link">&para;</a></h3>
+<pre><code class="language-c#">// Cài đặt lớp Rectangle
+public class Rectangle
+{
+    public double Width { get; set; }
+    public double Height { get; set; }
+    // Hàm thiết lập 
+    public Rectangle(double w = 0, double h = 0)
+    {
+        Width = w;
+        Height = h;
+    }
+    // Hàm tính diện tích hình chữ nhật
+    public double Area()
+    {
+        return Width * Height;
+    }
+}
+
+// Xây dựng lớp Square kế thừa lớp Rectangle
+public class Square : Rectangle
+{
+    // Hàm thiết lập
+    public Square(double w = 0) : base(w, w) { }
+}
+
+// Chương trình chính
+class Program
+{
+    static void Main()
+    {
+        // Tạo đối tượng hình chữ nhật
+        Rectangle r1 = new Rectangle(3, 7);
+        // In diện tích hình chữ nhật
+        Console.WriteLine(&quot;Dien tich hinh chu nhat = {0}&quot;, r1.Area());
+
+        // Tạo đối tượng hình vuông
+        Square s1 = new Square(5);
+        // In diện tích hình vuông
+        double area = s1.Area();
+        Console.WriteLine(&quot;Dien tich hinh vuong = {0}&quot;, area);
+    }
+}
+</code></pre>
+<p><a href="https://github.com/nd-hung/oop/tree/main/docs/topics/inheritance/code">Xem các ví dụ khác trên GitHub</a></p>
 <h2 id="a-hinh-polymorphism">Đa hình (Polymorphism)<a class="headerlink" href="#a-hinh-polymorphism" title="Permanent link">&para;</a></h2>
 <h3 id="dan-nhap">Dẫn nhập<a class="headerlink" href="#dan-nhap" title="Permanent link">&para;</a></h3>
 <h3 id="cai-at-phuong-thuc-a-hinh">Cài đặt phương thức đa hình<a class="headerlink" href="#cai-at-phuong-thuc-a-hinh" title="Permanent link">&para;</a></h3>

@@ -32,8 +32,8 @@ Thừa kế là một đặc điểm chính của lập trình hướng đối t
 // Cài đặt lớp Rectangle
 public class Rectangle
 {
-    public double Width { get; set; }
-    public double Height { get; set; }
+    protected Width { get; set; }
+    protected double Height { get; set; }
     // Hàm thiết lập 
     public Rectangle(double w = 0, double h = 0)
     {
@@ -73,11 +73,9 @@ class Program
 }
 ```
 
+Trong ví dụ trên, lớp Rectangle có hai thuộc tính Width, Height dùng để lưu chiều ngang, chiều cao của hình chữ nhật, phương thức tạo lập và phương thức `Area()` tính diện tích.
+
+Do hình vuông là trường hợp đặc biệt của hình chữ nhật (khi chiều rộng và chiều cao bằng nhau), nên ta tạo lớp Square kế thừa lớp Rectangle để sử dụng lại những thành phần: chiều rộng, chiều cao, phương thức tính diện tích. Trong lớp Square chỉ cần cài đặt hàm thiết lập phù hợp với trường hợp đặc biệt hóa (bốn cạnh bằng nhau nên chỉ cần tạo lập một cạnh). Kết quả, ta có lớp hình vuông với đầy đủ các thuộc tính, phương thức mà không cần phải viết lại toàn bộ mã nguồn.
+
 [Xem các ví dụ khác trên GitHub](https://github.com/nd-hung/oop/tree/main/docs/topics/inheritance/code)
-
-## Đa hình (Polymorphism)
-### Dẫn nhập
-### Cài đặt phương thức đa hình
-
-## Lớp giao diện (Interface)
 
