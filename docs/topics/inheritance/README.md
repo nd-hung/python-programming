@@ -1,9 +1,79 @@
-# Thừa kế và đa hình
+# Thừa kế
+
+Inheritance
+
 ---
 
-## Kỹ thuật thừa kế (Inheritance)
-### Quan hệ kế thừa
-### Cài đặt quan hệ kế thừa
+## Tổng quát hóa, đặc biệt hóa
+
+Mối quan hệ tổng quát hóa hay đặc biệt hóa rất quen thuộc trong thế giới thực. Đối tượng đặc biệt hóa của một dạng đối tượng tổng quát sẽ có đầy đủ tính chất của lớp tổng quát đó, đồng thời có thêm các tính chất riêng của nó. Ví dụ, hình vuông là trường hợp đặc biệt của hình chữ nhật, hay nói ngược lại hình chữ nhật là trường hợp tổng quát của hình vuông. Trong lập trình hướng đối tượng, mối quan hệ tổng quát hóa, đặc biệt hóa được cài đặt thông qua kỹ thuật thừa kế (inheritance).
+
+## Kỹ thuật thừa kế
+
+Thừa kế là một đặc điểm chính của lập trình hướng đối tượng, cho phép tạo lớp mới tái sử dụng các lớp đã có. Lớp cho phép thừa kế gọi là **lớp cơ sở (base class)** hay lớp cha (parent class), lớp hưởng thừa kế gọi là **lớp dẫn xuất (derived class)** hay lớp con (child class). Lớp thừa kế có thể sử dụng lại, sửa đổi hay mở rộng các thành phần của lớp cơ sở.
+
+- Trong C# một lớp dẫn xuất chỉ được kế thừa một lớp cơ sở. Một lớp cơ sở có thể có nhiều lớp dẫn xuất.
+- Có thể cài đặt thừa kế chuyển tiếp (transitive inheritance). Nếu lớp C kế thừa lớp B, lớp B kế thừa lớp A thì lớp C được sử dụng các thành viên (thuộc tính, phương thức) của lớp B và lớp A.
+- Lớp dẫn xuất không được phép thừa kế phương thức thiết lập (constructor), hủy (finalizer) của lớp cơ sở.
+
+### Cú pháp
+
+```C#
+<Phạm vi> class <Tên lớp dẫn xuất>: <Tên lớp cơ sở> 
+{ 
+  // Các thành phần dữ liệu
+  // Các thành phần phương thức
+}
+```
+
+### Ví dụ
+
+```c#
+// Cài đặt lớp Rectangle
+public class Rectangle
+{
+    public double Width { get; set; }
+    public double Height { get; set; }
+    // Hàm thiết lập 
+    public Rectangle(double w = 0, double h = 0)
+    {
+        Width = w;
+        Height = h;
+    }
+    // Hàm tính diện tích hình chữ nhật
+    public double Area()
+    {
+        return Width * Height;
+    }
+}
+
+// Xây dựng lớp Square kế thừa lớp Rectangle
+public class Square : Rectangle
+{
+    // Hàm thiết lập
+    public Square(double w = 0) : base(w, w) { }
+}
+
+// Chương trình chính
+class Program
+{
+    static void Main()
+    {
+        // Tạo đối tượng hình chữ nhật
+        Rectangle r1 = new Rectangle(3, 7);
+        // In diện tích hình chữ nhật
+        Console.WriteLine("Dien tich hinh chu nhat = {0}", r1.Area());
+
+        // Tạo đối tượng hình vuông
+        Square s1 = new Square(5);
+        // In diện tích hình vuông
+        double area = s1.Area();
+        Console.WriteLine("Dien tich hinh vuong = {0}", area);
+    }
+}
+```
+
+[Xem các ví dụ khác trên GitHub](https://github.com/nd-hung/oop/tree/main/docs/topics/inheritance/code)
 
 ## Đa hình (Polymorphism)
 ### Dẫn nhập
