@@ -86,4 +86,7 @@ Do hình vuông là trường hợp đặc biệt của hình chữ nhật (khi 
 - Thành viên có mức độ `internal` cho phép lớp dẫn xuất trong cùng assembly với lớp cơ sở sử dụng.
 - Thành viên có mức độ `public` cho phép sử dụng tự do từ ngoài lớp.
 
+## Lớp niêm phong (sealed class)
+
+Khi muốn tạo một lớp không cho lớp khác thừa kế, dùng từa khóa `sealed` trước tên lớp.
 

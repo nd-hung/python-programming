@@ -367,13 +367,13 @@ foreach (int i in ints)
 }
 ```
 
-## Định nghĩa toán tử trên lớp (operator overloading)
+## Nạp chồng toán tử (operator overloading)
 
 Các ngôn ngữ lập trình đều có sẵn các toán tử số học một ngôi, hai ngôi như: cộng, trừ, nhân, chia, so sánh, tăng giảm. Tuy nhiên, trong lập trình hướng đối tượng, các đối tượng do người dùng khai báo không thể sử dụng các toán tử trên một cách trực tiếp được (vì chúng thuộc kiểu dữ liệu tự định nghĩa).
 
 C# cho phép nạp cài đặt lại (nạp chồng) một số toán tử đã được định nghĩa giúp cho các phép toán trên đối tượng trở nên quen thuộc hơn.
 
-### Cú pháp định nghĩa lại toán tử
+### Cú pháp
 
 ```c#
 public static <T> operator <O>(<T> [, <T>])
