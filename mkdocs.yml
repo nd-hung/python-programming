@@ -9,7 +9,6 @@ nav:
     - Các chủ đề:
       - Tổng quan về lập trình hướng đối tượng: topics\overview\README.md
       - Nền tảng .NET và ngôn ngữ C#: topics\dotnet-and-csharp\README.md
-      - Mô hình hóa hướng đối tượng: topics\object-oriented-modeling\README.md
       - Lớp và đối tượng: topics\classes-and-objects\README.md
       - Thừa kế: topics\inheritance\README.md
       - Đa hình: topics\polymorphism\README.md

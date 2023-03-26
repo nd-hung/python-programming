@@ -8,9 +8,9 @@ Inheritance
 
 Mối quan hệ tổng quát hóa hay đặc biệt hóa rất quen thuộc trong thế giới thực. Đối tượng đặc biệt hóa của một dạng đối tượng tổng quát sẽ có đầy đủ tính chất của lớp tổng quát đó, đồng thời có thêm các tính chất riêng của nó. Ví dụ, hình vuông là trường hợp đặc biệt của hình chữ nhật, hay nói ngược lại hình chữ nhật là trường hợp tổng quát của hình vuông. Trong lập trình hướng đối tượng, mối quan hệ tổng quát hóa, đặc biệt hóa được cài đặt thông qua kỹ thuật thừa kế (inheritance).
 
-## Kỹ thuật thừa kế
+## Cài đặt thừa kế
 
-Thừa kế là một đặc điểm chính của lập trình hướng đối tượng, cho phép tạo lớp mới tái sử dụng các lớp đã có. Lớp cho phép thừa kế gọi là **lớp cơ sở (base class)** hay lớp cha (parent class), lớp hưởng thừa kế gọi là **lớp dẫn xuất (derived class)** hay lớp con (child class). Lớp thừa kế có thể sử dụng lại, sửa đổi hay mở rộng các thành phần của lớp cơ sở.
+Thừa kế là một đặc điểm quan trọng của lập trình hướng đối tượng, cho phép tạo lớp mới tái sử dụng các lớp đã có. Lớp cho phép thừa kế gọi là **lớp cơ sở (base class)** hay lớp cha (parent class), lớp hưởng thừa kế gọi là **lớp dẫn xuất (derived class)** hay lớp con (child class). Lớp thừa kế có thể sử dụng lại, sửa đổi hay mở rộng các thành phần của lớp cơ sở.
 
 - Trong C# một lớp dẫn xuất chỉ được kế thừa một lớp cơ sở. Một lớp cơ sở có thể có nhiều lớp dẫn xuất.
 - Có thể cài đặt thừa kế chuyển tiếp (transitive inheritance). Nếu lớp C kế thừa lớp B, lớp B kế thừa lớp A thì lớp C được sử dụng các thành viên (thuộc tính, phương thức) của lớp B và lớp A.
@@ -78,4 +78,12 @@ Trong ví dụ trên, lớp Rectangle có hai thuộc tính Width, Height dùng 
 Do hình vuông là trường hợp đặc biệt của hình chữ nhật (khi chiều rộng và chiều cao bằng nhau), nên ta tạo lớp Square kế thừa lớp Rectangle để sử dụng lại những thành phần: chiều rộng, chiều cao, phương thức tính diện tích. Trong lớp Square chỉ cần cài đặt hàm thiết lập phù hợp với trường hợp đặc biệt hóa (bốn cạnh bằng nhau nên chỉ cần tạo lập một cạnh). Kết quả, ta có lớp hình vuông với đầy đủ các thuộc tính, phương thức mà không cần phải viết lại toàn bộ mã nguồn.
 
 [Xem các ví dụ khác trên GitHub](https://github.com/nd-hung/oop/tree/main/docs/topics/inheritance/code)
+
+## Quy tắc thừa kế
+
+- Thành viên (thuộc tính, phương thức) có mức độ `private` không cho phép truy cập từ ngoài lớp.
+- Thành viên có mức độ `protected` cho phép các lớp dẫn xuất sử dụng.
+- Thành viên có mức độ `internal` cho phép lớp dẫn xuất trong cùng assembly với lớp cơ sở sử dụng.
+- Thành viên có mức độ `public` cho phép sử dụng tự do từ ngoài lớp.
+
 

@@ -2,7 +2,6 @@
 
 Object Oriented Programming
 
----
 
 Tài liệu này trình bày lý thuyết tóm tắt và các bài thực hành của học phần Lập trình hướng đối tượng.
 Công cụ lập trình sử dụng để minh họa trong học phần này là .NET và C#.

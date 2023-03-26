@@ -125,14 +125,6 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#a-hinh-polymorphism" class="nav-link">Đa hình (Polymorphism)</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#lop-giao-dien-interface" class="nav-link">Lớp giao diện (Interface)</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
         </ul>
@@ -163,8 +155,8 @@
 <pre><code class="language-c#">// Cài đặt lớp Rectangle
 public class Rectangle
 {
-    public double Width { get; set; }
-    public double Height { get; set; }
+    protected Width { get; set; }
+    protected double Height { get; set; }
     // Hàm thiết lập 
     public Rectangle(double w = 0, double h = 0)
     {
@@ -203,11 +195,9 @@ class Program
     }
 }
 </code></pre>
-<p><a href="https://github.com/nd-hung/oop/tree/main/docs/topics/inheritance/code">Xem các ví dụ khác trên GitHub</a></p>
-<h2 id="a-hinh-polymorphism">Đa hình (Polymorphism)<a class="headerlink" href="#a-hinh-polymorphism" title="Permanent link">&para;</a></h2>
-<h3 id="dan-nhap">Dẫn nhập<a class="headerlink" href="#dan-nhap" title="Permanent link">&para;</a></h3>
-<h3 id="cai-at-phuong-thuc-a-hinh">Cài đặt phương thức đa hình<a class="headerlink" href="#cai-at-phuong-thuc-a-hinh" title="Permanent link">&para;</a></h3>
-<h2 id="lop-giao-dien-interface">Lớp giao diện (Interface)<a class="headerlink" href="#lop-giao-dien-interface" title="Permanent link">&para;</a></h2></div>
+<p>Trong ví dụ trên, lớp Rectangle có hai thuộc tính Width, Height dùng để lưu chiều ngang, chiều cao của hình chữ nhật, phương thức tạo lập và phương thức <code>Area()</code> tính diện tích.</p>
+<p>Do hình vuông là trường hợp đặc biệt của hình chữ nhật (khi chiều rộng và chiều cao bằng nhau), nên ta tạo lớp Square kế thừa lớp Rectangle để sử dụng lại những thành phần: chiều rộng, chiều cao, phương thức tính diện tích. Trong lớp Square chỉ cần cài đặt hàm thiết lập phù hợp với trường hợp đặc biệt hóa (bốn cạnh bằng nhau nên chỉ cần tạo lập một cạnh). Kết quả, ta có lớp hình vuông với đầy đủ các thuộc tính, phương thức mà không cần phải viết lại toàn bộ mã nguồn.</p>
+<p><a href="https://github.com/nd-hung/oop/tree/main/docs/topics/inheritance/code">Xem các ví dụ khác trên GitHub</a></p></div>
             </div>
         </div>
 
