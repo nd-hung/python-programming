@@ -129,7 +129,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#ghi-e-phuong-thuc-method-overriding" class="nav-link">Ghi đè phương thức (Method overriding)</a>
+            <li class="nav-item" data-level="2"><a href="#an-phuong-thuc-cua-lop-co-so" class="nav-link">Ẩn phương thức của lớp cơ sở</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -221,86 +221,11 @@ class Program
     // Class members here.
 }
 </code></pre>
-<h2 id="ghi-e-phuong-thuc-method-overriding">Ghi đè phương thức (Method overriding)<a class="headerlink" href="#ghi-e-phuong-thuc-method-overriding" title="Permanent link">&para;</a></h2>
-<p>Ví dụ (<a href="https://github.com/nd-hung/oop/blob/main/docs/topics/inheritance/code/MethodOverriding/Program.cs">Xem mã nguồn trên GitHub</a>):</p>
-<pre><code class="language-c#">// Định nghĩa lớp Shape mô tả các hình vẽ tổng quát
-public class Shape
-{
-    protected string name; 
-    public string Name { get =&gt; name; }
-    // Hàm thiết lập
-    public Shape(string name = &quot;Shape&quot;)
-    { this.name = name; }
-    // Hàm tính diện tích - Hàm ảo (virtual)
-    // Shape chưa phải hình vẽ cụ thể nên chưa thể tính diện tích
-    public virtual double Area()
-    {        
-        return 0;
-    }
-} // Kết thúc lớp Shape
-
-// Định nghĩa lớp Square mô tả các hình vuông, kế thừa lớp Shape
-public class Square : Shape
-{
-    // Hình vuông có thuộc tính độ dài cạnh
-    private double side;
-    public double Side { get =&gt; side; }
-
-    // Hàm thiết lập: khởi tạo tên gọi và độ dài cạnh hình vuông
-    public Square(string name = &quot;Square&quot;, double side = 0) : base(name)
-    {
-        this.side = side;
-    }
-
-    // Hàm tính diện tích - Ghi đè hàm cùng tên của lớp Shape
-    public override double Area()
-    {
-        // Ở đây là hình vẽ cụ thể (hình vuông) nên tính được diện tích
-        return side * side;
-    }
-} // Kết thúc lớp Square
-
-// Định nghĩa lớp Circle mô tả các hình tròn, kế thừa lớp Shape
-public class Circle : Shape
-{
-    // Hình tròn có thuộc tính độ dài bán kính
-    private double radius;
-    public double Radius { get =&gt; radius; }
-
-    // Hàm thiết lập: khởi tạo tên gọi và độ dài bán kính hình tròn
-    public Circle(string name = &quot;Circle&quot;, double radius = 0) : base(name)
-    {
-        this.radius = radius;
-    }
-
-    // Hàm tính diện tích - Ghi đè hàm cùng tên của lớp Shape
-    public override double Area()
-    {
-        // Ở đây là hình vẽ cụ thể (hình tròn) nên tính được diện tích
-        return Math.PI * radius * radius;
-    }
-} // Kết thúc lớp Circle
-
-// Chương trình chính
-internal class Program
-{
-    static void Main(string[] args)
-    {
-        // Tạo đối tượng hình vẽ
-        Shape shape = new Shape(&quot;General shape&quot;);
-        Console.WriteLine(&quot;This is a {0}, area = {1:0.00}&quot;, shape.Name, shape.Area());
-
-        // Tạo đối tượng hình vuông
-        Shape square = new Square(&quot;Square&quot;, 5);
-        Console.WriteLine(&quot;This is a {0}, area = {1:0.00}&quot;, square.Name, square.Area());
-
-        // Tạo đối tượng hình tròn
-        Shape circle = new Circle(&quot;Circle&quot;, 1);
-        Console.WriteLine(&quot;This is a {0}, area = {1:0.00}&quot;, circle.Name, circle.Area());
-    }
-}
-</code></pre>
-<p><img alt="Ví dụ chạy chương trình" src="code/MethodOverriding/img/run_example.PNG" /></p></div>
+<h2 id="an-phuong-thuc-cua-lop-co-so">Ẩn phương thức của lớp cơ sở<a class="headerlink" href="#an-phuong-thuc-cua-lop-co-so" title="Permanent link">&para;</a></h2>
+<p>Trong lớp dẫn xuất, khi muốn cài đặt một phương thức thay thế phương thức trùng tên ở lớp cơ sở, ta dùng từ khóa <code>new</code> trước định nghĩa phương thức.</p>
+<ul>
+<li>Ví dụ: <a href="https://github.com/nd-hung/oop/blob/main/docs/topics/inheritance/code/HidingBaseMethods/">Xem trên GitHub</a></li>
+</ul></div>
             </div>
         </div>
 

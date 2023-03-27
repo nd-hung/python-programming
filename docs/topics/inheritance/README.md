@@ -103,5 +103,23 @@ public sealed class Square
 
 Trong lớp dẫn xuất, khi muốn cài đặt một phương thức thay thế phương thức trùng tên ở lớp cơ sở, ta dùng từ khóa `new` trước định nghĩa phương thức.
 
+```c#
+public class BaseClass
+{
+    public void Method()
+    {
+        // Statements
+    }
+}
+
+public class DerivedClass : BaseClass
+{
+    public new void Method()
+    {
+        // Statements
+    }
+}
+```
+
 - Ví dụ: [Xem trên GitHub](https://github.com/nd-hung/oop/blob/main/docs/topics/inheritance/code/HidingBaseMethods/)
 
