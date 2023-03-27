@@ -23,7 +23,7 @@ namespace BaseMethodHidingDemo
     // Định nghĩa lớp Student mô tả sinh viên, kế thừa lớp Person
     public class Student : Person
     {
-        // Sinh viên có các thuộc tính mã sinh viên, điểm trung bình
+        // Ngoài họ tên (kế thừa lớp Person), sinh viên có các thuộc tính mã sinh viên, điểm trung bình
         private string? maSV;
         private double dtb;
 

@@ -6,7 +6,7 @@ Polymorphism
 
 ## Ghi đè phương thức (Method overriding)
 
-Ví dụ ([Xem mã nguồn trên GitHub](https://github.com/nd-hung/oop/blob/main/docs/topics/inheritance/code/MethodOverriding/Program.cs)):
+Ví dụ ([Xem trên GitHub](https://github.com/nd-hung/oop/blob/main/docs/topics/inheritance/code/MethodOverriding/Program.cs)):
 
 ```c#
 // Định nghĩa lớp Shape mô tả các hình vẽ tổng quát

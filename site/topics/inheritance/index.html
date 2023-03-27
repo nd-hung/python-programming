@@ -223,6 +223,22 @@ class Program
 </code></pre>
 <h2 id="an-phuong-thuc-cua-lop-co-so">Ẩn phương thức của lớp cơ sở<a class="headerlink" href="#an-phuong-thuc-cua-lop-co-so" title="Permanent link">&para;</a></h2>
 <p>Trong lớp dẫn xuất, khi muốn cài đặt một phương thức thay thế phương thức trùng tên ở lớp cơ sở, ta dùng từ khóa <code>new</code> trước định nghĩa phương thức.</p>
+<pre><code class="language-c#">public class BaseClass
+{
+    public void Method()
+    {
+        // Statements
+    }
+}
+
+public class DerivedClass : BaseClass
+{
+    public new void Method()
+    {
+        // Statements
+    }
+}
+</code></pre>
 <ul>
 <li>Ví dụ: <a href="https://github.com/nd-hung/oop/blob/main/docs/topics/inheritance/code/HidingBaseMethods/">Xem trên GitHub</a></li>
 </ul></div>
