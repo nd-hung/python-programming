@@ -15,18 +15,18 @@ Visual Studio Code là công cụ viết mã nguồn được sử dụng phổ 
 
 > VS Code là công cụ viết mã nguồn (code editor), không phải là IDE đầy đủ. Để lập trình C# với VS Code, cần cài đặt thêm các công cụ sau:
 > - Gói mở rộng (extension) hỗ trợ viết mã nguồn C#.
-> - .NET: VS Code hỗ trợ .NET Core, hoặc .NET Framework 4.5.2 trở lên.
+> - .NET SDK: VS Code hỗ trợ .NET 6, hoặc .NET Framework 4.5.2 trở lên.
 
 ## Cài đặt VS Code
 
 - [Tải về bản cài đặt VS Code cho Windows, bản cài đặt người dùng (User)](https://go.microsoft.com/fwlink/?LinkID=534107).
 - Mở file cài đặt vừa tải xuống (tên file dạng `VSCodeUserSetup-{version}.exe`, chẳng hạn version=`x64-1.61.2`).
 
-- **License Agreement**: Chọn "Accept the agreement" và "Next".
+- **License Agreement**: Chọn **I accept the agreement** và **Next**.
 
 <img src="figs/installvscode1.PNG">
 
-- **Ready to Install**: Chọn "Install".
+- **Ready to Install**: Chọn **Install**.
 
 <img src="figs/installvscode3.PNG">
 
@@ -36,7 +36,7 @@ Visual Studio Code là công cụ viết mã nguồn được sử dụng phổ 
 ## Cài C# extension
 
 - Khởi động VS Code.
-- Chọn biểu tượng "Extensions" (Ctrl+Shift+X)
+- Chọn biểu tượng **Extensions** (Ctrl+Shift+X)
 
 ![Extensions](figs/vscode-extensions.png)
 
@@ -48,7 +48,7 @@ Tại ô tìm kiếm, nhập `C#`. Trong danh sách các extensions hiện ra, c
 
 ### Yêu cầu
 
-Bảo đảm máy tính đã cài đặt các công cụ sau:
+Đảm bảo máy tính đã được cài đặt các công cụ sau:
 
 - .NET 6 trở lên.
 - Visual Studio Code với C# extension.
@@ -72,6 +72,8 @@ Bảo đảm máy tính đã cài đặt các công cụ sau:
 dotnet new console --framework net6.0 --use-program-main
 ```
 
+Lệnh `dotnet new console` tạo ứng dụng .NET console, tùy chọn `--framework net6.0` chọn phiên bản .NET. Nếu có tùy chọn `--use-program-main` thì VS Code tạo khuôn mẫu ứng dụng có sẵn lớp `Program` trong đó có hàm `Main`, nếu không có tùy chọn này thì VS Code tạo ứng dụng dạng `top-level statements`.
+
 Trong trong file mã nguồn `Program.cs` VS Code tạo sẵn một lớp `Program`, trong đó có một phương thức `Main`. Khi chạy ứng dụng, các lệnh trong hàm `Main` sẽ được thực hiện.
 
 ![Open Folder](figs/vscode-create-app-3.PNG)
@@ -80,7 +82,7 @@ VS Code tạo sẵn dòng lệnh in ra câu "Hello, World!".
 
 ### Chạy ứng dụng
 
-- Trong cửa sổ Terminal nhập lệnh sau để chạy ứng dụng:
+- Tại dấu nhắc trong cửa sổ Terminal nhập lệnh sau để chạy ứng dụng:
 
 ```Console
 dotnet run
@@ -90,7 +92,7 @@ dotnet run
 
 ## Liên kết VS Code với tài khoản Github
 
-- Chọn biểu tượng "Extensions" (Ctrl+Shift+X), nhập Github vào ô tìm kiếm, chọn gói "GitHub Pull Requests and Issues" của Github và nhấn "Install". 
+- Chọn biểu tượng "Extensions" (Ctrl+Shift+X), nhập Github vào ô tìm kiếm, chọn gói "GitHub Pull Requests and Issues" của Github và nhấn "Install".
 
 ## Debug ứng dụng C#/.NET Console với VS Code
 
