@@ -145,6 +145,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#nap-chong-phuong-thuc-method-overloading" class="nav-link">Nạp chồng phương thức (method overloading)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#nap-chong-toan-tu-operator-overloading" class="nav-link">Nạp chồng toán tử (operator overloading)</a>
               <ul class="nav flex-column">
               </ul>
@@ -466,6 +470,33 @@ ints.Sort();
 foreach (int i in ints)
 {
     Console.Write(&quot;{0} &quot;, i);
+}
+</code></pre>
+<h2 id="nap-chong-phuong-thuc-method-overloading">Nạp chồng phương thức (method overloading)<a class="headerlink" href="#nap-chong-phuong-thuc-method-overloading" title="Permanent link">&para;</a></h2>
+<p>Trong một lớp có thể tạo một số phương thức cùng tên nhưng khác nhau về danh sách tham số (khác nhau về số lượng tham số, kiểu dữ liệu của tham số, thứ tự các tham số). Cơ chế này gọi là nạp chồng phương thức.</p>
+<p>Ví dụ:</p>
+<pre><code class="language-c#">// Tạo lớp tĩnh chứa các hàm cùng tên tính tổng 
+static class MyMath
+{
+    // Hàm tính tổng 2 số nguyên
+    public static int Sum(int x, int y)
+    { return x + y; }
+    // Hàm tính tổng 3 số nguyên
+    public static int Sum(int x, int y, int z)
+    { return x + y + z; }
+    // Hàm tính tổng 2 số thực
+    public static double Sum(double x, double y) 
+    {  return x + y; }
+}
+
+class Program
+{
+    public static void Main()
+    {
+        Console.WriteLine(MyMath.Sum(1, 2));
+        Console.WriteLine(MyMath.Sum(1, 2, 3));
+        Console.WriteLine(MyMath.Sum(2.34, 3.56 ));
+    }
 }
 </code></pre>
 <h2 id="nap-chong-toan-tu-operator-overloading">Nạp chồng toán tử (operator overloading)<a class="headerlink" href="#nap-chong-toan-tu-operator-overloading" title="Permanent link">&para;</a></h2>
