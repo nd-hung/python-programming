@@ -103,5 +103,5 @@ public sealed class Square
 
 Trong lớp dẫn xuất, khi muốn cài đặt một phương thức thay thế phương thức trùng tên ở lớp cơ sở, ta dùng từ khóa `new` trước định nghĩa phương thức.
 
-- Ví dụ: [Xem trên GitHub]()
+- Ví dụ: [Xem trên GitHub](https://github.com/nd-hung/oop/blob/main/docs/topics/inheritance/code/HidingBaseMethods/)
 
