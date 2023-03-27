@@ -62,7 +62,7 @@ Tại ô tìm kiếm, nhập `C#`. Trong danh sách các extensions hiện ra, c
 ![Open Folder](figs/vscode-create-app-1.PNG)
 
 - Chọn **Select Folder** để tạo app trong thư mục vừa tạo. Nếu được hỏi `Do you trust the authors of the files in this folder?` thì chọn `Yes, I trust the authors`.
-- Mở cửa sổ dòng lệnh (Terminal): Chọn **View > Terminal**.  
+- Mở cửa sổ dòng lệnh (Terminal): Chọn **View > Terminal** hoặc nhấn **Ctrl + `**.  
 
 ![Open Folder](figs/vscode-create-app-2.PNG)
 
