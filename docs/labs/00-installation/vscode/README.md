@@ -4,13 +4,18 @@
 
 ## Sơ lược về Visual Studio Code
 
-- Gọn nhẹ, với nhiều tính năng cao cấp: gợi ý mã lệnh thông minh (IntelliSense code completion), quản lý phiên bản mã nguồn phân tán (Git).
-- Khả năng mở rộng để lập trình với nhiều ngôn ngữ, gồm cả C#.
+Visual Studio Code là công cụ viết mã nguồn được sử dụng phổ biến hiện nay do có nhiều tính năng mạnh, hỗ trợ đa nền tảng lại gọn nhẹ.
+
+### Các đặc điểm chính của VS Code
+
+- Nhiều tính năng cao cấp: gợi ý mã lệnh thông minh (IntelliSense code completion), quản lý phiên bản mã nguồn phân tán (Git).
+- Khả năng mở rộng để lập trình với nhiều ngôn ngữ.
 - Có thể chạy VS Code trên Windows, macOS và Linux.
 - Miễn phí & mã nguồn mở.
-- VS Code là công cụ viết mã nguồn (code editor), không phải là IDE đầy đủ. Để lập trình C# với VS Code, cần cài đặt thêm các công cụ sau:
-  - Gói mở rộng (extension) hỗ trợ viết mã nguồn C#.
-  - .NET: VS Code hỗ trợ .NET Core, hoặc .NET Framework 4.5.2 trở lên.
+
+> VS Code là công cụ viết mã nguồn (code editor), không phải là IDE đầy đủ. Để lập trình C# với VS Code, cần cài đặt thêm các công cụ sau:
+> - Gói mở rộng (extension) hỗ trợ viết mã nguồn C#.
+> - .NET: VS Code hỗ trợ .NET Core, hoặc .NET Framework 4.5.2 trở lên.
 
 ## Cài đặt VS Code
 
