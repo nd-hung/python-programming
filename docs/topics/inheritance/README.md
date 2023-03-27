@@ -101,7 +101,7 @@ public sealed class Square
 
 ## Ghi đè phương thức (Method overriding)
 
-Ví dụ ([Xem mã nguồn trên GitHub](#)):
+Ví dụ ([Xem mã nguồn trên GitHub](https://github.com/nd-hung/oop/blob/main/docs/topics/inheritance/code/MethodOverriding/Program.cs)):
 
 ```c#
 // Định nghĩa lớp Shape mô tả các hình vẽ tổng quát
@@ -180,3 +180,6 @@ internal class Program
         Console.WriteLine("This is a {0}, area = {1:0.00}", circle.Name, circle.Area());
     }
 }
+```
+
+![Ví dụ chạy chương trình](code/MethodOverriding/img/run_example.PNG)
