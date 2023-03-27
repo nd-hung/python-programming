@@ -88,5 +88,14 @@ Do hình vuông là trường hợp đặc biệt của hình chữ nhật (khi 
 
 ## Lớp niêm phong (sealed class)
 
-Khi muốn tạo một lớp không cho lớp khác thừa kế, dùng từa khóa `sealed` trước tên lớp.
+Khi muốn tạo một lớp không cho lớp khác thừa kế, thêm từa khóa `sealed` trước định nghĩa tên lớp.
+
+Ví dụ:
+
+```c#
+public sealed class Square
+{
+    // Class members here.
+}
+```
 

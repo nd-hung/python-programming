@@ -49,10 +49,6 @@
 </li>
                                     
 <li>
-    <a href="../object-oriented-modeling/" class="dropdown-item">Mô hình hóa hướng đối tượng</a>
-</li>
-                                    
-<li>
     <a href="./" class="dropdown-item active">Lớp và đối tượng</a>
 </li>
                                     
@@ -85,7 +81,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../object-oriented-modeling/" class="nav-link">
+                                <a rel="prev" href="../dotnet-and-csharp/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
@@ -149,7 +145,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#inh-nghia-toan-tu-tren-lop-operator-overloading" class="nav-link">Định nghĩa toán tử trên lớp (operator overloading)</a>
+            <li class="nav-item" data-level="2"><a href="#nap-chong-toan-tu-operator-overloading" class="nav-link">Nạp chồng toán tử (operator overloading)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -472,10 +468,10 @@ foreach (int i in ints)
     Console.Write(&quot;{0} &quot;, i);
 }
 </code></pre>
-<h2 id="inh-nghia-toan-tu-tren-lop-operator-overloading">Định nghĩa toán tử trên lớp (operator overloading)<a class="headerlink" href="#inh-nghia-toan-tu-tren-lop-operator-overloading" title="Permanent link">&para;</a></h2>
+<h2 id="nap-chong-toan-tu-operator-overloading">Nạp chồng toán tử (operator overloading)<a class="headerlink" href="#nap-chong-toan-tu-operator-overloading" title="Permanent link">&para;</a></h2>
 <p>Các ngôn ngữ lập trình đều có sẵn các toán tử số học một ngôi, hai ngôi như: cộng, trừ, nhân, chia, so sánh, tăng giảm. Tuy nhiên, trong lập trình hướng đối tượng, các đối tượng do người dùng khai báo không thể sử dụng các toán tử trên một cách trực tiếp được (vì chúng thuộc kiểu dữ liệu tự định nghĩa).</p>
 <p>C# cho phép nạp cài đặt lại (nạp chồng) một số toán tử đã được định nghĩa giúp cho các phép toán trên đối tượng trở nên quen thuộc hơn.</p>
-<h3 id="cu-phap-inh-nghia-lai-toan-tu">Cú pháp định nghĩa lại toán tử<a class="headerlink" href="#cu-phap-inh-nghia-lai-toan-tu" title="Permanent link">&para;</a></h3>
+<h3 id="cu-phap">Cú pháp<a class="headerlink" href="#cu-phap" title="Permanent link">&para;</a></h3>
 <pre><code class="language-c#">public static &lt;T&gt; operator &lt;O&gt;(&lt;T&gt; [, &lt;T&gt;])
 {
     // Các lệnh

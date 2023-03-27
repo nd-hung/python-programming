@@ -367,6 +367,38 @@ foreach (int i in ints)
 }
 ```
 
+## Nạp chồng phương thức (method overloading)
+
+Trong một lớp có thể tạo một số phương thức cùng tên nhưng khác nhau về danh sách tham số (khác nhau về số lượng tham số, kiểu dữ liệu của tham số, thứ tự các tham số). Cơ chế này gọi là nạp chồng phương thức.
+
+Ví dụ:
+
+```c#
+// Tạo lớp tĩnh chứa các hàm cùng tên tính tổng 
+static class MyMath
+{
+    // Hàm tính tổng 2 số nguyên
+    public static int Sum(int x, int y)
+    { return x + y; }
+    // Hàm tính tổng 3 số nguyên
+    public static int Sum(int x, int y, int z)
+    { return x + y + z; }
+    // Hàm tính tổng 2 số thực
+    public static double Sum(double x, double y) 
+    {  return x + y; }
+}
+
+class Program
+{
+    public static void Main()
+    {
+        Console.WriteLine(MyMath.Sum(1, 2));
+        Console.WriteLine(MyMath.Sum(1, 2, 3));
+        Console.WriteLine(MyMath.Sum(2.34, 3.56 ));
+    }
+}
+```
+
 ## Nạp chồng toán tử (operator overloading)
 
 Các ngôn ngữ lập trình đều có sẵn các toán tử số học một ngôi, hai ngôi như: cộng, trừ, nhân, chia, so sánh, tăng giảm. Tuy nhiên, trong lập trình hướng đối tượng, các đối tượng do người dùng khai báo không thể sử dụng các toán tử trên một cách trực tiếp được (vì chúng thuộc kiểu dữ liệu tự định nghĩa).

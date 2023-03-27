@@ -49,10 +49,6 @@
 </li>
                                     
 <li>
-    <a href="../object-oriented-modeling/" class="dropdown-item">Mô hình hóa hướng đối tượng</a>
-</li>
-                                    
-<li>
     <a href="../classes-and-objects/" class="dropdown-item">Lớp và đối tượng</a>
 </li>
                                     
@@ -121,7 +117,15 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#ky-thuat-thua-ke" class="nav-link">Kỹ thuật thừa kế</a>
+            <li class="nav-item" data-level="2"><a href="#cai-at-thua-ke" class="nav-link">Cài đặt thừa kế</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#quy-tac-thua-ke" class="nav-link">Quy tắc thừa kế</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#lop-niem-phong-sealed-class" class="nav-link">Lớp niêm phong (sealed class)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -137,8 +141,8 @@
 <hr />
 <h2 id="tong-quat-hoa-ac-biet-hoa">Tổng quát hóa, đặc biệt hóa<a class="headerlink" href="#tong-quat-hoa-ac-biet-hoa" title="Permanent link">&para;</a></h2>
 <p>Mối quan hệ tổng quát hóa hay đặc biệt hóa rất quen thuộc trong thế giới thực. Đối tượng đặc biệt hóa của một dạng đối tượng tổng quát sẽ có đầy đủ tính chất của lớp tổng quát đó, đồng thời có thêm các tính chất riêng của nó. Ví dụ, hình vuông là trường hợp đặc biệt của hình chữ nhật, hay nói ngược lại hình chữ nhật là trường hợp tổng quát của hình vuông. Trong lập trình hướng đối tượng, mối quan hệ tổng quát hóa, đặc biệt hóa được cài đặt thông qua kỹ thuật thừa kế (inheritance).</p>
-<h2 id="ky-thuat-thua-ke">Kỹ thuật thừa kế<a class="headerlink" href="#ky-thuat-thua-ke" title="Permanent link">&para;</a></h2>
-<p>Thừa kế là một đặc điểm chính của lập trình hướng đối tượng, cho phép tạo lớp mới tái sử dụng các lớp đã có. Lớp cho phép thừa kế gọi là <strong>lớp cơ sở (base class)</strong> hay lớp cha (parent class), lớp hưởng thừa kế gọi là <strong>lớp dẫn xuất (derived class)</strong> hay lớp con (child class). Lớp thừa kế có thể sử dụng lại, sửa đổi hay mở rộng các thành phần của lớp cơ sở.</p>
+<h2 id="cai-at-thua-ke">Cài đặt thừa kế<a class="headerlink" href="#cai-at-thua-ke" title="Permanent link">&para;</a></h2>
+<p>Thừa kế là một đặc điểm quan trọng của lập trình hướng đối tượng, cho phép tạo lớp mới tái sử dụng các lớp đã có. Lớp cho phép thừa kế gọi là <strong>lớp cơ sở (base class)</strong> hay lớp cha (parent class), lớp hưởng thừa kế gọi là <strong>lớp dẫn xuất (derived class)</strong> hay lớp con (child class). Lớp thừa kế có thể sử dụng lại, sửa đổi hay mở rộng các thành phần của lớp cơ sở.</p>
 <ul>
 <li>Trong C# một lớp dẫn xuất chỉ được kế thừa một lớp cơ sở. Một lớp cơ sở có thể có nhiều lớp dẫn xuất.</li>
 <li>Có thể cài đặt thừa kế chuyển tiếp (transitive inheritance). Nếu lớp C kế thừa lớp B, lớp B kế thừa lớp A thì lớp C được sử dụng các thành viên (thuộc tính, phương thức) của lớp B và lớp A.</li>
@@ -197,7 +201,16 @@ class Program
 </code></pre>
 <p>Trong ví dụ trên, lớp Rectangle có hai thuộc tính Width, Height dùng để lưu chiều ngang, chiều cao của hình chữ nhật, phương thức tạo lập và phương thức <code>Area()</code> tính diện tích.</p>
 <p>Do hình vuông là trường hợp đặc biệt của hình chữ nhật (khi chiều rộng và chiều cao bằng nhau), nên ta tạo lớp Square kế thừa lớp Rectangle để sử dụng lại những thành phần: chiều rộng, chiều cao, phương thức tính diện tích. Trong lớp Square chỉ cần cài đặt hàm thiết lập phù hợp với trường hợp đặc biệt hóa (bốn cạnh bằng nhau nên chỉ cần tạo lập một cạnh). Kết quả, ta có lớp hình vuông với đầy đủ các thuộc tính, phương thức mà không cần phải viết lại toàn bộ mã nguồn.</p>
-<p><a href="https://github.com/nd-hung/oop/tree/main/docs/topics/inheritance/code">Xem các ví dụ khác trên GitHub</a></p></div>
+<p><a href="https://github.com/nd-hung/oop/tree/main/docs/topics/inheritance/code">Xem các ví dụ khác trên GitHub</a></p>
+<h2 id="quy-tac-thua-ke">Quy tắc thừa kế<a class="headerlink" href="#quy-tac-thua-ke" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Thành viên (thuộc tính, phương thức) có mức độ <code>private</code> không cho phép truy cập từ ngoài lớp.</li>
+<li>Thành viên có mức độ <code>protected</code> cho phép các lớp dẫn xuất sử dụng.</li>
+<li>Thành viên có mức độ <code>internal</code> cho phép lớp dẫn xuất trong cùng assembly với lớp cơ sở sử dụng.</li>
+<li>Thành viên có mức độ <code>public</code> cho phép sử dụng tự do từ ngoài lớp.</li>
+</ul>
+<h2 id="lop-niem-phong-sealed-class">Lớp niêm phong (sealed class)<a class="headerlink" href="#lop-niem-phong-sealed-class" title="Permanent link">&para;</a></h2>
+<p>Khi muốn tạo một lớp không cho lớp khác thừa kế, dùng từa khóa <code>sealed</code> trước tên lớp.</p></div>
             </div>
         </div>
 
