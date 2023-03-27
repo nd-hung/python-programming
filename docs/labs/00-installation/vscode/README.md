@@ -90,9 +90,10 @@ dotnet run
 
 ![Open Folder](figs/vscode-run-app.PNG)
 
-## Liên kết VS Code với tài khoản Github
+## Liên kết VS Code với tài khoản GitHub
 
 - Chọn biểu tượng "Extensions" (Ctrl+Shift+X), nhập Github vào ô tìm kiếm, chọn gói "GitHub Pull Requests and Issues" của Github và nhấn "Install".
+- Thực hiện các bước theo [hướng dẫn từ VS Code](https://code.visualstudio.com/docs/sourcecontrol/github).
 
 ## Debug ứng dụng C#/.NET Console với VS Code
 
