@@ -2,9 +2,15 @@
 
 ---
 
-## Yêu cầu
+## Mô tả bài toán
+
+- Phương tiện xe cơ giới có nhiều loại, mọi loại xe đều có các thuộc tính: biển số, năm sản xuất, các phương thức nhập, xuất thông tin xe.
+- Xe con ngoài các đặc điểm chung có thêm thuộc tính số chỗ ngồi.
+- Xe tải ngoài các đặc điểm chung có thuộc tính tải trọng (tính bằng kg).
 
 ![UML diagram](img/Xe.svg)
+
+## Yêu cầu
 
 ### Cài đặt lớp cơ sở Xe
 
