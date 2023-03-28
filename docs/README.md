@@ -30,7 +30,7 @@ Công cụ lập trình sử dụng để minh họa là .NET và C#.
     <li>C++ How to Program, 10th edition - Paul Dietel - Pearson, 2017</li>
 </ol>
 
-### Tài nguyên trực tuyến
+### Tài liệu trực tuyến
 <ol>
 <li><a href="https://learn.microsoft.com/en-us/dotnet/">Microsoft .NET documentation</a>
 <li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/">Microsoft C# documentation</a></li>
