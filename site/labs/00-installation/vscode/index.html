@@ -119,7 +119,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#lien-ket-vs-code-voi-tai-khoan-github" class="nav-link">Liên kết VS Code với tài khoản Github</a>
+            <li class="nav-item" data-level="2"><a href="#lien-ket-vs-code-voi-tai-khoan-github" class="nav-link">Liên kết VS Code với tài khoản GitHub</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -137,15 +137,19 @@
 <h1 id="tao-ung-dung-c-voi-visual-studio-code">Tạo ứng dụng C# với Visual Studio Code<a class="headerlink" href="#tao-ung-dung-c-voi-visual-studio-code" title="Permanent link">&para;</a></h1>
 <hr />
 <h2 id="so-luoc-ve-visual-studio-code">Sơ lược về Visual Studio Code<a class="headerlink" href="#so-luoc-ve-visual-studio-code" title="Permanent link">&para;</a></h2>
+<p>Visual Studio Code là công cụ viết mã nguồn được sử dụng phổ biến hiện nay do có nhiều tính năng mạnh, hỗ trợ đa nền tảng lại gọn nhẹ.</p>
+<h3 id="cac-ac-iem-chinh-cua-vs-code">Các đặc điểm chính của VS Code<a class="headerlink" href="#cac-ac-iem-chinh-cua-vs-code" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Gọn nhẹ, với nhiều tính năng cao cấp: gợi ý mã lệnh thông minh (IntelliSense code completion), quản lý phiên bản mã nguồn phân tán (Git).</li>
-<li>Khả năng mở rộng để lập trình với nhiều ngôn ngữ, gồm cả C#.</li>
+<li>Nhiều tính năng cao cấp: gợi ý mã lệnh thông minh (IntelliSense code completion), quản lý phiên bản mã nguồn phân tán (Git).</li>
+<li>Khả năng mở rộng để lập trình với nhiều ngôn ngữ.</li>
 <li>Có thể chạy VS Code trên Windows, macOS và Linux.</li>
 <li>Miễn phí &amp; mã nguồn mở.</li>
-<li>VS Code là công cụ viết mã nguồn (code editor), không phải là IDE đầy đủ. Để lập trình C# với VS Code, cần cài đặt thêm các công cụ sau:</li>
-<li>Gói mở rộng (extension) hỗ trợ viết mã nguồn C#.</li>
-<li>.NET: VS Code hỗ trợ .NET Core, hoặc .NET Framework 4.5.2 trở lên.</li>
 </ul>
+<blockquote>
+<p>VS Code là công cụ viết mã nguồn (code editor), không phải là IDE đầy đủ. Để lập trình C# với VS Code, cần cài đặt thêm các công cụ sau:
+- Gói mở rộng (extension) hỗ trợ viết mã nguồn C#.
+- .NET SDK: VS Code hỗ trợ .NET 6, hoặc .NET Framework 4.5.2 trở lên.</p>
+</blockquote>
 <h2 id="cai-at-vs-code">Cài đặt VS Code<a class="headerlink" href="#cai-at-vs-code" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://go.microsoft.com/fwlink/?LinkID=534107">Tải về bản cài đặt VS Code cho Windows, bản cài đặt người dùng (User)</a>.</li>
@@ -153,12 +157,12 @@
 <p>Mở file cài đặt vừa tải xuống (tên file dạng <code>VSCodeUserSetup-{version}.exe</code>, chẳng hạn version=<code>x64-1.61.2</code>).</p>
 </li>
 <li>
-<p><strong>License Agreement</strong>: Chọn "Accept the agreement" và "Next".</p>
+<p><strong>License Agreement</strong>: Chọn <strong>I accept the agreement</strong> và <strong>Next</strong>.</p>
 </li>
 </ul>
 <p><img src="figs/installvscode1.PNG"></p>
 <ul>
-<li><strong>Ready to Install</strong>: Chọn "Install".</li>
+<li><strong>Ready to Install</strong>: Chọn <strong>Install</strong>.</li>
 </ul>
 <p><img src="figs/installvscode3.PNG"></p>
 <blockquote>
@@ -168,14 +172,14 @@ Muốn cài đặt VS Code cho tất cả người dùng, <a href="https://go.mi
 <h2 id="cai-c-extension">Cài C# extension<a class="headerlink" href="#cai-c-extension" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Khởi động VS Code.</li>
-<li>Chọn biểu tượng "Extensions" (Ctrl+Shift+X)</li>
+<li>Chọn biểu tượng <strong>Extensions</strong> (Ctrl+Shift+X)</li>
 </ul>
 <p><img alt="Extensions" src="figs/vscode-extensions.png" /></p>
 <p>Tại ô tìm kiếm, nhập <code>C#</code>. Trong danh sách các extensions hiện ra, chọn gói "C# for Visual Studio Code (powered by OmniSharp)" của Microsoft và nhấn <strong>Install</strong>.</p>
 <p><img alt="Chọn C# extension" src="figs/dotnetinstall_extension.PNG" /></p>
 <h2 id="tao-ung-dung-net-consolec-voi-vs-code">Tạo ứng dụng .NET Console/C# với VS Code<a class="headerlink" href="#tao-ung-dung-net-consolec-voi-vs-code" title="Permanent link">&para;</a></h2>
 <h3 id="yeu-cau">Yêu cầu<a class="headerlink" href="#yeu-cau" title="Permanent link">&para;</a></h3>
-<p>Bảo đảm máy tính đã cài đặt các công cụ sau:</p>
+<p>Đảm bảo máy tính đã được cài đặt các công cụ sau:</p>
 <ul>
 <li>.NET 6 trở lên.</li>
 <li>Visual Studio Code với C# extension.</li>
@@ -189,7 +193,7 @@ Muốn cài đặt VS Code cho tất cả người dùng, <a href="https://go.mi
 <p><img alt="Open Folder" src="figs/vscode-create-app-1.PNG" /></p>
 <ul>
 <li>Chọn <strong>Select Folder</strong> để tạo app trong thư mục vừa tạo. Nếu được hỏi <code>Do you trust the authors of the files in this folder?</code> thì chọn <code>Yes, I trust the authors</code>.</li>
-<li>Mở cửa sổ dòng lệnh (Terminal): Chọn <strong>View &gt; Terminal</strong>.  </li>
+<li>Mở cửa sổ dòng lệnh (Terminal): Chọn <strong>View &gt; Terminal</strong> hoặc nhấn <strong>Ctrl + `</strong>.  </li>
 </ul>
 <p><img alt="Open Folder" src="figs/vscode-create-app-2.PNG" /></p>
 <ul>
@@ -197,19 +201,21 @@ Muốn cài đặt VS Code cho tất cả người dùng, <a href="https://go.mi
 </ul>
 <pre><code class="language-Console">dotnet new console --framework net6.0 --use-program-main
 </code></pre>
+<p>Lệnh <code>dotnet new console</code> tạo ứng dụng .NET console, tùy chọn <code>--framework net6.0</code> chọn phiên bản .NET. Nếu có tùy chọn <code>--use-program-main</code> thì VS Code tạo khuôn mẫu ứng dụng có sẵn lớp <code>Program</code> trong đó có hàm <code>Main</code>, nếu không có tùy chọn này thì VS Code tạo ứng dụng dạng <code>top-level statements</code>.</p>
 <p>Trong trong file mã nguồn <code>Program.cs</code> VS Code tạo sẵn một lớp <code>Program</code>, trong đó có một phương thức <code>Main</code>. Khi chạy ứng dụng, các lệnh trong hàm <code>Main</code> sẽ được thực hiện.</p>
 <p><img alt="Open Folder" src="figs/vscode-create-app-3.PNG" /></p>
 <p>VS Code tạo sẵn dòng lệnh in ra câu "Hello, World!".</p>
 <h3 id="chay-ung-dung">Chạy ứng dụng<a class="headerlink" href="#chay-ung-dung" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Trong cửa sổ Terminal nhập lệnh sau để chạy ứng dụng:</li>
+<li>Tại dấu nhắc trong cửa sổ Terminal nhập lệnh sau để chạy ứng dụng:</li>
 </ul>
 <pre><code class="language-Console">dotnet run
 </code></pre>
 <p><img alt="Open Folder" src="figs/vscode-run-app.PNG" /></p>
-<h2 id="lien-ket-vs-code-voi-tai-khoan-github">Liên kết VS Code với tài khoản Github<a class="headerlink" href="#lien-ket-vs-code-voi-tai-khoan-github" title="Permanent link">&para;</a></h2>
+<h2 id="lien-ket-vs-code-voi-tai-khoan-github">Liên kết VS Code với tài khoản GitHub<a class="headerlink" href="#lien-ket-vs-code-voi-tai-khoan-github" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Chọn biểu tượng "Extensions" (Ctrl+Shift+X), nhập Github vào ô tìm kiếm, chọn gói "GitHub Pull Requests and Issues" của Github và nhấn "Install". </li>
+<li>Chọn biểu tượng "Extensions" (Ctrl+Shift+X), nhập Github vào ô tìm kiếm, chọn gói "GitHub Pull Requests and Issues" của Github và nhấn "Install".</li>
+<li>Thực hiện các bước theo <a href="https://code.visualstudio.com/docs/sourcecontrol/github">hướng dẫn từ VS Code</a>.</li>
 </ul>
 <h2 id="debug-ung-dung-cnet-console-voi-vs-code">Debug ứng dụng C#/.NET Console với VS Code<a class="headerlink" href="#debug-ung-dung-cnet-console-voi-vs-code" title="Permanent link">&para;</a></h2>
 <p><a href="https://learn.microsoft.com/en-us/dotnet/core/tutorials/debugging-with-visual-studio-code">Xem hướng dẫn debug từ Microsoft</a></p></div>
