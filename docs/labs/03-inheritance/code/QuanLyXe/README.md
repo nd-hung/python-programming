@@ -8,6 +8,8 @@
 - Xe con ngoài các đặc điểm chung có thêm thuộc tính số chỗ ngồi.
 - Xe tải ngoài các đặc điểm chung có thuộc tính tải trọng (tính bằng kg).
 
+Theo mô tả trên, có thể biểu diễn mối quan hệ giữa các lớp Xe, XeCon, XeTai như lược đồ UML dưới đây.
+
 ![UML diagram](img/Xe.svg)
 
 ## Yêu cầu
