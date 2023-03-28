@@ -4,5 +4,11 @@ Inheritance
 
 ---
 
-## 1 - [Quản lý xe](code/QuanLyXe)
+## 1 - [Tạo lớp hình vuông](https://github.com/nd-hung/oop/tree/main/docs/topics/inheritance/code/Rectangle)
+
+## 2 - [Tạo lớp sinh viên](https://github.com/nd-hung/oop/tree/main/docs/topics/inheritance/code/SinhVien)
+
+## 3 - [Ẩn phương thức lớp cơ sở](https://github.com/nd-hung/oop/tree/main/docs/topics/inheritance/code/HidingBaseMethods)
+
+## 4 - [Quản lý xe](code/QuanLyXe)
 
