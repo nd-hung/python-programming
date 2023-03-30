@@ -25,7 +25,7 @@ Ví dụ sau đây minh họa phương pháp lập trình cấu trúc. Cho một
 ### Trừu tượng hóa (Abstraction)
 
 Trừu tượng hóa là quá trình loại bỏ đi các thông tin, tính chất cụ thể của sự vật, hiện tượng và
-và giữ lại những tính chất, hành vi chung của chúng.
+giữ lại những tính chất, hành vi đặc trưng của chúng.
 
 ### Tính bao đóng (Encapsulation)
 

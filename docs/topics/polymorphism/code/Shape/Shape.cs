@@ -15,7 +15,8 @@ public class Shape
     {
         return 0;
     }
-
+    // Phương thức trừu tượng (abstract) nhập thông tin hình vẽ
+    public abstract void Nhap();
     // Phương thức ảo in thông tin
     public virtual void Print(){}
 }
@@ -38,6 +39,14 @@ public class Circle:Shape
     public override void Print()
     {
         Console.WriteLine("This is a {0}, area = {1}", Name, Area());
+    }
+
+    // Phương thức ghi đè nhập thông tin hình tròn
+    public override void Nhap()
+    {
+        Name = "Circle";
+        Console.Write("Nhap ban kinh: ");
+        Radius = double.Parse(Console.ReadLine());
     }
 }
 
@@ -64,5 +73,13 @@ public class Rectangle:Shape
     {
         Console.WriteLine("This is a {0}, area = {1}", Name, Area());
     }
-
+    // Phương thức ghi đè nhập thông tin hình chữ nhật
+    public override void Nhap()
+    {
+        Name = "Rectangle";
+        Console.Write("Nhap chieu rong: ");
+        Width = double.Parse(Console.ReadLine());
+        Console.Write("Nhap chieu cao: ");
+        Height = double.Parse(Console.ReadLine());
+    }
 }
