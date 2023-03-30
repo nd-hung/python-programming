@@ -3,60 +3,54 @@
 // Tạo lớp hình vẽ tổng quát (Shape)
 public class Shape
 {
-    protected string Name;
+    protected string Name; // Thuộc tính lưu tên hình vẽ
 
-    public Shape(string name="")
+    // Constructor
+    public Shape(string name = "")
     {
         Name = name;
     }
-    
+
     // Phương thức ảo tính diện tích
     public virtual double Area()
     {
         return 0;
     }
-    // Phương thức trừu tượng (abstract) nhập thông tin hình vẽ
-    public abstract void Nhap();
-    // Phương thức ảo in thông tin
-    public virtual void Print(){}
+    public virtual void Print() { }
 }
 
-// Lớp hình tròn (Circle) kế thừa lớp hình vẽ
-public class Circle:Shape
+// Tạo lớp hình tròn (Circle) kế thừa lớp hình vẽ
+public class Circle : Shape
 {
-    public double Radius;
-    public Circle(string name="", double r=0):base(name)
+    public double Radius;   // Thuộc tính lưu độ dài bán kính
+
+    // Constructor
+    public Circle(string name = "", double r = 0) : base(name)
     {
-        Radius=r;
+        Radius = r;
     }
-    // Phương thức ghi đè tính diện tích hình tròn
+
+    // Phương thức ghi đè (override) tính diện tích hình tròn
     public override double Area()
     {
-        return Math.PI*Radius*Radius;
+        return Math.PI * Radius * Radius;
     }
 
     // Phương thức ghi đè in thông tin hình tròn
     public override void Print()
     {
-        Console.WriteLine("This is a {0}, area = {1}", Name, Area());
-    }
-
-    // Phương thức ghi đè nhập thông tin hình tròn
-    public override void Nhap()
-    {
-        Name = "Circle";
-        Console.Write("Nhap ban kinh: ");
-        Radius = double.Parse(Console.ReadLine());
+        Console.WriteLine("This is a {0}, area = {1:.000}", Name, Area());
     }
 }
 
-// Lớp hình chữ nhật (rectangle) kế thừa lớp hình vẽ
-public class Rectangle:Shape
+// Lớp hình chữ nhật (Rectangle) kế thừa lớp hình vẽ
+public class Rectangle : Shape
 {
-    public double Width;
+    public double Width;    // Các thuộc tính lưu kích thước hình chữ nhật
     public double Height;
 
-    public Rectangle(string name="", double w=0, double h=0): base(name)
+    // Constructor
+    public Rectangle(string name = "", double w = 0, double h = 0) : base(name)
     {
         Width = w;
         Height = h;
@@ -71,15 +65,6 @@ public class Rectangle:Shape
     // Phương thức ghi đè in thông tin hình chữ nhật
     public override void Print()
     {
-        Console.WriteLine("This is a {0}, area = {1}", Name, Area());
-    }
-    // Phương thức ghi đè nhập thông tin hình chữ nhật
-    public override void Nhap()
-    {
-        Name = "Rectangle";
-        Console.Write("Nhap chieu rong: ");
-        Width = double.Parse(Console.ReadLine());
-        Console.Write("Nhap chieu cao: ");
-        Height = double.Parse(Console.ReadLine());
+        Console.WriteLine("This is a {0}, area = {1:.000}", Name, Area());
     }
 }
