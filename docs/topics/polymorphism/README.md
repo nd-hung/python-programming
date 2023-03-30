@@ -9,88 +9,81 @@ Polymorphism
 Ví dụ ([Xem trên GitHub](https://github.com/nd-hung/oop/blob/main/docs/topics/inheritance/code/MethodOverriding/Program.cs)):
 
 ```c#
-// Định nghĩa lớp Shape mô tả các hình vẽ tổng quát
+// Tạo lớp hình vẽ tổng quát (Shape)
 public class Shape
 {
-    protected string name; 
-    public string Name { get => name; }
-    // Hàm thiết lập
-    public Shape(string name = "Shape")
-    { this.name = name; }
-    // Hàm tính diện tích - Hàm ảo (virtual)
-    // Shape chưa phải hình vẽ cụ thể nên chưa thể tính diện tích
+    // Phương thức ảo tính diện tích
+    // Shape không phải hình vẽ cụ thể, nên không tính được diện tích
     public virtual double Area()
-    {        
+    {
         return 0;
     }
-} // Kết thúc lớp Shape
+}// Kết thúc lớp Shape
 
-// Định nghĩa lớp Square mô tả các hình vuông, kế thừa lớp Shape
-public class Square : Shape
-{
-    // Hình vuông có thuộc tính độ dài cạnh
-    private double side;
-    public double Side { get => side; }
-
-    // Hàm thiết lập: khởi tạo tên gọi và độ dài cạnh hình vuông
-    public Square(string name = "Square", double side = 0) : base(name)
-    {
-        this.side = side;
-    }
-
-    // Hàm tính diện tích - Ghi đè hàm cùng tên của lớp Shape
-    public override double Area()
-    {
-        // Ở đây là hình vẽ cụ thể (hình vuông) nên tính được diện tích
-        return side * side;
-    }
-} // Kết thúc lớp Square
-
-// Định nghĩa lớp Circle mô tả các hình tròn, kế thừa lớp Shape
+// Tạo lớp hình tròn (Circle) kế thừa lớp hình vẽ
 public class Circle : Shape
 {
-    // Hình tròn có thuộc tính độ dài bán kính
-    private double radius;
-    public double Radius { get => radius; }
+    public double Radius;   // Thuộc tính lưu độ dài bán kính
 
-    // Hàm thiết lập: khởi tạo tên gọi và độ dài bán kính hình tròn
-    public Circle(string name = "Circle", double radius = 0) : base(name)
+    // Constructor
+    public Circle(double r = 0)
     {
-        this.radius = radius;
+        Radius = r;
     }
 
-    // Hàm tính diện tích - Ghi đè hàm cùng tên của lớp Shape
+    // Phương thức ghi đè (override) tính diện tích hình tròn
     public override double Area()
     {
-        // Ở đây là hình vẽ cụ thể (hình tròn) nên tính được diện tích
-        return Math.PI * radius * radius;
+        return Math.PI * Radius * Radius;
     }
-} // Kết thúc lớp Circle
+}// Kết thúc lớp Circle
+
+// Lớp hình chữ nhật (Rectangle) kế thừa lớp hình vẽ
+public class Rectangle : Shape
+{
+    public double Width;    // Các thuộc tính lưu kích thước hình chữ nhật
+    public double Height;
+
+    // Constructor
+    public Rectangle(double w = 0, double h = 0)
+    {
+        Width = w;
+        Height = h;
+    }
+
+    // Phương thức ghi đè tính diện tích hình chữ nhật
+    public override double Area()
+    {
+        return Width * Height;
+    }
+} // Kết thúc lớp Rectangle
 
 // Chương trình chính
-internal class Program
+class Program
 {
-    static void Main(string[] args)
+    public static void Main()
     {
-        // Tạo đối tượng hình vẽ
-        Shape shape = new Shape("General shape");
-        Console.WriteLine("This is a {0}, area = {1:0.00}", shape.Name, shape.Area());
+        // Tạo đối tượng hình vẽ tổng quát
+        Shape s0 = new Shape();
+        // In kiểu đối tượng & diện tích
+        Console.WriteLine("This is a {0}, area = {1:0.000}", s0.GetType(), s0.Area());
 
-        // Tạo đối tượng hình vuông
-        Shape square = new Square("Square", 5);
-        Console.WriteLine("This is a {0}, area = {1:0.00}", square.Name, square.Area());
+        // Khai báo đối tượng hình vẽ tổng quát và khởi tạo là hình tròn:
+        Shape s1 = new Circle("Circle", 1); // Khởi tạo tên, bán kính
+        // In kiểu đối tượng & diện tích
+        Console.WriteLine("This is a {0}, area = {1:0.000}", s1.GetType(), s1.Area());
 
-        // Tạo đối tượng hình tròn
-        Shape circle = new Circle("Circle", 1);
-        Console.WriteLine("This is a {0}, area = {1:0.00}", circle.Name, circle.Area());
+        // Khai báo đối tượng hình vẽ tổng quát và khởi tạo là hình chữ nhật:
+        Shape s2 = new Rectangle("Rectangle", 3, 7); // Khởi tạo tên, các cạnh
+        // In kiểu đối tượng & diện tích
+        Console.WriteLine("This is a {0}, area = {1:0.000}", s2.GetType(), s2.Area());
     }
 }
 
-/* 
-    Output
-    This is a General shape, area = 0.00
-    This is a Square, area = 25.00
-    This is a Circle, area = 3.14
+/* Output
+This is a Shape, area = 0.000
+This is a Circle, area = 3.142
+This is a Rectangle, area = 21.000
 */
 ```
 
