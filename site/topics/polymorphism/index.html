@@ -148,7 +148,7 @@
 </li>
 </ol>
 <h2 id="bai-toan-vi-du">Bài toán ví dụ<a class="headerlink" href="#bai-toan-vi-du" title="Permanent link">&para;</a></h2>
-<p>Giả sử muốn tạo ứng dụng cho phép vẽ các hình khác nhau về hình dạng (vuông, tròn, tam giác,...) sau đó tìm hình vẽ có diện tích lớn nhất.</p>
+<p>Giả sử muốn tạo ứng dụng cho phép vẽ các hình khác nhau về hình dạng (vuông, tròn, tam giác,...) sau đó tính diện tích của mỗi hình.</p>
 <p>Bài toán này có thể giải quyết hiệu quả bằng kỹ thuật đa hình như sau: Trước hết tạo lớp cơ sở Shape có phương thức ảo <code>GetArea()</code> để tính diện tích hình vẽ. Do Shape là lớp tổng quát, chưa biết hình vẽ cụ thể nên không tính được diện tích, vì thế cho kết quả trả về là <code>0</code>. Ở lớp dẫn xuất Circle có phương thức ghi đè <code>GetArea()</code>, ở đây đã biết loại hình vẽ cụ thể (hình tròn) nên tính được diện tích của nó. Tương tự như vậy với lớp dẫn xuất Rectangle (hình chữ nhật).</p>
 <p>Trong chương trình chính tạo 3 đối tượng thuộc lớp Shape nhưng khởi tạo thành 3 đối tượng khác nhau: 1 của chính lớp Shape, 1 của lớp Circle và 1 của lớp Rectangle. Ta thấy, khi gọi phương thức tính diện tích của mỗi đối tượng, tùy theo kiểu của đối tượng được tạo ra mà các dòng lệnh tính diện tích phù hợp được gọi.</p>
 <p><img alt="UML class diagram" src="img/Polymorphism-ClassDiagram.png" /></p>
