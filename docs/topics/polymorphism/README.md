@@ -21,7 +21,7 @@ Cơ chế đa hình cho phép cài đặt một cách nhất quán các phương
 
 ## Bài toán ví dụ
 
-Giả sử muốn tạo ứng dụng cho phép vẽ các hình khác nhau về hình dạng (vuông, tròn, tam giác,...) sau đó tìm hình vẽ có diện tích lớn nhất.
+Giả sử muốn tạo ứng dụng cho phép vẽ các hình khác nhau về hình dạng (vuông, tròn, tam giác,...) sau đó tính diện tích của mỗi hình.
 
 Bài toán này có thể giải quyết hiệu quả bằng kỹ thuật đa hình như sau: Trước hết tạo lớp cơ sở Shape có phương thức ảo `GetArea()` để tính diện tích hình vẽ. Do Shape là lớp tổng quát, chưa biết hình vẽ cụ thể nên không tính được diện tích, vì thế cho kết quả trả về là `0`. Ở lớp dẫn xuất Circle có phương thức ghi đè `GetArea()`, ở đây đã biết loại hình vẽ cụ thể (hình tròn) nên tính được diện tích của nó. Tương tự như vậy với lớp dẫn xuất Rectangle (hình chữ nhật).
 

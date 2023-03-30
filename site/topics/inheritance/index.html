@@ -263,23 +263,7 @@ I'm a cat, my name is Thomas.
 </code></pre>
 <h2 id="an-phuong-thuc-cua-lop-co-so">Ẩn phương thức của lớp cơ sở<a class="headerlink" href="#an-phuong-thuc-cua-lop-co-so" title="Permanent link">&para;</a></h2>
 <p>Khi ở lớp dẫn xuất có một phương thức trùng tên và danh sách tham số với lớp cơ sở, nếu không có từ khóa <code>override</code> ở trước, thì phương thức ở lớp dẫn xuất sẽ mặc định thay thế phương thức của lớp cơ sở.</p>
-<p>Đề cài đặt đặc điểm này tường minh, dùng từ khóa <code>new</code> khi định nghĩa phương thức trùng tên ở lớp dẫn xuất, theo khuôn mẫu sau:</p>
-<pre><code class="language-c#">public class BaseClass
-{
-    public void Method()
-    {
-        // Statements
-    }
-}
-
-public class DerivedClass : BaseClass
-{
-    public new void Method()
-    {
-        // Statements
-    }
-}
-</code></pre>
+<p>Để cài đặt đặc điểm này tường minh, dùng từ khóa <code>new</code> khi định nghĩa phương thức trùng tên ở lớp dẫn xuất.</p>
 <ul>
 <li>Ví dụ: <a href="https://github.com/nd-hung/oop/blob/main/docs/topics/inheritance/code/HidingBaseMethods/">Xem trên GitHub</a></li>
 </ul></div>
