@@ -90,7 +90,7 @@ Do hình vuông là trường hợp đặc biệt của hình chữ nhật (khi 
 
 Khi muốn tạo một lớp không cho lớp khác thừa kế, thêm từa khóa `sealed` trước định nghĩa tên lớp.
 
-Ví dụ:
+Ví dụ ([xem mã nguồn trên GitHub](#)):
 
 ```c#
 public sealed class Square
@@ -99,9 +99,47 @@ public sealed class Square
 }
 ```
 
+## Nạp chồng phương thức của lớp cơ sở
+
+Các phương thức của lớp dẫn xuất có thể nạp chồng phương thức trùng tên của lớp cơ sở. Cơ chế này tương tự như nạp chồng phương thức trong cùng lớp.
+
+Ví dụ:
+
+```c#
+// Tạo lớp cơ sở Animal
+public class Animal
+{
+    public void SayHi() // Phương thức SayHi() có mức truy cập public nên lớp con được sử dụng
+    {
+        Console.WriteLine("I'm an animal.");
+    }
+}
+
+public class Cat:Animal
+{
+    // Phương thức SayHi() của lớp con trùng tên nhưng khác tham số với phương thức SayHi() của lớp cha
+    public void SayHi(string message)
+    {
+        Console.WriteLine(message);
+    }
+}
+// Chương trình chính
+public class Program
+{
+    public static void Main()
+    {
+        Cat cat1 = new Cat();
+        cat1.SayHi();   // Phương thức của lớp cha được gọi
+        cat1.SayHi("I'm a cat, my name is Thomas.");    // Phương thức của lớp con được gọi
+    }
+}
+```
+
 ## Ẩn phương thức của lớp cơ sở
 
-Trong lớp dẫn xuất, khi muốn cài đặt một phương thức thay thế phương thức trùng tên ở lớp cơ sở, ta dùng từ khóa `new` trước định nghĩa phương thức.
+Khi ở lớp dẫn xuất có một phương thức trùng tên và danh sách tham số với lớp cơ sở, nếu không có từ khóa `override` ở trước, thì phương thức ở lớp dẫn xuất sẽ mặc định thay thế phương thức của lớp cơ sở.
+
+Đề cài đặt đặc điểm này tường minh, dùng từ khóa `new` khi định nghĩa phương thức trùng tên ở lớp dẫn xuất, theo khuôn mẫu sau:
 
 ```c#
 public class BaseClass

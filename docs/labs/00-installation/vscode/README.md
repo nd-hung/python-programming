@@ -13,7 +13,7 @@ Visual Studio Code là công cụ viết mã nguồn được sử dụng phổ 
 - Có thể chạy VS Code trên Windows, macOS và Linux.
 - Miễn phí & mã nguồn mở.
 
-> VS Code là công cụ viết mã nguồn (code editor), không phải là IDE đầy đủ. Để lập trình C# với VS Code, cần cài đặt thêm các công cụ sau:
+> Chú ý: VS Code là công cụ viết mã nguồn (code editor), không phải là IDE đầy đủ. Để lập trình C# với VS Code, cần cài đặt thêm các công cụ sau:
 > - Gói mở rộng (extension) hỗ trợ viết mã nguồn C#.
 > - .NET SDK: VS Code hỗ trợ .NET 6, hoặc .NET Framework 4.5.2 trở lên.
 
