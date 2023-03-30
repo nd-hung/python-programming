@@ -144,7 +144,7 @@ I'm a cat, my name is Thomas.
 
 Khi ở lớp dẫn xuất có một phương thức trùng tên và danh sách tham số với lớp cơ sở, nếu không có từ khóa `override` ở trước, thì phương thức ở lớp dẫn xuất sẽ mặc định thay thế phương thức của lớp cơ sở.
 
-Đề cài đặt đặc điểm này tường minh, dùng từ khóa `new` khi định nghĩa phương thức trùng tên ở lớp dẫn xuất, theo khuôn mẫu sau:
+Để cài đặt đặc điểm này tường minh, dùng từ khóa `new` khi định nghĩa phương thức trùng tên ở lớp dẫn xuất, theo khuôn mẫu sau:
 
 ```c#
 public class BaseClass

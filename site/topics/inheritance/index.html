@@ -129,6 +129,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#nap-chong-phuong-thuc-cua-lop-co-so" class="nav-link">Nạp chồng phương thức của lớp cơ sở</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#an-phuong-thuc-cua-lop-co-so" class="nav-link">Ẩn phương thức của lớp cơ sở</a>
               <ul class="nav flex-column">
               </ul>
@@ -221,8 +225,45 @@ class Program
     // Class members here.
 }
 </code></pre>
+<h2 id="nap-chong-phuong-thuc-cua-lop-co-so">Nạp chồng phương thức của lớp cơ sở<a class="headerlink" href="#nap-chong-phuong-thuc-cua-lop-co-so" title="Permanent link">&para;</a></h2>
+<p>Các phương thức của lớp dẫn xuất có thể nạp chồng phương thức trùng tên của lớp cơ sở. Cơ chế này tương tự như nạp chồng phương thức trong cùng lớp.</p>
+<p>Ví dụ (<a href="https://github.com/nd-hung/oop/blob/main/docs/topics/inheritance/code/MethodOverloading/Program.cs">xem mã nguồn trên GitHub</a>):</p>
+<pre><code class="language-c#">// Tạo lớp cơ sở Animal
+public class Animal
+{
+    public void SayHi() // Phương thức SayHi() có mức truy cập public nên lớp con được sử dụng
+    {
+        Console.WriteLine(&quot;I'm an animal.&quot;);
+    }
+}
+// Tạo lớp Cat kết thừa lớp Animal
+public class Cat : Animal
+{
+    // Phương thức SayHi() của lớp con trùng tên nhưng khác tham số với phương thức SayHi() của lớp cha
+    public void SayHi(string message)
+    {
+        Console.WriteLine(message);
+    }
+}
+// Chương trình chính
+public class Program
+{
+    public static void Main()
+    {
+        Cat cat1 = new Cat();
+        cat1.SayHi();   // Phương thức của lớp cha được gọi
+        cat1.SayHi(&quot;I'm a cat, my name is Thomas.&quot;);    // Phương thức của lớp con được gọi
+    }
+}
+
+/* Output
+I'm an animal.
+I'm a cat, my name is Thomas.
+*/
+</code></pre>
 <h2 id="an-phuong-thuc-cua-lop-co-so">Ẩn phương thức của lớp cơ sở<a class="headerlink" href="#an-phuong-thuc-cua-lop-co-so" title="Permanent link">&para;</a></h2>
-<p>Trong lớp dẫn xuất, khi muốn cài đặt một phương thức thay thế phương thức trùng tên ở lớp cơ sở, ta dùng từ khóa <code>new</code> trước định nghĩa phương thức.</p>
+<p>Khi ở lớp dẫn xuất có một phương thức trùng tên và danh sách tham số với lớp cơ sở, nếu không có từ khóa <code>override</code> ở trước, thì phương thức ở lớp dẫn xuất sẽ mặc định thay thế phương thức của lớp cơ sở.</p>
+<p>Đề cài đặt đặc điểm này tường minh, dùng từ khóa <code>new</code> khi định nghĩa phương thức trùng tên ở lớp dẫn xuất, theo khuôn mẫu sau:</p>
 <pre><code class="language-c#">public class BaseClass
 {
     public void Method()
