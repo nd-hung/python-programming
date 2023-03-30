@@ -90,7 +90,7 @@ Do hình vuông là trường hợp đặc biệt của hình chữ nhật (khi 
 
 Khi muốn tạo một lớp không cho lớp khác thừa kế, thêm từa khóa `sealed` trước định nghĩa tên lớp.
 
-Ví dụ ([xem mã nguồn trên GitHub](https://github.com/nd-hung/oop/blob/main/docs/topics/inheritance/code/MethodOverloading/Program.cs)):
+Ví dụ:
 
 ```c#
 public sealed class Square
@@ -103,7 +103,7 @@ public sealed class Square
 
 Các phương thức của lớp dẫn xuất có thể nạp chồng phương thức trùng tên của lớp cơ sở. Cơ chế này tương tự như nạp chồng phương thức trong cùng lớp.
 
-Ví dụ:
+Ví dụ ([xem mã nguồn trên GitHub](https://github.com/nd-hung/oop/blob/main/docs/topics/inheritance/code/MethodOverloading/Program.cs)):
 
 ```c#
 // Tạo lớp cơ sở Animal
@@ -114,8 +114,8 @@ public class Animal
         Console.WriteLine("I'm an animal.");
     }
 }
-
-public class Cat:Animal
+// Tạo lớp Cat kết thừa lớp Animal
+public class Cat : Animal
 {
     // Phương thức SayHi() của lớp con trùng tên nhưng khác tham số với phương thức SayHi() của lớp cha
     public void SayHi(string message)

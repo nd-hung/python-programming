@@ -8,8 +8,8 @@ public class Animal
         Console.WriteLine("I'm an animal.");
     }
 }
-
-public class Cat:Animal
+// Tạo lớp Cat kết thừa lớp Animal
+public class Cat : Animal
 {
     // Phương thức SayHi() của lớp con trùng tên nhưng khác tham số với phương thức SayHi() của lớp cha
     public void SayHi(string message)
