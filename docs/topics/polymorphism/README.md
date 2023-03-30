@@ -4,9 +4,9 @@ Polymorphism
 
 ---
 
-## Giới thiệu
+## Kỹ thuật đa hình
 
-Cơ chế đa hình (polymorphism ~ many forms) được xem là đặc trưng quan trọng thứ ba của phương pháp lập trình hướng đối tượng.
+Cơ chế đa hình (polymorphism ~ many forms) được xem là một trong bốn đặc trưng quan trọng nhất của phương pháp lập trình hướng đối tượng.
 
 Hai đặc điểm mấu chốt của đa hình:
 
