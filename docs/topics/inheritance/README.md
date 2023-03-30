@@ -90,7 +90,7 @@ Do hình vuông là trường hợp đặc biệt của hình chữ nhật (khi 
 
 Khi muốn tạo một lớp không cho lớp khác thừa kế, thêm từa khóa `sealed` trước định nghĩa tên lớp.
 
-Ví dụ ([xem mã nguồn trên GitHub](#)):
+Ví dụ ([xem mã nguồn trên GitHub](https://github.com/nd-hung/oop/blob/main/docs/topics/inheritance/code/MethodOverloading/Program.cs)):
 
 ```c#
 public sealed class Square
@@ -133,6 +133,11 @@ public class Program
         cat1.SayHi("I'm a cat, my name is Thomas.");    // Phương thức của lớp con được gọi
     }
 }
+
+/* Output
+I'm an animal.
+I'm a cat, my name is Thomas.
+*/
 ```
 
 ## Ẩn phương thức của lớp cơ sở
