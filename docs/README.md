@@ -12,10 +12,10 @@ Công cụ lập trình sử dụng để minh họa là .NET và C#.
 </div><br>
 
 ## Các chủ đề chính
-- #### [Tổng quan về lập trình hướng đối tượng](topics/overview)
+- #### [Tổng quan](topics/overview)
 - #### [Nền tảng .NET và ngôn ngữ C#](topics/dotnet-and-csharp)
 - #### [Lớp và đối tượng](topics/classes-and-objects)
-- #### [Thừa kế ](topics/inheritance)
+- #### [Thừa kế](topics/inheritance)
 - #### [Đa hình](topics/polymorphism)
 - #### [Phát triển ứng dụng GUI với .NET và C#](topics/gui-development)
 

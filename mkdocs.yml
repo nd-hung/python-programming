@@ -7,7 +7,7 @@ edit_uri: tree/main/docs
 
 nav:
     - Các chủ đề:
-      - Tổng quan về lập trình hướng đối tượng: topics\overview\README.md
+      - Tổng quan: topics\overview\README.md
       - Nền tảng .NET và ngôn ngữ C#: topics\dotnet-and-csharp\README.md
       - Lớp và đối tượng: topics\classes-and-objects\README.md
       - Thừa kế: topics\inheritance\README.md

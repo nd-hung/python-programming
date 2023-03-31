@@ -2,7 +2,7 @@
 
 ---
 
-## [Tổng quan về lập trình hướng đối tượng](overview)
+## [Tổng quan](overview)
 - Sơ lược các phương pháp lập trình
 - Cách tiếp cận hướng đối tượng
 
@@ -10,15 +10,11 @@
 - Nền tảng .NET
 - Ngôn ngữ C#
 
-## [Mô hình hóa hướng đối tượng với UML](object-oriented-modeling)
-- Phân tích thiết kế hướng đối tượng
-- Mô hình hóa hướng đối tượng với UML
-
 ## [Lớp và đối tượng](classes-and-objects)
 - Cài đặt lớp
 - Đối tượng, thuộc tính và phương thức
 
-## [Kỹ thuật thừa kế](inheritance)
+## [Thừa kế](inheritance)
 - Quan hệ tổng quát hóa, đặc biệt hóa
 - Cài đặt lớp thừa kế
 
