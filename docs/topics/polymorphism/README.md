@@ -29,6 +29,8 @@ Trong chương trình chính tạo danh sách đối tượng thuộc lớp Shap
 
 ![UML class diagram](img/Polymorphism-ClassDiagram.png)
 
+([Xem trên GitHub](https://github.com/nd-hung/oop/tree/main/docs/topics/polymorphism/code/Shape/))
+
 ```c#
 // Tạo lớp hình vẽ tổng quát (Shape)
 public class Shape
@@ -124,5 +126,5 @@ Index = 3, type: Rectangle, area = 54.000
 */
 ```
 
-([Xem trên GitHub](https://github.com/nd-hung/oop/tree/main/docs/topics/polymorphism/code/Shape/))
+
 
