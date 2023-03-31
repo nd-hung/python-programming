@@ -8,8 +8,9 @@ Polymorphism
 
 <center><img src="img/polymorphism-hierachy.png" width="75%"></center>
 
-- Cơ chế đa hình (polymorphism) là một trong bốn đặc trưng quan trọng nhất của phương pháp lập trình hướng đối tượng.
-- Hai đặc điểm mấu chốt của đa hình:
+- Cơ chế đa hình (polymorphism) là một trong bốn đặc trưng quan trọng nhất của phương pháp lập trình hướng đối tượng. Có hai loại: đa hình tĩnh ([nạp chồng phương thức](https://nd-hung.github.io/oop/topics/classes-and-objects/#nap-chong-phuong-thuc-method-overloading), [nạp chồng toán tử](https://nd-hung.github.io/oop/topics/classes-and-objects/#nap-chong-toan-tu-operator-overloading)), và đa hình động (ghi đè phương thức).
+
+- Hai đặc điểm mấu chốt của đa hình động:
     - Tại thời điểm chạy ứng dụng, các đối tượng của lớp con có thể được xử lý như là đối tượng của lớp cha. Nói cách khác, một đối tượng của lớp cha có thể giữ một đối tượng của lớp con và gọi phương thức của lớp con đó. Khi đó, kiểu dữ liệu của đối tượng lúc khai báo và lúc thực thi chương trình là khác nhau.
     - Ở lớp cơ sở có thể cài đặt các phương thức ảo (virtual methods), ở các lớp dẫn xuất sẽ cài đặt các phương thức ghi đè (override methods). Khi chạy ứng dụng, trình điều khiển thực thi CLR (Common Language Runtime) sẽ gọi phương thức ghi đè của lớp con.
 
