@@ -8,7 +8,7 @@
         <meta name="author" content="Hung Nguyen">
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Tổng quan về lập trình hướng đối tượng - Lập trình hướng đối tượng</title>
+        <title>Tổng quan - Lập trình hướng đối tượng</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -41,7 +41,7 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="./" class="dropdown-item active">Tổng quan về lập trình hướng đối tượng</a>
+    <a href="./" class="dropdown-item active">Tổng quan</a>
 </li>
                                     
 <li>
@@ -113,7 +113,7 @@
             
             <li class="nav-item" data-level="1"><a href="#tong-quan-ve-lap-trinh-huong-oi-tuong" class="nav-link">Tổng quan về lập trình hướng đối tượng</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#lap-trinh-cau-truc-structural-programming" class="nav-link">Lập trình cấu trúc (structural programming)</a>
+            <li class="nav-item" data-level="2"><a href="#lap-trinh-cau-truc-structural-programming" class="nav-link">Lập trình cấu trúc (Structural Programming)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -135,21 +135,25 @@
 <h1 id="tong-quan-ve-lap-trinh-huong-oi-tuong">Tổng quan về lập trình hướng đối tượng<a class="headerlink" href="#tong-quan-ve-lap-trinh-huong-oi-tuong" title="Permanent link">&para;</a></h1>
 <p>Overview</p>
 <hr />
-<p>Yêu cầu về phần mềm ngày càng trở nên đa dạng và phức tạp, đòi hỏi phương pháp lập trình hiệu quả để đáp ứng. Cho đến nay có hai phương pháp lập trình phổ biến nhất là <strong>lập trình cấu trúc</strong> và <strong>lập trình hướng đối tượng</strong>.</p>
-<h2 id="lap-trinh-cau-truc-structural-programming">Lập trình cấu trúc (structural programming)<a class="headerlink" href="#lap-trinh-cau-truc-structural-programming" title="Permanent link">&para;</a></h2>
-<p>Phương pháp lập trình cấu trúc, còn gọi là lập trình hướng thủ tục (procedural programming) vận dụng cách tiếp cận từ trên xuống (top-down development), từ tổng quát đến chi tiết. Theo đó, chương trình được phân rã thành các chức năng riêng biệt, các chức năng này nếu cần lại có thể được chia nhỏ thành các chức năng nhỏ hơn. Mỗi chức năng con này được cài đặt thành một chương trình con tương ứng. Mỗi chương trình con có thể được gọi nhiều lần với các dữ liệu vào khác nhau.</p>
-<p>Ví dụ sau đây minh họa phương pháp lập trình cấu trúc. Cho một mảng số nguyên, sắp xếp mảng tăng dần, in mảng đã sắp xếp. Theo yêu cầu bài toán, chương trình được phân rã thành các chức năng: tạo mảng, sắp xếp mảng, in mảng.</p>
+<p>Cho đến nay có hai phương pháp lập trình phổ biến nhất là <strong>lập trình cấu trúc</strong> và <strong>lập trình hướng đối tượng</strong>.</p>
+<h2 id="lap-trinh-cau-truc-structural-programming">Lập trình cấu trúc (Structural Programming)<a class="headerlink" href="#lap-trinh-cau-truc-structural-programming" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Còn gọi là lập trình hướng thủ tục (procedural programming) vận dụng cách tiếp cận từ trên xuống (top-down development), từ tổng quát đến chi tiết.</li>
+<li>Chương trình được phân rã thành các chức năng riêng biệt, các chức năng này nếu cần lại có thể được chia nhỏ thành các chức năng nhỏ hơn. Mỗi chức năng con này được cài đặt thành một chương trình con tương ứng. Mỗi chương trình con có thể được gọi nhiều lần với các dữ liệu vào khác nhau.</li>
+</ul>
+<p>Ví dụ: Cho một mảng số nguyên, sắp xếp mảng tăng dần, in mảng đã sắp xếp.</p>
+<p>Theo yêu cầu bài toán, chương trình được phân rã thành các chức năng: tạo mảng, sắp xếp mảng, in mảng.</p>
 <p><img src="code/structured-programming/img/top-down-approach.png" class="center"></p>
 <p><a href="https://github.com/nd-hung/oop/blob/main/docs/topics/overview/code/structured-programming/Program.cs">Xem mã nguồn trên GitHub</a></p>
 <h2 id="phuong-phap-lap-trinh-huong-oi-tuong-object-oriented-programming">Phương pháp lập trình hướng đối tượng (Object Oriented Programming)<a class="headerlink" href="#phuong-phap-lap-trinh-huong-oi-tuong-object-oriented-programming" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Là phương pháp lập trình dựa trên cách tiếp cận hướng đối tượng. Theo đó, chương trình là tập hợp các đối tượng. Đối tượng là sự kết hợp giữa dữ liệu (thuộc tính) và các xử lý (phương thức) xoay quanh dữ liệu đó. Đối tượng thực hiện các yêu cầu xử lý thông qua cơ chế truyền thông điệp (message passing).</li>
+<li>Dựa trên cách tiếp cận hướng đối tượng. Theo đó, chương trình là tập hợp các đối tượng. Đối tượng là sự kết hợp giữa dữ liệu (thuộc tính) và các xử lý (phương thức) xoay quanh dữ liệu đó. Đối tượng thực hiện các yêu cầu xử lý thông qua cơ chế truyền thông điệp (message passing).</li>
 </ul>
 <h2 id="cac-nguyen-ly-co-ban-cua-lap-trinh-huong-oi-tuong">Các nguyên lý cơ bản của lập trình hướng đối tượng<a class="headerlink" href="#cac-nguyen-ly-co-ban-cua-lap-trinh-huong-oi-tuong" title="Permanent link">&para;</a></h2>
 <h3 id="truu-tuong-hoa-abstraction">Trừu tượng hóa (Abstraction)<a class="headerlink" href="#truu-tuong-hoa-abstraction" title="Permanent link">&para;</a></h3>
 <p>Trừu tượng hóa là quá trình loại bỏ đi các thông tin, tính chất cụ thể của sự vật, hiện tượng và
 giữ lại những tính chất, hành vi đặc trưng của chúng.</p>
-<h3 id="tinh-bao-ong-encapsulation">Tính bao đóng (Encapsulation)<a class="headerlink" href="#tinh-bao-ong-encapsulation" title="Permanent link">&para;</a></h3>
+<h3 id="bao-ong-encapsulation">Bao đóng (Encapsulation)<a class="headerlink" href="#bao-ong-encapsulation" title="Permanent link">&para;</a></h3>
 <p>Trong phương pháp lập trình cấu trúc, dữ liệu và các chức năng xử lý tách rời nhau. Trong lập trình hướng đối tượng, dữ liệu và các xử lý xoay quanh dữ liệu đó được tích hợp trong một thực thể gọi là đối tượng.</p>
 <p>Tính bao đóng cho phép người lập trình xác định mức độ truy cập đến thành viên của một lớp từ bên ngoài.
 Theo đó, có thể chủ động ẩn đi các dữ liệu hoặc phương thức nhằm hạn chế những tác động không mong muốn từ bên ngoài lớp.</p>
