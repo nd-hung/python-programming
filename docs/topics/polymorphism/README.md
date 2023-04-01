@@ -115,7 +115,7 @@ Ta thấy, cơ chế đa hình không những hỗ trợ tái sử dụng mã ng
 
 Viết chương trình sao cho khi chạy cho phép tạo các hình khác nhau (vuông, tròn, tam giác,...), sau đó tìm hình vẽ có diện tích lớn nhất.
 
-Cách giải quyết bài toán này tương tự [Ví dụ 1](#). Trước hết tạo lớp cơ sở Shape có phương thức ảo `GetArea()` để tính diện tích hình vẽ. Do Shape là lớp tổng quát, chưa biết hình vẽ cụ thể nên không tính được diện tích, vì thế ta cho kết quả trả về là `0`. Ở lớp dẫn xuất Circle có phương thức ghi đè `GetArea()`, ở đây đã biết loại hình vẽ cụ thể (hình tròn) nên tính được diện tích của nó. Tương tự như vậy với lớp dẫn xuất Rectangle (hình chữ nhật).
+Cách giải quyết bài toán này tương tự [Ví dụ 1](https://nd-hung.github.io/oop/topics/polymorphism/#vi-du-1). Trước hết tạo lớp cơ sở Shape có phương thức ảo `GetArea()` để tính diện tích hình vẽ. Do Shape là lớp tổng quát, chưa biết hình vẽ cụ thể nên không tính được diện tích, vì thế ta cho kết quả trả về là `0`. Ở lớp dẫn xuất Circle có phương thức ghi đè `GetArea()`, ở đây đã biết loại hình vẽ cụ thể (hình tròn) nên tính được diện tích của nó. Tương tự như vậy với lớp dẫn xuất Rectangle (hình chữ nhật).
 
 Trong chương trình chính tạo danh sách đối tượng thuộc lớp Shape nhưng khởi tạo thành 2 loại đối tượng khác nhau: 1 của lớp Circle và 1 của lớp Rectangle. Ta thấy, khi gọi phương thức tính diện tích của mỗi đối tượng, tùy theo kiểu của đối tượng cụ thể được tạo ra (hình tròn, hình chữ nhật) mà các dòng lệnh tính diện tích phù hợp được gọi.
 

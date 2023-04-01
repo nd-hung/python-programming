@@ -113,11 +113,19 @@
             
             <li class="nav-item" data-level="1"><a href="#a-hinh" class="nav-link">Đa hình</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#dan-nhap" class="nav-link">Dẫn nhập</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#ky-thuat-a-hinh" class="nav-link">Kỹ thuật đa hình</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#vi-du" class="nav-link">Ví dụ</a>
+            <li class="nav-item" data-level="2"><a href="#vi-du-1" class="nav-link">Ví dụ 1</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#vi-du-2" class="nav-link">Ví dụ 2</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -131,11 +139,16 @@
 <h1 id="a-hinh">Đa hình<a class="headerlink" href="#a-hinh" title="Permanent link">&para;</a></h1>
 <p>Polymorphism</p>
 <hr />
+<h2 id="dan-nhap">Dẫn nhập<a class="headerlink" href="#dan-nhap" title="Permanent link">&para;</a></h2>
+<p>Giả sử cần viết ứng dụng quản lý một danh sách động vật gồm nhiều loài khác nhau (chó, mèo, dê, gà, cừu ...). Với mỗi loài đều cần có hành động phát ra tiếng kêu, tuy nhiên cách thức phát ra tiếng kêu của mỗi loài lại khác nhau.</p>
+<p>Câu hỏi: Có thể cài đặt phương thức giống nhau <code>Speak()</code> sao cho khi thêm một con vật mới vào danh sách, tùy theo nó thuộc loài nào mà phương thức <code>Speak()</code> sẽ thực thi đoạn code phát ra tiếng kêu phù hợp?</p>
+<p>Vấn đề này có thể giải quyết hiệu quả bằng kỹ thuật đa hình (polymorphism).</p>
 <h2 id="ky-thuat-a-hinh">Kỹ thuật đa hình<a class="headerlink" href="#ky-thuat-a-hinh" title="Permanent link">&para;</a></h2>
 <p><center><img src="img/polymorphism-hierachy.png" width="75%"></center></p>
 <ul>
+<li>Đa hình là một trong bốn đặc trưng quan trọng nhất của phương pháp lập trình hướng đối tượng (bao gồm: trừu tượng hóa (abstraction), bao đóng (encapsulation), thừa kế (inheritance) và đa hình (polymorphism)). Có hai loại đa hình: đa hình tĩnh (<a href="https://nd-hung.github.io/oop/topics/classes-and-objects/#nap-chong-phuong-thuc-method-overloading">nạp chồng phương thức</a>, <a href="https://nd-hung.github.io/oop/topics/classes-and-objects/#nap-chong-toan-tu-operator-overloading">nạp chồng toán tử</a>) và đa hình động (ghi đè phương thức).</li>
 <li>
-<p>Cơ chế đa hình là một trong bốn trụ cột quan trọng nhất của phương pháp lập trình hướng đối tượng (bao gồm: trừu tượng hóa (abstraction), bao đóng (encapsulation), thừa kế (inheritance) và đa hình (polymorphism)). Có hai loại đa hình: đa hình tĩnh (<a href="https://nd-hung.github.io/oop/topics/classes-and-objects/#nap-chong-phuong-thuc-method-overloading">nạp chồng phương thức</a>, <a href="https://nd-hung.github.io/oop/topics/classes-and-objects/#nap-chong-toan-tu-operator-overloading">nạp chồng toán tử</a>) và đa hình động (ghi đè phương thức).</p>
+<p>Cơ chế đa hình động xuất hiện khi có quan hệ thừa kế.</p>
 </li>
 <li>
 <p>Hai đặc điểm mấu chốt của đa hình động:</p>
@@ -154,9 +167,85 @@
 <p>Từ đối tượng của lớp cơ sở sử dụng phương thức ảo để gọi phương thức ghi đè ở lớp dẫn xuất.</p>
 </li>
 </ol>
-<h2 id="vi-du">Ví dụ<a class="headerlink" href="#vi-du" title="Permanent link">&para;</a></h2>
+<h2 id="vi-du-1">Ví dụ 1<a class="headerlink" href="#vi-du-1" title="Permanent link">&para;</a></h2>
+<p><img alt="Polymorphism" src="img/Polymorphism.png" /></p>
+<p>Với bài toán quản lý động vật ở trên, ta cần xây dựng lớp cơ sở Animal với phương thức ảo (virtual method) có tên
+<code>Speak()</code>. Sau đó, trong mỗi lớp dẫn xuất đến lớp Animal đều cài đặt phương thức trùng tên và ghi đè (override) lên phương thức của lớp cơ sở.</p>
+<pre><code class="language-c#">// Tạo lớp cơ sở Animal mô quả động vật tổng quát
+public class Animal
+{
+    public string Name;
+
+    // Constructor
+    public Animal(string name = &quot;&quot;)
+    {
+        Name = name;
+    }
+    // Tạo phương thức ảo (virtual) phát ra tiếng kêu
+    public virtual void Speak()
+    {
+        Console.WriteLine(&quot;Hello, I'm an animal.&quot;);
+    }
+}
+
+// Tạo lớp dẫn xuất Dog kế thừa lớp Animal
+public class Dog : Animal
+{
+    // Constructor
+    public Dog(string name = &quot;&quot;) : base(name) { }
+    // Tạo phương thức ghi đè (override) phát ra tiếng kêu của loài chó
+    public override void Speak()
+    {
+        Console.WriteLine(&quot;Wufwuf, I'm a dog. My name is &quot; + Name);
+    }
+}
+
+// Tạo lớp dẫn xuất Cat kế thừa lớp Animal
+public class Cat : Animal
+{
+    // Constructor
+    public Cat(string name = &quot;&quot;) : base(name) { }
+
+    // Tạo phương thức ghi đè (override) phát ra tiếng kêu của loài mèo
+    public override void Speak()
+    {
+        Console.WriteLine(&quot;Meow, I'm a cat. My name is &quot; + Name);
+    }
+}
+
+// Chương trình chính
+public class DemoPolymorphism
+{
+    public static void Main()
+    {
+        // Tạo một danh sách loài vật
+        var animals = new List&lt;Animal&gt;
+        {
+            new Dog(&quot;Shiba&quot;),
+            new Cat(&quot;Tom&quot;),
+            new Cat(&quot;Doreamon&quot;),
+            new Dog(&quot;Tyke&quot;)
+        };
+
+        // In thông tin của mỗi hình &amp; tìm diện tích lớn nhất
+        foreach (var pet in animals)
+        {
+            pet.Speak();
+        }
+    }
+}
+
+/* Output
+Wufwuf, I'm a dog. My name is Shiba
+Meow, I'm a cat. My name is Tom
+Meow, I'm a cat. My name is Doreamon
+Wufwuf, I'm a dog. My name is Tyke
+*/
+</code></pre>
+<p>Ta thấy, cơ chế đa hình không những hỗ trợ tái sử dụng mã nguồn triệt để mà còn giúp cài đặt một cách nhất quán các phương thức giống nhau về hành động nhưng khác nhau về cách thức. Hơn nữa, khi cần bổ sung một lớp dẫn xuất mới, chẳng hạn lớp Pig, thì không phải sửa đổi mã nguồn đã có.</p>
+<h2 id="vi-du-2">Ví dụ 2<a class="headerlink" href="#vi-du-2" title="Permanent link">&para;</a></h2>
 <p>Viết chương trình sao cho khi chạy cho phép tạo các hình khác nhau (vuông, tròn, tam giác,...), sau đó tìm hình vẽ có diện tích lớn nhất.</p>
-<p>Bài toán này có thể giải quyết hiệu quả bằng kỹ thuật đa hình. Trước hết tạo lớp cơ sở Shape có phương thức ảo <code>GetArea()</code> để tính diện tích hình vẽ. Do Shape là lớp tổng quát, chưa biết hình vẽ cụ thể nên không tính được diện tích, vì thế ta cho kết quả trả về là <code>0</code>. Ở lớp dẫn xuất Circle có phương thức ghi đè <code>GetArea()</code>, ở đây đã biết loại hình vẽ cụ thể (hình tròn) nên tính được diện tích của nó. Tương tự như vậy với lớp dẫn xuất Rectangle (hình chữ nhật).</p>
+<p>Cách giải quyết bài toán này tương tự <a href="#">Ví dụ 1</a>. Trước hết tạo lớp cơ sở Shape có phương thức ảo <code>GetArea()</code> để tính diện tích hình vẽ. Do Shape là lớp tổng quát, chưa biết hình vẽ cụ thể nên không tính được diện tích, vì thế ta cho kết quả trả về là <code>0</code>. Ở lớp dẫn xuất Circle có phương thức ghi đè <code>GetArea()</code>, ở đây đã biết loại hình vẽ cụ thể (hình tròn) nên tính được diện tích của nó. Tương tự như vậy với lớp dẫn xuất Rectangle (hình chữ nhật).</p>
 <p>Trong chương trình chính tạo danh sách đối tượng thuộc lớp Shape nhưng khởi tạo thành 2 loại đối tượng khác nhau: 1 của lớp Circle và 1 của lớp Rectangle. Ta thấy, khi gọi phương thức tính diện tích của mỗi đối tượng, tùy theo kiểu của đối tượng cụ thể được tạo ra (hình tròn, hình chữ nhật) mà các dòng lệnh tính diện tích phù hợp được gọi.</p>
 <p><img alt="UML class diagram" src="img/Polymorphism-ClassDiagram.png" /></p>
 <p>(<a href="https://github.com/nd-hung/oop/tree/main/docs/topics/polymorphism/code/Shape/">Xem trên GitHub</a>)</p>
