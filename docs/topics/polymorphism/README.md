@@ -93,7 +93,7 @@ public class DemoPolymorphism
             new Dog("Tyke")
         };
 
-        // In thông tin của mỗi hình & tìm diện tích lớn nhất
+        // Gọi phương thức phát tiếng kêu của mỗi con vật
         foreach (var pet in animals)
         {
             pet.Speak();
