@@ -4,11 +4,20 @@ Polymorphism
 
 ---
 
+## Dẫn nhập
+
+Giả sử cần viết ứng dụng quản lý một danh sách động vật gồm nhiều loài khác nhau (chó, mèo, dê, gà, cừu ...). Với mỗi loài đều cần có hành động phát ra tiếng kêu, tuy nhiên cách thức phát ra tiếng kêu của mỗi loài lại khác nhau.
+
+Câu hỏi: Có thể cài đặt phương thức giống nhau `Speak()` sao cho khi thêm một con vật mới vào danh sách, tùy theo nó thuộc loài nào mà phương thức `Speak()` sẽ thực thi đoạn code phát ra tiếng kêu phù hợp?
+
+Vấn đề này có thể giải quyết hiệu quả bằng kỹ thuật đa hình (polymorphism).
+
 ## Kỹ thuật đa hình
 
 <center><img src="img/polymorphism-hierachy.png" width="75%"></center>
 
-- Cơ chế đa hình là một trong bốn trụ cột quan trọng nhất của phương pháp lập trình hướng đối tượng (bao gồm: trừu tượng hóa (abstraction), bao đóng (encapsulation), thừa kế (inheritance) và đa hình (polymorphism)). Có hai loại đa hình: đa hình tĩnh ([nạp chồng phương thức](https://nd-hung.github.io/oop/topics/classes-and-objects/#nap-chong-phuong-thuc-method-overloading), [nạp chồng toán tử](https://nd-hung.github.io/oop/topics/classes-and-objects/#nap-chong-toan-tu-operator-overloading)) và đa hình động (ghi đè phương thức).
+- Đa hình là một trong bốn đặc trưng quan trọng nhất của phương pháp lập trình hướng đối tượng (bao gồm: trừu tượng hóa (abstraction), bao đóng (encapsulation), thừa kế (inheritance) và đa hình (polymorphism)). Có hai loại đa hình: đa hình tĩnh ([nạp chồng phương thức](https://nd-hung.github.io/oop/topics/classes-and-objects/#nap-chong-phuong-thuc-method-overloading), [nạp chồng toán tử](https://nd-hung.github.io/oop/topics/classes-and-objects/#nap-chong-toan-tu-operator-overloading)) và đa hình động (ghi đè phương thức).
+- Cơ chế đa hình động xuất hiện khi có quan hệ thừa kế.
 
 - Hai đặc điểm mấu chốt của đa hình động:
     - Tại thời điểm chạy ứng dụng, các đối tượng của lớp con có thể được xử lý như là đối tượng của lớp cha. Nói cách khác, một đối tượng của lớp cha có thể giữ một đối tượng của lớp con và gọi phương thức của lớp con đó. Khi đó, kiểu dữ liệu của đối tượng lúc khai báo và lúc thực thi chương trình là khác nhau.
@@ -20,11 +29,93 @@ Cơ chế đa hình cho phép cài đặt một cách nhất quán các phương
 
 2. Từ đối tượng của lớp cơ sở sử dụng phương thức ảo để gọi phương thức ghi đè ở lớp dẫn xuất.
 
-## Ví dụ
+## Ví dụ 1
+
+![Polymorphism](img/Polymorphism.png)
+
+Với bài toán quản lý động vật ở trên, ta cần xây dựng lớp cơ sở Animal với phương thức ảo (virtual method) có tên
+`Speak()`. Sau đó, trong mỗi lớp dẫn xuất đến lớp Animal đều cài đặt phương thức trùng tên và ghi đè (override) lên phương thức của lớp cơ sở.
+
+```c#
+// Tạo lớp cơ sở Animal mô quả động vật tổng quát
+public class Animal
+{
+    public string Name;
+
+    // Constructor
+    public Animal(string name = "")
+    {
+        Name = name;
+    }
+    // Tạo phương thức ảo (virtual) phát ra tiếng kêu
+    public virtual void Speak()
+    {
+        Console.WriteLine("Hello, I'm an animal.");
+    }
+}
+
+// Tạo lớp dẫn xuất Dog kế thừa lớp Animal
+public class Dog : Animal
+{
+    // Constructor
+    public Dog(string name = "") : base(name) { }
+    // Tạo phương thức ghi đè (override) phát ra tiếng kêu của loài chó
+    public override void Speak()
+    {
+        Console.WriteLine("Wufwuf, I'm a dog. My name is " + Name);
+    }
+}
+
+// Tạo lớp dẫn xuất Cat kế thừa lớp Animal
+public class Cat : Animal
+{
+    // Constructor
+    public Cat(string name = "") : base(name) { }
+
+    // Tạo phương thức ghi đè (override) phát ra tiếng kêu của loài mèo
+    public override void Speak()
+    {
+        Console.WriteLine("Meow, I'm a cat. My name is " + Name);
+    }
+}
+
+// Chương trình chính
+public class DemoPolymorphism
+{
+    public static void Main()
+    {
+        // Tạo một danh sách loài vật
+        var animals = new List<Animal>
+        {
+            new Dog("Shiba"),
+            new Cat("Tom"),
+            new Cat("Doreamon"),
+            new Dog("Tyke")
+        };
+
+        // In thông tin của mỗi hình & tìm diện tích lớn nhất
+        foreach (var pet in animals)
+        {
+            pet.Speak();
+        }
+    }
+}
+
+/* Output
+Wufwuf, I'm a dog. My name is Shiba
+Meow, I'm a cat. My name is Tom
+Meow, I'm a cat. My name is Doreamon
+Wufwuf, I'm a dog. My name is Tyke
+*/
+```
+
+Ta thấy, cơ chế đa hình không những hỗ trợ tái sử dụng mã nguồn triệt để mà còn giúp cài đặt một cách nhất quán các phương thức giống nhau về hành động nhưng khác nhau về cách thức. Hơn nữa, khi cần bổ sung một lớp dẫn xuất mới, chẳng hạn lớp Pig, thì không phải sửa đổi mã nguồn đã có.
+
+## Ví dụ 2
 
 Viết chương trình sao cho khi chạy cho phép tạo các hình khác nhau (vuông, tròn, tam giác,...), sau đó tìm hình vẽ có diện tích lớn nhất.
 
-Bài toán này có thể giải quyết hiệu quả bằng kỹ thuật đa hình. Trước hết tạo lớp cơ sở Shape có phương thức ảo `GetArea()` để tính diện tích hình vẽ. Do Shape là lớp tổng quát, chưa biết hình vẽ cụ thể nên không tính được diện tích, vì thế ta cho kết quả trả về là `0`. Ở lớp dẫn xuất Circle có phương thức ghi đè `GetArea()`, ở đây đã biết loại hình vẽ cụ thể (hình tròn) nên tính được diện tích của nó. Tương tự như vậy với lớp dẫn xuất Rectangle (hình chữ nhật).
+Cách giải quyết bài toán này tương tự [Ví dụ 1](#). Trước hết tạo lớp cơ sở Shape có phương thức ảo `GetArea()` để tính diện tích hình vẽ. Do Shape là lớp tổng quát, chưa biết hình vẽ cụ thể nên không tính được diện tích, vì thế ta cho kết quả trả về là `0`. Ở lớp dẫn xuất Circle có phương thức ghi đè `GetArea()`, ở đây đã biết loại hình vẽ cụ thể (hình tròn) nên tính được diện tích của nó. Tương tự như vậy với lớp dẫn xuất Rectangle (hình chữ nhật).
 
 Trong chương trình chính tạo danh sách đối tượng thuộc lớp Shape nhưng khởi tạo thành 2 loại đối tượng khác nhau: 1 của lớp Circle và 1 của lớp Rectangle. Ta thấy, khi gọi phương thức tính diện tích của mỗi đối tượng, tùy theo kiểu của đối tượng cụ thể được tạo ra (hình tròn, hình chữ nhật) mà các dòng lệnh tính diện tích phù hợp được gọi.
 

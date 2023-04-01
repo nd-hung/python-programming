@@ -117,7 +117,7 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#bai-toan-vi-du" class="nav-link">Bài toán ví dụ</a>
+            <li class="nav-item" data-level="2"><a href="#vi-du" class="nav-link">Ví dụ</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -135,7 +135,7 @@
 <p><center><img src="img/polymorphism-hierachy.png" width="75%"></center></p>
 <ul>
 <li>
-<p>Cơ chế đa hình (polymorphism) là một trong bốn đặc trưng quan trọng nhất của phương pháp lập trình hướng đối tượng. Có hai loại: đa hình tĩnh (<a href="https://nd-hung.github.io/oop/topics/classes-and-objects/#nap-chong-phuong-thuc-method-overloading">nạp chồng phương thức</a>, <a href="https://nd-hung.github.io/oop/topics/classes-and-objects/#nap-chong-toan-tu-operator-overloading">nạp chồng toán tử</a>), và đa hình động (ghi đè phương thức).</p>
+<p>Cơ chế đa hình là một trong bốn trụ cột quan trọng nhất của phương pháp lập trình hướng đối tượng (bao gồm: trừu tượng hóa (abstraction), bao đóng (encapsulation), thừa kế (inheritance) và đa hình (polymorphism)). Có hai loại đa hình: đa hình tĩnh (<a href="https://nd-hung.github.io/oop/topics/classes-and-objects/#nap-chong-phuong-thuc-method-overloading">nạp chồng phương thức</a>, <a href="https://nd-hung.github.io/oop/topics/classes-and-objects/#nap-chong-toan-tu-operator-overloading">nạp chồng toán tử</a>) và đa hình động (ghi đè phương thức).</p>
 </li>
 <li>
 <p>Hai đặc điểm mấu chốt của đa hình động:</p>
@@ -154,9 +154,9 @@
 <p>Từ đối tượng của lớp cơ sở sử dụng phương thức ảo để gọi phương thức ghi đè ở lớp dẫn xuất.</p>
 </li>
 </ol>
-<h2 id="bai-toan-vi-du">Bài toán ví dụ<a class="headerlink" href="#bai-toan-vi-du" title="Permanent link">&para;</a></h2>
-<p>Tạo ứng dụng sao cho khi chạy cho phép vẽ các hình khác nhau về hình dạng (vuông, tròn, tam giác,...), sau đó tìm hình vẽ có diện tích lớn nhất.</p>
-<p>Bài toán này có thể giải quyết hiệu quả bằng kỹ thuật đa hình. Trước hết tạo lớp cơ sở Shape có phương thức ảo <code>GetArea()</code> để tính diện tích hình vẽ. Do Shape là lớp tổng quát, chưa biết hình vẽ cụ thể nên không tính được diện tích, vì thế cho kết quả trả về là <code>0</code>. Ở lớp dẫn xuất Circle có phương thức ghi đè <code>GetArea()</code>, ở đây đã biết loại hình vẽ cụ thể (hình tròn) nên tính được diện tích của nó. Tương tự như vậy với lớp dẫn xuất Rectangle (hình chữ nhật).</p>
+<h2 id="vi-du">Ví dụ<a class="headerlink" href="#vi-du" title="Permanent link">&para;</a></h2>
+<p>Viết chương trình sao cho khi chạy cho phép tạo các hình khác nhau (vuông, tròn, tam giác,...), sau đó tìm hình vẽ có diện tích lớn nhất.</p>
+<p>Bài toán này có thể giải quyết hiệu quả bằng kỹ thuật đa hình. Trước hết tạo lớp cơ sở Shape có phương thức ảo <code>GetArea()</code> để tính diện tích hình vẽ. Do Shape là lớp tổng quát, chưa biết hình vẽ cụ thể nên không tính được diện tích, vì thế ta cho kết quả trả về là <code>0</code>. Ở lớp dẫn xuất Circle có phương thức ghi đè <code>GetArea()</code>, ở đây đã biết loại hình vẽ cụ thể (hình tròn) nên tính được diện tích của nó. Tương tự như vậy với lớp dẫn xuất Rectangle (hình chữ nhật).</p>
 <p>Trong chương trình chính tạo danh sách đối tượng thuộc lớp Shape nhưng khởi tạo thành 2 loại đối tượng khác nhau: 1 của lớp Circle và 1 của lớp Rectangle. Ta thấy, khi gọi phương thức tính diện tích của mỗi đối tượng, tùy theo kiểu của đối tượng cụ thể được tạo ra (hình tròn, hình chữ nhật) mà các dòng lệnh tính diện tích phù hợp được gọi.</p>
 <p><img alt="UML class diagram" src="img/Polymorphism-ClassDiagram.png" /></p>
 <p>(<a href="https://github.com/nd-hung/oop/tree/main/docs/topics/polymorphism/code/Shape/">Xem trên GitHub</a>)</p>
