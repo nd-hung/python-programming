@@ -353,7 +353,7 @@ public interface IAnimal
 {
     public string Name {get;set; }  // Lớp kế thừa phải cài đặt thuộc tính này
 
-    // Tạo khuôn mẫu phương thức phát tiếng kêu, lớp kế thừa phải cài đặt phương thức này
+    // Lớp kế thừa phải cài đặt phương thức này
     void Speak();
 }
 
