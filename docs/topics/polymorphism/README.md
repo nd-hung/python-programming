@@ -14,10 +14,9 @@ Vấn đề này có thể giải quyết hiệu quả bằng kỹ thuật đa h
 
 ## Kỹ thuật đa hình
 
-<center><img src="img/polymorphism-hierachy.png" width="75%"></center>
-
 - Đa hình là một trong bốn đặc trưng quan trọng nhất của phương pháp lập trình hướng đối tượng (bao gồm: trừu tượng hóa (abstraction), bao đóng (encapsulation), thừa kế (inheritance) và đa hình (polymorphism)). Có hai loại đa hình: đa hình tĩnh ([nạp chồng phương thức](https://nd-hung.github.io/oop/topics/classes-and-objects/#nap-chong-phuong-thuc-method-overloading), [nạp chồng toán tử](https://nd-hung.github.io/oop/topics/classes-and-objects/#nap-chong-toan-tu-operator-overloading)) và đa hình động (ghi đè phương thức).
-- Cơ chế đa hình động xuất hiện khi có quan hệ thừa kế.
+
+- Có thể cài đặt cơ chế đa hình bằng kỹ thuật thừa kế hoặc cài đặt giao diện (interface).
 
 - Hai đặc điểm mấu chốt của đa hình động:
     - Tại thời điểm chạy ứng dụng, các đối tượng của lớp con có thể được xử lý như là đối tượng của lớp cha. Nói cách khác, một đối tượng của lớp cha có thể giữ một đối tượng của lớp con và gọi phương thức của lớp con đó. Khi đó, kiểu dữ liệu của đối tượng lúc khai báo và lúc thực thi chương trình là khác nhau.
@@ -29,12 +28,55 @@ Cơ chế đa hình cho phép cài đặt một cách nhất quán các phương
 
 2. Từ đối tượng của lớp cơ sở sử dụng phương thức ảo để gọi phương thức ghi đè ở lớp dẫn xuất.
 
-## Ví dụ 1
+### Cú pháp
+
+```c#
+// Bước 1: Cài đặt các lớp có mối quan hệ thừa kế
+// Tạo lớp cơ sở
+class BaseClass
+{
+    // Tạo phương thức ảo
+    public virtual MethodName([<Danh sách tham số>])
+    {
+        // Các lệnh của phương thức ảo
+    }
+}
+
+// Tạo các lớp thừa kế
+class DerivedClass : BaseClass
+{
+    // Tạo phương thức ghi đè
+    public override MethodName([<Danh sách tham số>])
+    {
+        // Các lệnh của phương thức ghi đè
+    }
+}
+
+// Bước 2: Sử dụng phương thức đa hình
+class Program
+{
+    public static void Main()
+    {
+        // Tạo đối tượng thuộc lớp cơ sở và khởi tạo là đối tượng của lớp thừa kế
+        BaseClass obj = new DerivedClass();
+        // Gọi phương thức đa hình từ đối tượng của lớp cơ sở
+        obj.MethodName();
+    }
+}
+```
+
+## Ví dụ
+
+### Ví dụ 1
 
 ![Polymorphism](img/Polymorphism.png)
 
-Với bài toán quản lý động vật ở trên, ta cần xây dựng lớp cơ sở Animal với phương thức ảo (virtual method) có tên
-`Speak()`. Sau đó, trong mỗi lớp dẫn xuất đến lớp Animal đều cài đặt phương thức trùng tên và ghi đè (override) lên phương thức của lớp cơ sở.
+Với bài toán quản lý động vật ở phần [dẫn nhập](#dan-nhap), ta cần xây dựng lớp cơ sở Animal với phương thức ảo (virtual method) có tên
+`Speak()`. Sau đó, trong mỗi lớp kế thừa lớp Animal đều cài đặt phương thức trùng tên ghi đè (override) lên phương thức của lớp cơ sở.
+
+Trong chương trình chính, khai báo biến `animals` để chứa danh sách các con vật tổng quát (`Animal`). Mỗi khi thêm một con vật cụ thể (`Dog`/`Cat`) vào danh sách thì phương thức thiết lập của lớp tương ứng sẽ được gọi để khởi tạo đối tượng.
+
+Khi duyệt từng đối tượng và gọi phương thức `Speak()`, tùy theo loại cụ thể của đối tượng mà đoạn code ở trong phương thức ghi đè sẽ được thực hiện.
 
 ```c#
 // Tạo lớp cơ sở Animal mô quả động vật tổng quát
@@ -109,15 +151,15 @@ Wufwuf, I'm a dog. My name is Tyke
 */
 ```
 
-Ta thấy, cơ chế đa hình không những hỗ trợ tái sử dụng mã nguồn triệt để mà còn giúp cài đặt một cách nhất quán các phương thức giống nhau về hành động nhưng khác nhau về cách thức. Hơn nữa, khi cần bổ sung một lớp dẫn xuất mới, chẳng hạn lớp Pig, thì không phải sửa đổi mã nguồn đã có.
+Ta thấy, cơ chế đa hình không những hỗ trợ tái sử dụng mã nguồn triệt để mà còn giúp cài đặt một cách nhất quán các phương thức giống nhau về hành động nhưng khác nhau về cách thức. Hơn nữa, khi cần bổ sung một lớp dẫn xuất mới (ở đây là bổ sung một loài vật mới: bò, dê, cừu...) thì không phải sửa đổi mã nguồn đã có.
 
-## Ví dụ 2
+### Ví dụ 2
 
 Viết chương trình sao cho khi chạy cho phép tạo các hình khác nhau (vuông, tròn, tam giác,...), sau đó tìm hình vẽ có diện tích lớn nhất.
 
-Cách giải quyết bài toán này tương tự [Ví dụ 1](https://nd-hung.github.io/oop/topics/polymorphism/#vi-du-1). Trước hết tạo lớp cơ sở Shape có phương thức ảo `GetArea()` để tính diện tích hình vẽ. Do Shape là lớp tổng quát, chưa biết hình vẽ cụ thể nên không tính được diện tích, vì thế ta cho kết quả trả về là `0`. Ở lớp dẫn xuất Circle có phương thức ghi đè `GetArea()`, ở đây đã biết loại hình vẽ cụ thể (hình tròn) nên tính được diện tích của nó. Tương tự như vậy với lớp dẫn xuất Rectangle (hình chữ nhật).
+Cách giải quyết bài toán này tương tự [Ví dụ 1](#vi-du-1). Trước hết tạo lớp cơ sở Shape có phương thức ảo `GetArea()` để tính diện tích hình vẽ. Do Shape là lớp tổng quát, chưa biết hình vẽ cụ thể nên không tính được diện tích, vì thế ta cho kết quả trả về là `0`. Ở lớp dẫn xuất Circle có phương thức ghi đè `GetArea()`, ở đây đã biết loại hình vẽ cụ thể (hình tròn) nên tính được diện tích của nó. Tương tự như vậy với lớp dẫn xuất Rectangle (hình chữ nhật).
 
-Trong chương trình chính tạo danh sách đối tượng thuộc lớp Shape nhưng khởi tạo thành 2 loại đối tượng khác nhau: 1 của lớp Circle và 1 của lớp Rectangle. Ta thấy, khi gọi phương thức tính diện tích của mỗi đối tượng, tùy theo kiểu của đối tượng cụ thể được tạo ra (hình tròn, hình chữ nhật) mà các dòng lệnh tính diện tích phù hợp được gọi.
+Trong chương trình chính tạo danh sách đối tượng thuộc lớp Shape nhưng khởi tạo thành một trong hai loại đối tượng khác nhau của lớp Circle và lớp Rectangle. Ta thấy, khi gọi phương thức tính diện tích của mỗi đối tượng, tùy theo kiểu của đối tượng cụ thể được tạo ra (hình tròn, hình chữ nhật) mà các dòng lệnh tính diện tích phù hợp được gọi.
 
 ![UML class diagram](img/Polymorphism-ClassDiagram.png)
 
@@ -218,5 +260,77 @@ Index = 3, type: Rectangle, area = 54.000
 */
 ```
 
+## Lớp trừu tượng, phương thức trừu tượng
 
+- Khi tạo một lớp với mục đích dùng làm lớp cơ sở cho các lớp khác mà chưa phải là một lớp đầy đủ, ta có thể thiết lập lớp này là lớp trừu tượng (abstract class).
+- Lớp trừu tượng có thể chứa: phương thức trừu tượng hoặc phương thức cụ thể, các thuộc tính, phương thức thiết lập.
+- Phương thức trừu tượng khai báo như khuôn mẫu hàm (không có thân hàm), thay từ khóa `virtual` bằng `abstract`.
+- Ở các lớp dẫn xuất cần phải cài đặt chi tiết các phương thức trừu tượng đã khai báo ở lớp cơ sở.
+- Lớp dẫn xuất chỉ được kế thừa một lớp trừu tượng.
 
+### Cú pháp tạo lớp trừu tượng, phương thức trừu tượng
+
+```c#
+// Tạo lớp cơ sở trừu tượng
+class AbstractClass
+{
+    // Tạo phương thức trừu tượng (giống như khai báo khuôn mẫu hàm)
+    [<access modifier>] abstract MethodName([<Danh sách tham số>]);
+}
+
+// Tạo các lớp thừa kế
+class DerivedClass : AbstractClass
+{
+    // Tạo phương thức ghi đè
+    public override MethodName([<Danh sách tham số>])
+    {
+        // Các lệnh của phương thức ghi đè
+    }
+}
+```
+
+### Ví dụ:
+
+```c#
+// Tạo lớp trừu tượng Animal mô quả động vật tổng quát
+public abstract class Animal
+{
+    public string Name;
+
+    // Constructor
+    public Animal(string name = "")
+    {
+        Name = name;
+    }
+    // Tạo phương thức trừu tượng (abstract) 
+    public abstract void Speak();
+}
+
+// Tạo lớp dẫn xuất Dog kế thừa lớp trừu tượng Animal
+public class Dog : Animal
+{
+    // Constructor
+    public Dog(string name = "") : base(name) { }
+    // Tạo phương thức ghi đè (override) phát ra tiếng kêu của loài chó
+    public override void Speak()
+    {
+        Console.WriteLine("Wufwuf, I'm a dog. My name is " + Name);
+    }
+}
+
+// Chương trình chính
+public class DemoAbstractClass
+{
+    public static void Main()
+    {
+        // Khởi tạo đối tượng của lớp trừu tượng -> không thực hiện được:
+        // Error CS0144: Cannot create an instance of the abstract type or interface 'Animal`
+        Animal animal = new Animal("I'm an animal.");
+
+        // Khai báo đối tượng thuộc kiểu Animal và khởi tạo là đối tượng thuộc kiểu dẫn xuất -> thực hiện được:
+        Animal dog = new Dog("I'm a dog, my name is Spike.");
+    }
+}
+```
+
+## Giao diện (interface)
