@@ -264,14 +264,14 @@ Index = 3, type: Rectangle, area = 54.000
 
 - Khi tạo một lớp với mục đích dùng làm lớp cơ sở cho các lớp khác mà chưa phải là một lớp đầy đủ, ta có thể thiết lập lớp này là lớp trừu tượng (abstract class).
 - Lớp trừu tượng có thể chứa: phương thức trừu tượng hoặc phương thức cụ thể, các thuộc tính, phương thức thiết lập.
-- Phương thức trừu tượng khai báo như khuôn mẫu hàm (không có thân hàm), thay từ khóa `virtual` bằng `abstract`.
+- Phương thức trừu tượng khai báo như khuôn mẫu hàm (không có thân hàm), thay từ khóa `virtual` bằng `abstract` trước kiểu trả về của phương thức.
 - Ở các lớp dẫn xuất cần phải cài đặt chi tiết các phương thức trừu tượng đã khai báo ở lớp cơ sở.
 - Lớp dẫn xuất chỉ được kế thừa một lớp trừu tượng.
 
 ### Cú pháp tạo lớp trừu tượng, phương thức trừu tượng
 
 ```c#
-// Tạo lớp cơ sở trừu tượng
+// Tạo lớp trừu tượng
 class AbstractClass
 {
     // Tạo phương thức trừu tượng (giống như khai báo khuôn mẫu hàm)
@@ -333,4 +333,56 @@ public class DemoAbstractClass
 }
 ```
 
+## Sự khác nhau giữa từ khóa `new` và `override`
+
+- Sử dụng từ khóa `new` trước kiểu trả về của định nghĩa phương thức ở lớp con khi muốn ẩn phương thức cùng tên ở lớp cha.
+- Sử dụng từ khóa `override` trước kiểu trả về của định nghĩa phương thức ở lớp con khi muốn cài đặt mở rộng thức cùng tên ở lớp cha. Phương thức cùng tên ở lớp cha cần có từ khóa `virtual` trước kiểu trả về.
+
 ## Giao diện (interface)
+
+- Giao diện là một lớp chỉ chứa các phương thức trừu tượng (abstract methods), các thuộc tính (properites) chưa cài đặt chi tiết.
+- Các lớp kế thừa bắt buộc phải cài đặt mọi thành phần được khai báo trong interface (lớp kế thừa có thể có thêm các thuộc tính, phương thức mới).
+- Một lớp có thể cài đặt (kế thừa) nhiều giao diện.
+- Quy ước đặt tên interface bắt đầu bằng ký tự `I`.
+
+### Ví dụ
+
+```c#
+// Tạo interface khai báo các thuộc tính, phương thức của động vật tổng quát
+public interface IAnimal
+{
+    public string Name {get;set; }  // Lớp kế thừa phải cài đặt thuộc tính này
+
+    // Tạo khuôn mẫu phương thức phát tiếng kêu, lớp kế thừa phải cài đặt phương thức này
+    void Speak();
+}
+
+// Tạo lớp dẫn xuất Dog cài đặt giao diện IAnimal
+public class Dog : IAnimal
+{
+    public string Name { get; set; }
+
+    public Dog(string name)
+    {
+        Name = name;
+    }
+    // Cài đặt chi tiết phương thức phát ra tiếng kêu
+    public void Speak()
+    {
+        Console.WriteLine("Hello I'm a {0}, my name is {1}", this.GetType(), Name);
+    }
+}
+
+// Chương trình chính
+public class TestInterface
+{
+    public static void Main()
+    {
+        // IAnimal dog0 = new IAnimal(); // -> Lỗi biên dịch CS0144 Cannot create an instance of the abstract type or interface 'IAnimal'
+        IAnimal dog1 = new Dog("Spike"); // OK
+        dog1.Speak();
+        Dog dog2 = new Dog("Shiba");     // OK
+        dog2.Speak();
+    }
+}
+```
