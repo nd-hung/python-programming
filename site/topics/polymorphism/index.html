@@ -129,6 +129,10 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            <li class="nav-item" data-level="2"><a href="#su-khac-nhau-giua-tu-khoa-new-va-override" class="nav-link">Sự khác nhau giữa từ khóa new và override</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#giao-dien-interface" class="nav-link">Giao diện (interface)</a>
               <ul class="nav flex-column">
               </ul>
@@ -388,12 +392,12 @@ Index = 3, type: Rectangle, area = 54.000
 <ul>
 <li>Khi tạo một lớp với mục đích dùng làm lớp cơ sở cho các lớp khác mà chưa phải là một lớp đầy đủ, ta có thể thiết lập lớp này là lớp trừu tượng (abstract class).</li>
 <li>Lớp trừu tượng có thể chứa: phương thức trừu tượng hoặc phương thức cụ thể, các thuộc tính, phương thức thiết lập.</li>
-<li>Phương thức trừu tượng khai báo như khuôn mẫu hàm (không có thân hàm), thay từ khóa <code>virtual</code> bằng <code>abstract</code>.</li>
+<li>Phương thức trừu tượng khai báo như khuôn mẫu hàm (không có thân hàm), thay từ khóa <code>virtual</code> bằng <code>abstract</code> trước kiểu trả về của phương thức.</li>
 <li>Ở các lớp dẫn xuất cần phải cài đặt chi tiết các phương thức trừu tượng đã khai báo ở lớp cơ sở.</li>
 <li>Lớp dẫn xuất chỉ được kế thừa một lớp trừu tượng.</li>
 </ul>
 <h3 id="cu-phap-tao-lop-truu-tuong-phuong-thuc-truu-tuong">Cú pháp tạo lớp trừu tượng, phương thức trừu tượng<a class="headerlink" href="#cu-phap-tao-lop-truu-tuong-phuong-thuc-truu-tuong" title="Permanent link">&para;</a></h3>
-<pre><code class="language-c#">// Tạo lớp cơ sở trừu tượng
+<pre><code class="language-c#">// Tạo lớp trừu tượng
 class AbstractClass
 {
     // Tạo phương thức trừu tượng (giống như khai báo khuôn mẫu hàm)
@@ -451,7 +455,57 @@ public class DemoAbstractClass
     }
 }
 </code></pre>
-<h2 id="giao-dien-interface">Giao diện (interface)<a class="headerlink" href="#giao-dien-interface" title="Permanent link">&para;</a></h2></div>
+<h2 id="su-khac-nhau-giua-tu-khoa-new-va-override">Sự khác nhau giữa từ khóa <code>new</code> và <code>override</code><a class="headerlink" href="#su-khac-nhau-giua-tu-khoa-new-va-override" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Sử dụng từ khóa <code>new</code> trước kiểu trả về của định nghĩa phương thức ở lớp con khi muốn ẩn phương thức cùng tên ở lớp cha.</li>
+<li>Sử dụng từ khóa <code>override</code> trước kiểu trả về của định nghĩa phương thức ở lớp con khi muốn cài đặt mở rộng thức cùng tên ở lớp cha. Phương thức cùng tên ở lớp cha cần có từ khóa <code>virtual</code> trước kiểu trả về.</li>
+</ul>
+<h2 id="giao-dien-interface">Giao diện (interface)<a class="headerlink" href="#giao-dien-interface" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Giao diện là một lớp chỉ chứa các phương thức trừu tượng (abstract methods), các thuộc tính (properites) chưa cài đặt chi tiết.</li>
+<li>Các lớp kế thừa bắt buộc phải cài đặt mọi thành phần được khai báo trong interface (lớp kế thừa có thể có thêm các thuộc tính, phương thức mới).</li>
+<li>Một lớp có thể cài đặt (kế thừa) nhiều giao diện.</li>
+<li>Quy ước đặt tên interface bắt đầu bằng ký tự <code>I</code>.</li>
+</ul>
+<h3 id="vi-du_2">Ví dụ<a class="headerlink" href="#vi-du_2" title="Permanent link">&para;</a></h3>
+<pre><code class="language-c#">// Tạo interface khai báo các thuộc tính, phương thức của động vật tổng quát
+public interface IAnimal
+{
+    public string Name {get;set; }  // Lớp kế thừa phải cài đặt thuộc tính này
+
+    // Tạo khuôn mẫu phương thức phát tiếng kêu, lớp kế thừa phải cài đặt phương thức này
+    void Speak();
+}
+
+// Tạo lớp dẫn xuất Dog cài đặt giao diện IAnimal
+public class Dog : IAnimal
+{
+    public string Name { get; set; }
+
+    public Dog(string name)
+    {
+        Name = name;
+    }
+    // Cài đặt chi tiết phương thức phát ra tiếng kêu
+    public void Speak()
+    {
+        Console.WriteLine(&quot;Hello I'm a {0}, my name is {1}&quot;, this.GetType(), Name);
+    }
+}
+
+// Chương trình chính
+public class TestInterface
+{
+    public static void Main()
+    {
+        // IAnimal dog0 = new IAnimal(); // -&gt; Lỗi biên dịch CS0144 Cannot create an instance of the abstract type or interface 'IAnimal'
+        IAnimal dog1 = new Dog(&quot;Spike&quot;); // OK
+        dog1.Speak();
+        Dog dog2 = new Dog(&quot;Shiba&quot;);     // OK
+        dog2.Speak();
+    }
+}
+</code></pre></div>
             </div>
         </div>
 

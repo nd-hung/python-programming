@@ -385,4 +385,9 @@ public class TestInterface
         dog2.Speak();
     }
 }
+
+/* Output
+Hello I'm a Dog, my name is Spike
+Hello I'm a Dog, my name is Shiba
+*/
 ```
