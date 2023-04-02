@@ -121,11 +121,15 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#vi-du-1" class="nav-link">Ví dụ 1</a>
+            <li class="nav-item" data-level="2"><a href="#vi-du" class="nav-link">Ví dụ</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#vi-du-2" class="nav-link">Ví dụ 2</a>
+            <li class="nav-item" data-level="2"><a href="#lop-truu-tuong-phuong-thuc-truu-tuong" class="nav-link">Lớp trừu tượng, phương thức trừu tượng</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#giao-dien-interface" class="nav-link">Giao diện (interface)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -144,11 +148,12 @@
 <p>Câu hỏi: Có thể cài đặt phương thức giống nhau <code>Speak()</code> sao cho khi thêm một con vật mới vào danh sách, tùy theo nó thuộc loài nào mà phương thức <code>Speak()</code> sẽ thực thi đoạn code phát ra tiếng kêu phù hợp?</p>
 <p>Vấn đề này có thể giải quyết hiệu quả bằng kỹ thuật đa hình (polymorphism).</p>
 <h2 id="ky-thuat-a-hinh">Kỹ thuật đa hình<a class="headerlink" href="#ky-thuat-a-hinh" title="Permanent link">&para;</a></h2>
-<p><center><img src="img/polymorphism-hierachy.png" width="75%"></center></p>
 <ul>
-<li>Đa hình là một trong bốn đặc trưng quan trọng nhất của phương pháp lập trình hướng đối tượng (bao gồm: trừu tượng hóa (abstraction), bao đóng (encapsulation), thừa kế (inheritance) và đa hình (polymorphism)). Có hai loại đa hình: đa hình tĩnh (<a href="https://nd-hung.github.io/oop/topics/classes-and-objects/#nap-chong-phuong-thuc-method-overloading">nạp chồng phương thức</a>, <a href="https://nd-hung.github.io/oop/topics/classes-and-objects/#nap-chong-toan-tu-operator-overloading">nạp chồng toán tử</a>) và đa hình động (ghi đè phương thức).</li>
 <li>
-<p>Cơ chế đa hình động xuất hiện khi có quan hệ thừa kế.</p>
+<p>Đa hình là một trong bốn đặc trưng quan trọng nhất của phương pháp lập trình hướng đối tượng (bao gồm: trừu tượng hóa (abstraction), bao đóng (encapsulation), thừa kế (inheritance) và đa hình (polymorphism)). Có hai loại đa hình: đa hình tĩnh (<a href="https://nd-hung.github.io/oop/topics/classes-and-objects/#nap-chong-phuong-thuc-method-overloading">nạp chồng phương thức</a>, <a href="https://nd-hung.github.io/oop/topics/classes-and-objects/#nap-chong-toan-tu-operator-overloading">nạp chồng toán tử</a>) và đa hình động (ghi đè phương thức).</p>
+</li>
+<li>
+<p>Có thể cài đặt cơ chế đa hình bằng kỹ thuật thừa kế hoặc cài đặt giao diện (interface).</p>
 </li>
 <li>
 <p>Hai đặc điểm mấu chốt của đa hình động:</p>
@@ -167,10 +172,47 @@
 <p>Từ đối tượng của lớp cơ sở sử dụng phương thức ảo để gọi phương thức ghi đè ở lớp dẫn xuất.</p>
 </li>
 </ol>
-<h2 id="vi-du-1">Ví dụ 1<a class="headerlink" href="#vi-du-1" title="Permanent link">&para;</a></h2>
+<h3 id="cu-phap">Cú pháp<a class="headerlink" href="#cu-phap" title="Permanent link">&para;</a></h3>
+<pre><code class="language-c#">// Bước 1: Cài đặt các lớp có mối quan hệ thừa kế
+// Tạo lớp cơ sở
+class BaseClass
+{
+    // Tạo phương thức ảo
+    public virtual MethodName([&lt;Danh sách tham số&gt;])
+    {
+        // Các lệnh của phương thức ảo
+    }
+}
+
+// Tạo các lớp thừa kế
+class DerivedClass : BaseClass
+{
+    // Tạo phương thức ghi đè
+    public override MethodName([&lt;Danh sách tham số&gt;])
+    {
+        // Các lệnh của phương thức ghi đè
+    }
+}
+
+// Bước 2: Sử dụng phương thức đa hình
+class Program
+{
+    public static void Main()
+    {
+        // Tạo đối tượng thuộc lớp cơ sở và khởi tạo là đối tượng của lớp thừa kế
+        BaseClass obj = new DerivedClass();
+        // Gọi phương thức đa hình từ đối tượng của lớp cơ sở
+        obj.MethodName();
+    }
+}
+</code></pre>
+<h2 id="vi-du">Ví dụ<a class="headerlink" href="#vi-du" title="Permanent link">&para;</a></h2>
+<h3 id="vi-du-1">Ví dụ 1<a class="headerlink" href="#vi-du-1" title="Permanent link">&para;</a></h3>
 <p><img alt="Polymorphism" src="img/Polymorphism.png" /></p>
-<p>Với bài toán quản lý động vật ở trên, ta cần xây dựng lớp cơ sở Animal với phương thức ảo (virtual method) có tên
-<code>Speak()</code>. Sau đó, trong mỗi lớp dẫn xuất đến lớp Animal đều cài đặt phương thức trùng tên và ghi đè (override) lên phương thức của lớp cơ sở.</p>
+<p>Với bài toán quản lý động vật ở phần <a href="#dan-nhap">dẫn nhập</a>, ta cần xây dựng lớp cơ sở Animal với phương thức ảo (virtual method) có tên
+<code>Speak()</code>. Sau đó, trong mỗi lớp kế thừa lớp Animal đều cài đặt phương thức trùng tên ghi đè (override) lên phương thức của lớp cơ sở.</p>
+<p>Trong chương trình chính, khai báo biến <code>animals</code> để chứa danh sách các con vật tổng quát (<code>Animal</code>). Mỗi khi thêm một con vật cụ thể (<code>Dog</code>/<code>Cat</code>) vào danh sách thì phương thức thiết lập của lớp tương ứng sẽ được gọi để khởi tạo đối tượng.</p>
+<p>Khi duyệt từng đối tượng và gọi phương thức <code>Speak()</code>, tùy theo loại cụ thể của đối tượng mà đoạn code ở trong phương thức ghi đè sẽ được thực hiện.</p>
 <pre><code class="language-c#">// Tạo lớp cơ sở Animal mô quả động vật tổng quát
 public class Animal
 {
@@ -242,11 +284,11 @@ Meow, I'm a cat. My name is Doreamon
 Wufwuf, I'm a dog. My name is Tyke
 */
 </code></pre>
-<p>Ta thấy, cơ chế đa hình không những hỗ trợ tái sử dụng mã nguồn triệt để mà còn giúp cài đặt một cách nhất quán các phương thức giống nhau về hành động nhưng khác nhau về cách thức. Hơn nữa, khi cần bổ sung một lớp dẫn xuất mới, chẳng hạn lớp Pig, thì không phải sửa đổi mã nguồn đã có.</p>
-<h2 id="vi-du-2">Ví dụ 2<a class="headerlink" href="#vi-du-2" title="Permanent link">&para;</a></h2>
+<p>Ta thấy, cơ chế đa hình không những hỗ trợ tái sử dụng mã nguồn triệt để mà còn giúp cài đặt một cách nhất quán các phương thức giống nhau về hành động nhưng khác nhau về cách thức. Hơn nữa, khi cần bổ sung một lớp dẫn xuất mới (ở đây là bổ sung một loài vật mới: bò, dê, cừu...) thì không phải sửa đổi mã nguồn đã có.</p>
+<h3 id="vi-du-2">Ví dụ 2<a class="headerlink" href="#vi-du-2" title="Permanent link">&para;</a></h3>
 <p>Viết chương trình sao cho khi chạy cho phép tạo các hình khác nhau (vuông, tròn, tam giác,...), sau đó tìm hình vẽ có diện tích lớn nhất.</p>
-<p>Cách giải quyết bài toán này tương tự <a href="https://nd-hung.github.io/oop/topics/polymorphism/#vi-du-1">Ví dụ 1</a>. Trước hết tạo lớp cơ sở Shape có phương thức ảo <code>GetArea()</code> để tính diện tích hình vẽ. Do Shape là lớp tổng quát, chưa biết hình vẽ cụ thể nên không tính được diện tích, vì thế ta cho kết quả trả về là <code>0</code>. Ở lớp dẫn xuất Circle có phương thức ghi đè <code>GetArea()</code>, ở đây đã biết loại hình vẽ cụ thể (hình tròn) nên tính được diện tích của nó. Tương tự như vậy với lớp dẫn xuất Rectangle (hình chữ nhật).</p>
-<p>Trong chương trình chính tạo danh sách đối tượng thuộc lớp Shape nhưng khởi tạo thành 2 loại đối tượng khác nhau: 1 của lớp Circle và 1 của lớp Rectangle. Ta thấy, khi gọi phương thức tính diện tích của mỗi đối tượng, tùy theo kiểu của đối tượng cụ thể được tạo ra (hình tròn, hình chữ nhật) mà các dòng lệnh tính diện tích phù hợp được gọi.</p>
+<p>Cách giải quyết bài toán này tương tự <a href="#vi-du-1">Ví dụ 1</a>. Trước hết tạo lớp cơ sở Shape có phương thức ảo <code>GetArea()</code> để tính diện tích hình vẽ. Do Shape là lớp tổng quát, chưa biết hình vẽ cụ thể nên không tính được diện tích, vì thế ta cho kết quả trả về là <code>0</code>. Ở lớp dẫn xuất Circle có phương thức ghi đè <code>GetArea()</code>, ở đây đã biết loại hình vẽ cụ thể (hình tròn) nên tính được diện tích của nó. Tương tự như vậy với lớp dẫn xuất Rectangle (hình chữ nhật).</p>
+<p>Trong chương trình chính tạo danh sách đối tượng thuộc lớp Shape nhưng khởi tạo thành một trong hai loại đối tượng khác nhau của lớp Circle và lớp Rectangle. Ta thấy, khi gọi phương thức tính diện tích của mỗi đối tượng, tùy theo kiểu của đối tượng cụ thể được tạo ra (hình tròn, hình chữ nhật) mà các dòng lệnh tính diện tích phù hợp được gọi.</p>
 <p><img alt="UML class diagram" src="img/Polymorphism-ClassDiagram.png" /></p>
 <p>(<a href="https://github.com/nd-hung/oop/tree/main/docs/topics/polymorphism/code/Shape/">Xem trên GitHub</a>)</p>
 <pre><code class="language-c#">// Tạo lớp hình vẽ tổng quát (Shape)
@@ -341,7 +383,75 @@ Cac hinh ve co dien tich lon nhat:
 Index = 0, type: Rectangle, area = 54.000
 Index = 3, type: Rectangle, area = 54.000
 */
-</code></pre></div>
+</code></pre>
+<h2 id="lop-truu-tuong-phuong-thuc-truu-tuong">Lớp trừu tượng, phương thức trừu tượng<a class="headerlink" href="#lop-truu-tuong-phuong-thuc-truu-tuong" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Khi tạo một lớp với mục đích dùng làm lớp cơ sở cho các lớp khác mà chưa phải là một lớp đầy đủ, ta có thể thiết lập lớp này là lớp trừu tượng (abstract class).</li>
+<li>Lớp trừu tượng có thể chứa: phương thức trừu tượng hoặc phương thức cụ thể, các thuộc tính, phương thức thiết lập.</li>
+<li>Phương thức trừu tượng khai báo như khuôn mẫu hàm (không có thân hàm), thay từ khóa <code>virtual</code> bằng <code>abstract</code>.</li>
+<li>Ở các lớp dẫn xuất cần phải cài đặt chi tiết các phương thức trừu tượng đã khai báo ở lớp cơ sở.</li>
+<li>Lớp dẫn xuất chỉ được kế thừa một lớp trừu tượng.</li>
+</ul>
+<h3 id="cu-phap-tao-lop-truu-tuong-phuong-thuc-truu-tuong">Cú pháp tạo lớp trừu tượng, phương thức trừu tượng<a class="headerlink" href="#cu-phap-tao-lop-truu-tuong-phuong-thuc-truu-tuong" title="Permanent link">&para;</a></h3>
+<pre><code class="language-c#">// Tạo lớp cơ sở trừu tượng
+class AbstractClass
+{
+    // Tạo phương thức trừu tượng (giống như khai báo khuôn mẫu hàm)
+    [&lt;access modifier&gt;] abstract MethodName([&lt;Danh sách tham số&gt;]);
+}
+
+// Tạo các lớp thừa kế
+class DerivedClass : AbstractClass
+{
+    // Tạo phương thức ghi đè
+    public override MethodName([&lt;Danh sách tham số&gt;])
+    {
+        // Các lệnh của phương thức ghi đè
+    }
+}
+</code></pre>
+<h3 id="vi-du_1">Ví dụ:<a class="headerlink" href="#vi-du_1" title="Permanent link">&para;</a></h3>
+<pre><code class="language-c#">// Tạo lớp trừu tượng Animal mô quả động vật tổng quát
+public abstract class Animal
+{
+    public string Name;
+
+    // Constructor
+    public Animal(string name = &quot;&quot;)
+    {
+        Name = name;
+    }
+    // Tạo phương thức trừu tượng (abstract) 
+    public abstract void Speak();
+}
+
+// Tạo lớp dẫn xuất Dog kế thừa lớp trừu tượng Animal
+public class Dog : Animal
+{
+    // Constructor
+    public Dog(string name = &quot;&quot;) : base(name) { }
+    // Tạo phương thức ghi đè (override) phát ra tiếng kêu của loài chó
+    public override void Speak()
+    {
+        Console.WriteLine(&quot;Wufwuf, I'm a dog. My name is &quot; + Name);
+    }
+}
+
+// Chương trình chính
+public class DemoAbstractClass
+{
+    public static void Main()
+    {
+        // Khởi tạo đối tượng của lớp trừu tượng -&gt; không thực hiện được:
+        // Error CS0144: Cannot create an instance of the abstract type or interface 'Animal`
+        Animal animal = new Animal(&quot;I'm an animal.&quot;);
+
+        // Khai báo đối tượng thuộc kiểu Animal và khởi tạo là đối tượng thuộc kiểu dẫn xuất -&gt; thực hiện được:
+        Animal dog = new Dog(&quot;I'm a dog, my name is Spike.&quot;);
+    }
+}
+</code></pre>
+<h2 id="giao-dien-interface">Giao diện (interface)<a class="headerlink" href="#giao-dien-interface" title="Permanent link">&para;</a></h2></div>
             </div>
         </div>
 

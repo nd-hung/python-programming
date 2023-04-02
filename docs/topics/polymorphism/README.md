@@ -282,7 +282,7 @@ class AbstractClass
 class DerivedClass : AbstractClass
 {
     // Tạo phương thức ghi đè
-    public override MethodName([<Danh sách tham số>])
+    [<access modifier>] override MethodName([<Danh sách tham số>])
     {
         // Các lệnh của phương thức ghi đè
     }
