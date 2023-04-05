@@ -16,11 +16,11 @@ Vấn đề này có thể giải quyết hiệu quả bằng kỹ thuật đa h
 
 - Đa hình là một trong bốn đặc trưng quan trọng nhất của phương pháp lập trình hướng đối tượng (bao gồm: trừu tượng hóa (abstraction), bao đóng (encapsulation), thừa kế (inheritance) và đa hình (polymorphism)). Có hai loại đa hình: đa hình tĩnh ([nạp chồng phương thức](https://nd-hung.github.io/oop/topics/classes-and-objects/#nap-chong-phuong-thuc-method-overloading), [nạp chồng toán tử](https://nd-hung.github.io/oop/topics/classes-and-objects/#nap-chong-toan-tu-operator-overloading)) và đa hình động (ghi đè phương thức).
 
-- Có thể cài đặt cơ chế đa hình bằng kỹ thuật thừa kế hoặc cài đặt giao diện (interface).
-
 - Hai đặc điểm mấu chốt của đa hình động:
     - Tại thời điểm chạy ứng dụng, các đối tượng của lớp con có thể được xử lý như là đối tượng của lớp cha. Nói cách khác, một đối tượng của lớp cha có thể giữ một đối tượng của lớp con và gọi phương thức của lớp con đó. Khi đó, kiểu dữ liệu của đối tượng lúc khai báo và lúc thực thi chương trình là khác nhau.
     - Ở lớp cơ sở có thể cài đặt các phương thức ảo (virtual methods), ở các lớp dẫn xuất sẽ cài đặt các phương thức ghi đè (override methods). Khi chạy ứng dụng, trình điều khiển thực thi CLR (Common Language Runtime) sẽ gọi phương thức ghi đè của lớp con.
+
+- Có thể cài đặt cơ chế đa hình bằng kỹ thuật thừa kế hoặc cài đặt giao diện (interface).
 
 Cơ chế đa hình cho phép cài đặt một cách nhất quán các phương thức giống nhau của các lớp đối tượng khác nhau thông qua hai bước sau:
 
@@ -272,7 +272,7 @@ Index = 3, type: Rectangle, area = 54.000
 
 ```c#
 // Tạo lớp trừu tượng
-class AbstractClass
+abstract class AbstractClass
 {
     // Tạo phương thức trừu tượng (giống như khai báo khuôn mẫu hàm)
     [<access modifier>] abstract MethodName([<Danh sách tham số>]);
@@ -336,7 +336,7 @@ public class DemoAbstractClass
 ## Sự khác nhau giữa từ khóa `new` và `override`
 
 - Sử dụng từ khóa `new` trước kiểu trả về của định nghĩa phương thức ở lớp con khi muốn ẩn phương thức cùng tên ở lớp cha.
-- Sử dụng từ khóa `override` trước kiểu trả về của định nghĩa phương thức ở lớp con khi muốn cài đặt mở rộng thức cùng tên ở lớp cha. Phương thức cùng tên ở lớp cha cần có từ khóa `virtual` trước kiểu trả về.
+- Sử dụng từ khóa `override` trước kiểu trả về của định nghĩa phương thức ở lớp con khi muốn cài đặt mở rộng thức cùng tên ở lớp cha. Phương thức cùng tên ở lớp cha cần có từ khóa `virtual` hoặc `abstract` trước kiểu trả về.
 
 ## Giao diện (interface)
 
