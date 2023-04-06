@@ -528,8 +528,9 @@ Hello I'm a Dog, my name is Shiba
 <li>Trong C#, một lớp có thể cài đặt (kế thừa) nhiều interface, vì thế có thể khai thác đặc điểm này để giải quyết phần nào vấn đề đa thừa kế.</li>
 </ul>
 <h3 id="vi-du_3">Ví dụ:<a class="headerlink" href="#vi-du_3" title="Permanent link">&para;</a></h3>
-<p>Cần cài đặt lớp DateTime để quản lý ngày giờ. Lớp DateTime cài đặt từ hai interface IDate và ITime.</p>
-<p><a href="#">Xem mã nguồn trên GitHub</a></p>
+<p>Cài đặt lớp DateTime để quản lý ngày giờ. Lớp DateTime cài đặt từ hai interface IDate và ITime.</p>
+<p><img alt="Multiple implementation" src="code/MultipleInheritance/img/MultipleImplementation.png" /></p>
+<p><a href="https://github.com/nd-hung/oop/tree/main/docs/topics/polymorphism/code/MultipleInheritance">Xem trên GitHub</a></p>
 <pre><code class="language-c#">// Tạo interface IDate xử lý ngày tháng
 interface IDate
 {
@@ -604,7 +605,7 @@ class MyDateTime: IDate, ITime
     static bool isValidDate(int day, int month, int year)
     {
         bool isValid = true;
-        if(year &lt; 1 || day &lt; 1 || day &gt; 31 || month &lt; 1 || month &gt; 12) isValid = false;
+        if(year &lt; 1 || day &lt; 1 || day &gt; 31 || month &lt; 1 || month &gt; 12) return false;
         switch(month) 
         { 
             case 1: case 3: case 5: case 7: case 8: case 10: case 12:

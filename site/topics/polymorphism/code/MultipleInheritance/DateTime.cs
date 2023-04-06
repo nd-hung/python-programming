@@ -75,7 +75,7 @@ class MyDateTime: IDate, ITime
     {
         bool isValid = true;
 
-        if(year < 1 || day < 1 || day > 31 || month < 1 || month > 12) isValid = false;
+        if(year < 1 || day < 1 || day > 31 || month < 1 || month > 12) return false;
         
         switch(month) 
         {   // Các tháng 1,3,5,7,8,10,12 có giá trị ngày từ 1-31 
