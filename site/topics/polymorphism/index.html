@@ -650,7 +650,127 @@ class Program
         Console.WriteLine(dt2);    // Output: Invalid date or time
     }
 }
-</code></pre></div>
+</code></pre>
+<h3 id="cai-at-nhieu-giao-dien-trung-phuong-thuc">Cài đặt nhiều giao diện trùng phương thức<a class="headerlink" href="#cai-at-nhieu-giao-dien-trung-phuong-thuc" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Khi một lớp cài đặt hai interface có chứa phương thức trùng nhau thì cả hai giao diện này đều sử dụng được phương thức cài đặt này.</li>
+<li>Ví dụ:</li>
+</ul>
+<pre><code class="language-c#">interface IDate
+{
+    public void Print();
+}
+
+interface ITime
+{
+    public void Print();
+}
+
+// Lớp MyDateTime cài đặt các giao diện IDate, ITime
+class MyDateTime : IDate, ITime
+{
+    // Các trường dữ liệu (fields) riêng của lớp
+    private int day, month, year;
+    private int second, minute, hour;
+
+    // Constructor
+    public MyDateTime(int day, int month, int year, int hour, int minute=0, int second=0)
+    {
+        this.day = day;
+        this.month = month; 
+        this.year = year;
+        this.hour = hour;
+        this.minute = minute;
+        this.second = second;
+    }
+
+    public void Print()
+    {
+        Console.WriteLine($&quot;{day:00}/{month:00}/{year:0000}-{hour:00}:{minute:00}:{second:00}&quot;);
+    }
+}
+
+class Program
+{
+    public static void Main()
+    {
+        MyDateTime dt1 = new MyDateTime(6,4,2023,14,23);
+        dt1.Print(); // Output: 06/04/2023-14:23:00
+
+        IDate dt2 = new MyDateTime(2,9,1945,15,20);
+        dt2.Print(); // Output: 02/09/1945-15:20:00
+
+        ITime dt3 = new MyDateTime(7, 5, 1954, 17, 0);
+        dt3.Print(); // Output: 07/05/1954-17:00:00
+    }
+}
+*/
+</code></pre>
+<p>Trong ví dụ trên, cả hai interface IDate và ITime đều có phương thức Print(); lớp MyDateTime cài đặt cả 2 giao diện này nhưng chỉ có 1 phương thức Print() trong lớp. Trong chương trình chính, tạo 3 đối tượng dt1, dt2, dt3 theo 3 cách khác nhau. Sau đó, cho từng đối tượng gọi phương thức Print() thì cả 3 đều gọi đến phương thức trùng tên ở lớp MyDateTime.</p>
+<p>Khi muốn phương thức trùng tên ở các interface ứng xử khác nhau thì trong lớp cài đặt phải viết tường minh. Quay lại ví dụ trên, giả sử ta muốn phương thức Print() của giao diện IDate in ra ngày tháng năm, còn phương thức Print() của giao diện ITime in ra giờ phút giây. Ta cần cài đặt tường minh ở lớp kế thừa như sau:</p>
+<pre><code class="language-c#">interface IDate
+{
+    public void Print();
+}
+
+interface ITime
+{
+    public void Print();
+}
+
+// Lớp MyDateTime cài đặt các giao diện IDate, ITime
+class MyDateTime : IDate, ITime
+{
+    // Các trường dữ liệu (fields) riêng của lớp
+    private int day, month, year;
+    private int second, minute, hour;
+
+    // Constructor
+    public MyDateTime(int day, int month, int year, int hour, int minute=0, int second=0)
+    {
+        this.day = day;
+        this.month = month; 
+        this.year = year;
+        this.hour = hour;
+        this.minute = minute;
+        this.second = second;
+    }
+
+    // Cài đặt phương thức Print() của giao diện IDate
+    void IDate.Print()
+    {
+        Console.WriteLine($&quot;{day:00}/{month:00}/{year:0000}&quot;);
+    }
+
+    // Cài đặt phương thức Print() của giao diện ITime
+    void ITime.Print()
+    {
+        Console.WriteLine($&quot;{hour:00}:{minute:00}:{second:00}&quot;);
+    }
+
+    // Cài đặt phương thức chung Print() 
+    public void Print()
+    {
+        Console.WriteLine($&quot;{day:00}/{month:00}/{year:0000}-{hour:00}:{minute:00}:{second:00}&quot;);
+    }
+}
+
+class Program
+{
+    public static void Main()
+    {
+        MyDateTime dt1 = new MyDateTime(6,4,2023,14,23);
+        dt1.Print();    // Output: 06/04/2023-14:23:00
+
+        IDate dt2 = new MyDateTime(2,9,1945,15,20);
+        dt2.Print();    // Output: 02/09/1945
+
+        ITime dt3 = new MyDateTime(7, 5, 1954, 17, 0);
+        dt3.Print();    // Output: 17:00:00
+    }
+}
+</code></pre>
+<p>Trong đoạn code trên, đối tượng dt1 được khai báo thuộc lớp MyDateTime nên khi gọi phương thức dt1.Print() thì phương thức chung Print() được gọi; đối tượng dt2 được khai báo thuộc giao diện IDate nên khi gọi phương thức dt2.Print() thì phương thức IDate.Print() được thực thi; đối tượng dt3 được khai báo thuộc giao diện ITime nên khi gọi phương thức dt3.Print() thì phương thức ITime.Print() được thực hiện.</p></div>
             </div>
         </div>
 
