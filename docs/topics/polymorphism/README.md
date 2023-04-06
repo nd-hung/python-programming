@@ -409,7 +409,9 @@ Hello I'm a Dog, my name is Shiba
 
 Cần cài đặt lớp DateTime để quản lý ngày giờ. Lớp DateTime cài đặt từ hai interface IDate và ITime.
 
-[Xem mã nguồn trên GitHub](#)
+![Multiple implementation](code/MultipleInheritance/img/MultipleImplementation.png)
+
+[Xem trên GitHub](https://github.com/nd-hung/oop/tree/main/docs/topics/polymorphism/code/MultipleInheritance)
 
 ```c#
 // Tạo interface IDate xử lý ngày tháng
@@ -486,7 +488,7 @@ class MyDateTime: IDate, ITime
     static bool isValidDate(int day, int month, int year)
     {
         bool isValid = true;
-        if(year < 1 || day < 1 || day > 31 || month < 1 || month > 12) isValid = false;
+        if(year < 1 || day < 1 || day > 31 || month < 1 || month > 12) return false;
         switch(month) 
         { 
             case 1: case 3: case 5: case 7: case 8: case 10: case 12:
