@@ -36,6 +36,7 @@ class MyDateTime: IDate, ITime
     // Cài đặt phương thức SetDate của interface IDate
     public void SetDate(int day, int month, int year)
     {
+        // Cần hoàn thiện mã nguồn để kiểm tra một ngày tháng năm hợp lệ
         if (isValidDate(day, month, year))
         {
             this.day = day;
@@ -53,7 +54,7 @@ class MyDateTime: IDate, ITime
     // Cài đặt phương thức SetTime của interface ITime
     public void SetTime(int hour=0, int minute=0, int second=0)
     {
-        if(isValidTime(hour, minute, second)) 
+        if(hour >=0 && hour <= 23 && minute >= 0 && minute <= 59 && second >= 0 && second <= 59) 
         {
             this.hour = hour;
             this.minute = minute;
