@@ -267,6 +267,7 @@ Index = 3, type: Rectangle, area = 54.000
 - Phương thức trừu tượng khai báo như khuôn mẫu hàm (không có thân hàm), thay từ khóa `virtual` bằng `abstract` trước kiểu trả về của phương thức.
 - Ở các lớp dẫn xuất cần phải cài đặt chi tiết các phương thức trừu tượng đã khai báo ở lớp cơ sở.
 - Lớp dẫn xuất chỉ được kế thừa một lớp trừu tượng.
+- Có thể thiết lập phương thức, thuộc tính, sự kiện ảo; không thể thiết lập các trường dữ liệu (fields) ảo.
 
 ### Cú pháp tạo lớp trừu tượng, phương thức trừu tượng
 
@@ -341,9 +342,15 @@ public class DemoAbstractClass
 ## Giao diện (interface)
 
 - Giao diện là một lớp chỉ chứa các phương thức trừu tượng (abstract methods), các thuộc tính (properites) chưa cài đặt chi tiết.
-- Các lớp kế thừa bắt buộc phải cài đặt mọi thành phần được khai báo trong interface (lớp kế thừa có thể có thêm các thuộc tính, phương thức mới).
+- Các lớp cài đặt bắt buộc phải cài đặt mọi thành phần được khai báo trong interface (lớp cài đặt có thể có thêm các thuộc tính, phương thức mới).
 - Một lớp có thể cài đặt (kế thừa) nhiều giao diện.
 - Quy ước đặt tên interface bắt đầu bằng ký tự `I`.
+
+> Chú ý:
+
+> Trong các phiên bản C# trước 8.0, giao diện được thiết kế như là lớp trừu tượng chỉ có các thành phần trừu tượng. Lớp cài đặt phải viết mã nguồn đầy đủ cho tất cả thành phần của giao diện.
+> Từ phiên bản 8.0 trở đi, giao diện có thể có phần cài đặt mặc định cho một số hoặc toàn bộ thành viên; lớp kế thừa không bắt buộc phải cài đặt thành phần đã được cài đặt mặc định.
+
 
 ### Ví dụ
 
@@ -390,4 +397,138 @@ public class TestInterface
 Hello I'm a Dog, my name is Spike
 Hello I'm a Dog, my name is Shiba
 */
+```
+
+## Đa thừa kế
+
+- Đa thừa kế là việc một lớp có thể kế thừa đồng thời từ nhiều lớp khác nhau.
+- Ngôn ngữ C# không hỗ trợ trực tiếp đa thừa kế; một lớp chỉ được phép kế thừa một lớp cơ sở.
+- Trong C#, một lớp có thể cài đặt (kế thừa) nhiều interface, vì thế có thể khai thác đặc điểm này để giải quyết phần nào vấn đề đa thừa kế.
+
+### Ví dụ:
+
+Cần cài đặt lớp DateTime để quản lý ngày giờ. Lớp DateTime cài đặt từ hai interface IDate và ITime.
+
+[Xem mã nguồn trên GitHub](#)
+
+```c#
+// Tạo interface IDate xử lý ngày tháng
+interface IDate
+{
+    // Định nghĩa khuôn mẫu phương thức lấy ngày tháng năm
+    public string GetDate();
+
+    // Định nghĩa khuôn mẫu phương thức đặt ngày tháng năm
+    public void SetDate(int day, int month, int year);
+}
+
+// Tạo interface ITime xử lý giờ phút
+interface ITime
+{
+    // Định nghĩa khuôn mẫu phương thức lấy giờ phút giây
+    public string GetTime();
+
+    // Định nghĩa khuôn mẫu phương thức đặt giờ phút giây
+    public void SetTime(int hour=0, int minute=0, int second=0);
+}
+
+// Tạo lớp MyDateTime cài đặt các giao diện IDate, ITime
+class MyDateTime: IDate, ITime
+{
+    // Các trường dữ liệu (fields) riêng của lớp
+    private int day, month, year;
+    private int second, minute, hour;
+
+    // Cài đặt phương thức GetDate
+    public string GetDate()
+    {
+        return $"{day}/{month}/{year}"; 
+    }
+
+    // Cài đặt phương thức SetDate
+    public void SetDate(int day, int month, int year)
+    {
+        if (isValidDate(day, month, year))
+        {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+    }
+
+    // Cài đặt phương thức GetTime
+    public string GetTime()
+    {
+        return $"{hour}:{minute}:{second}";
+    }
+
+    // Cài đặt phương thức SetTime
+    public void SetTime(int hour=0, int minute=0, int second=0)
+    {
+        if(isValidTime(hour, minute, second))
+        {
+            this.hour = hour;
+            this.minute = minute;
+            this.second = second;
+        }
+    }
+
+    // Phương thức trả về chuỗi chứa ngày giờ
+    // Dùng từ khóa override để ghi đè phương thức ToString()
+    public override string ToString()
+    {
+        if (isValidDate(day, month, year) && isValidTime(hour, minute, second))
+            return $"{day:00}/{month:00}/{year:0000}-{hour:00}:{minute:00}:{second:00}";
+        else return $"Invalid date or time";
+    }
+
+    // Hàm tiện ích kiểm tra ngày tháng có hợp lệ hay không
+    static bool isValidDate(int day, int month, int year)
+    {
+        bool isValid = true;
+        if(year < 1 || day < 1 || day > 31 || month < 1 || month > 12) isValid = false;
+        switch(month) 
+        { 
+            case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+                if(day > 31) isValid = false; break;
+            case 4: case 6: case 9: case 11:
+                if (day > 30) isValid = false; break;
+            case 2:
+                {
+                    if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0))
+                    {
+                        if (day > 29) isValid = false;
+                    }
+                    else
+                    {
+                        if (day > 28) isValid = false;
+                    }
+                    break;
+                }
+        }
+        return isValid;
+    }
+
+    // Hàm tiện ích kiểm tra thời gian hợp lệ
+    static bool isValidTime(int hour, int minute, int second)
+    {
+        return (hour >= 0 && hour <= 23 && minute >= 0 && minute <= 59 && second >= 0 && second <= 59);
+    }
+}
+
+class Program
+{
+    public static void Main()
+    {
+        var dt1 = new MyDateTime();
+        dt1.SetDate(29, 2, 2020); // Phương thức SetDate của giao diện IDate
+        dt1.SetTime(5, 37, 08);   // Phương thức SetTime của giao diện ITime
+        Console.WriteLine(dt1);   // Output: 29/02/2020-05:37:08
+
+        var dt2 = new MyDateTime();
+        dt2.SetDate(29, 2, 2023); 
+        dt2.SetTime(26, 8, 7);   
+        Console.WriteLine(dt2);    // Output: Invalid date or time
+    }
+}
 ```

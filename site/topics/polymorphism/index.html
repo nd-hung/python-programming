@@ -157,14 +157,14 @@
 <p>Đa hình là một trong bốn đặc trưng quan trọng nhất của phương pháp lập trình hướng đối tượng (bao gồm: trừu tượng hóa (abstraction), bao đóng (encapsulation), thừa kế (inheritance) và đa hình (polymorphism)). Có hai loại đa hình: đa hình tĩnh (<a href="https://nd-hung.github.io/oop/topics/classes-and-objects/#nap-chong-phuong-thuc-method-overloading">nạp chồng phương thức</a>, <a href="https://nd-hung.github.io/oop/topics/classes-and-objects/#nap-chong-toan-tu-operator-overloading">nạp chồng toán tử</a>) và đa hình động (ghi đè phương thức).</p>
 </li>
 <li>
-<p>Có thể cài đặt cơ chế đa hình bằng kỹ thuật thừa kế hoặc cài đặt giao diện (interface).</p>
-</li>
-<li>
 <p>Hai đặc điểm mấu chốt của đa hình động:</p>
 <ul>
 <li>Tại thời điểm chạy ứng dụng, các đối tượng của lớp con có thể được xử lý như là đối tượng của lớp cha. Nói cách khác, một đối tượng của lớp cha có thể giữ một đối tượng của lớp con và gọi phương thức của lớp con đó. Khi đó, kiểu dữ liệu của đối tượng lúc khai báo và lúc thực thi chương trình là khác nhau.</li>
 <li>Ở lớp cơ sở có thể cài đặt các phương thức ảo (virtual methods), ở các lớp dẫn xuất sẽ cài đặt các phương thức ghi đè (override methods). Khi chạy ứng dụng, trình điều khiển thực thi CLR (Common Language Runtime) sẽ gọi phương thức ghi đè của lớp con.</li>
 </ul>
+</li>
+<li>
+<p>Có thể cài đặt cơ chế đa hình bằng kỹ thuật thừa kế hoặc cài đặt giao diện (interface).</p>
 </li>
 </ul>
 <p>Cơ chế đa hình cho phép cài đặt một cách nhất quán các phương thức giống nhau của các lớp đối tượng khác nhau thông qua hai bước sau:</p>
@@ -398,7 +398,7 @@ Index = 3, type: Rectangle, area = 54.000
 </ul>
 <h3 id="cu-phap-tao-lop-truu-tuong-phuong-thuc-truu-tuong">Cú pháp tạo lớp trừu tượng, phương thức trừu tượng<a class="headerlink" href="#cu-phap-tao-lop-truu-tuong-phuong-thuc-truu-tuong" title="Permanent link">&para;</a></h3>
 <pre><code class="language-c#">// Tạo lớp trừu tượng
-class AbstractClass
+abstract class AbstractClass
 {
     // Tạo phương thức trừu tượng (giống như khai báo khuôn mẫu hàm)
     [&lt;access modifier&gt;] abstract MethodName([&lt;Danh sách tham số&gt;]);
@@ -458,7 +458,7 @@ public class DemoAbstractClass
 <h2 id="su-khac-nhau-giua-tu-khoa-new-va-override">Sự khác nhau giữa từ khóa <code>new</code> và <code>override</code><a class="headerlink" href="#su-khac-nhau-giua-tu-khoa-new-va-override" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Sử dụng từ khóa <code>new</code> trước kiểu trả về của định nghĩa phương thức ở lớp con khi muốn ẩn phương thức cùng tên ở lớp cha.</li>
-<li>Sử dụng từ khóa <code>override</code> trước kiểu trả về của định nghĩa phương thức ở lớp con khi muốn cài đặt mở rộng thức cùng tên ở lớp cha. Phương thức cùng tên ở lớp cha cần có từ khóa <code>virtual</code> trước kiểu trả về.</li>
+<li>Sử dụng từ khóa <code>override</code> trước kiểu trả về của định nghĩa phương thức ở lớp con khi muốn cài đặt mở rộng thức cùng tên ở lớp cha. Phương thức cùng tên ở lớp cha cần có từ khóa <code>virtual</code> hoặc <code>abstract</code> trước kiểu trả về.</li>
 </ul>
 <h2 id="giao-dien-interface">Giao diện (interface)<a class="headerlink" href="#giao-dien-interface" title="Permanent link">&para;</a></h2>
 <ul>
