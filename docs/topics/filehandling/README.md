@@ -77,7 +77,7 @@ StreamReader reader = new StreamReader("text_file_name.txt");
 reader.Close();
 ```
 
-- Ví dụ: ([Xem trên GitHub](#))
+- Ví dụ: ([Xem trên GitHub](https://github.com/nd-hung/oop/tree/main/docs/topics/filehandling/code/ReadFileExample))
 
 ```c#
 class FileReader

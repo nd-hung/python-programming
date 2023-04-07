@@ -36,7 +36,7 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Các chủ đề <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -61,7 +61,7 @@
 </li>
                                     
 <li>
-    <a href="../gui-development/" class="dropdown-item">Phát triển ứng dụng GUI với .NET và C#</a>
+    <a href="./" class="dropdown-item active">Xử lý file</a>
 </li>
                                     
 <li>
@@ -80,6 +80,16 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../polymorphism/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../labs/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
                             <li class="nav-item">
                                 <a href="https://github.com/nd-hung/oop/tree/main/docs/topics/filehandling/README.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
@@ -103,11 +113,23 @@
             
             <li class="nav-item" data-level="1"><a href="#xu-ly-file" class="nav-link">Xử lý file</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#dan-nhap" class="nav-link">Dẫn nhập</a>
+            <li class="nav-item" data-level="2"><a href="#so-luoc-ve-luong-nhap-xuat-streams" class="nav-link">Sơ lược về luồng nhập xuất (streams)</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#xu-ly-file-trong-c" class="nav-link">Xử lý file trong C</a>
+            <li class="nav-item" data-level="2"><a href="#cac-loai-luong-du-lieu" class="nav-link">Các loại luồng dữ liệu</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#uong-dan-paths" class="nav-link">Đường dẫn (paths)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#oc-file-van-ban" class="nav-link">Đọc file văn bản</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ghi-file-van-ban" class="nav-link">Ghi file văn bản</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -121,8 +143,137 @@
 <h1 id="xu-ly-file">Xử lý file<a class="headerlink" href="#xu-ly-file" title="Permanent link">&para;</a></h1>
 <p>File handling</p>
 <hr />
-<h2 id="dan-nhap">Dẫn nhập<a class="headerlink" href="#dan-nhap" title="Permanent link">&para;</a></h2>
-<h2 id="xu-ly-file-trong-c">Xử lý file trong C<a class="headerlink" href="#xu-ly-file-trong-c" title="Permanent link">&para;</a></h2></div>
+<h2 id="so-luoc-ve-luong-nhap-xuat-streams">Sơ lược về luồng nhập xuất (streams)<a class="headerlink" href="#so-luoc-ve-luong-nhap-xuat-streams" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Luồng (streams) là thành phần cơ bản của thư viện nhập xuất, sử dụng để truy xuất dữ liệu lên bộ nhớ ngoài.
+Một luồng là một dãy các bytes được gửi từ một ứng dụng hoặc thiết bị nhập đến một ứng dụng khác hoặc thiết bị xuất.</li>
+<li>Mỗi khi muốn đọc/ghi dữ liệu từ/lên file, cần phải mở một luồng cho file tương ứng, tiến hành đọc/ghi dữ liệu, và đóng luồng khi quá trình đọc/ghi hoàn tất.</li>
+</ul>
+<h2 id="cac-loai-luong-du-lieu">Các loại luồng dữ liệu<a class="headerlink" href="#cac-loai-luong-du-lieu" title="Permanent link">&para;</a></h2>
+<h3 id="luong-nhi-phan-binary-streams">Luồng nhị phân (binary streams)<a class="headerlink" href="#luong-nhi-phan-binary-streams" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Luồng nhị phân dùng để xử lý file nhị phân (mọi loại file): hình ảnh, âm thanh, văn bản,...</li>
+<li>Các lớp dựng sẵn xử lý file nhị phân: FileStream, BinaryReader, BinaryWriter.</li>
+</ul>
+<p>Lớp FileStream cung cấp các phương thức đọc/ghi file nhị phân theo từng byte riêng lẻ hoặc dãy bytes.</p>
+<p>Lớp BinaryWriter cho phép ghi dữ liệu kiểu cơ sở (int, char, bool, string, ...) lên luồng xử lý.</p>
+<p>Lớp BinaryReader cung cấp các phương thức đọc dữ liệu được ghi bởi phương thức của lớp BinaryWriter.</p>
+<h3 id="luong-van-ban-text-streams">Luồng văn bản (text streams)<a class="headerlink" href="#luong-van-ban-text-streams" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Dùng để xử lý file văn bản - là một dãy ký tự.</li>
+<li>
+<p>Các lớp chính dùng để xử lý file văn bản của .NET là TextReader và TextWriter. Hai lớp này đều là lớp trừu tượng, định nghĩa các phương thức xử lý file trong đó có các phương thức quan trọng sau:
+    ReadLine(): đọc một dòng văn bản và trả về một chuỗi.
+    ReadToEnd(): đọc từ luồng hiện tại đến hết và trả về một chuỗi.
+    Write(): ghi một chuỗi vào luồng đang mở.
+    WriteLine(): ghi một dòng văn bản vào luồng đang mở.</p>
+</li>
+<li>
+<p>Lớp StreamReader kế thừa lớp trừu tượng TextReader và cài đặt các phương thức đọc văn bản.</p>
+</li>
+<li>Lớp StreamWriter kế thừa lớp trừu tượng TextWriter và cài đặt các phương thức ghi văn bản.</li>
+</ul>
+<blockquote>
+<p>Trong .NET xử lý ký tự theo Unicode.</p>
+</blockquote>
+<h3 id="cac-thao-tac-co-ban-voi-luong">Các thao tác cơ bản với luồng<a class="headerlink" href="#cac-thao-tac-co-ban-voi-luong" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Tạo luồng (Create): trước hết cần tạo luồng để kết nối đến nguồn dữ liệu.</li>
+<li>Đọc dữ liệu (Read): lấy dữ liệu từ luồng.</li>
+<li>Ghi dữ liệu (Write): gửi dữ liệu đến luồng theo một cách xác định.</li>
+<li>Định vị (Seek/Position): di chuyển vị trí hiện hành của luồng.</li>
+<li>Đóng luồng (Close): ngắt kết nối luồng, giải phóng tài nguyên.</li>
+</ul>
+<h2 id="uong-dan-paths">Đường dẫn (paths)<a class="headerlink" href="#uong-dan-paths" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Đường dẫn là một chuỗi xác định vị trí của tập tin/thư mục trong ổ đĩa máy tính.</li>
+</ul>
+<h3 id="uong-dan-ay-u-full-path">Đường dẫn đầy đủ (full path)<a class="headerlink" href="#uong-dan-ay-u-full-path" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Đường dẫn đầy đủ là chuỗi xác định vị trí của tập tin/thư mục trong ổ đĩa, bắt đầu từ tên ổ đĩa. Ví dụ: <code>C:\oop\labs\data\textfile.txt</code></li>
+<li>Khai báo đường dẫn đầy đủ trong C#:</li>
+</ul>
+<pre><code class="language-c#">// Cách 1
+string fileName = &quot;C:\\oop\\labs\\data\\textfile.txt&quot;;
+// Cách 2
+string theSameFileName = @&quot;C:\oop\labs\data\textfile.txt&quot;;
+</code></pre>
+<h3 id="uong-dan-tuong-oi-relative-paths">Đường dẫn tương đối (relative paths)<a class="headerlink" href="#uong-dan-tuong-oi-relative-paths" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Đường dẫn tương đối là chuỗi xác định vị trí tương đối của tập tin/thư mục so với vị trí hiện hành của ứng dụng.</li>
+<li>Ví dụ: <code>@"..\data\textfile.txt"</code> chỉ ra vị trí của file <code>textfile.txt</code> nằm ở thư mục <code>data</code>, còn thư mục <code>data</code> nằm cùng cấp với thư mục cha của vị trí hiện tại.</li>
+</ul>
+<blockquote>
+<p>Nên sử dụng đường dẫn tương đối giúp ứng dụng linh hoạt hơn.</p>
+</blockquote>
+<h2 id="oc-file-van-ban">Đọc file văn bản<a class="headerlink" href="#oc-file-van-ban" title="Permanent link">&para;</a></h2>
+<pre><code class="language-c#">// Dùng đối tượng lớp StreamReader để tạo luồng kết nối tới file text
+StreamReader reader = new StreamReader(&quot;text_file_name.txt&quot;);
+// Đọc file
+// Đóng luồng xử lý sau khi kết thúc
+reader.Close();
+</code></pre>
+<ul>
+<li>Ví dụ: (<a href="#">Xem trên GitHub</a>)</li>
+</ul>
+<pre><code class="language-c#">class FileReader
+{
+    static void Main()
+    {
+        // Sử dụng đường dẫn tương đối
+        StreamReader reader = new StreamReader(@&quot;data\textfile.txt&quot;);  
+        int lineNumber = 0;
+        // Đọc dòng đầu tiên từ file
+        string line = reader.ReadLine();
+        // Đọc các dòng còn lại
+        while (line != null)
+        {
+            lineNumber++;
+            Console.WriteLine(&quot;Line {0}: {1}&quot;, lineNumber, line);
+            line = reader.ReadLine();
+        }
+        // Đóng luồng sau khi xử lý xong
+        reader.Close();
+    }
+}
+
+/* Output
+Line 1: This is line #1
+Line 2: This is line #2
+Line 3: This is line #3
+*/
+</code></pre>
+<h2 id="ghi-file-van-ban">Ghi file văn bản<a class="headerlink" href="#ghi-file-van-ban" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Sử dụng lớp StreamWriter để ghi file văn bản.</li>
+</ul>
+<pre><code class="language-c#">// Tạo luồng kết nối tới file text để ghi
+StreamWriter writer = new StreamWriter(&quot;text_file_name.txt&quot;);
+// Ghi file
+// Đóng luồng xử lý sau khi kết thúc
+writer.Close();
+</code></pre>
+<ul>
+<li>Ví dụ: Ghi một dãy số lên file văn bản</li>
+</ul>
+<pre><code class="language-c#">class FileWriter
+{
+    static void Main()
+    {
+        // Mở file để ghi
+        StreamWriter writer = new StreamWriter(&quot;numbers.txt&quot;);
+        // Dùng lệnh using(writer) để tự động đóng luồng khi hoàn thành
+        using (writer)
+        {
+            // Lưu các số nguyên từ 1-20 trên một dòng, cách nhau 1 khoảng trắng
+            for (int i = 1; i &lt;= 20; i++)
+            {
+                writer.Write(&quot;{0} &quot;, i);
+            }
+        }
+    }
+}
+</code></pre></div>
             </div>
         </div>
 

@@ -61,7 +61,7 @@
 </li>
                                     
 <li>
-    <a href="../gui-development/" class="dropdown-item">Phát triển ứng dụng GUI với .NET và C#</a>
+    <a href="../filehandling/" class="dropdown-item">Xử lý file</a>
 </li>
                                     
 <li>
@@ -86,7 +86,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../gui-development/" class="nav-link">
+                                <a rel="next" href="../filehandling/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -702,7 +702,6 @@ class Program
         dt3.Print(); // Output: 07/05/1954-17:00:00
     }
 }
-*/
 </code></pre>
 <p>Trong ví dụ trên, cả hai interface IDate và ITime đều có phương thức Print(); lớp MyDateTime cài đặt cả 2 giao diện này nhưng chỉ có 1 phương thức Print() trong lớp. Trong chương trình chính, tạo 3 đối tượng dt1, dt2, dt3 theo 3 cách khác nhau. Sau đó, cho từng đối tượng gọi phương thức Print() thì cả 3 đều gọi đến phương thức trùng tên ở lớp MyDateTime.</p>
 <p>Khi muốn phương thức trùng tên ở các interface ứng xử khác nhau thì trong lớp cài đặt phải viết tường minh. Quay lại ví dụ trên, giả sử ta muốn phương thức Print() của giao diện IDate in ra ngày tháng năm, còn phương thức Print() của giao diện ITime in ra giờ phút giây. Ta cần cài đặt tường minh ở lớp kế thừa như sau:</p>
