@@ -6,7 +6,7 @@ Tóm tắt lý thuyết và các bài thực hành của học phần Lập trì
 Công cụ lập trình sử dụng để minh họa là .NET và C#.
 
 <div class="text-center">
-    <a href="topics/" class="btn btn-primary" role="button">Lý thuyết tóm tắt</a>
+    <a href="topics/" class="btn btn-primary" role="button">Tóm tắt lý thuyết</a>
     &nbsp;&nbsp;&nbsp;
     <a href="labs/" class="btn btn-primary" role="button">Bài thực hành</a>
 </div><br>
