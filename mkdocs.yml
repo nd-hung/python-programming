@@ -12,7 +12,7 @@ nav:
       - Lớp và đối tượng: topics\classes-and-objects\README.md
       - Thừa kế: topics\inheritance\README.md
       - Đa hình: topics\polymorphism\README.md
-      - Phát triển ứng dụng GUI với .NET và C#: topics\gui-development\README.md
+      - Xử lý file: topics\filehandling\README.md
       - Thực hành: labs\README.md
     - Giảng viên: author\about.md 
 

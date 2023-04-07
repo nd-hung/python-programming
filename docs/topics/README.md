@@ -20,13 +20,8 @@
 
 ## [Đa hình](polymorphism)
 - Dẫn nhập
-- Phương thức
+- Cài đặt đa hình
 
 ## [Xử lý file](filehandling)
+- Sơ lược về luồng (Streams)
 - Xử lý file trong C#
-
-
-## [Phát triển ứng dụng GUI với .NET và C#](gui-development)
-- Windows Forms App
-- Tạo ứng dụng Desktop với .NET và C#
-

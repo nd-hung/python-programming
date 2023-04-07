@@ -591,7 +591,6 @@ class Program
         dt3.Print(); // Output: 07/05/1954-17:00:00
     }
 }
-*/
 ```
 
 Trong ví dụ trên, cả hai interface IDate và ITime đều có phương thức Print(); lớp MyDateTime cài đặt cả 2 giao diện này nhưng chỉ có 1 phương thức Print() trong lớp. Trong chương trình chính, tạo 3 đối tượng dt1, dt2, dt3 theo 3 cách khác nhau. Sau đó, cho từng đối tượng gọi phương thức Print() thì cả 3 đều gọi đến phương thức trùng tên ở lớp MyDateTime.

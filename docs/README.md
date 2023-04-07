@@ -17,7 +17,6 @@ Công cụ lập trình sử dụng để minh họa là .NET và C#.
 - #### [Lớp và đối tượng](topics/classes-and-objects)
 - #### [Thừa kế](topics/inheritance)
 - #### [Đa hình](topics/polymorphism)
-- #### [Phát triển ứng dụng GUI với .NET và C#](topics/gui-development)
 
 ## Tài liệu tham khảo
 ### Sách, giáo trình
