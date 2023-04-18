@@ -1,4 +1,4 @@
-﻿// Đáp án gợi ý Bài kiểm tra 1
+﻿// Mã nguồn tham khảo Bài kiểm tra 1
 
 namespace Test1
 {
