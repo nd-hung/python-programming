@@ -1,4 +1,4 @@
-# Lecturer Infomation
+# Lecturer Information
 
 ---
 
