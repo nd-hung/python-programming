@@ -13,7 +13,7 @@ nav:
       - Thừa kế: topics\inheritance\README.md
       - Đa hình: topics\polymorphism\README.md
       - Xử lý file: topics\filehandling\README.md
-      - Thực hành: labs\README.md
+      - Bài thực hành: labs\README.md
     - Giảng viên: author\about.md 
 
 theme:
