@@ -1,10 +1,10 @@
-# Tạo ứng dụng C# với Visual Studio Code
+# Tạo ứng dụng C# với Visual Studio Code (VS Code)
 
 ---
 
-## Sơ lược về Visual Studio Code
+## Sơ lược về VS Code
 
-Visual Studio Code là công cụ viết mã nguồn được sử dụng phổ biến hiện nay do có nhiều tính năng mạnh, hỗ trợ đa nền tảng lại gọn nhẹ.
+VS Code là công cụ viết mã nguồn được sử dụng phổ biến hiện nay do có nhiều tính năng mạnh, hỗ trợ đa nền tảng lại gọn nhẹ.
 
 ### Các đặc điểm chính của VS Code
 

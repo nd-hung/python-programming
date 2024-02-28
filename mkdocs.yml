@@ -1,19 +1,19 @@
-site_name: Lập trình hướng đối tượng
-site_description: Object Oriented Programming
+site_name: Lập trình Python
+site_description: Programming with Python
 site_author: Hung Nguyen
 
-repo_url: https://github.com/nd-hung/oop
+repo_url: https://github.com/nd-hung/python
 edit_uri: tree/main/docs
 
 nav:
     - Các chủ đề:
       - Tổng quan: topics\overview\README.md
-      - Nền tảng .NET và ngôn ngữ C#: topics\dotnet-and-csharp\README.md
-      - Lớp và đối tượng: topics\classes-and-objects\README.md
-      - Thừa kế: topics\inheritance\README.md
-      - Đa hình: topics\polymorphism\README.md
-      - Xử lý file: topics\filehandling\README.md
-      - Thực hành: labs\README.md
+      - Python cơ bản: topics\dotnet-and-csharp\README.md
+      - Lập trình hướng đối tượng với Python: topics\classes-and-objects\README.md
+      - Một số xử lý cơ bản & thư viện thông dụng: topics\inheritance\README.md
+      - Phát triển ứng dụng với Python: topics\polymorphism\README.md
+      - Xây dựng giải pháp học máy, khoa học dữ liệu: topics\filehandling\README.md
+      - Bài thực hành: labs\README.md
     - Giảng viên: author\about.md 
 
 theme:
@@ -24,7 +24,7 @@ theme:
         - django
     features:
         - content.action.view
-
+ 
 extra_css:
   - css/extra.css
 

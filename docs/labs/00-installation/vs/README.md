@@ -4,9 +4,9 @@
 
 ## Sơ lược về Visual Studio
 
-Micosoft Visual Studio là môi trường phát triển tích hợp (IDE) có đầy đủ tính năng dùng cho phát triển đa dạng các ứng dụng trên môi trường Windows, iOS, Android, ứng dụng web và dịch vụ đám mây (cloud services).
+>Micosoft Visual Studio là môi trường phát triển tích hợp (IDE) có đầy đủ tính năng dùng cho phát triển đa dạng các ứng dụng trên môi trường Windows, iOS, Android, ứng dụng web và dịch vụ đám mây (cloud services).
 
-Có 3 phiên bản Visual Studio: Community, Professional, Enterprise. Trong đó bản Community miễn phí, cung cấp đầy đủ tính năng đối với người dùng cá nhân.
+>Có 3 phiên bản Visual Studio: Community, Professional, Enterprise. Trong đó bản Community miễn phí, cung cấp đầy đủ tính năng đối với người dùng cá nhân.
 
 ## Cài đặt Visual Studio Community 2022
 

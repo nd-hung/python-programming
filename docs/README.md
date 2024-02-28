@@ -1,9 +1,9 @@
-# Lập trình hướng đối tượng
+<div class="text-center">
+    <img src="./img/python-5-logo-png-transparent.png" width="10%">
+</div>
 
-Object Oriented Programming
-
-Tóm tắt lý thuyết và các bài thực hành của học phần Lập trình hướng đối tượng.
-Công cụ lập trình sử dụng để minh họa là .NET và C#.
+# Lập trình Python 
+Programming with Python
 
 <div class="text-center">
     <a href="topics/" class="btn btn-primary" role="button">Tóm tắt lý thuyết</a>

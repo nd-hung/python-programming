@@ -2,26 +2,18 @@
 
 ---
 
-## [Tổng quan](overview)
-- Sơ lược các phương pháp lập trình
-- Cách tiếp cận hướng đối tượng
+## [Tổng quan về lập trình](overview)
+- Các khái niệm cơ bản về lập trình
+- Các phương pháp lập trình
+- Ngôn ngữ lập trình Python
 
-## [Nền tảng .NET và ngôn ngữ C#](dotnet-and-csharp)
-- Nền tảng .NET
-- Ngôn ngữ C#
+## [Python cơ bản]()
+- Các kiểu dữ liệu cơ bản của Python
+- Nhập xuất dữ liệu
+- Các cấu trúc điều khiển
+- Lập trình với hàm trong Python
 
-## [Lớp và đối tượng](classes-and-objects)
-- Cài đặt lớp
-- Đối tượng, thuộc tính và phương thức
 
-## [Thừa kế](inheritance)
-- Quan hệ tổng quát hóa, đặc biệt hóa
-- Cài đặt lớp thừa kế
+## [Lập trình hướng đối tượng với Python]()
+- Tổng quan về phương pháp lập trình hướng đối tượng
 
-## [Đa hình](polymorphism)
-- Dẫn nhập
-- Cài đặt đa hình
-
-## [Xử lý file](filehandling)
-- Sơ lược về luồng (Streams)
-- Xử lý file trong C#

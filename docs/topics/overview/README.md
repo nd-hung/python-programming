@@ -1,50 +1,42 @@
-# Tổng quan về lập trình hướng đối tượng
+# Tổng quan về lập trình
 
 Overview
 
 ---
 
-Cho đến nay có hai phương pháp lập trình phổ biến nhất là **lập trình cấu trúc** và **lập trình hướng đối tượng**.
+## Ngôn ngữ lập trình Python
 
-## Lập trình cấu trúc (Structural Programming)
+Ngày nay, Python là một trong những ngôn ngữ lập trình được sử dụng rộng rãi nhất trên thế giới. Các ưu điểm nổi bật của Python là:
 
-- Còn gọi là lập trình hướng thủ tục (procedural programming) vận dụng cách tiếp cận từ trên xuống (top-down development), từ tổng quát đến chi tiết.
-- Chương trình được phân rã thành các chức năng riêng biệt, các chức năng này nếu cần lại có thể được chia nhỏ thành các chức năng nhỏ hơn. Mỗi chức năng con này được cài đặt thành một chương trình con tương ứng. Mỗi chương trình con có thể được gọi nhiều lần với các dữ liệu vào khác nhau.
+- Python là ngôn ngữ thông dịch, hướng đối tượng.
+- Python có cú pháp đơn giản, dễ hiểu. Chương trình Python dễ bảo trì, nâng cấp.
+- Python hoạt động trên đa nền tảng: Windows, Linux và Mac.
+- Khả năng mở rộng dễ dàng.
 
-Ví dụ: Cho một mảng số nguyên, sắp xếp mảng tăng dần, in mảng đã sắp xếp.
+### Các ứng dụng của Python
 
-Theo yêu cầu bài toán, chương trình được phân rã thành các chức năng: tạo mảng, sắp xếp mảng, in mảng.
+Là ngôn ngữ lập trình đa dụng, Python được sử dụng rộng rãi trong nhiều lĩnh vực:
 
-<img src="code/structured-programming/img/top-down-approach.png" class="center">
+#### Lập trình hệ thống (system programming)
+- Python cung cấp các thư viện dựng sẵn cho phép tạo các ứng dụng hệ thống gọn nhẹ, dễ bảo trì. Các loại ứng dụng bao gồm xử lý file, xử lý song song v.v..
 
-[Xem mã nguồn trên GitHub](https://github.com/nd-hung/oop/blob/main/docs/topics/overview/code/structured-programming/Program.cs)
+#### Tạo ứng dụng GUI
+- Python cung cấp giao tiếp chuẩn, hướng đối tượng liên kết đến thư viện đồ họa Tk GUI API (gọi là tkinter), cho khả năng tạo các ứng dụng GUI nhanh chóng. Một số thư viện khác gồm PyQt, PyGTK.
 
-## Phương pháp lập trình hướng đối tượng (Object Oriented Programming)
+#### Lập trình ứng dụng Web/Internet
+- Python cung cấp công cụ lập trình socket, truyền dữ liệu qua mạng,xử lý tài liệu XML, JSON, xử lý email, v.v..
+Ngoài ra, có nhiều công cụ được phát triển bởi bên thứ 3 như Django, web2py.
 
-- Dựa trên cách tiếp cận hướng đối tượng. Theo đó, chương trình là tập hợp các đối tượng. Đối tượng là sự kết hợp giữa dữ liệu (thuộc tính) và các xử lý (phương thức) xoay quanh dữ liệu đó. Đối tượng thực hiện các yêu cầu xử lý thông qua cơ chế truyền thông điệp (message passing).
+#### Lập trình cơ sở dữ liệu
 
-## Các nguyên lý cơ bản của lập trình hướng đối tượng
+- Python cung cấp giao tiếp kết nối với các hệ quản trị cơ cơ sở dữ liệu quan hệ phổ biến như Oracle.
 
-### Trừu tượng hóa (Abstraction)
+#### Lập trình xử lý bài toán khoa học
 
-Trừu tượng hóa là quá trình loại bỏ đi các thông tin, tính chất cụ thể của sự vật, hiện tượng và
-giữ lại những tính chất, hành vi đặc trưng của chúng.
+Python ngày nay được sử dụng trong các bài toán khoa học kỹ thuật, với các thư viện xử lý số rất mạnh như NumPy, SciPy.
 
-### Bao đóng (Encapsulation)
+#### Lập trình ứng dụng khoa học dữ liệu, trí tuệ nhân tạo, IoT
 
-Trong phương pháp lập trình cấu trúc, dữ liệu và các chức năng xử lý tách rời nhau. Trong lập trình hướng đối tượng, dữ liệu và các xử lý xoay quanh dữ liệu đó được tích hợp trong một thực thể gọi là đối tượng.
+### Cơ chế hoạt động của Python
 
-Tính bao đóng cho phép người lập trình xác định mức độ truy cập đến thành viên của một lớp từ bên ngoài.
-Theo đó, có thể chủ động ẩn đi các dữ liệu hoặc phương thức nhằm hạn chế những tác động không mong muốn từ bên ngoài lớp.
-
-### Thừa kế (Inheritance)
-
-Kỹ thuật thừa kế cho phép tạo một lớp mới kế thừa (sử dụng lại) các thành phần (thuộc tính, phương thức) của một lớp đã có. Kỹ thuật thừa kế thể hiện mối quan hệ tổng quát hóa - đặc biệt hóa trong thế giới thực. Ví dụ, hình vuông là một trường hợp đặc biệt của hình chữ nhật khi nó có 4 cạnh bằng nhau, khi đó ta nói hình vuông là trường hợp đặc biệt hóa của hình chữ nhật, hay nói cách khác, hình chữ nhật là trường hợp tổng quát hóa của hình vuông.
-
-Khi lập trình áp dụng kỹ thuật thừa kế, lớp đặc biệt hóa sẽ kế thừa các thành phần của lớp tổng quát. Lớp tổng quát được gọi là lớp cơ sở/lớp cha (base/parent/super class), lớp đặc biệt hóa được gọi là lớp dẫn xuất/lớp con (derived/child/sub class).
-
-> Chú ý: Lớp dẫn xuất chỉ được sử dụng các thành phần mà lớp cơ sở chia sẻ.
-
-### Đa hình (Polymorphism)
-
-Kỹ thuật đa hình xuất hiện khi sử dụng thừa kế trong lập trình. Đa hình cho phép xây dựng lớp cơ sở có những thành phần được viết ở mức tổng quát, sau đó các thành phần này được cài đặt chi tiết ở các lớp kế thừa. Đa hình cho phép cài đặt các phương thức cùng tên nhưng tùy theo loại đối tượng mà đoạn mã nguồn phù hợp sẽ được thực thi một cách linh hoạt.
+- Ngôn ngữ Python hoạt động theo cơ chế thông dịch. 

@@ -2,25 +2,25 @@ div.col-md-9 h1:first-of-type {
     text-align: center;
     font-size: 30px;
     font-weight: 500;
-    color:#C60021
+    color:#4584b6
 }
 
 h2{
     font-size: 25px;
     font-weight: 450;
-    color:#C60021;
+    color:#4584b6;
 }
 
 h3{
     font-size: 20px;
     font-weight: 400;
-    color:#C60021;
+    color:#4584b6;
 }
 
 h4{
     font-size: 15px;
     font-weight: 350;
-    color:#C60021;
+    color:#4584b6;
 }
 
 div.col-md-9>p:first-of-type {
@@ -67,6 +67,14 @@ body.homepage>div.container>div.row>div.col-md-9 {
     max-width: 100%;
 }
 
-body {background-color: #F6F6F8;}
+body {
+    background-color: #F6F6F8;
+} 
 
- 
+.navbar-dark .navbar-brand {
+    color: #ffde57;
+}
+
+.btn-primary {
+    color: #ffde57;
+}
