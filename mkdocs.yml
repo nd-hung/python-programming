@@ -2,7 +2,7 @@ site_name: Lập trình Python
 site_description: Programming with Python
 site_author: Hung Nguyen
 
-repo_url: https://github.com/nd-hung/python
+repo_url: https://github.com/nd-hung/python-programming
 edit_uri: tree/main/docs
 
 nav:
