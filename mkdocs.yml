@@ -7,12 +7,12 @@ edit_uri: tree/main/docs
 
 nav:
     - Các chủ đề:
-      - Tổng quan: topics\overview\README.md
-      - Python cơ bản: topics\dotnet-and-csharp\README.md
-      - Lập trình hướng đối tượng với Python: topics\classes-and-objects\README.md
-      - Một số xử lý cơ bản & thư viện thông dụng: topics\inheritance\README.md
-      - Phát triển ứng dụng với Python: topics\polymorphism\README.md
-      - Xây dựng giải pháp học máy, khoa học dữ liệu: topics\filehandling\README.md
+      - Tổng quan về lập trình: topics\overview\README.md
+      - Python cơ bản: topics\
+      - Lập trình hướng đối tượng với Python: topics\
+      - Một số thư viện Python thông dụng: topics\
+      - Phát triển ứng dụng với Python: topics\
+      - Xây dựng giải pháp học máy, khoa học dữ liệu: topics\
       - Bài thực hành: labs\README.md
     - Giảng viên: author\about.md 
 

@@ -12,28 +12,36 @@ Programming with Python
 </div><br>
 
 ## Các chủ đề chính
-- #### [Tổng quan](topics/overview)
-- #### [Nền tảng .NET và ngôn ngữ C#](topics/dotnet-and-csharp)
-- #### [Lớp và đối tượng](topics/classes-and-objects)
-- #### [Thừa kế](topics/inheritance)
-- #### [Đa hình](topics/polymorphism)
-
+- #### [Tổng quan về lập trình](topics/overview)
+- #### [Python cơ bản](#)
+- #### [Lập trình hướng đối tượng với Python](#)
+- #### [Một số thư viện Python thông dụng](#)
+- #### [Xây dựng giải pháp học máy, khoa học dữ liệu](#)
+- #### [Bài thực hành](#)
+  
 ## Tài liệu tham khảo
 ### Sách, giáo trình
 
 <ol>
-    <li>Lập trình hướng đối tượng - Trần Đan Thư, Đinh Bá Tiến, Nguyễn Tấn Trần Minh Khang - NXB Khoa học kỹ thuật, 2010</li>
-    <li>C# Programming Yellow Book - Rob Miles, 2016</li>
-    <li>Beginning C# Object-Oriented Programming - Dan Clark, 2015</li>
-    <li>Lập trình hướng đối tượng với C++ - Lê Đăng Hưng, Tạ Tuấn Anh, Nguyễn Hữu Đức, Nguyễn Thanh Thủy - NXB Khoa học kỹ thuật, 2005</li>
-    <li>C++ How to Program, 10th edition - Paul Dietel - Pearson, 2017</li>
+    <li>
+        <a href="https://bedford-computing.co.uk/learning/wp-content/uploads/2015/10/No.Starch.Python.Oct_.2015.ISBN_.1593276036.pdf">Python Crash Course. Eric Matthes. No Starch Press, 2016</a>
+    </li>
+
+    <li>
+        <a href="https://github.com/AatmikJain/ComputerScienceBooks/blob/master/Python%20Head%20First%2C%202nd%20Edition.pdf">Head-First Python, 2nd edition. Paul Barry. O’Reilly, 2016</a>
+    </li>
+
+    <li>
+        <a href="https://github.com/survey4pass/kit1/blob/master/Invent%20Your%20Own%20Computer%20Games%20with%20Python-No%20Starch%25282016%2529.pdf">Invent Your Own Computer Games with Python, 4th edition. Al Sweigart. No Starch, 2017</a>
+    </li>
+
+    <li>Think Python: How to Think Like a Computer Scientist, 2nd edition. Allen B. Downey. O’Reilly, 2015</li>
+    <li>Learn Python 3 the Hard Way. Zed A. Shaw. Addison-Wesley, 2016</li>
 </ol>
 
 ### Tài liệu trực tuyến
 <ol>
-<li><a href="https://learn.microsoft.com/en-us/dotnet/">Microsoft .NET documentation</a>
-<li><a href="https://learn.microsoft.com/en-us/dotnet/csharp/">Microsoft C# documentation</a></li>
-<li><a href="https://visualstudio.microsoft.com/vs/getting-started/">Learn to code in Visual Studio - Microsoft<a></li>
-<li><a href="https://learn.microsoft.com/en-us/dotnet/core/tutorials/with-visual-studio-code?pivots=dotnet-6-0">Create .NET console applications using Visual Studio Code<a></li>
-<li><a href="https://www.w3schools.com/cs/index.php">C# Tutorial - W3Schools</a></li>
+<li><a href="https://docs.python.org/3/tutorial/">Python.org - Python Tutorial</a>
+<li><a href="https://www.learnpython.org/">Learn Python</a>
+<li><a href="https://www.w3schools.com/python/">W3School - Python Tutorial</a>
 </ol>
