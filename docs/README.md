@@ -23,6 +23,7 @@ Programming with Python
 ### Sách, giáo trình
 
 <ol>
+    <li>Python cơ bản. Bùi Việt Hà. NXB ĐHQG Hà Nội, 2020</li>
     <li>
         <a href="https://bedford-computing.co.uk/learning/wp-content/uploads/2015/10/No.Starch.Python.Oct_.2015.ISBN_.1593276036.pdf">Python Crash Course. Eric Matthes. No Starch Press, 2016</a>
     </li>
@@ -37,6 +38,12 @@ Programming with Python
 
     <li>Think Python: How to Think Like a Computer Scientist, 2nd edition. Allen B. Downey. O’Reilly, 2015</li>
     <li>Learn Python 3 the Hard Way. Zed A. Shaw. Addison-Wesley, 2016</li>
+    <li>
+        Introduction to Machine Learning with Python. Andreas C.Muller, Sarah Guido. O'Reilly Media, 2019
+    </li>
+    <li>
+        Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 2nd Edition. Aurélien Géron. O'Reilly Media, 2019
+    </li>
 </ol>
 
 ### Tài liệu trực tuyến
