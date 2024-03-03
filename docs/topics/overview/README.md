@@ -77,8 +77,7 @@ Kết quả chạy chương trình:
 ![Kết quả chạy chương trình Python](img/python_example.PNG)
 
 
-
-Ngôn ngữ lập trình
+## Ngôn ngữ lập trình
 
 - Ngôn ngữ lập trình là loại phần mềm chuyên dụng dùng để tạo ra các chương trình máy tính. Một ngôn ngữ lập trình cung cấp các khai báo dữ liệu và các câu lệnh điều khiển, đồng thời có chức năng dịch các dòng lệnh thành ngôn ngữ máy để máy tính thi hành được.
 
