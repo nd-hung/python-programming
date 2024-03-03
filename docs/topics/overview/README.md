@@ -70,7 +70,7 @@ Overview
 
 Chương trình nguồn (source code):
 
-https://github.com/nd-hung/python-programming/blob/c8e2379bd709677cbc988f7cb1169d99fa0807dc/docs/topics/overview/code/find_max_number.py
+https://github.com/nd-hung/python-programming/blob/c8e2379bd709677cbc988f7cb1169d99fa0807dc/docs/topics/overview/code/find_max_number.py#L1-L10
 
 Kết quả chạy chương trình:
 
