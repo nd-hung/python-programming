@@ -35,10 +35,14 @@ Overview
 
 ## Ngôn ngữ lập trình
 
-- Ngôn ngữ lập trình là loại phần mềm chuyên dụng dùng để tạo ra các chương trình máy tính.
+- Ngôn ngữ lập trình là loại phần mềm chuyên dụng dùng để tạo ra các chương trình máy tính. Một ngôn ngữ lập trình cung cấp các khai báo dữ liệu và các câu lệnh điều khiển, đồng thời có chức năng dịch các dòng lệnh thành ngôn ngữ máy để máy tính thi hành được.
 
 ### Các loại ngôn ngữ lập trình
+
 - Ngôn ngữ máy ()
+
+### Môi trường phát triển tích hợp (IDE)
+
 ### Ngôn ngữ lập trình Python
 
 Ngày nay, Python là một trong những ngôn ngữ lập trình được sử dụng rộng rãi nhất trên thế giới. Các ưu điểm nổi bật của Python là:
