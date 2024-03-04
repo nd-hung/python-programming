@@ -7,7 +7,7 @@
 - Các phương pháp lập trình
 - Ngôn ngữ lập trình Python
 
-## [Python cơ bản]()
+## [Python cơ bản](python-basic)
 - Các kiểu dữ liệu cơ bản của Python
 - Nhập xuất dữ liệu
 - Các cấu trúc điều khiển

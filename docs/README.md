@@ -13,7 +13,7 @@ Programming with Python
 
 ## Các chủ đề chính
 - #### [Tổng quan về lập trình](topics/overview)
-- #### [Python cơ bản](#)
+- #### [Python cơ bản](topics/python-basic/)
 - #### [Lập trình hướng đối tượng với Python](#)
 - #### [Một số thư viện Python thông dụng](#)
 - #### [Xây dựng giải pháp học máy, khoa học dữ liệu](#)
