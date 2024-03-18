@@ -2,7 +2,8 @@
     <img src="./img/python-5-logo-png-transparent.png" width="10%">
 </div>
 
-# Lập trình Python 
+# Lập trình Python
+
 Programming with Python
 
 <div class="text-center">
@@ -12,15 +13,23 @@ Programming with Python
 </div><br>
 
 ## Các chủ đề chính
+
 - #### [Tổng quan về lập trình](topics/overview)
+
 - #### [Python cơ bản](topics/python-basic/)
+
 - #### [Python nâng cao](topics/advanced-python/)
+
 - #### [Lập trình hướng đối tượng với Python](topics/python-oop/)
+
 - #### [Một số thư viện Python thông dụng](#)
+
 - #### [Xây dựng giải pháp học máy, khoa học dữ liệu](#)
+
 - #### [Bài thực hành](#)
   
 ## Tài liệu tham khảo
+
 ### Sách, giáo trình
 
 <ol>
@@ -48,6 +57,7 @@ Programming with Python
 </ol>
 
 ### Tài liệu trực tuyến
+
 <ol>
 <li><a href="https://docs.python.org/3/tutorial/">Python.org - Python Tutorial</a>
 <li><a href="https://www.learnpython.org/">Learn Python</a>

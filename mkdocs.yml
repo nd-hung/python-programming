@@ -10,7 +10,7 @@ nav:
       - Tổng quan về lập trình: topics\overview\README.md
       - Python cơ bản: topics\python-basic
       - Python nâng cao: topics\advanced-python
-      - Lập trình hướng đối tượng với Python: topics\
+      - Lập trình hướng đối tượng với Python: topics\python-oop
       - Một số thư viện Python thông dụng: topics\
       - Phát triển ứng dụng với Python: topics\
       - Xây dựng giải pháp học máy, khoa học dữ liệu: topics\

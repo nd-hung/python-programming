@@ -19,6 +19,30 @@ class ClassName:
    <Các hàm thành viên>
 ```
 
+## Phương thức `__init__()`
+
+- Hàm thiết lập (constructor) của lớp Python có tên là `__init__()`.
+- Hàm thiết lập được gọi mỗi khi đối tượng được tạo ra. Vì thế, thường dùng hàm này để khởi tạo các giá trị ban đầu cho đối tượng.
+- Ví dụ:
+
+```python
+# Khai báo lớp học sinh
+class Student:
+    # Khai báo hàm khởi tạo
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def PrintInfo(self):
+        print('{}, {}'.format(self.name, self.age))
+
+# Tạo đối tượng và khởi tạo giá trị
+sv1 = Student("Trung", 18)
+sv2 = Student('Thực', 19)
+sv1.PrintInfo()
+sv2.PrintInfo()
+```
+
 ## Lớp bên trong lớp
 
 - Ví dụ:
