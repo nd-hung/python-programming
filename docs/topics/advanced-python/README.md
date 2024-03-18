@@ -50,8 +50,10 @@ def PrintMessage(msg):
     print(msg)
 
 # Sử dụng hàm
-msg = 'Hello World'
-PrintMessage(msg)
+msg1 = 'Hello World'
+PrintMessage(msg1)
+
+PrintMessage('I love Python')
 ```
 
 - Hàm nhận vào 2 số nguyên, tính và in ra màn hình tổng của chúng:
@@ -78,6 +80,7 @@ def LaSNT(n):
     for i in range(2, n//2+1):
         if n%i ==0: return False
     return True
+    
 # Sử dụng hàm
 print(LaSNT(8))
 print(LaSNT(13))
