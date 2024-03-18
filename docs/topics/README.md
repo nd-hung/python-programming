@@ -14,6 +14,6 @@
 - Lập trình với hàm trong Python
 
 
-## [Lập trình hướng đối tượng với Python]()
+## [Lập trình hướng đối tượng với Python](python-oop)
 - Tổng quan về phương pháp lập trình hướng đối tượng
 

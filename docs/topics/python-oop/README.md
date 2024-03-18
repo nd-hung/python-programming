@@ -6,27 +6,55 @@ Python OOP
 
 ## Các khái niệm cơ bản
 
-- Lớp (class): 
+- Lớp (class): Là cấu trúc dữ liệu mô tả các đối tượng giống nhau về tính chất (properties) và phương thức (methods).
+- Đối tượng (object): là thực thể được tạo ra từ một lớp. Một lớp có thể tạo ra nhiều đối tượng khác nhau.
 
-Overview of OOP Terminology
-Class − A user-defined prototype for an object that defines a set of attributes that characterize any object of the class. The attributes are data members (class variables and instance variables) and methods, accessed via dot notation.
+## Định nghĩa lớp
 
-Class variable − A variable that is shared by all instances of a class. Class variables are defined within a class but outside any of the class's methods. Class variables are not used as frequently as instance variables are.
+- Cú pháp
 
-Data member − A class variable or instance variable that holds data associated with a class and its objects.
+```python
+class ClassName:
+   <Các biến thành viên>
+   <Các hàm thành viên>
+```
 
-Function overloading − The assignment of more than one behavior to a particular function. The operation performed varies by the types of objects or arguments involved.
+## Lớp bên trong lớp
 
-Instance variable − A variable that is defined inside a method and belongs only to the current instance of a class.
+- Ví dụ:
 
-Inheritance − The transfer of the characteristics of a class to other classes that are derived from it.
+```python
+# Minh họa cài đặt lớp bên trong lớp
+# Lớp Laptop (outer class)
+import datetime
 
-Instance − An individual object of a certain class. An object obj that belongs to a class Circle, for example, is an instance of the class Circle.
+class Laptop:
+    # Phương thức khởi tạo của lớp ngoài
+    def __init__(self, model, year=datetime.datetime.now().year, btr_voltage=None, btr_capacity=None):
+        assert isinstance(year, int) and year > 0, 'Năm phải là số nguyên dương'
+        self.Model = model  # model    
+        self.Year = year    # năm sản xuất
+        self.Battery = self.Battery(btr_voltage, btr_capacity)
 
-Instantiation − The creation of an instance of a class.
+    # Phương thức in thông tin của lớp ngoài
+    def PrintInfo(self):
+        print('Laptop model: {}, Year: {}'.format(self.Model, self.Year))
+        # Gọi phương thức in thông tin của lớp trong
+        self.Battery.PrintInfo()
 
-Method − A special kind of function that is defined in a class definition.
+    # Cài đặt lớp Battery (inner class) bên trong lớp Laptop
+    class Battery:
+        # Phương thức khởi tạo của lớp trong
+        def __init__(self, volate, capacity):
+            self.Voltage = volate       # Điện thế
+            self.Capacity = capacity    # Dung lượng
 
-Object − A unique instance of a data structure that's defined by its class. An object comprises both data members (class variables and instance variables) and methods.
+        # Phương thức in thông tin của lớp trong
+        def PrintInfo(self):
+            print('Battery info: Voltage: {}, Capacity: {}'.format(self.Voltage, self.Capacity))
 
-Operator overloading − The assignment of more than one function to a particular operator.
+# Chương trình chính
+if __name__ == '__main__':
+    lap1 = Laptop('Dell', 2020, '12V', '55kWh')
+    lap1.PrintInfo()
+```
