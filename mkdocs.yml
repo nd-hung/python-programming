@@ -8,7 +8,8 @@ edit_uri: tree/main/docs
 nav:
     - Các chủ đề:
       - Tổng quan về lập trình: topics\overview\README.md
-      - Python cơ bản: topics\
+      - Python cơ bản: topics\python-basic
+      - Python nâng cao: topics\advanced-python
       - Lập trình hướng đối tượng với Python: topics\
       - Một số thư viện Python thông dụng: topics\
       - Phát triển ứng dụng với Python: topics\
