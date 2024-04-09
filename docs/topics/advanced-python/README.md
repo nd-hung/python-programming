@@ -103,3 +103,50 @@ print(x(5))
 y = lambda(a,b: a+b)
 print(y(9, 6))
 ```
+
+## Hàm map()
+
+Hàm map() sẽ gọi hàm được chỉ ra với đối số là từng phần tử trong danh sách. Kết quả trả về (là đối tượng kiểu map) có thể chuyển thành danh sách qua hàm list(), hoặc tập hợp qua hàm set().
+
+### Cú pháp
+
+```python
+map(function, iterables)
+```
+
+Trong đó, `function` là tên hàm, `iterables` là một đối tượng chứa danh sách các phần tử.
+
+### Ví dụ
+
+```python
+def square(n) -> int:
+    return n**2
+
+
+nums = [1, 2, 3, 4, 5]
+squaredNums = list(map(square, nums))
+print(squaredNums)  #[1, 4, 9, 16, 25]
+
+places = ['Nha', 'Trang', 'Khánh', 'Hòa']
+lens = list(map(lambda s: len(s), places))
+print(lens) #[3, 5, 5, 3]
+```
+
+## Hàm filter()
+
+Hàm filter() lọc các phần tử trong danh sách thỏa mãn điều kiện của hàm đặt ra.
+
+### Cú pháp
+
+```python
+filter(function, iterables)
+```
+
+### Ví dụ
+
+```python
+nums = [1, 2, 3, 4, 5]
+# Lọc các số lẻ trong dãy
+oddNums = list(filter(lambda n: n % 2 != 0, nums))
+print(oddNums)  #[1, 3, 5]
+```
