@@ -25,7 +25,6 @@ greeting.pack()
 window.mainloop()
 ```
 
-- Kết quả chạy chương trình:
 ![Kết quả chạy chương trình](img/first_tkinter_app.png)
 
 - Một ứng dụng phức tạp hơn: BMI calculator
@@ -43,28 +42,32 @@ def bmi_calculate():
 # Khởi tạo cửa sổ ứng dụng
 root = Tk()
 root.title('BMI Calculator')
+
+# Tạo các nhãn (label) trong cửa sổ
 h_message_label = Label(text='Nhập chiều cao (m)',
                         font=('Verdana', 16))
 w_message_label = Label(text='Nhập cân nặng (kg)',
                         font=('Verdana', 16))
-
 output_label = Label(font=('Verdana', 16))
+
 # Tạo textbox nhập liệu
 h_entry = Entry(font=('Verdana', 16), width=4)
 w_entry = Entry(font=('Verdana', 16), width=4)
-# Tạo nút lệnh
-calc_button = Button(text='Caculate', font=('Verdana', 16),
+
+# Tạo nút lệnh (button)
+calc_button = Button(text='Tính', font=('Verdana', 16),
                      command=bmi_calculate)
-# Sắp xếp các đối tượng vào lưới
+
+# Sắp xếp vị trí các đối tượng đồ họa
 h_message_label.grid(row=0, column=0)
 w_message_label.grid(row=1, column=0)
 h_entry.grid(row=0, column=1)
 w_entry.grid(row=1, column=1)
-calc_button.grid(row=1, column=2)
+calc_button.grid(row=0, column=2, rowspan=2)
 output_label.grid(row=2, column=0, columnspan=3)
+
 # Chạy Tkinter event loop
 mainloop()
 ```
 
-Kết quả chạy chương trình:
 ![Kết quả chạy chương trình](img/bmi_calculator.png)

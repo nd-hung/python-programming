@@ -24,6 +24,8 @@ Programming with Python
 
 - #### [Một số thư viện Python thông dụng](#)
 
+- #### [Tạo ứng dụng GUI](topics/gui/)
+
 - #### [Xây dựng giải pháp học máy, khoa học dữ liệu](#)
 
 - #### [Bài thực hành](#)
