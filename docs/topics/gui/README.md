@@ -27,6 +27,17 @@ window.mainloop()
 
 ![Kết quả chạy chương trình](img/first_tkinter_app.png)
 
+## Làm việc với các Widgets
+
+Widgets là các đối tượng giao tiếp đồ họa với người dùng. Tkinter xây dựng mỗi widget dưới dạng lớp đối tượng.
+| Widget Class  | Description |
+| ------------- | ------------- |
+| Label	        | A widget used to display text on the screen |
+| Button 	    | A button that can contain text and can perform an action when clicked |
+| Entry	        | A text entry widget that allows only a single line of text |
+| Text	        | A text entry widget that allows multiline text entry |
+| Frame	        | A rectangular region used to group related widgets or provide padding between widgets |
+
 - Một ứng dụng phức tạp hơn: BMI calculator
 
 ```python
@@ -71,3 +82,4 @@ mainloop()
 ```
 
 ![Kết quả chạy chương trình](img/bmi_calculator.png)
+
