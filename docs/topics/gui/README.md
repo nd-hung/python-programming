@@ -30,6 +30,7 @@ window.mainloop()
 ## Làm việc với các Widgets
 
 Widgets là các đối tượng giao tiếp đồ họa với người dùng. Tkinter xây dựng mỗi widget dưới dạng lớp đối tượng.
+
 | Widget Class  | Description |
 | ------------- | ------------- |
 | Label	        | A widget used to display text on the screen |
