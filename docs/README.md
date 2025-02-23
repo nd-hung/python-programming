@@ -66,7 +66,7 @@ Programming with Python
 <li><a href="https://www.w3schools.com/python/">W3School - Python Tutorial</a>
 </ol>
 
-# My Interactive Python Page
+## My Interactive Python Page
 
 Here’s an interactive Python compiler for you to try out directly in this Markdown page:
 
