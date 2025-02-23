@@ -58,6 +58,10 @@ Programming with Python
     </li>
 </ol>
 
+## My Interactive Python Page
+
+Here’s an interactive Python compiler for you to try out directly in this Markdown page:
+
 ### Tài liệu trực tuyến
 
 <ol>
@@ -66,9 +70,7 @@ Programming with Python
 <li><a href="https://www.w3schools.com/python/">W3School - Python Tutorial</a>
 </ol>
 
-## My Interactive Python Page
 
-Here’s an interactive Python compiler for you to try out directly in this Markdown page:
 
 <script type="text/javascript" src="//cdn.datacamp.com/dcl-react.js.gz"></script>
 
