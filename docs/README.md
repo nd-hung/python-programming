@@ -65,3 +65,8 @@ Programming with Python
 <li><a href="https://www.learnpython.org/">Learn Python</a>
 <li><a href="https://www.w3schools.com/python/">W3School - Python Tutorial</a>
 </ol>
+
+<iframe src="https://www.datacamp.com/datalab/w/ff458810-862e-476b-b04d-0020f65c9421/edit#ecea2921-818d-4726-8f37-8f83ea9303eb" 
+        width="100%" height="500px" 
+        frameborder="0">
+</iframe>
