@@ -4,9 +4,24 @@ Python Basics
 
 ---
 
+Môi trường Python tương tác cung cấp bởi [DataCamp](https://www.datacamp.com/).
+
+## Hello, World!
+
+
+<script type="text/javascript" src="//cdn.datacamp.com/dcl-react.js.gz">  
+</script>
+
+<div data-datacamp-exercise data-lang="python" data-height="200">
+  <code data-type="sample-code">
+    # Chương trình đầu tiên: In ra màn hình câu "Hello, World!"
+    print("Hello, World!")
+  </code>
+</div>
+
 ## Kiểu dữ liệu
 
-- Trong Python, tất cả các thứ: kiểu dữ liệu, biến, hàm, chương trình đều là đối tượng.
+- Trong Python, tất cả các thành phần của chương trình: kiểu dữ liệu, biến, hàm, chương trình đều là đối tượng.
 
 ## Biến, biểu thức, câu lệnh
 
@@ -45,19 +60,29 @@ Tên biến không hợp lệ:
 - Chú ý:
   - Ngôn ngữ Python phân biệt chữ hoa chữ thường (case-sensitive), nên các tên sau là khác nhau: `TinHoc`, `Tinhoc`, `tinHoc`.
   - Nên đặt tên biến ngắn gọn, có nghĩa (diễn tả nội dung nó chứa). Ví dụ, để viết lệnh tính quãng đường đi dựa vào vận tốc và thời gian, thay vì viết `d = v*t`, nên viết `distance = velocity * traveled_time` hoặc `quang_duong = van_toc * thoi_gian`, sẽ giúp câu lệnh dễ hiểu hơn.
-  - Trong Python 3, có thể đặt tên biến bằng ký tự Unicode (gồm cả tiếng Việt), chẳng hạn: `Ba_Vạn_Chín_Nghìn = 39000` là một khai báo hợp lệ. Tuy nhiên, chỉ nên đặt tên biến bằng các ký tự ASCII.
+  - Với Python 3, có thể đặt tên biến bằng ký tự Unicode (gồm cả tiếng Việt), chẳng hạn: `Ba_Vạn_Chín_Nghìn = 39000` là một khai báo hợp lệ. Tuy nhiên, chỉ nên đặt tên biến bằng các ký tự ASCII.
 
 Một số ví dụ về khởi tạo biến:
+<div data-datacamp-exercise data-lang="python" data-height="200">
+  <code data-type="sample-code">
+    n = 3721                                
+    print("n = ", n)
+    x = 123.45                              
+    #print(f"x = {x}")
+    a,b,c = 32, 4.5, 8
+    print(f"a = {a}, b = {b}, c = {c}")                          
+    # tạo 3 biến trên 1 dòng lệnh
+    st1 = 'Xin chào'                        
+    # st1 chứa chuỗi ký tự đặt giữa cặp dấu nháy đơn
+    st2 = "Việt Nam"                        
+    # st2 chứa chuỗi ký tự đặt giữa cặp dấu nháy kép
+    lst = ["Bưởi", "Mướp", "Cam", "Chanh"]  
+    # lst chứa danh sách (list)
+    myDict = {'Height':1.73, 'Weight':68}   
+    # myDict chứa từ điển (dictionary)
+  </code>
+</div>
 
-```Python
-n = 3721                                # n chứa số nguyên
-x = 123.45                              # a chứa số thực
-a,b,c = 32, 4.5, 8                      # tạo 3 biến trên 1 dòng lệnh
-st1 = 'Xin chào'                        # st1 chứa chuỗi ký tự đặt giữa cặp dấu nháy đơn
-st2 = "Việt Nam"                        # st2 chứa chuỗi ký tự đặt giữa cặp dấu nháy kép
-lst = ["Bưởi", "Mướp", "Cam", "Chanh"]  # lst chứa danh sách (list)
-myDict = {'Height':1.73, 'Weight':68}   # myDict chứa từ điển (dictionary)
-```
 
 ## Các câu lệnh điều khiển
 

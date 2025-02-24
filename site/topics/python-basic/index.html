@@ -108,6 +108,10 @@
             
             <li class="nav-item" data-level="1"><a href="#python-co-ban" class="nav-link">Python cơ bản</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#hello-world" class="nav-link">Hello, World!</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
             <li class="nav-item" data-level="2"><a href="#kieu-du-lieu" class="nav-link">Kiểu dữ liệu</a>
               <ul class="nav flex-column">
               </ul>
@@ -138,9 +142,21 @@
 <h1 id="python-co-ban">Python cơ bản<a class="headerlink" href="#python-co-ban" title="Permanent link">&para;</a></h1>
 <p>Python Basics</p>
 <hr />
+<p>Môi trường Python tương tác cung cấp bởi <a href="https://www.datacamp.com/">DataCamp</a>.</p>
+<h2 id="hello-world">Hello, World!<a class="headerlink" href="#hello-world" title="Permanent link">&para;</a></h2>
+<script type="text/javascript" src="//cdn.datacamp.com/dcl-react.js.gz">  
+</script>
+
+<div data-datacamp-exercise data-lang="python" data-height="200">
+  <code data-type="sample-code">
+    # Chương trình đầu tiên: In ra màn hình câu "Hello, World!"
+    print("Hello, World!")
+  </code>
+</div>
+
 <h2 id="kieu-du-lieu">Kiểu dữ liệu<a class="headerlink" href="#kieu-du-lieu" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Trong Python, tất cả các thứ: kiểu dữ liệu, biến, hàm, chương trình đều là đối tượng.</li>
+<li>Trong Python, tất cả các thành phần của chương trình: kiểu dữ liệu, biến, hàm, chương trình đều là đối tượng.</li>
 </ul>
 <h2 id="bien-bieu-thuc-cau-lenh">Biến, biểu thức, câu lệnh<a class="headerlink" href="#bien-bieu-thuc-cau-lenh" title="Permanent link">&para;</a></h2>
 <h3 id="bien-variables">Biến (variables)<a class="headerlink" href="#bien-variables" title="Permanent link">&para;</a></h3>
@@ -170,17 +186,29 @@
 <li>Chú ý:</li>
 <li>Ngôn ngữ Python phân biệt chữ hoa chữ thường (case-sensitive), nên các tên sau là khác nhau: <code>TinHoc</code>, <code>Tinhoc</code>, <code>tinHoc</code>.</li>
 <li>Nên đặt tên biến ngắn gọn, có nghĩa (diễn tả nội dung nó chứa). Ví dụ, để viết lệnh tính quãng đường đi dựa vào vận tốc và thời gian, thay vì viết <code>d = v*t</code>, nên viết <code>distance = velocity * traveled_time</code> hoặc <code>quang_duong = van_toc * thoi_gian</code>, sẽ giúp câu lệnh dễ hiểu hơn.</li>
-<li>Trong Python 3, có thể đặt tên biến bằng ký tự Unicode (gồm cả tiếng Việt), chẳng hạn: <code>Ba_Vạn_Chín_Nghìn = 39000</code> là một khai báo hợp lệ. Tuy nhiên, chỉ nên đặt tên biến bằng các ký tự ASCII.</li>
+<li>Với Python 3, có thể đặt tên biến bằng ký tự Unicode (gồm cả tiếng Việt), chẳng hạn: <code>Ba_Vạn_Chín_Nghìn = 39000</code> là một khai báo hợp lệ. Tuy nhiên, chỉ nên đặt tên biến bằng các ký tự ASCII.</li>
 </ul>
 <p>Một số ví dụ về khởi tạo biến:</p>
-<pre><code class="language-Python">n = 3721                                # n chứa số nguyên
-x = 123.45                              # a chứa số thực
-a,b,c = 32, 4.5, 8                      # tạo 3 biến trên 1 dòng lệnh
-st1 = 'Xin chào'                        # st1 chứa chuỗi ký tự đặt giữa cặp dấu nháy đơn
-st2 = &quot;Việt Nam&quot;                        # st2 chứa chuỗi ký tự đặt giữa cặp dấu nháy kép
-lst = [&quot;Bưởi&quot;, &quot;Mướp&quot;, &quot;Cam&quot;, &quot;Chanh&quot;]  # lst chứa danh sách (list)
-myDict = {'Height':1.73, 'Weight':68}   # myDict chứa từ điển (dictionary)
-</code></pre>
+<div data-datacamp-exercise data-lang="python" data-height="200">
+  <code data-type="sample-code">
+    n = 3721                                
+    print("n = ", n)
+    x = 123.45                              
+    #print(f"x = {x}")
+    a,b,c = 32, 4.5, 8
+    print(f"a = {a}, b = {b}, c = {c}")                          
+    # tạo 3 biến trên 1 dòng lệnh
+    st1 = 'Xin chào'                        
+    # st1 chứa chuỗi ký tự đặt giữa cặp dấu nháy đơn
+    st2 = "Việt Nam"                        
+    # st2 chứa chuỗi ký tự đặt giữa cặp dấu nháy kép
+    lst = ["Bưởi", "Mướp", "Cam", "Chanh"]  
+    # lst chứa danh sách (list)
+    myDict = {'Height':1.73, 'Weight':68}   
+    # myDict chứa từ điển (dictionary)
+  </code>
+</div>
+
 <h2 id="cac-cau-lenh-ieu-khien">Các câu lệnh điều khiển<a class="headerlink" href="#cac-cau-lenh-ieu-khien" title="Permanent link">&para;</a></h2>
 <h2 id="lenh-re-nhanh-if">Lệnh rẽ nhánh if<a class="headerlink" href="#lenh-re-nhanh-if" title="Permanent link">&para;</a></h2>
 <h3 id="dang-1-lenh-if-thieu">Dạng 1: Lệnh if thiếu<a class="headerlink" href="#dang-1-lenh-if-thieu" title="Permanent link">&para;</a></h3>

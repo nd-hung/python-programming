@@ -67,22 +67,3 @@ Programming with Python
 </ol>
 
 
-## My Interactive Python Page
-
-Here’s an interactive Python compiler for you to try out directly in this Markdown page:
-
-<script type="text/javascript" src="//cdn.datacamp.com/dcl-react.js.gz">  
-</script>
-
-<div data-datacamp-exercise data-lang="python" data-height="400">
-  <code data-type="pre-exercise-code">
-    import numpy as np
-  </code>
-  <code data-type="sample-code">
-    # Edit and run this code
-    print("Hello from Python in Markdown!")
-    print(np.array([1, 2, 3]))
-  </code>
-  
-</div>
-
