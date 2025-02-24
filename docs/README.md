@@ -58,10 +58,6 @@ Programming with Python
     </li>
 </ol>
 
-## My Interactive Python Page
-
-Here’s an interactive Python compiler for you to try out directly in this Markdown page:
-
 ### Tài liệu trực tuyến
 
 <ol>
@@ -71,8 +67,12 @@ Here’s an interactive Python compiler for you to try out directly in this Mark
 </ol>
 
 
+## My Interactive Python Page
 
-<script type="text/javascript" src="//cdn.datacamp.com/dcl-react.js.gz"></script>
+Here’s an interactive Python compiler for you to try out directly in this Markdown page:
+
+<script type="text/javascript" src="//cdn.datacamp.com/dcl-react.js.gz">  
+</script>
 
 <div data-datacamp-exercise data-lang="python" data-height="400">
   <code data-type="pre-exercise-code">
@@ -83,5 +83,6 @@ Here’s an interactive Python compiler for you to try out directly in this Mark
     print("Hello from Python in Markdown!")
     print(np.array([1, 2, 3]))
   </code>
+  
 </div>
 
