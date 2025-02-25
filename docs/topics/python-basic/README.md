@@ -4,8 +4,6 @@ Python Basics
 
 ---
 
-Môi trường Python tương tác cung cấp bởi [DataCamp](https://www.datacamp.com/).
-
 ## Hello, World!
 
 
@@ -68,17 +66,18 @@ Trong đó:
 
 Ví dụ:
 
-Tên biến hợp lệ: `delta`, `x1`, `don_gia`, `_123abc`
+- Tên biến hợp lệ: `delta`, `x1`, `don_gia`, `_123abc`
 
-Tên biến không hợp lệ:
+- Tên biến không hợp lệ:
 
-`3VanChinNghin`: bắt đầu bằng chữ số
+    `3VanChinNghin`: bắt đầu bằng chữ số
 
-`Don Gia`: chứa khoảng trắng
+    `Don Gia`: chứa khoảng trắng
 
-`except`: trùng với từ khóa của Python
+    `except`: trùng với từ khóa của Python
 
-- Chú ý:
+Chú ý:
+
     - Ngôn ngữ Python phân biệt chữ hoa chữ thường (case-sensitive), nên các tên sau là khác nhau: `TinHoc`, `Tinhoc`, `tinHoc`.
     - Nên đặt tên biến ngắn gọn, có nghĩa (diễn tả nội dung nó chứa). Ví dụ, để viết lệnh tính quãng đường đi dựa vào vận tốc và thời gian, thay vì viết `d = v*t`, nên viết `distance = velocity * traveled_time` hoặc `quang_duong = van_toc * thoi_gian`, sẽ giúp câu lệnh dễ hiểu hơn.
     - Với Python 3, có thể đặt tên biến bằng ký tự Unicode (gồm cả tiếng Việt), chẳng hạn: `Ba_Vạn_Chín_Nghìn = 39000` là một khai báo hợp lệ. Tuy nhiên, chỉ nên đặt tên biến bằng các ký tự ASCII.
