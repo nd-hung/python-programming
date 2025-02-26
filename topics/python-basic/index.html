@@ -146,7 +146,6 @@
 <h1 id="python-co-ban">Python cơ bản<a class="headerlink" href="#python-co-ban" title="Permanent link">&para;</a></h1>
 <p>Python Basics</p>
 <hr />
-<p>Môi trường Python tương tác cung cấp bởi <a href="https://www.datacamp.com/">DataCamp</a>.</p>
 <h2 id="hello-world">Hello, World!<a class="headerlink" href="#hello-world" title="Permanent link">&para;</a></h2>
 <script type="text/javascript" src="//cdn.datacamp.com/dcl-react.js.gz">  
 </script>
@@ -208,19 +207,22 @@
 <li>Không được đặt tên biến trùng với <a href="https://docs.python.org/3/reference/lexical_analysis.html#keywords">từ khóa của Python</a>.</li>
 </ul>
 <p>Ví dụ:</p>
+<ul>
+<li>
 <p>Tên biến hợp lệ: <code>delta</code>, <code>x1</code>, <code>don_gia</code>, <code>_123abc</code></p>
+</li>
+<li>
 <p>Tên biến không hợp lệ:</p>
 <p><code>3VanChinNghin</code>: bắt đầu bằng chữ số</p>
 <p><code>Don Gia</code>: chứa khoảng trắng</p>
 <p><code>except</code>: trùng với từ khóa của Python</p>
-<ul>
-<li>Chú ý:<ul>
-<li>Ngôn ngữ Python phân biệt chữ hoa chữ thường (case-sensitive), nên các tên sau là khác nhau: <code>TinHoc</code>, <code>Tinhoc</code>, <code>tinHoc</code>.</li>
-<li>Nên đặt tên biến ngắn gọn, có nghĩa (diễn tả nội dung nó chứa). Ví dụ, để viết lệnh tính quãng đường đi dựa vào vận tốc và thời gian, thay vì viết <code>d = v*t</code>, nên viết <code>distance = velocity * traveled_time</code> hoặc <code>quang_duong = van_toc * thoi_gian</code>, sẽ giúp câu lệnh dễ hiểu hơn.</li>
-<li>Với Python 3, có thể đặt tên biến bằng ký tự Unicode (gồm cả tiếng Việt), chẳng hạn: <code>Ba_Vạn_Chín_Nghìn = 39000</code> là một khai báo hợp lệ. Tuy nhiên, chỉ nên đặt tên biến bằng các ký tự ASCII.</li>
-</ul>
 </li>
 </ul>
+<p>Chú ý:</p>
+<pre><code>- Ngôn ngữ Python phân biệt chữ hoa chữ thường (case-sensitive), nên các tên sau là khác nhau: `TinHoc`, `Tinhoc`, `tinHoc`.
+- Nên đặt tên biến ngắn gọn, có nghĩa (diễn tả nội dung nó chứa). Ví dụ, để viết lệnh tính quãng đường đi dựa vào vận tốc và thời gian, thay vì viết `d = v*t`, nên viết `distance = velocity * traveled_time` hoặc `quang_duong = van_toc * thoi_gian`, sẽ giúp câu lệnh dễ hiểu hơn.
+- Với Python 3, có thể đặt tên biến bằng ký tự Unicode (gồm cả tiếng Việt), chẳng hạn: `Ba_Vạn_Chín_Nghìn = 39000` là một khai báo hợp lệ. Tuy nhiên, chỉ nên đặt tên biến bằng các ký tự ASCII.
+</code></pre>
 <p>Một số ví dụ về khởi tạo biến với Python:</p>
 <div data-datacamp-exercise data-lang="python" data-height="200">
   <code data-type="sample-code">
