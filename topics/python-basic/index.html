@@ -79,7 +79,7 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="../../author/about/" class="nav-link">Author</a>
+                                <a href="../../author/about/" class="nav-link">About</a>
                             </li>
                         </ul>
 
@@ -112,7 +112,7 @@
             
             <li class="nav-item" data-bs-level="1"><a href="#python-co-ban" class="nav-link">Python cơ bản</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#hello-world" class="nav-link">Hello, World!</a>
+            <li class="nav-item" data-bs-level="2"><a href="#hello-world" class="nav-link">Hello, World</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -146,7 +146,7 @@
 <h1 id="python-co-ban">Python cơ bản<a class="headerlink" href="#python-co-ban" title="Permanent link">&para;</a></h1>
 <p>Python Basics</p>
 <hr />
-<h2 id="hello-world">Hello, World!<a class="headerlink" href="#hello-world" title="Permanent link">&para;</a></h2>
+<h2 id="hello-world">Hello, World<a class="headerlink" href="#hello-world" title="Permanent link">&para;</a></h2>
 <script type="text/javascript" src="//cdn.datacamp.com/dcl-react.js.gz">  
 </script>
 
@@ -159,33 +159,31 @@
 
 <h2 id="kieu-du-lieu">Kiểu dữ liệu<a class="headerlink" href="#kieu-du-lieu" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Trong Python, tất cả các thành phần của chương trình: kiểu dữ liệu, biến, hàm, chương trình đều là đối tượng.</li>
-<li>
-<p>Python có các kiểu dữ liệu cơ sở sau:</p>
-<ul>
-<li>Kiểu chuỗi (text):    str</li>
-<li>Kiểu số (numeric):    int, float, complex</li>
-<li>Kiểu danh sách (sequence):    list, tuple, range</li>
+<li>Python có các kiểu dữ liệu cơ sở sau:</li>
+<li>Kiểu chuỗi (text): str</li>
+<li>Kiểu số (numeric): int, float, complex</li>
+<li>Kiểu danh sách (sequence): list, tuple, range</li>
 <li>Kiểu từ điển (mapping): dict</li>
-<li>Kiểu tập hợp (set):   set, frozenset</li>
+<li>Kiểu tập hợp (set): set, frozenset</li>
 <li>Kiểu Boolean: bool</li>
-<li>Kiểu nhị phânBinary Types:    bytes, bytearray, memoryview</li>
-<li>Kiểu None:    NoneType</li>
-</ul>
+<li>Kiểu nhị phânBinary Types: bytes, bytearray, memoryview</li>
+<li>
+<p>Kiểu None: NoneType</p>
 </li>
 <li>
-<p>Có thể xem kiểu dữ liệu của một biến, biểu thức bằng hàm type()</p>
+<p>Có thể xem kiểu dữ liệu của một biến, biểu thức bằng hàm type().</p>
 </li>
+<li>Kiểu dữ liệu của một biến được xác định khi gán giá trị cho nó.</li>
+<li>Ví dụ:</li>
 </ul>
 <div data-datacamp-exercise data-lang="python" data-height="100">
   <code data-type="sample-code">
-    n = 3721                                
-    print("Kiểu dữ liệu: ", type(n))
-
+    n = 3721
+    print("Kiểu dữ liệu của n: ", type(n).__name__)
     PI = 3.1416
-    ban_kinh = 1
-    dien_tich = PI * ban_kinh**2
-    print("Kiểu dữ liệu: ", type(dien_tich))
+    print("Kiểu dữ liệu của PI: ", type(PI).__name__)
+    bon_mua = ['Xuân', 'Hạ', 'Thu', 'Đông']
+    print("Kiểu dữ liệu của mua: ", type(mua).__name__)
   </code>
 </div>
 <h2 id="bien-bieu-thuc-cau-lenh">Biến, biểu thức, câu lệnh<a class="headerlink" href="#bien-bieu-thuc-cau-lenh" title="Permanent link">&para;</a></h2>
@@ -227,7 +225,7 @@
 <div data-datacamp-exercise data-lang="python" data-height="200">
   <code data-type="sample-code">
     # Khai báo biến n và gán số nguyên cho nó
-    n = 3721                                
+    n = 3721
     print("n = ", n)
 
   </code>
