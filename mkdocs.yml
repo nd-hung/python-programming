@@ -16,7 +16,7 @@ nav:
       - Phát triển ứng dụng với Python: topics\
       - Xây dựng giải pháp học máy, khoa học dữ liệu: topics\
       - Bài thực hành: labs\README.md
-    - Author: author\about.md 
+    - About: author\about.md 
 
 theme:
     name: mkdocs

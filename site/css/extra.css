@@ -2,25 +2,25 @@ div.col-md-9 h1:first-of-type {
     text-align: center;
     font-size: 30px;
     font-weight: 500;
-    color:#0F52BA
+    color:#007bbf
 }
 
 h2{
     font-size: 25px;
     font-weight: 450;
-    color:#0F52BA;
+    color:#007bbf;
 }
 
 h3{
     font-size: 20px;
     font-weight: 400;
-    color:#0F52BA;
+    color:#007bbf;
 }
 
 h4{
     font-size: 15px;
     font-weight: 350;
-    color:#0F52BA;
+    color:#007bbf;
 }
 
 div.col-md-9>p:first-of-type {

@@ -61,6 +61,8 @@ Programming with Python
 ### Tài liệu trực tuyến
 
 <ol>
+
+<li><a href="https://cs50.harvard.edu/python/2022/">Harvard University - Introduction to Proramming with Python</a>
 <li><a href="https://docs.python.org/3/tutorial/">Python.org - Python Tutorial</a>
 <li><a href="https://www.learnpython.org/">Learn Python</a>
 <li><a href="https://www.w3schools.com/python/">W3School - Python Tutorial</a>

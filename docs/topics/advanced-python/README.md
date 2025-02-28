@@ -6,14 +6,13 @@ Advanced Python
 
 ## Hàm Python
 
-- Yêu cầu hàng đầu trong lập trình là cần tổ chức mã nguồn có cấu trúc module hóa cao, thuận lợi cho việc sửa lỗi, cải tiến, mở rộng và tái sử dụng. Giải pháp để giải quyết yêu cầu trên là xây dựng chương trình con (hàm).
 - Hàm là một đoạn mã nguồn được thiết kế để thực hiện một chức năng chuyên biệt.
 - Hàm chỉ thực thi khi được gọi.
 - Có thể gọi hàm nhiều lần với các đối số (dữ liệu vào) khác nhau.
 
 - Có 3 loại hàm trong Python:
-  - Hàm dựng sẵn (built-in functions)
-  - Hàm định nghĩa trong các module dựng sẵn
+  - Hàm dựng sẵn (built-in functions). Ví dụ: abs(), range(), sorted(),...
+  - Hàm định nghĩa trong các thư viện do bên thứ ba phát triển. Ví dụ: numpy.
   - Hàm do người dùng (lập trình viên) tự định nghĩa
 
 ### Các bước xây dựng hàm

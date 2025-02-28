@@ -4,8 +4,7 @@ Python Basics
 
 ---
 
-## Hello, World!
-
+## Hello, World
 
 <script type="text/javascript" src="//cdn.datacamp.com/dcl-react.js.gz">  
 </script>
@@ -19,27 +18,28 @@ Python Basics
 
 ## Kiểu dữ liệu
 
-- Trong Python, tất cả các thành phần của chương trình: kiểu dữ liệu, biến, hàm, chương trình đều là đối tượng.
 - Python có các kiểu dữ liệu cơ sở sau:
-    - Kiểu chuỗi (text):	str
-    - Kiểu số (numeric):	int, float, complex
-    - Kiểu danh sách (sequence):	list, tuple, range
-    - Kiểu từ điển (mapping): dict
-    - Kiểu tập hợp (set):	set, frozenset
-    - Kiểu Boolean:	bool
-    - Kiểu nhị phânBinary Types:	bytes, bytearray, memoryview
-    - Kiểu None:	NoneType
+  - Kiểu chuỗi (text): str
+  - Kiểu số (numeric): int, float, complex
+  - Kiểu danh sách (sequence): list, tuple, range
+  - Kiểu từ điển (mapping): dict
+  - Kiểu tập hợp (set): set, frozenset
+  - Kiểu Boolean: bool
+  - Kiểu nhị phânBinary Types: bytes, bytearray, memoryview
+  - Kiểu None: NoneType
 
-- Có thể xem kiểu dữ liệu của một biến, biểu thức bằng hàm type()
+- Có thể xem kiểu dữ liệu của một biến, biểu thức bằng hàm type().
+- Kiểu dữ liệu của một biến được xác định khi gán giá trị cho nó.
+- Ví dụ:
+
 <div data-datacamp-exercise data-lang="python" data-height="100">
   <code data-type="sample-code">
-    n = 3721                                
-    print("Kiểu dữ liệu: ", type(n))
-
+    n = 3721
+    print("Kiểu dữ liệu của n: ", type(n).__name__)
     PI = 3.1416
-    ban_kinh = 1
-    dien_tich = PI * ban_kinh**2
-    print("Kiểu dữ liệu: ", type(dien_tich))
+    print("Kiểu dữ liệu của PI: ", type(PI).__name__)
+    bon_mua = ['Xuân', 'Hạ', 'Thu', 'Đông']
+    print("Kiểu dữ liệu của mua: ", type(mua).__name__)
   </code>
 </div>
 ## Biến, biểu thức, câu lệnh
@@ -87,12 +87,11 @@ Một số ví dụ về khởi tạo biến với Python:
 <div data-datacamp-exercise data-lang="python" data-height="200">
   <code data-type="sample-code">
     # Khai báo biến n và gán số nguyên cho nó
-    n = 3721                                
+    n = 3721
     print("n = ", n)
-    
+
   </code>
 </div>
-
 
 ## Các câu lệnh điều khiển
 
