@@ -9,28 +9,97 @@ Python Basics
 <script type="text/javascript" src="//cdn.datacamp.com/dcl-react.js.gz">  
 </script>
 
-<div data-datacamp-exercise data-lang="python" data-height="50">
+<div data-datacamp-exercise data-lang="python" data-height="5">
   <code data-type="sample-code">
     # Chương trình đầu tiên: In ra màn hình câu "Hello, World!"
     print("Hello, World!")
   </code>
 </div>
 
-## Kiểu dữ liệu
+## Thực thi chương trình Python
+### Chạy từng dòng lệnh 
+Các bước thực hiện:
+- Mở cửa sổ dòng lệnh (terminal).
+- Nhập `python` (hoặc `python3`) và nhấn `Enter` để mở Python chế độ tương tác.
+- Nhập từng dòng lệnh để thực thi.
+![Python interactive mode](./img/python_shell.PNG "Python interactive mode").
 
-- Python có các kiểu dữ liệu cơ sở sau:
-  - Kiểu chuỗi (text): str
-  - Kiểu số (numeric): int, float, complex
-  - Kiểu danh sách (sequence): list, tuple, range
-  - Kiểu từ điển (mapping): dict
-  - Kiểu tập hợp (set): set, frozenset
-  - Kiểu Boolean: bool
-  - Kiểu nhị phânBinary Types: bytes, bytearray, memoryview
-  - Kiểu None: NoneType
+### Chạy file mã nguồn từ chế độ dòng lệnh
 
-- Có thể xem kiểu dữ liệu của một biến, biểu thức bằng hàm type().
-- Kiểu dữ liệu của một biến được xác định khi gán giá trị cho nó.
-- Ví dụ:
+- Mở cửa sổ dòng lệnh (terminal).
+- Nhập `python <[path_to/]python_script_file_name.py>` và nhấn `Enter` để thực thi. Trình thông dịch sẽ lần lượt thực hiện các lệnh trong file mã nguồn.
+
+### Sử dụng IDE
+
+- Mở IDE lập trình Python (PyCharm, VS Code, Spyder, IDLE,...).
+- Tạo (hoặc mở) file chương trình Python.
+- Nhấn lệnh `Run` để thực thi chương trình.
+
+## Biến và kiểu dữ liệu
+
+Mọi biến trong Python đều là đối tượng, không cần phải khai báo biến trước khi sử dụng.
+Kiểu dữ liệu của một biến được xác định khi gán giá trị cho nó.
+
+Python có các kiểu dữ liệu cơ sở sau:
+
+### Kiểu chuỗi (text)
+Chuỗi là dãy ký tự đặt trong cặp dấu nháy kép "" hoặc nháy đơn ''.
+
+Ví dụ:
+<div data-datacamp-exercise data-lang="python" data-height="50">
+<code data-type="sample-code">
+    # Dạng chuỗi 1: đặt giữa cặp dấu nháy kép
+    ntu_slogan1 = "Lựa chọn đúng để thành công!"
+    print(ntu_slogan1, "\nSố ký tự = ", len(ntu_slogan1))
+
+    # Dạng chuỗi 2: đặt giữa cặp dấu nháy đơn
+    ntu_slogan2 = 'Căng buồm tri thức vươn khơi.'
+    print(ntu_slogan2)
+
+    # Nối 2 chuỗi:
+    print(ntu_slogan1 + ntu_slogan2)
+
+    # Dạng chuỗi 3: chuỗi gồm nhiều dòng
+    verses = """
+    'Trải qua một cuộc bể dâu
+    Những điều trông thấy mà đau đớn lòng.'
+    \t\t- trích Truyện Kiều (Nguyễn Du)
+    """
+    print(verses)
+  </code>
+</div>
+
+### Kiểu số (numeric)
+
+Python có các kiểu số nguyên (int), số thực (float).
+
+Ví dụ:
+<div data-datacamp-exercise data-lang="python" data-height="50">
+<code data-type="sample-code">
+    # Kiểu số nguyên
+    n = 3721
+    print("n = %d" % n)
+    so_du = n % 10
+    print("Chữ số cuối của n là %d" % so_du)
+
+    # Kiểu số thực
+    pi = 3.14159
+    print("PI = %.2f" % pi)
+  </code>
+</div>
+
+### Kiểu tuần tự (sequence)
+- Kiểu danh sách (sequence): list, tuple, range
+- Kiểu từ điển (mapping): dict
+- Kiểu tập hợp (set): set, frozenset
+- Kiểu Boolean: bool
+- Kiểu nhị phânBinary Types: bytes, bytearray, memoryview
+- Kiểu None: NoneType
+
+!!! Note
+    Có thể dùng hàm `type()` để lấy kiểu dữ liệu của một biến.
+
+Ví dụ:
 
 <div data-datacamp-exercise data-lang="python" data-height="100">
   <code data-type="sample-code">
