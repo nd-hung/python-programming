@@ -22,7 +22,9 @@ Các bước thực hiện:
 - Mở cửa sổ dòng lệnh (terminal).
 - Nhập `python` (hoặc `python3`) và nhấn `Enter` để mở Python chế độ tương tác.
 - Nhập từng dòng lệnh để thực thi.
-![Python interactive mode](./img/python_shell.PNG "Python interactive mode").
+
+<img src="./img/python_shell.PNG" alt="Python interactive mode" style="width:300px;">
+
 
 ### Chạy file mã nguồn từ chế độ dòng lệnh
 
