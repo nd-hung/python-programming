@@ -99,7 +99,7 @@ Ví dụ:
 - Kiểu None: NoneType
 
 !!! Note
-    Có thể dùng hàm `type()` để lấy kiểu dữ liệu của một biến.
+    Dùng hàm `type()` để lấy kiểu dữ liệu của một biến hoặc biểu thức.
 
 Ví dụ:
 
@@ -147,7 +147,7 @@ Ví dụ:
 
     `except`: trùng với từ khóa của Python
 
-Chú ý:
+!!! Note
 
     - Ngôn ngữ Python phân biệt chữ hoa chữ thường (case-sensitive), nên các tên sau là khác nhau: `TinHoc`, `Tinhoc`, `tinHoc`.
     - Nên đặt tên biến ngắn gọn, có nghĩa (diễn tả nội dung nó chứa). Ví dụ, để viết lệnh tính quãng đường đi dựa vào vận tốc và thời gian, thay vì viết `d = v*t`, nên viết `distance = velocity * traveled_time` hoặc `quang_duong = van_toc * thoi_gian`, sẽ giúp câu lệnh dễ hiểu hơn.
