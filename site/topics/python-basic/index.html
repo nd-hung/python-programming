@@ -163,11 +163,13 @@
 
 <h2 id="thuc-thi-chuong-trinh-python">Thực thi chương trình Python<a class="headerlink" href="#thuc-thi-chuong-trinh-python" title="Permanent link">&para;</a></h2>
 <h3 id="chay-tung-dong-lenh">Chạy từng dòng lệnh<a class="headerlink" href="#chay-tung-dong-lenh" title="Permanent link">&para;</a></h3>
-<p>Các bước thực hiện:
-- Mở cửa sổ dòng lệnh (terminal).
-- Nhập <code>python</code> (hoặc <code>python3</code>) và nhấn <code>Enter</code> để mở Python chế độ tương tác.
-- Nhập từng dòng lệnh để thực thi.
-<img alt="Python interactive mode" src="img/python_shell.PNG" title="Python interactive mode" />.</p>
+<p>Các bước thực hiện:</p>
+<ul>
+<li>Mở cửa sổ dòng lệnh (terminal).</li>
+<li>Nhập <code>python</code> (hoặc <code>python3</code>) và nhấn <code>Enter</code> để mở Python chế độ tương tác.</li>
+<li>Nhập từng dòng lệnh để thực thi.</li>
+</ul>
+<p><img src="./img/python_shell.PNG" alt="Python interactive mode" style="width:300px;"></p>
 <h3 id="chay-file-ma-nguon-tu-che-o-dong-lenh">Chạy file mã nguồn từ chế độ dòng lệnh<a class="headerlink" href="#chay-file-ma-nguon-tu-che-o-dong-lenh" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Mở cửa sổ dòng lệnh (terminal).</li>
@@ -190,14 +192,10 @@ Kiểu dữ liệu của một biến được xác định khi gán giá trị 
 <code data-type="sample-code">
     # Dạng chuỗi 1: đặt giữa cặp dấu nháy kép
     ntu_slogan1 = "Lựa chọn đúng để thành công!"
-    print(ntu_slogan1, "\nSố ký tự = ", len(ntu_slogan1))
 
     # Dạng chuỗi 2: đặt giữa cặp dấu nháy đơn
     ntu_slogan2 = 'Căng buồm tri thức vươn khơi.'
     print(ntu_slogan2)
-
-    # Nối 2 chuỗi:
-    print(ntu_slogan1 + ntu_slogan2)
 
     # Dạng chuỗi 3: chuỗi gồm nhiều dòng
     verses = """
@@ -216,9 +214,6 @@ Kiểu dữ liệu của một biến được xác định khi gán giá trị 
 <code data-type="sample-code">
     # Kiểu số nguyên
     n = 3721
-    print("n = %d" % n)
-    so_du = n % 10
-    print("Chữ số cuối của n là %d" % so_du)
 
     # Kiểu số thực
     pi = 3.14159
@@ -237,7 +232,7 @@ Kiểu dữ liệu của một biến được xác định khi gán giá trị 
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Có thể dùng hàm <code>type()</code> để lấy kiểu dữ liệu của một biến.</p>
+<p>Dùng hàm <code>type()</code> để lấy kiểu dữ liệu của một biến hoặc biểu thức.</p>
 </div>
 <p>Ví dụ:</p>
 <div data-datacamp-exercise data-lang="python" data-height="100">
@@ -280,11 +275,14 @@ Kiểu dữ liệu của một biến được xác định khi gán giá trị 
 <p><code>except</code>: trùng với từ khóa của Python</p>
 </li>
 </ul>
-<p>Chú ý:</p>
-<pre><code>- Ngôn ngữ Python phân biệt chữ hoa chữ thường (case-sensitive), nên các tên sau là khác nhau: `TinHoc`, `Tinhoc`, `tinHoc`.
-- Nên đặt tên biến ngắn gọn, có nghĩa (diễn tả nội dung nó chứa). Ví dụ, để viết lệnh tính quãng đường đi dựa vào vận tốc và thời gian, thay vì viết `d = v*t`, nên viết `distance = velocity * traveled_time` hoặc `quang_duong = van_toc * thoi_gian`, sẽ giúp câu lệnh dễ hiểu hơn.
-- Với Python 3, có thể đặt tên biến bằng ký tự Unicode (gồm cả tiếng Việt), chẳng hạn: `Ba_Vạn_Chín_Nghìn = 39000` là một khai báo hợp lệ. Tuy nhiên, chỉ nên đặt tên biến bằng các ký tự ASCII.
-</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>Ngôn ngữ Python phân biệt chữ hoa chữ thường (case-sensitive), nên các tên sau là khác nhau: <code>TinHoc</code>, <code>Tinhoc</code>, <code>tinHoc</code>.</li>
+<li>Nên đặt tên biến ngắn gọn, có nghĩa (diễn tả nội dung nó chứa). Ví dụ, để viết lệnh tính quãng đường đi dựa vào vận tốc và thời gian, thay vì viết <code>d = v*t</code>, nên viết <code>distance = velocity * traveled_time</code> hoặc <code>quang_duong = van_toc * thoi_gian</code>, sẽ giúp câu lệnh dễ hiểu hơn.</li>
+<li>Với Python 3, có thể đặt tên biến bằng ký tự Unicode (gồm cả tiếng Việt), chẳng hạn: <code>Ba_Vạn_Chín_Nghìn = 39000</code> là một khai báo hợp lệ. Tuy nhiên, chỉ nên đặt tên biến bằng các ký tự ASCII.</li>
+</ul>
+</div>
 <p>Một số ví dụ về khởi tạo biến với Python:</p>
 <div data-datacamp-exercise data-lang="python" data-height="200">
   <code data-type="sample-code">

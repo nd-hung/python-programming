@@ -17,14 +17,16 @@ Python Basics
 </div>
 
 ## Thực thi chương trình Python
+
 ### Chạy từng dòng lệnh 
+
 Các bước thực hiện:
+
 - Mở cửa sổ dòng lệnh (terminal).
 - Nhập `python` (hoặc `python3`) và nhấn `Enter` để mở Python chế độ tương tác.
 - Nhập từng dòng lệnh để thực thi.
 
 <img src="./img/python_shell.PNG" alt="Python interactive mode" style="width:300px;">
-
 
 ### Chạy file mã nguồn từ chế độ dòng lệnh
 
@@ -52,14 +54,10 @@ Ví dụ:
 <code data-type="sample-code">
     # Dạng chuỗi 1: đặt giữa cặp dấu nháy kép
     ntu_slogan1 = "Lựa chọn đúng để thành công!"
-    print(ntu_slogan1, "\nSố ký tự = ", len(ntu_slogan1))
 
     # Dạng chuỗi 2: đặt giữa cặp dấu nháy đơn
     ntu_slogan2 = 'Căng buồm tri thức vươn khơi.'
     print(ntu_slogan2)
-
-    # Nối 2 chuỗi:
-    print(ntu_slogan1 + ntu_slogan2)
 
     # Dạng chuỗi 3: chuỗi gồm nhiều dòng
     verses = """
@@ -80,9 +78,6 @@ Ví dụ:
 <code data-type="sample-code">
     # Kiểu số nguyên
     n = 3721
-    print("n = %d" % n)
-    so_du = n % 10
-    print("Chữ số cuối của n là %d" % so_du)
 
     # Kiểu số thực
     pi = 3.14159
