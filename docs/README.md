@@ -35,37 +35,38 @@ Programming with Python
 ### Sách, giáo trình
 
 <ol>
+
     <li>
         Python cơ bản. Bùi Việt Hà. NXB ĐHQG Hà Nội, 2020
-    </li>
+    
     
     <li>
         Python Crash Course. Eric Matthes. No Starch Press, 2016
-    </li>
+    
 
     <li>
         Head-First Python, 2nd edition. Paul Barry. O’Reilly, 2016
-    </li>
+    
 
     <li>
         Invent Your Own Computer Games with Python, 4th edition. Al Sweigart. No Starch, 2017
-    </li>
+    
 
     <li>
         Think Python: How to Think Like a Computer Scientist, 2nd edition. Allen B. Downey. O’Reilly, 2015
-    </li>
+    
     
     <li>
         Learn Python 3 the Hard Way. Zed A. Shaw. Addison-Wesley, 2016
-    </li>
+  
     
     <li>
         Introduction to Machine Learning with Python. Andreas C.Muller, Sarah Guido. O'Reilly Media, 2016
-    </li>
+ 
     
     <li>
         Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow, 2nd Edition. Aurélien Géron. O'Reilly Media, 2019
-    </li>
+  
 </ol>
 
 ### Tài liệu trực tuyến
