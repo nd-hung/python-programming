@@ -41,14 +41,64 @@ Ví dụ:
 - Tạo (hoặc mở) file chương trình Python.
 - Nhấn lệnh `Run` để thực thi chương trình.
 
-## Biến và kiểu dữ liệu
+## Khối lệnh
 
-Mọi biến trong Python đều là đối tượng, không cần phải khai báo biến trước khi sử dụng.
+- Python sử dụng khoảng canh lề (indentation) để giới hạn khối lệnh.
+- Số khoảng trắng trước khối lệnh ít nhất là 1, thông dụng nhất là 4.
+- Trong một khối lệnh, số khoảng trắng đứng trước mỗi dòng lệnh phải bằng nhau.
+
+Ví dụ:
+
+<div data-datacamp-exercise data-lang="python" data-height="10">
+<code data-type="sample-code">
+n = int(input("Nhập một số nguyên:"))
+
+if n % 2 == 0:
+    print("%d là số chẵn" % n)
+else:
+    print("%d là số lẻ" % n)
+</code>
+</div>
+
+## Kiểu dữ liệu và biến
+
+### Biến
+
+- Biến là đối tượng dùng để lưu dữ liệu.
+- Giá trị của biến có thể thay đổi khi chương trình hoạt động.
+- Python không có lệnh khai báo biến, biến được tạo ra khi gán giá trị cho nó.
+
+- Tên biến đặt theo quy tắc sau:
+  - Tên biến chỉ gồm các ký tự chữ cái, chữ số và dấu gạch dưới '_'.
+  - Tên biến phải bắt đầu bằng chữ cái hoặc ký tự gạch dưới.
+  - Không được đặt tên biến trùng với [từ khóa của Python](https://docs.python.org/3/reference/lexical_analysis.html#keywords).
+
+Ví dụ:
+
+- Tên biến hợp lệ: `delta`, `x1`, `don_gia`, `_123abc`
+
+- Tên biến không hợp lệ:
+
+    `3VanChinNghin`: bắt đầu bằng chữ số
+
+    `Don Gia`: chứa khoảng trắng
+
+    `except`: trùng với từ khóa của Python
+
+!!! Note
+
+- Ngôn ngữ Python phân biệt chữ hoa chữ thường (case-sensitive), nên các tên sau là khác nhau: `TinHoc`, `Tinhoc`, `tinHoc`.
+- Nên đặt tên biến ngắn gọn, có nghĩa (diễn tả nội dung nó chứa). Ví dụ, để viết lệnh tính quãng đường đi dựa vào vận tốc và thời gian, thay vì viết `d = v*t`, nên viết `distance = velocity * traveled_time` hoặc `quang_duong = van_toc * thoi_gian`, sẽ giúp câu lệnh dễ hiểu hơn.
+- Với Python 3, có thể đặt tên biến bằng ký tự Unicode (gồm cả tiếng Việt), chẳng hạn: `Ba_Vạn_Chín_Nghìn = 39000` là một khai báo hợp lệ. Tuy nhiên, chỉ nên đặt tên biến bằng các ký tự ASCII.
+
+
+### Kiểu dữ liệu
+
 Kiểu dữ liệu của một biến được xác định khi gán giá trị cho nó.
 
 Python có các kiểu dữ liệu cơ sở sau:
 
-### Kiểu chuỗi (text)
+#### Kiểu chuỗi (text)
 
 Chuỗi là dãy ký tự đặt trong cặp dấu nháy kép "" hoặc nháy đơn ''.
 
@@ -73,7 +123,7 @@ Ví dụ:
   </code>
 </div>
 
-### Kiểu số (numeric)
+#### Kiểu số (numeric)
 
 Python có các kiểu số nguyên (int), số thực (float) và số phức (complex).
 
@@ -95,13 +145,13 @@ Ví dụ:
   </code>
 </div>
 
-### Kiểu tuần tự (sequence)
+#### Kiểu tuần tự (sequence)
 
 - Kiểu danh sách (sequence): list, tuple, range
 - Kiểu từ điển (mapping): dict
 - Kiểu tập hợp (set): set, frozenset
 
-### Kiểu Boolean: bool
+#### Kiểu Boolean: bool
 Kiểu bool có giá trị `True` hoặc `False`.
 
 Ví dụ:
@@ -118,7 +168,7 @@ Ví dụ:
     </code>
 </div>
 
-### Kiểu None (NoneType)
+#### Kiểu None (NoneType)
 
 Kiểu dữ liệu `None` dùng để chỉ một biến hoặc đối tượng không có giá trị.
 
@@ -152,56 +202,9 @@ Ví dụ:
     greeting_message = 'Welcome to Nha Trang!'
     print("Kiểu dữ liệu là ", type(greeting_message).__name__)
 </div>
-## Biến, biểu thức, câu lệnh
 
-### Biến (variables)
 
-- Biến là đối tượng dùng để lưu dữ liệu.
-- Giá trị của biến có thể thay đổi khi chương trình hoạt động.
-- Python không có lệnh khai báo biến, biến được tạo ra khi gán giá trị cho nó.
 
-Cú pháp khởi tạo biến:
-
-```Python
-<variable_name> = <value>
-<variable_name1>, <variable_name2> = <value1>,<value2>
-```
-
-Trong đó:
-
-- Tên biến: đặt theo quy định sau:
-  - Tên biến chỉ gồm các ký tự chữ cái, chữ số và dấu gạch dưới '_'.
-  - Tên biến phải bắt đầu bằng chữ cái hoặc ký tự gạch dưới.
-  - Không được đặt tên biến trùng với [từ khóa của Python](https://docs.python.org/3/reference/lexical_analysis.html#keywords).
-
-Ví dụ:
-
-- Tên biến hợp lệ: `delta`, `x1`, `don_gia`, `_123abc`
-
-- Tên biến không hợp lệ:
-
-    `3VanChinNghin`: bắt đầu bằng chữ số
-
-    `Don Gia`: chứa khoảng trắng
-
-    `except`: trùng với từ khóa của Python
-
-!!! Note
-
-- Ngôn ngữ Python phân biệt chữ hoa chữ thường (case-sensitive), nên các tên sau là khác nhau: `TinHoc`, `Tinhoc`, `tinHoc`.
-- Nên đặt tên biến ngắn gọn, có nghĩa (diễn tả nội dung nó chứa). Ví dụ, để viết lệnh tính quãng đường đi dựa vào vận tốc và thời gian, thay vì viết `d = v*t`, nên viết `distance = velocity * traveled_time` hoặc `quang_duong = van_toc * thoi_gian`, sẽ giúp câu lệnh dễ hiểu hơn.
-- Với Python 3, có thể đặt tên biến bằng ký tự Unicode (gồm cả tiếng Việt), chẳng hạn: `Ba_Vạn_Chín_Nghìn = 39000` là một khai báo hợp lệ. Tuy nhiên, chỉ nên đặt tên biến bằng các ký tự ASCII.
-
-Một số ví dụ về khởi tạo biến với Python:
-  
-<div data-datacamp-exercise data-lang="python" data-height="200">
-  <code data-type="sample-code">
-    # Khai báo biến n và gán số nguyên cho nó
-    n = 3721
-    print("n = ", n)
-
-  </code>
-</div>
 
 ## Các câu lệnh điều khiển
 

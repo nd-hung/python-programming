@@ -120,11 +120,11 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#bien-va-kieu-du-lieu" class="nav-link">Biến và kiểu dữ liệu</a>
+            <li class="nav-item" data-bs-level="2"><a href="#khoi-lenh" class="nav-link">Khối lệnh</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#bien-bieu-thuc-cau-lenh" class="nav-link">Biến, biểu thức, câu lệnh</a>
+            <li class="nav-item" data-bs-level="2"><a href="#kieu-du-lieu-va-bien" class="nav-link">Kiểu dữ liệu và biến</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -165,100 +165,52 @@
 <h3 id="chay-tung-dong-lenh">Chạy từng dòng lệnh<a class="headerlink" href="#chay-tung-dong-lenh" title="Permanent link">&para;</a></h3>
 <p>Các bước thực hiện:</p>
 <ul>
-<li>Mở cửa sổ dòng lệnh (terminal).</li>
+<li>Mở cửa sổ chế độ dòng lệnh (terminal).</li>
 <li>Nhập <code>python</code> (hoặc <code>python3</code>) và nhấn <code>Enter</code> để mở Python chế độ tương tác.</li>
 <li>Nhập từng dòng lệnh để thực thi.</li>
 </ul>
+<p>Ví dụ:</p>
 <p><img src="./img/python_shell.PNG" alt="Python interactive mode" style="width:300px;"></p>
 <h3 id="chay-file-ma-nguon-tu-che-o-dong-lenh">Chạy file mã nguồn từ chế độ dòng lệnh<a class="headerlink" href="#chay-file-ma-nguon-tu-che-o-dong-lenh" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Mở cửa sổ dòng lệnh (terminal).</li>
 <li>Nhập <code>python &lt;[path_to/]python_script_file_name.py&gt;</code> và nhấn <code>Enter</code> để thực thi. Trình thông dịch sẽ lần lượt thực hiện các lệnh trong file mã nguồn.</li>
 </ul>
-<h3 id="su-dung-ide">Sử dụng IDE<a class="headerlink" href="#su-dung-ide" title="Permanent link">&para;</a></h3>
+<h3 id="thuc-thi-chuong-trinh-python-tu-moi-truong-phat-trien-tich-hop-ide">Thực thi chương trình Python từ môi trường phát triển tích hợp (IDE)<a class="headerlink" href="#thuc-thi-chuong-trinh-python-tu-moi-truong-phat-trien-tich-hop-ide" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Mở IDE lập trình Python (PyCharm, VS Code, Spyder, IDLE,...).</li>
+<li>Mở IDE lập trình Python ưa thích (PyCharm, VS Code, Spyder, IDLE,...).</li>
 <li>Tạo (hoặc mở) file chương trình Python.</li>
 <li>Nhấn lệnh <code>Run</code> để thực thi chương trình.</li>
 </ul>
-<h2 id="bien-va-kieu-du-lieu">Biến và kiểu dữ liệu<a class="headerlink" href="#bien-va-kieu-du-lieu" title="Permanent link">&para;</a></h2>
-<p>Mọi biến trong Python đều là đối tượng, không cần phải khai báo biến trước khi sử dụng.
-Kiểu dữ liệu của một biến được xác định khi gán giá trị cho nó.</p>
-<p>Python có các kiểu dữ liệu cơ sở sau:</p>
-<h3 id="kieu-chuoi-text">Kiểu chuỗi (text)<a class="headerlink" href="#kieu-chuoi-text" title="Permanent link">&para;</a></h3>
-<p>Chuỗi là dãy ký tự đặt trong cặp dấu nháy kép "" hoặc nháy đơn ''.</p>
-<p>Ví dụ:</p>
-<div data-datacamp-exercise data-lang="python" data-height="50">
-<code data-type="sample-code">
-    # Dạng chuỗi 1: đặt giữa cặp dấu nháy kép
-    ntu_slogan1 = "Lựa chọn đúng để thành công!"
-
-    # Dạng chuỗi 2: đặt giữa cặp dấu nháy đơn
-    ntu_slogan2 = 'Căng buồm tri thức vươn khơi.'
-    print(ntu_slogan2)
-
-    # Dạng chuỗi 3: chuỗi gồm nhiều dòng
-    verses = """
-    'Trải qua một cuộc bể dâu
-    Những điều trông thấy mà đau đớn lòng.'
-    \t\t- trích Truyện Kiều (Nguyễn Du)
-    """
-    print(verses)
-  </code>
-</div>
-
-<h3 id="kieu-so-numeric">Kiểu số (numeric)<a class="headerlink" href="#kieu-so-numeric" title="Permanent link">&para;</a></h3>
-<p>Python có các kiểu số nguyên (int), số thực (float).</p>
-<p>Ví dụ:</p>
-<div data-datacamp-exercise data-lang="python" data-height="50">
-<code data-type="sample-code">
-    # Kiểu số nguyên
-    n = 3721
-
-    # Kiểu số thực
-    pi = 3.14159
-    print("PI = %.2f" % pi)
-  </code>
-</div>
-
-<h3 id="kieu-tuan-tu-sequence">Kiểu tuần tự (sequence)<a class="headerlink" href="#kieu-tuan-tu-sequence" title="Permanent link">&para;</a></h3>
+<h2 id="khoi-lenh">Khối lệnh<a class="headerlink" href="#khoi-lenh" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Kiểu danh sách (sequence): list, tuple, range</li>
-<li>Kiểu từ điển (mapping): dict</li>
-<li>Kiểu tập hợp (set): set, frozenset</li>
-<li>Kiểu Boolean: bool</li>
-<li>Kiểu nhị phânBinary Types: bytes, bytearray, memoryview</li>
-<li>Kiểu None: NoneType</li>
+<li>Python sử dụng khoảng canh lề (indentation) để giới hạn khối lệnh.</li>
+<li>Số khoảng trắng trước khối lệnh ít nhất là 1, thông dụng nhất là 4.</li>
+<li>Trong một khối lệnh, số khoảng trắng đứng trước mỗi dòng lệnh phải bằng nhau.</li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Dùng hàm <code>type()</code> để lấy kiểu dữ liệu của một biến hoặc biểu thức.</p>
-</div>
 <p>Ví dụ:</p>
-<div data-datacamp-exercise data-lang="python" data-height="100">
-  <code data-type="sample-code">
-    n = 3721
-    print("Kiểu dữ liệu của n: ", type(n).__name__)
-    PI = 3.1416
-    print("Kiểu dữ liệu của PI: ", type(PI).__name__)
-    bon_mua = ['Xuân', 'Hạ', 'Thu', 'Đông']
-    print("Kiểu dữ liệu của mua: ", type(mua).__name__)
-  </code>
+<div data-datacamp-exercise data-lang="python" data-height="10">
+<code data-type="sample-code">
+n = int(input("Nhập một số nguyên:"))
+
+if n % 2 == 0:
+    print("%d là số chẵn" % n)
+else:
+    print("%d là số lẻ" % n)
+</code>
 </div>
-<h2 id="bien-bieu-thuc-cau-lenh">Biến, biểu thức, câu lệnh<a class="headerlink" href="#bien-bieu-thuc-cau-lenh" title="Permanent link">&para;</a></h2>
-<h3 id="bien-variables">Biến (variables)<a class="headerlink" href="#bien-variables" title="Permanent link">&para;</a></h3>
+
+<h2 id="kieu-du-lieu-va-bien">Kiểu dữ liệu và biến<a class="headerlink" href="#kieu-du-lieu-va-bien" title="Permanent link">&para;</a></h2>
+<h3 id="bien">Biến<a class="headerlink" href="#bien" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Biến là đối tượng dùng để lưu dữ liệu.</li>
 <li>Giá trị của biến có thể thay đổi khi chương trình hoạt động.</li>
-<li>Python không có lệnh khai báo biến, biến được tạo ra khi gán giá trị cho nó.</li>
-</ul>
-<p>Cú pháp khởi tạo biến:</p>
-<pre><code class="language-Python">&lt;variable_name&gt; = &lt;value&gt;
-&lt;variable_name1&gt;, &lt;variable_name2&gt; = &lt;value1&gt;,&lt;value2&gt;
-</code></pre>
-<p>Trong đó:</p>
-<ul>
-<li>Tên biến: đặt theo quy định sau:</li>
+<li>
+<p>Python không có lệnh khai báo biến, biến được tạo ra khi gán giá trị cho nó.</p>
+</li>
+<li>
+<p>Tên biến đặt theo quy tắc sau:</p>
+</li>
 <li>Tên biến chỉ gồm các ký tự chữ cái, chữ số và dấu gạch dưới '_'.</li>
 <li>Tên biến phải bắt đầu bằng chữ cái hoặc ký tự gạch dưới.</li>
 <li>Không được đặt tên biến trùng với <a href="https://docs.python.org/3/reference/lexical_analysis.html#keywords">từ khóa của Python</a>.</li>
@@ -277,20 +229,109 @@ Kiểu dữ liệu của một biến được xác định khi gán giá trị 
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
+</div>
 <ul>
 <li>Ngôn ngữ Python phân biệt chữ hoa chữ thường (case-sensitive), nên các tên sau là khác nhau: <code>TinHoc</code>, <code>Tinhoc</code>, <code>tinHoc</code>.</li>
 <li>Nên đặt tên biến ngắn gọn, có nghĩa (diễn tả nội dung nó chứa). Ví dụ, để viết lệnh tính quãng đường đi dựa vào vận tốc và thời gian, thay vì viết <code>d = v*t</code>, nên viết <code>distance = velocity * traveled_time</code> hoặc <code>quang_duong = van_toc * thoi_gian</code>, sẽ giúp câu lệnh dễ hiểu hơn.</li>
 <li>Với Python 3, có thể đặt tên biến bằng ký tự Unicode (gồm cả tiếng Việt), chẳng hạn: <code>Ba_Vạn_Chín_Nghìn = 39000</code> là một khai báo hợp lệ. Tuy nhiên, chỉ nên đặt tên biến bằng các ký tự ASCII.</li>
 </ul>
-</div>
-<p>Một số ví dụ về khởi tạo biến với Python:</p>
-<div data-datacamp-exercise data-lang="python" data-height="200">
-  <code data-type="sample-code">
-    # Khai báo biến n và gán số nguyên cho nó
-    n = 3721
-    print("n = ", n)
+<h3 id="kieu-du-lieu">Kiểu dữ liệu<a class="headerlink" href="#kieu-du-lieu" title="Permanent link">&para;</a></h3>
+<p>Kiểu dữ liệu của một biến được xác định khi gán giá trị cho nó.</p>
+<p>Python có các kiểu dữ liệu cơ sở sau:</p>
+<h4 id="kieu-chuoi-text">Kiểu chuỗi (text)<a class="headerlink" href="#kieu-chuoi-text" title="Permanent link">&para;</a></h4>
+<p>Chuỗi là dãy ký tự đặt trong cặp dấu nháy kép "" hoặc nháy đơn ''.</p>
+<p>Ví dụ:</p>
+<div data-datacamp-exercise data-lang="python" data-height="50">
+<code data-type="sample-code">
+    # Dạng chuỗi 1: đặt giữa cặp dấu nháy kép
+    ntu_slogan1 = "Lựa chọn đúng để thành công!"
+    print(ntu_slogan1)
 
+    # Dạng chuỗi 2: đặt giữa cặp dấu nháy đơn
+    ntu_slogan2 = 'Căng buồm tri thức vươn khơi.'
+    print(ntu_slogan2)
+
+    # Dạng chuỗi 3: chuỗi gồm nhiều dòng
+    verses = """
+    'Trải qua một cuộc bể dâu
+    Những điều trông thấy mà đau đớn lòng.'
+    \t\t- trích Truyện Kiều (Nguyễn Du)
+    """
+    print(verses)
   </code>
+</div>
+
+<h4 id="kieu-so-numeric">Kiểu số (numeric)<a class="headerlink" href="#kieu-so-numeric" title="Permanent link">&para;</a></h4>
+<p>Python có các kiểu số nguyên (int), số thực (float) và số phức (complex).</p>
+<p>Ví dụ:</p>
+<div data-datacamp-exercise data-lang="python" data-height="50">
+    <code data-type="sample-code">
+        # Kiểu số nguyên
+        n = 3721
+        print("n = %d" % n)
+
+        # Kiểu số thực
+        pi = 3.14159
+        print("PI = %.2f" % pi)
+
+        # Số phức
+        z = 3 + 5j
+        print("z = ", z)
+  </code>
+</div>
+
+<h4 id="kieu-tuan-tu-sequence">Kiểu tuần tự (sequence)<a class="headerlink" href="#kieu-tuan-tu-sequence" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Kiểu danh sách (sequence): list, tuple, range</li>
+<li>Kiểu từ điển (mapping): dict</li>
+<li>Kiểu tập hợp (set): set, frozenset</li>
+</ul>
+<h4 id="kieu-boolean-bool">Kiểu Boolean: bool<a class="headerlink" href="#kieu-boolean-bool" title="Permanent link">&para;</a></h4>
+<p>Kiểu bool có giá trị <code>True</code> hoặc <code>False</code>.</p>
+<p>Ví dụ:</p>
+<div data-datacamp-exercise data-lang="python" data-height="50">
+    <code data-type="sample-code">
+        fruits = {'bưởi', 'táo', 'đu đủ', 'cam'}
+
+        is_apple_in_fruits = 'táo' in fruits
+        print(is_apple_in_fruits)
+
+        is_durian_in_fruits = 'durian' in fruits
+        print(is_durian_in_fruits)  
+    </code>
+</div>
+
+<h4 id="kieu-none-nonetype">Kiểu None (NoneType)<a class="headerlink" href="#kieu-none-nonetype" title="Permanent link">&para;</a></h4>
+<p>Kiểu dữ liệu <code>None</code> dùng để chỉ một biến hoặc đối tượng không có giá trị.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Dùng hàm <code>type()</code> để lấy kiểu dữ liệu của một biến hoặc biểu thức.</p>
+</div>
+<p>Ví dụ:</p>
+<div data-datacamp-exercise data-lang="python" data-height="100">
+
+  <code data-type="sample-code">
+
+    n = 3721
+    print("Kiểu dữ liệu là ", type(n).__name__)
+
+    PI = 3.1416
+    print("Kiểu dữ liệu là ", type(PI).__name__)
+
+    four_seasons = ['Xuân', 'Hạ', 'Thu', 'Đông']
+    print("Kiểu dữ liệu là ", type(four_seasons).__name__)
+
+    fruits = {"bưởi", "táo", "cam", "chanh"}
+    print("Kiểu dữ liệu là ", type(fruits).__name__)
+
+    student_info = {'ID':'65131234', 'grades':{'python':8.5, 'maths':7.8}}
+    print("Kiểu dữ liệu là ", type(student_info).__name__)
+
+    numbers = (3,7,2,1)
+    print("Kiểu dữ liệu là ", type(numbers).__name__)
+
+    greeting_message = 'Welcome to Nha Trang!'
+    print("Kiểu dữ liệu là ", type(greeting_message).__name__)
 </div>
 
 <h2 id="cac-cau-lenh-ieu-khien">Các câu lệnh điều khiển<a class="headerlink" href="#cac-cau-lenh-ieu-khien" title="Permanent link">&para;</a></h2>
