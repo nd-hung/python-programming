@@ -54,7 +54,8 @@ Ví dụ:
 <code data-type="sample-code">
     # Dạng chuỗi 1: đặt giữa cặp dấu nháy kép
     ntu_slogan1 = "Lựa chọn đúng để thành công!"
-
+    print(ntu_slogan1)
+    
     # Dạng chuỗi 2: đặt giữa cặp dấu nháy đơn
     ntu_slogan2 = 'Căng buồm tri thức vươn khơi.'
     print(ntu_slogan2)
@@ -71,17 +72,23 @@ Ví dụ:
 
 ### Kiểu số (numeric)
 
-Python có các kiểu số nguyên (int), số thực (float).
+Python có các kiểu số nguyên (int), số thực (float) và số phức (complex).
 
 Ví dụ:
 <div data-datacamp-exercise data-lang="python" data-height="50">
 <code data-type="sample-code">
     # Kiểu số nguyên
     n = 3721
+    print("n = %d" % n)
 
     # Kiểu số thực
     pi = 3.14159
     print("PI = %.2f" % pi)
+
+    # Số phức
+    z = 3 + 5j
+    print("z = ", z)
+
   </code>
 </div>
 
@@ -99,14 +106,30 @@ Ví dụ:
 Ví dụ:
 
 <div data-datacamp-exercise data-lang="python" data-height="100">
+
   <code data-type="sample-code">
+
     n = 3721
-    print("Kiểu dữ liệu của n: ", type(n).__name__)
+    print("Kiểu dữ liệu là ", type(n).__name__)
+
     PI = 3.1416
-    print("Kiểu dữ liệu của PI: ", type(PI).__name__)
-    bon_mua = ['Xuân', 'Hạ', 'Thu', 'Đông']
-    print("Kiểu dữ liệu của mua: ", type(mua).__name__)
-  </code>
+    print("Kiểu dữ liệu là ", type(PI).__name__)
+    
+    four_seasons = ['Xuân', 'Hạ', 'Thu', 'Đông']
+    print("Kiểu dữ liệu là ", type(four_seasons).__name__)
+
+    fruits = {"bưởi", "táo", "cam", "chanh"}
+    print("Kiểu dữ liệu là ", type(fruits).__name__)
+
+    student_info = {'ID':'65131234', 'grades':{'python':8.5, 'maths':7.8}}
+    print("Kiểu dữ liệu là ", type(student_info).__name__)
+
+    numbers = (3,7,2,1)
+    print("Kiểu dữ liệu là ", type(numbers).__name__)
+
+    greeting_message = 'Welcome to Nha Trang!'
+    print("Kiểu dữ liệu là ", type(greeting_message).__name__)
+
 </div>
 ## Biến, biểu thức, câu lệnh
 

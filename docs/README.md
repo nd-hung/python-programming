@@ -37,15 +37,15 @@ Programming with Python
 <ol>
     <li>Python cơ bản. Bùi Việt Hà. NXB ĐHQG Hà Nội, 2020</li>
     <li>
-        <a href="https://bedford-computing.co.uk/learning/wp-content/uploads/2015/10/No.Starch.Python.Oct_.2015.ISBN_.1593276036.pdf">Python Crash Course. Eric Matthes. No Starch Press, 2016</a>
+        Python Crash Course. Eric Matthes. No Starch Press, 2016
     </li>
 
     <li>
-        <a href="https://github.com/AatmikJain/ComputerScienceBooks/blob/master/Python%20Head%20First%2C%202nd%20Edition.pdf">Head-First Python, 2nd edition. Paul Barry. O’Reilly, 2016</a>
+        Head-First Python, 2nd edition. Paul Barry. O’Reilly, 2016
     </li>
 
     <li>
-        <a href="https://github.com/survey4pass/kit1/blob/master/Invent%20Your%20Own%20Computer%20Games%20with%20Python-No%20Starch%25282016%2529.pdf">Invent Your Own Computer Games with Python, 4th edition. Al Sweigart. No Starch, 2017</a>
+        Invent Your Own Computer Games with Python, 4th edition. Al Sweigart. No Starch, 2017
     </li>
 
     <li>Think Python: How to Think Like a Computer Scientist, 2nd edition. Allen B. Downey. O’Reilly, 2015</li>
