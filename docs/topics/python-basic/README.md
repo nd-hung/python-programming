@@ -51,7 +51,7 @@ Ví dụ:
 
 <div data-datacamp-exercise data-lang="python" data-height="10">
 <code data-type="sample-code">
-n = int(input("Nhập một số nguyên:"))
+n = 123
 
 if n % 2 == 0:
     print("%d là số chẵn" % n)
