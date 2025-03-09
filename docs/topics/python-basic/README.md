@@ -18,13 +18,15 @@ Python Basics
 
 ## Thực thi chương trình Python
 
-### Chạy từng dòng lệnh 
+### Chạy từng dòng lệnh
 
 Các bước thực hiện:
 
-- Mở cửa sổ dòng lệnh (terminal).
+- Mở cửa sổ chế độ dòng lệnh (terminal).
 - Nhập `python` (hoặc `python3`) và nhấn `Enter` để mở Python chế độ tương tác.
 - Nhập từng dòng lệnh để thực thi.
+
+Ví dụ:
 
 <img src="./img/python_shell.PNG" alt="Python interactive mode" style="width:300px;">
 
@@ -33,9 +35,9 @@ Các bước thực hiện:
 - Mở cửa sổ dòng lệnh (terminal).
 - Nhập `python <[path_to/]python_script_file_name.py>` và nhấn `Enter` để thực thi. Trình thông dịch sẽ lần lượt thực hiện các lệnh trong file mã nguồn.
 
-### Sử dụng IDE
+### Thực thi chương trình Python từ môi trường phát triển tích hợp (IDE)
 
-- Mở IDE lập trình Python (PyCharm, VS Code, Spyder, IDLE,...).
+- Mở IDE lập trình Python ưa thích (PyCharm, VS Code, Spyder, IDLE,...).
 - Tạo (hoặc mở) file chương trình Python.
 - Nhấn lệnh `Run` để thực thi chương trình.
 
@@ -47,6 +49,7 @@ Kiểu dữ liệu của một biến được xác định khi gán giá trị 
 Python có các kiểu dữ liệu cơ sở sau:
 
 ### Kiểu chuỗi (text)
+
 Chuỗi là dãy ký tự đặt trong cặp dấu nháy kép "" hoặc nháy đơn ''.
 
 Ví dụ:
@@ -55,7 +58,7 @@ Ví dụ:
     # Dạng chuỗi 1: đặt giữa cặp dấu nháy kép
     ntu_slogan1 = "Lựa chọn đúng để thành công!"
     print(ntu_slogan1)
-    
+
     # Dạng chuỗi 2: đặt giữa cặp dấu nháy đơn
     ntu_slogan2 = 'Căng buồm tri thức vươn khơi.'
     print(ntu_slogan2)
@@ -75,32 +78,51 @@ Ví dụ:
 Python có các kiểu số nguyên (int), số thực (float) và số phức (complex).
 
 Ví dụ:
+
 <div data-datacamp-exercise data-lang="python" data-height="50">
-<code data-type="sample-code">
-    # Kiểu số nguyên
-    n = 3721
-    print("n = %d" % n)
+    <code data-type="sample-code">
+        # Kiểu số nguyên
+        n = 3721
+        print("n = %d" % n)
 
-    # Kiểu số thực
-    pi = 3.14159
-    print("PI = %.2f" % pi)
+        # Kiểu số thực
+        pi = 3.14159
+        print("PI = %.2f" % pi)
 
-    # Số phức
-    z = 3 + 5j
-    print("z = ", z)
-
+        # Số phức
+        z = 3 + 5j
+        print("z = ", z)
   </code>
 </div>
 
 ### Kiểu tuần tự (sequence)
+
 - Kiểu danh sách (sequence): list, tuple, range
 - Kiểu từ điển (mapping): dict
 - Kiểu tập hợp (set): set, frozenset
-- Kiểu Boolean: bool
-- Kiểu nhị phânBinary Types: bytes, bytearray, memoryview
-- Kiểu None: NoneType
 
-!!! Note
+### Kiểu Boolean: bool
+Kiểu bool có giá trị `True` hoặc `False`.
+
+Ví dụ:
+
+<div data-datacamp-exercise data-lang="python" data-height="50">
+    <code data-type="sample-code">
+        fruits = {'bưởi', 'táo', 'đu đủ', 'cam'}
+
+        is_apple_in_fruits = 'táo' in fruits
+        print(is_apple_in_fruits)
+
+        is_durian_in_fruits = 'durian' in fruits
+        print(is_durian_in_fruits)  
+    </code>
+</div>
+
+### Kiểu None (NoneType)
+
+Kiểu dữ liệu `None` dùng để chỉ một biến hoặc đối tượng không có giá trị.
+
+!!! NOTE
     Dùng hàm `type()` để lấy kiểu dữ liệu của một biến hoặc biểu thức.
 
 Ví dụ:
@@ -129,7 +151,6 @@ Ví dụ:
 
     greeting_message = 'Welcome to Nha Trang!'
     print("Kiểu dữ liệu là ", type(greeting_message).__name__)
-
 </div>
 ## Biến, biểu thức, câu lệnh
 
@@ -167,9 +188,9 @@ Ví dụ:
 
 !!! Note
 
-  - Ngôn ngữ Python phân biệt chữ hoa chữ thường (case-sensitive), nên các tên sau là khác nhau: `TinHoc`, `Tinhoc`, `tinHoc`.
-  - Nên đặt tên biến ngắn gọn, có nghĩa (diễn tả nội dung nó chứa). Ví dụ, để viết lệnh tính quãng đường đi dựa vào vận tốc và thời gian, thay vì viết `d = v*t`, nên viết `distance = velocity * traveled_time` hoặc `quang_duong = van_toc * thoi_gian`, sẽ giúp câu lệnh dễ hiểu hơn.
-  - Với Python 3, có thể đặt tên biến bằng ký tự Unicode (gồm cả tiếng Việt), chẳng hạn: `Ba_Vạn_Chín_Nghìn = 39000` là một khai báo hợp lệ. Tuy nhiên, chỉ nên đặt tên biến bằng các ký tự ASCII.
+- Ngôn ngữ Python phân biệt chữ hoa chữ thường (case-sensitive), nên các tên sau là khác nhau: `TinHoc`, `Tinhoc`, `tinHoc`.
+- Nên đặt tên biến ngắn gọn, có nghĩa (diễn tả nội dung nó chứa). Ví dụ, để viết lệnh tính quãng đường đi dựa vào vận tốc và thời gian, thay vì viết `d = v*t`, nên viết `distance = velocity * traveled_time` hoặc `quang_duong = van_toc * thoi_gian`, sẽ giúp câu lệnh dễ hiểu hơn.
+- Với Python 3, có thể đặt tên biến bằng ký tự Unicode (gồm cả tiếng Việt), chẳng hạn: `Ba_Vạn_Chín_Nghìn = 39000` là một khai báo hợp lệ. Tuy nhiên, chỉ nên đặt tên biến bằng các ký tự ASCII.
 
 Một số ví dụ về khởi tạo biến với Python:
   
