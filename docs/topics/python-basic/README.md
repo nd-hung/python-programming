@@ -203,14 +203,11 @@ Ví dụ:
     print("Kiểu dữ liệu là ", type(greeting_message).__name__)
 </div>
 
-
-
-
 ## Các câu lệnh điều khiển
 
-## Lệnh rẽ nhánh if
+### Lệnh rẽ nhánh if
 
-### Dạng 1: Lệnh if thiếu
+#### Dạng 1: Lệnh if thiếu
 
 - Nếu `<BT logic>` có giá trị đúng (True) thì thực hiện `<Lệnh đơn>` hoặc `<Khối lệnh>`
 
@@ -232,7 +229,7 @@ if m > 0:
     print(f'{m} là số dương.')
 ```
 
-### Dạng 2: Lệnh if đủ
+#### Dạng 2: Lệnh if đủ
 
 - Nếu `<BT logic>` có giá trị đúng (True) thì thực hiện `<Khối lệnh 1>`, ngược lại thực hiện `<Khối lệnh 2>`
 
@@ -262,7 +259,7 @@ a, b = 6, 9
 print(f'{a} > {b}') if a > b else print(f'{b} > {a}')    
 ```
 
-### elif
+#### elif
 
 - Trong lệnh if, muốn kiểm tra điều kiện mới khi điều kiện trước không thỏa mãn thì dùng từ khóa `elif`
 
@@ -278,9 +275,9 @@ else:
     <Khối lệnh n+1>
 ```
 
-## Lệnh lặp
+### Lệnh lặp
 
-### Lệnh lặp while
+#### Lệnh lặp while
 
 - Lệnh lặp `while` lặp lại khối lệnh chừng nào `BT điều kiện` còn đúng.
 
@@ -326,11 +323,11 @@ while i < 10:
     print(i, end= ' ')
 ```
 
-### Lệnh lặp for
+#### Lệnh lặp for
 
 - Lệnh lặp `for` dùng để duyệt từng phần tử trong một dãy (list, tuple, dictionary, set, string).
 
-#### Duyệt danh sách
+##### Duyệt danh sách
 
 - Cú pháp
 
@@ -351,7 +348,7 @@ for i in range(len(Tứ_Linh)):
     print(Tứ_Linh[i], end=' ')
 ```
 
-#### Duyệt chuỗi ký tự
+##### Duyệt chuỗi ký tự
 
 - Chuỗi là một dãy ký tự vì thế có thể duyệt từng ký tự của chuỗi bằng lệnh for.
 - Cú pháp
@@ -379,7 +376,7 @@ for i in range(10): # range(0, 10, 1)
     print('Hello world')
 ```
 
-### Lệnh lặp lồng nhau (nested loop)
+#### Lệnh lặp lồng nhau (nested loop)
 
 - Lệnh lặp lồng nhau: Trong một lệnh lặp chứa lệnh lặp khác.
 - Với mỗi bước lặp của vòng lặp ngoài, lệnh lặp bên trong sẽ thực hiện hết một lượt.
@@ -390,3 +387,81 @@ for i in range(2, 10):
     for j in range(1, 11):
         print('%3d x %3d = %3d'  % (i, j, i*j))
 ```
+
+## Hàm Python
+
+- Hàm là một đoạn mã lệnh được lập trình để thực hiện một chức năng chuyên biệt.
+- Một hàm có tên gọi, đầu vào và đầu ra.
+- Hàm chỉ thực thi khi nó được gọi.
+- Một hàm có thể được gọi nhiều lần với các giá trị khác nhau của đối số.
+
+Ví dụ:
+<div data-datacamp-exercise data-lang="python" data-height="20">
+    <code data-type="sample-code">
+    def say_hi():
+        """
+        In ra câu chào "Hi there!"
+        """
+        print("Hi there!")
+        
+    # Gọi hàm 
+    say_hi()
+    </code>
+</div>
+
+Hàm `say_hi()` ở trên không có đầu vào, không trả về giá trị cho lời gọi hàm; khi gọi hàm, máy tính sẽ thực thi các lệnh trong thân hàm, ở đây là lệnh `print("Hi there!")`.
+
+### Truyền đối số cho hàm
+
+- Hàm có thể nhận các giá trị đầu vào để xử lý, gọi là tham số. Các tham số cách nhau dấy phẩy.
+
+Ví dụ: Sửa lại hàm `say_hi()` ở trên để khi gọi hàm và truyền cho nó một chuỗi chứa tên bất kỳ thì máy tính sẽ in ra câu chào tên đó.
+
+<div data-datacamp-exercise data-lang="python" data-height="20">
+   <code data-type="sample-code">
+    def say_hi(name):
+        """
+        Hàm in ra câu chào tên trong chuỗi được truyền vào
+        """
+        print("Hello %s" % name.title())
+        
+    # Gọi hàm với các đối số khác nhau
+    say_hi("Nhâm Thìn")
+    say_hi("Cristiano Ronaldo")
+    st = "Việt Nam"
+    say_hi(st)
+
+    </code>
+</div>
+
+## Một số hàm dựng sẵn của Python
+
+Trình thông dịch [Python cung cấp nhiều hàm dựng sẵn (built-in functions)](https://docs.python.org/3/library/functions.html). Sau đây là một số hàm thông dụng.
+
+### Nhóm hàm toán học
+
+| Tên hàm | Mô tả                                                 |
+| :------ | :---------------------------------------------------- |
+| abs()   | Tính giá trị tuyệt đối của một số                     |
+| max()   | Tìm số lớn nhất trong các đối số hoặc trong danh sách |
+| min()   | Tìm số nhỏ nhất trong các đối số hoặc trong danh sách |
+| pow()   | Tính lũy thừa                                         |
+| round() | Làm tròn số thập phân                                 |
+| sum()   | Tính tổng các giá trị trong danh sách                 |
+
+### Nhóm hàm xử lý với kiểu dữ liệu cơ sở
+| Hàm         | Mô tả                                                        |
+| :---------- | :----------------------------------------------------------- |
+| int()       | Đổi một chuỗi hoặc số sang số nguyên                         |
+| bin()       | Đổi số nguyên sang hệ nhị phân                               |
+| hex()       | Đổi số nguyên sang hệ hexa                                   |
+| float()     | Đối chuỗi hoặc số sang số thực                               |
+| str()       | Chuyển đối tượng thành kiểu chuỗi                            |
+| ord()       | Trả về mã Unicode của ký tự                                  |
+| chr()       | Trả về ký tự ứng với mã Unicode                              |
+
+### dict(), set(), list(), tuple()
+
+Trả về kiểu từ điển, tập hợp, danh sách
+
+                               |

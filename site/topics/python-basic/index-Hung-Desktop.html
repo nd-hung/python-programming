@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Hung Nguyen">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Python cơ bản - Lập trình Python</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <link href="../../css/extra.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/django.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Lập trình Python</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Các chủ đề</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../overview/" class="dropdown-item">Tổng quan về lập trình</a>
+</li>
+                                    
+<li>
+    <a href="." class="dropdown-item">Python cơ bản</a>
+</li>
+                                    
+<li>
+    <a href="../advanced-python" class="dropdown-item">Python nâng cao</a>
+</li>
+                                    
+<li>
+    <a href="../python-oop" class="dropdown-item">Lập trình hướng đối tượng với Python</a>
+</li>
+                                    
+<li>
+    <a href="../" class="dropdown-item">Một số thư viện Python thông dụng</a>
+</li>
+                                    
+<li>
+    <a href="../gui" class="dropdown-item">Tạo ứng dụng GUI</a>
+</li>
+                                    
+<li>
+    <a href="../" class="dropdown-item">Phát triển ứng dụng với Python</a>
+</li>
+                                    
+<li>
+    <a href="../" class="dropdown-item">Xây dựng giải pháp học máy, khoa học dữ liệu</a>
+</li>
+                                    
+<li>
+    <a href="../../labs/" class="dropdown-item">Bài thực hành</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../author/about/" class="nav-link">About</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a href="https://github.com/nd-hung/python-programming/tree/main/docs/topics/python-basic/README.md" class="nav-link"><i class="fa-brands fa-github"></i> Edit on GitHub</a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#python-co-ban" class="nav-link">Python cơ bản</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#hello-world" class="nav-link">Hello, World</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#thuc-thi-chuong-trinh-python" class="nav-link">Thực thi chương trình Python</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#bien-va-kieu-du-lieu" class="nav-link">Biến và kiểu dữ liệu</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#bien-bieu-thuc-cau-lenh" class="nav-link">Biến, biểu thức, câu lệnh</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#cac-cau-lenh-ieu-khien" class="nav-link">Các câu lệnh điều khiển</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#lenh-re-nhanh-if" class="nav-link">Lệnh rẽ nhánh if</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#lenh-lap" class="nav-link">Lệnh lặp</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="python-co-ban">Python cơ bản<a class="headerlink" href="#python-co-ban" title="Permanent link">&para;</a></h1>
+<p>Python Basics</p>
+<hr />
+<h2 id="hello-world">Hello, World<a class="headerlink" href="#hello-world" title="Permanent link">&para;</a></h2>
+<script type="text/javascript" src="//cdn.datacamp.com/dcl-react.js.gz">  
+</script>
+
+<div data-datacamp-exercise data-lang="python" data-height="5">
+  <code data-type="sample-code">
+    # Chương trình đầu tiên: In ra màn hình câu "Hello, World!"
+    print("Hello, World!")
+  </code>
+</div>
+
+<h2 id="thuc-thi-chuong-trinh-python">Thực thi chương trình Python<a class="headerlink" href="#thuc-thi-chuong-trinh-python" title="Permanent link">&para;</a></h2>
+<h3 id="chay-tung-dong-lenh">Chạy từng dòng lệnh<a class="headerlink" href="#chay-tung-dong-lenh" title="Permanent link">&para;</a></h3>
+<p>Các bước thực hiện:</p>
+<ul>
+<li>Mở cửa sổ dòng lệnh (terminal).</li>
+<li>Nhập <code>python</code> (hoặc <code>python3</code>) và nhấn <code>Enter</code> để mở Python chế độ tương tác.</li>
+<li>Nhập từng dòng lệnh để thực thi.</li>
+</ul>
+<p><img src="./img/python_shell.PNG" alt="Python interactive mode" style="width:300px;"></p>
+<h3 id="chay-file-ma-nguon-tu-che-o-dong-lenh">Chạy file mã nguồn từ chế độ dòng lệnh<a class="headerlink" href="#chay-file-ma-nguon-tu-che-o-dong-lenh" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Mở cửa sổ dòng lệnh (terminal).</li>
+<li>Nhập <code>python &lt;[path_to/]python_script_file_name.py&gt;</code> và nhấn <code>Enter</code> để thực thi. Trình thông dịch sẽ lần lượt thực hiện các lệnh trong file mã nguồn.</li>
+</ul>
+<h3 id="su-dung-ide">Sử dụng IDE<a class="headerlink" href="#su-dung-ide" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Mở IDE lập trình Python (PyCharm, VS Code, Spyder, IDLE,...).</li>
+<li>Tạo (hoặc mở) file chương trình Python.</li>
+<li>Nhấn lệnh <code>Run</code> để thực thi chương trình.</li>
+</ul>
+<h2 id="bien-va-kieu-du-lieu">Biến và kiểu dữ liệu<a class="headerlink" href="#bien-va-kieu-du-lieu" title="Permanent link">&para;</a></h2>
+<p>Mọi biến trong Python đều là đối tượng, không cần phải khai báo biến trước khi sử dụng.
+Kiểu dữ liệu của một biến được xác định khi gán giá trị cho nó.</p>
+<p>Python có các kiểu dữ liệu cơ sở sau:</p>
+<h3 id="kieu-chuoi-text">Kiểu chuỗi (text)<a class="headerlink" href="#kieu-chuoi-text" title="Permanent link">&para;</a></h3>
+<p>Chuỗi là dãy ký tự đặt trong cặp dấu nháy kép "" hoặc nháy đơn ''.</p>
+<p>Ví dụ:</p>
+<div data-datacamp-exercise data-lang="python" data-height="50">
+<code data-type="sample-code">
+    # Dạng chuỗi 1: đặt giữa cặp dấu nháy kép
+    ntu_slogan1 = "Lựa chọn đúng để thành công!"
+
+    # Dạng chuỗi 2: đặt giữa cặp dấu nháy đơn
+    ntu_slogan2 = 'Căng buồm tri thức vươn khơi.'
+    print(ntu_slogan2)
+
+    # Dạng chuỗi 3: chuỗi gồm nhiều dòng
+    verses = """
+    'Trải qua một cuộc bể dâu
+    Những điều trông thấy mà đau đớn lòng.'
+    \t\t- trích Truyện Kiều (Nguyễn Du)
+    """
+    print(verses)
+  </code>
+</div>
+
+<h3 id="kieu-so-numeric">Kiểu số (numeric)<a class="headerlink" href="#kieu-so-numeric" title="Permanent link">&para;</a></h3>
+<p>Python có các kiểu số nguyên (int), số thực (float).</p>
+<p>Ví dụ:</p>
+<div data-datacamp-exercise data-lang="python" data-height="50">
+<code data-type="sample-code">
+    # Kiểu số nguyên
+    n = 3721
+
+    # Kiểu số thực
+    pi = 3.14159
+    print("PI = %.2f" % pi)
+  </code>
+</div>
+
+<h3 id="kieu-tuan-tu-sequence">Kiểu tuần tự (sequence)<a class="headerlink" href="#kieu-tuan-tu-sequence" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Kiểu danh sách (sequence): list, tuple, range</li>
+<li>Kiểu từ điển (mapping): dict</li>
+<li>Kiểu tập hợp (set): set, frozenset</li>
+<li>Kiểu Boolean: bool</li>
+<li>Kiểu nhị phânBinary Types: bytes, bytearray, memoryview</li>
+<li>Kiểu None: NoneType</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Dùng hàm <code>type()</code> để lấy kiểu dữ liệu của một biến hoặc biểu thức.</p>
+</div>
+<p>Ví dụ:</p>
+<div data-datacamp-exercise data-lang="python" data-height="100">
+  <code data-type="sample-code">
+    n = 3721
+    print("Kiểu dữ liệu của n: ", type(n).__name__)
+    PI = 3.1416
+    print("Kiểu dữ liệu của PI: ", type(PI).__name__)
+    bon_mua = ['Xuân', 'Hạ', 'Thu', 'Đông']
+    print("Kiểu dữ liệu của mua: ", type(mua).__name__)
+  </code>
+</div>
+<h2 id="bien-bieu-thuc-cau-lenh">Biến, biểu thức, câu lệnh<a class="headerlink" href="#bien-bieu-thuc-cau-lenh" title="Permanent link">&para;</a></h2>
+<h3 id="bien-variables">Biến (variables)<a class="headerlink" href="#bien-variables" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Biến là đối tượng dùng để lưu dữ liệu.</li>
+<li>Giá trị của biến có thể thay đổi khi chương trình hoạt động.</li>
+<li>Python không có lệnh khai báo biến, biến được tạo ra khi gán giá trị cho nó.</li>
+</ul>
+<p>Cú pháp khởi tạo biến:</p>
+<pre><code class="language-Python">&lt;variable_name&gt; = &lt;value&gt;
+&lt;variable_name1&gt;, &lt;variable_name2&gt; = &lt;value1&gt;,&lt;value2&gt;
+</code></pre>
+<p>Trong đó:</p>
+<ul>
+<li>Tên biến: đặt theo quy định sau:</li>
+<li>Tên biến chỉ gồm các ký tự chữ cái, chữ số và dấu gạch dưới '_'.</li>
+<li>Tên biến phải bắt đầu bằng chữ cái hoặc ký tự gạch dưới.</li>
+<li>Không được đặt tên biến trùng với <a href="https://docs.python.org/3/reference/lexical_analysis.html#keywords">từ khóa của Python</a>.</li>
+</ul>
+<p>Ví dụ:</p>
+<ul>
+<li>
+<p>Tên biến hợp lệ: <code>delta</code>, <code>x1</code>, <code>don_gia</code>, <code>_123abc</code></p>
+</li>
+<li>
+<p>Tên biến không hợp lệ:</p>
+<p><code>3VanChinNghin</code>: bắt đầu bằng chữ số</p>
+<p><code>Don Gia</code>: chứa khoảng trắng</p>
+<p><code>except</code>: trùng với từ khóa của Python</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul>
+<li>Ngôn ngữ Python phân biệt chữ hoa chữ thường (case-sensitive), nên các tên sau là khác nhau: <code>TinHoc</code>, <code>Tinhoc</code>, <code>tinHoc</code>.</li>
+<li>Nên đặt tên biến ngắn gọn, có nghĩa (diễn tả nội dung nó chứa). Ví dụ, để viết lệnh tính quãng đường đi dựa vào vận tốc và thời gian, thay vì viết <code>d = v*t</code>, nên viết <code>distance = velocity * traveled_time</code> hoặc <code>quang_duong = van_toc * thoi_gian</code>, sẽ giúp câu lệnh dễ hiểu hơn.</li>
+<li>Với Python 3, có thể đặt tên biến bằng ký tự Unicode (gồm cả tiếng Việt), chẳng hạn: <code>Ba_Vạn_Chín_Nghìn = 39000</code> là một khai báo hợp lệ. Tuy nhiên, chỉ nên đặt tên biến bằng các ký tự ASCII.</li>
+</ul>
+</div>
+<p>Một số ví dụ về khởi tạo biến với Python:</p>
+<div data-datacamp-exercise data-lang="python" data-height="200">
+  <code data-type="sample-code">
+    # Khai báo biến n và gán số nguyên cho nó
+    n = 3721
+    print("n = ", n)
+
+  </code>
+</div>
+
+<h2 id="cac-cau-lenh-ieu-khien">Các câu lệnh điều khiển<a class="headerlink" href="#cac-cau-lenh-ieu-khien" title="Permanent link">&para;</a></h2>
+<h2 id="lenh-re-nhanh-if">Lệnh rẽ nhánh if<a class="headerlink" href="#lenh-re-nhanh-if" title="Permanent link">&para;</a></h2>
+<h3 id="dang-1-lenh-if-thieu">Dạng 1: Lệnh if thiếu<a class="headerlink" href="#dang-1-lenh-if-thieu" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Nếu <code>&lt;BT logic&gt;</code> có giá trị đúng (True) thì thực hiện <code>&lt;Lệnh đơn&gt;</code> hoặc <code>&lt;Khối lệnh&gt;</code></li>
+</ul>
+<pre><code class="language-python">if &lt;BT logic&gt;: &lt;Lệnh đơn&gt;
+hoặc
+if &lt;BT logic&gt;: 
+    &lt;Khối lệnh&gt;
+</code></pre>
+<p>Ví dụ:</p>
+<pre><code class="language-python">n = 5
+if n % 2 != 0: print(f'{n} là số lẻ.')
+m = 69
+if m &gt; 0:
+    print(f'm = {m}')
+    print(f'{m} là số dương.')
+</code></pre>
+<h3 id="dang-2-lenh-if-u">Dạng 2: Lệnh if đủ<a class="headerlink" href="#dang-2-lenh-if-u" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Nếu <code>&lt;BT logic&gt;</code> có giá trị đúng (True) thì thực hiện <code>&lt;Khối lệnh 1&gt;</code>, ngược lại thực hiện <code>&lt;Khối lệnh 2&gt;</code></li>
+</ul>
+<pre><code class="language-python">if &lt;BT logic&gt;: 
+    &lt;Khối lệnh 1&gt;
+else:
+    &lt;Khối lệnh 2&gt;
+</code></pre>
+<p>Hoặc viết gọn hơn khi chỉ có lệnh đơn:</p>
+<pre><code class="language-python">&lt;Lệnh 1&gt; if &lt;BT logic&gt; else &lt;Lệnh 2&gt;
+</code></pre>
+<p>Ví dụ:</p>
+<pre><code class="language-python">n = 5
+if n % 2 != 0: 
+    print(f'{n} là số lẻ.')
+else:
+    print(f'{n} là số chẵn.')
+
+a, b = 6, 9
+print(f'{a} &gt; {b}') if a &gt; b else print(f'{b} &gt; {a}')    
+</code></pre>
+<h3 id="elif">elif<a class="headerlink" href="#elif" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Trong lệnh if, muốn kiểm tra điều kiện mới khi điều kiện trước không thỏa mãn thì dùng từ khóa <code>elif</code></li>
+</ul>
+<pre><code class="language-python">if &lt;BT logic 1&gt;:        
+    &lt;Khối lệnh 1&gt;
+elif &lt;BT logic 2&gt;:
+    &lt;Khối lệnh 2&gt;
+    ...
+elif &lt;BT logic n&gt;:
+    &lt;Khối lệnh n&gt;
+else:
+    &lt;Khối lệnh n+1&gt;
+</code></pre>
+<h2 id="lenh-lap">Lệnh lặp<a class="headerlink" href="#lenh-lap" title="Permanent link">&para;</a></h2>
+<h3 id="lenh-lap-while">Lệnh lặp while<a class="headerlink" href="#lenh-lap-while" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Lệnh lặp <code>while</code> lặp lại khối lệnh chừng nào <code>BT điều kiện</code> còn đúng.</li>
+</ul>
+<pre><code class="language-python">while &lt;BT điều kiện&gt;:
+    &lt;Khối lệnh&gt;
+</code></pre>
+<p>Ví dụ: Tính tổng các chữ số của số tự nhiên n:</p>
+<pre><code>n = 123
+sum_digits = 0
+while n &gt; 0:
+    sum_digits += n % 10
+    n = n // 10
+print(f'Tổng chữ số = {sum_digits}')
+</code></pre>
+<h4 id="lenh-break">Lệnh break<a class="headerlink" href="#lenh-break" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Lệnh `break' khi được gọi sẽ dừng vòng lặp.</li>
+<li>Trong ví dụ sau, dù điều kiện lặp là <code>i &lt; 100</code>, nhưng nếu i bằng 5 thì dừng vòng lặp, nên chương trình chỉ in ra các số nguyên liên tiếp từ 1 đến 4.</li>
+</ul>
+<pre><code class="language-python">i = 1
+while i &lt; 100:
+    print(i, end= ' ')
+    i += 1
+    if i == 5: break
+</code></pre>
+<h4 id="lenh-continue">Lệnh continue<a class="headerlink" href="#lenh-continue" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Lệnh `continue' khi được gọi sẽ chuyển sang vòng lặp kế tiếp.</li>
+<li>Trong ví dụ sau, biến i khởi đầu bằng 0, chừng nào i còn thỏa <code>&lt; 10</code> thì tăng i thêm 1 và in ra giá trị của i, nhưng nếu i là số chẵn thì lệnh <code>continue</code> được gọi, chương trình chuyển sang xử lý bước lặp tiếp theo mà bỏ qua lệnh <code>print(i, end=' ')</code>. Kết quả là chương trình chỉ in ra các số lẻ từ 1 đến 9.</li>
+</ul>
+<pre><code class="language-python">i = 0
+while i &lt; 10:
+    i += 1
+    if i % 2 == 0: continue
+    print(i, end= ' ')
+</code></pre>
+<h3 id="lenh-lap-for">Lệnh lặp for<a class="headerlink" href="#lenh-lap-for" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Lệnh lặp <code>for</code> dùng để duyệt từng phần tử trong một dãy (list, tuple, dictionary, set, string).</li>
+</ul>
+<h4 id="duyet-danh-sach">Duyệt danh sách<a class="headerlink" href="#duyet-danh-sach" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Cú pháp</li>
+</ul>
+<pre><code class="language-python">for &lt;biến chạy&gt; in &lt;danh sách&gt;:
+    &lt;Khối lệnh&gt;
+</code></pre>
+<ul>
+<li>Ví dụ</li>
+</ul>
+<pre><code class="language-python">Tứ_Linh = ['Long', 'Ly', 'Quy', 'Phượng']
+# Cách 1: duyệt từng phần tử của danh sách
+for tl in Tứ_Linh:
+    print(tl, end=' ')
+# Cách 2: duyệt từng phần tử thông qua vị trí trong danh sách    
+for i in range(len(Tứ_Linh)):
+    print(Tứ_Linh[i], end=' ')
+</code></pre>
+<h4 id="duyet-chuoi-ky-tu">Duyệt chuỗi ký tự<a class="headerlink" href="#duyet-chuoi-ky-tu" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Chuỗi là một dãy ký tự vì thế có thể duyệt từng ký tự của chuỗi bằng lệnh for.</li>
+<li>Cú pháp</li>
+</ul>
+<pre><code class="language-python">for ch in &lt;chuỗi&gt;:
+    &lt;Lệnh&gt;
+</code></pre>
+<ul>
+<li>Ví dụ</li>
+</ul>
+<pre><code class="language-python">st = 'Nha Trang Khánh Hòa'
+for ch in st:
+    print(ch) 
+</code></pre>
+<h4 id="ham-range">Hàm range()<a class="headerlink" href="#ham-range" title="Permanent link">&para;</a></h4>
+<ul>
+<li>hàm <code>range(&lt;start_value&gt;, &lt;end_value&gt;, &lt;step&gt;)</code> thường được kết hợp khi muốn thực hiện lệnh lặp với số bước lặp xác định.</li>
+<li>Ví dụ: In 10 dòng 'Hello world'</li>
+</ul>
+<pre><code class="language-python">for i in range(10): # range(0, 10, 1)
+    print('Hello world')
+</code></pre>
+<h3 id="lenh-lap-long-nhau-nested-loop">Lệnh lặp lồng nhau (nested loop)<a class="headerlink" href="#lenh-lap-long-nhau-nested-loop" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Lệnh lặp lồng nhau: Trong một lệnh lặp chứa lệnh lặp khác.</li>
+<li>Với mỗi bước lặp của vòng lặp ngoài, lệnh lặp bên trong sẽ thực hiện hết một lượt.</li>
+<li>Ví dụ: In bảng cửu chương</li>
+</ul>
+<pre><code class="language-python">for i in range(2, 10):
+    for j in range(1, 11):
+        print('%3d x %3d = %3d'  % (i, j, i*j))
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
