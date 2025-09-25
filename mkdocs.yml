@@ -7,14 +7,14 @@ edit_uri: tree/main/docs
 
 nav:
     - Các chủ đề:
-      - Tổng quan về lập trình: topics\overview\README.md
+      - Giới thiệu ngôn ngữ lập trình Python: topics\overview\README.md
       - Python cơ bản: topics\python-basic
       - Python nâng cao: topics\advanced-python
       - Lập trình hướng đối tượng với Python: topics\python-oop
       - Một số thư viện Python thông dụng: topics\
       - Tạo ứng dụng GUI: topics\gui
-      - Phát triển ứng dụng với Python: topics\
-      - Xây dựng giải pháp học máy, khoa học dữ liệu: topics\
+      - Phát triển ứng dụng web với Python: topics\
+      - Xây dựng, triển khai ứng dụng AI: topics\
       - Bài thực hành: labs\README.md
     - About: author\about.md 
 

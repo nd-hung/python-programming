@@ -14,7 +14,7 @@ Programming with Python
 
 ## Các chủ đề chính
 
-- #### [Tổng quan về lập trình](topics/overview)
+- #### [Giới thiệu Python](topics/overview)
 
 - #### [Python cơ bản](topics/python-basic/)
 
@@ -26,7 +26,9 @@ Programming with Python
 
 - #### [Tạo ứng dụng GUI](topics/gui/)
 
-- #### [Xây dựng giải pháp học máy, khoa học dữ liệu](#)
+- #### [Tạo ứng dụng web với Python](#)
+
+- #### [Xây dựng, triển khai ứng dụng AI](#)
 
 - #### [Bài thực hành](#)
   
