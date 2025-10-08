@@ -8,7 +8,7 @@
         <meta name="author" content="Hung Nguyen">
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Tổng quan về lập trình - Lập trình Python</title>
+        <title>Giới thiệu ngôn ngữ lập trình Python - Lập trình Python</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/fontawesome.min.css" rel="stylesheet">
         <link href="../../css/brands.min.css" rel="stylesheet">
@@ -42,7 +42,7 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="./" class="dropdown-item active" aria-current="page">Tổng quan về lập trình</a>
+    <a href="./" class="dropdown-item active" aria-current="page">Giới thiệu ngôn ngữ lập trình Python</a>
 </li>
                                     
 <li>
@@ -66,11 +66,11 @@
 </li>
                                     
 <li>
-    <a href="../" class="dropdown-item">Phát triển ứng dụng với Python</a>
+    <a href="../" class="dropdown-item">Phát triển ứng dụng web với Python</a>
 </li>
                                     
 <li>
-    <a href="../" class="dropdown-item">Xây dựng giải pháp học máy, khoa học dữ liệu</a>
+    <a href="../" class="dropdown-item">Xây dựng, triển khai ứng dụng AI</a>
 </li>
                                     
 <li>
@@ -120,20 +120,8 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#cac-khai-niem-co-ban-ve-lap-trinh" class="nav-link">Các khái niệm cơ bản về lập trình</a>
+            <li class="nav-item" data-bs-level="1"><a href="#gioi-thieu-ngon-ngu-lap-trinh-python" class="nav-link">Giới thiệu ngôn ngữ lập trình Python</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#may-tinh-chuong-trinh-va-lap-trinh" class="nav-link">Máy tính, chương trình và lập trình</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#giai-thuat-va-lap-trinh" class="nav-link">Giải thuật và lập trình</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-bs-level="2"><a href="#ngon-ngu-lap-trinh" class="nav-link">Ngôn ngữ lập trình</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
         </ul>
@@ -141,103 +129,9 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="cac-khai-niem-co-ban-ve-lap-trinh">Các khái niệm cơ bản về lập trình<a class="headerlink" href="#cac-khai-niem-co-ban-ve-lap-trinh" title="Permanent link">&para;</a></h1>
-<p>Overview</p>
+<h1 id="gioi-thieu-ngon-ngu-lap-trinh-python">Giới thiệu ngôn ngữ lập trình Python<a class="headerlink" href="#gioi-thieu-ngon-ngu-lap-trinh-python" title="Permanent link">&para;</a></h1>
+<p>Introduction to Python</p>
 <hr />
-<h2 id="may-tinh-chuong-trinh-va-lap-trinh">Máy tính, chương trình và lập trình<a class="headerlink" href="#may-tinh-chuong-trinh-va-lap-trinh" title="Permanent link">&para;</a></h2>
-<h3 id="so-luoc-ve-may-tinh-ien-tu">Sơ lược về máy tính điện tử<a class="headerlink" href="#so-luoc-ve-may-tinh-ien-tu" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Máy tính điện tử (electronic computer) là thiết bị điện tử có khả năng xử lý thông tin tự động theo chương trình lập sẵn.</li>
-<li>Máy tính điện tử ngày nay được chế tạo theo <a href="https://en.wikipedia.org/wiki/Von_Neumann_architecture">kiến trúc Von Neumann</a>.</li>
-</ul>
-<p><a href="https://en.wikipedia.org/wiki/Von_Neumann_architecture#/media/File:Von_Neumann_Architecture.svg"><img alt="Von Neumann architecture" src="img/Von_Neumann_Architecture.svg" /></a></p>
-<ul>
-<li>Các thành phần chính của máy tính điện tử:<ul>
-<li>Bộ xử lý trung tâm (central processing unit) có chức năng điều khiển, thực hiện các tính toán số học và logic.</li>
-<li>Bộ nhớ (memory) lưu trữ dữ liệu (data) và chương trình (programs).</li>
-<li>Thiết bị nhập (input devices) nạp dữ liệu hoặc lệnh vào cho máy tính xử lý.</li>
-<li>Thiết bị xuất (output devices) đưa kết quả xử lý ra.</li>
-</ul>
-</li>
-</ul>
-<h3 id="ac-iem-co-ban-cua-may-tinh-ien-tu">Đặc điểm cơ bản của máy tính điện tử<a class="headerlink" href="#ac-iem-co-ban-cua-may-tinh-ien-tu" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Máy tính hoạt động (xử lý dữ liệu) theo chương trình lập sẵn.</li>
-<li>Máy tính điện tử chỉ xử lý được các lệnh và dữ liệu được biểu diễn dưới dạng mã nhị phân (gọi là mã máy).</li>
-<li>Tốc độ xử lý của máy tính rất nhanh (hàng tỷ phép tính/giây).</li>
-</ul>
-<h2 id="giai-thuat-va-lap-trinh">Giải thuật và lập trình<a class="headerlink" href="#giai-thuat-va-lap-trinh" title="Permanent link">&para;</a></h2>
-<h3 id="giai-quyet-bai-toan-bang-may-tinh">Giải quyết bài toán bằng máy tính<a class="headerlink" href="#giai-quyet-bai-toan-bang-may-tinh" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Khi cần giải quyết một bài toán, máy tính không tự nghĩ ra cách giải, mà con người cần xây dựng một dãy các lệnh theo trật tự xác định để máy tính thực hiện xử lý. Tập các lệnh được gọi là chương trình (program).</li>
-<li>Để giải quyết một bài toán bằng máy tính, con người cần thực hiện các bước cơ bản sau:<ul>
-<li>Phân tích bài toán, xác định yêu cầu: dữ kiện bài toán (input), kết quả cần tìm kiếm/tính toán (output);</li>
-<li>Xây dựng giải thuật/thuật toán (algorithm): Vận dụng kiến thức liên quan để xây dựng dãy các hành động theo một thứ tự xác định để giải quyết bài toán;</li>
-<li>Viết chương trình (programming/coding): Sử dụng ngôn ngữ lập trình phù hợp để cài đặt giải thuật thành chương trình máy tính.</li>
-</ul>
-</li>
-</ul>
-<h3 id="giai-thuat">Giải thuật<a class="headerlink" href="#giai-thuat" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Giải thuật hay thuật toán (algorithm) là một dãy hữu hạn các hành động được định nghĩa rõ ràng nhằm giải quyết một bài toán cụ thể.</li>
-<li>Giải thuật phải thỏa mãn các tính chất sau:<ul>
-<li>Đúng (correctness): Kết quả của giải thuật phải chính xác.</li>
-<li>Rõ ràng (unambiguous): Các bước xử lý của giải thuật phải xác định.</li>
-<li>Phổ quát (generality): Giải thuật cần giải được một lớp bài toán có đầu vào tương tự nhau.</li>
-<li>Hữu hạn (finite): Giải thuật phải kết thúc sau một số hữu hạn bước xử lý.</li>
-</ul>
-</li>
-</ul>
-<h3 id="bieu-dien-giai-thuat">Biểu diễn giải thuật<a class="headerlink" href="#bieu-dien-giai-thuat" title="Permanent link">&para;</a></h3>
-<h4 id="su-dung-ngon-ngu-tu-nhien">Sử dụng ngôn ngữ tự nhiên<a class="headerlink" href="#su-dung-ngon-ngu-tu-nhien" title="Permanent link">&para;</a></h4>
-<ul>
-<li>
-<p>Ví dụ: Nhập ba số nguyên bất kỳ, tìm số lớn nhất.</p>
-<ul>
-<li><em>Input</em>: 3 số nguyên bất kỳ</li>
-<li>
-<p><em>Output</em>: số lớn nhất trong 3 số vừa nhập</p>
-</li>
-<li>
-<p><strong>Bước 1</strong>: Nhập 3 số nguyên a,b,c</p>
-</li>
-<li><strong>Bước 2</strong>: Khởi tạo giá trị max =  a</li>
-<li><strong>Bước 3</strong>: So sánh max với b, nếu max &lt; b thì gán max = b</li>
-<li><strong>Bước 4</strong>: So sánh max với c, nếu max &lt; c thì gán max = c</li>
-<li><strong>Bước 5</strong>: In ra giá trị số max</li>
-<li><strong>Bước 6</strong>: Kết thúc</li>
-</ul>
-</li>
-</ul>
-<h4 id="su-dung-luu-o-flowchart">Sử dụng lưu đồ (flowchart)<a class="headerlink" href="#su-dung-luu-o-flowchart" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Lưu đồ sử dụng các biểu tượng hình học để biểu diễn giải thuật.
-<img alt="Các ký hiệu biểu diễn giải thuật" src="img/flowchart_base_components.PNG" /></li>
-<li>Ví dụ: Nhập ba số nguyên bất kỳ, tìm số lớn nhất.<ul>
-<li><em>Input</em>: 3 số nguyên bất kỳ</li>
-<li><em>Output</em>: số lớn nhất trong 3 số vừa nhập</li>
-</ul>
-</li>
-</ul>
-<p><img alt="Giải thuật tìm số lớn nhất trong 3 số nguyên" src="img/algorithm_flowchart_example.png" /></p>
-<h3 id="lap-trinh">Lập trình<a class="headerlink" href="#lap-trinh" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Là hoạt động thực hành cài đặt giải thuật trừu tượng thành chương trình máy tính bằng cách sử dụng một ngôn ngữ lập trình.</li>
-<li>Ví dụ: Cài đặt giải thuật tìm số lớn nhất trong 3 số nguyên bằng ngôn ngữ lập trình Python:</li>
-</ul>
-<p>Chương trình nguồn (source code):</p>
-<p>https://github.com/nd-hung/python-programming/blob/c8e2379bd709677cbc988f7cb1169d99fa0807dc/docs/topics/overview/code/find_max_number.py#L1-L14</p>
-<p>Kết quả chạy chương trình:</p>
-<p><img alt="Kết quả chạy chương trình Python" src="img/python_example.PNG" /></p>
-<h2 id="ngon-ngu-lap-trinh">Ngôn ngữ lập trình<a class="headerlink" href="#ngon-ngu-lap-trinh" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Ngôn ngữ lập trình là loại phần mềm chuyên dụng dùng để tạo ra các chương trình máy tính. Một ngôn ngữ lập trình cung cấp các khai báo dữ liệu và các câu lệnh điều khiển, đồng thời có chức năng dịch các dòng lệnh thành ngôn ngữ máy để máy tính thi hành được.</li>
-</ul>
-<h3 id="cac-loai-ngon-ngu-lap-trinh">Các loại ngôn ngữ lập trình<a class="headerlink" href="#cac-loai-ngon-ngu-lap-trinh" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Ngôn ngữ máy ()</li>
-</ul>
-<h3 id="moi-truong-phat-trien-tich-hop-ide">Môi trường phát triển tích hợp (IDE)<a class="headerlink" href="#moi-truong-phat-trien-tich-hop-ide" title="Permanent link">&para;</a></h3>
 <h3 id="ngon-ngu-lap-trinh-python">Ngôn ngữ lập trình Python<a class="headerlink" href="#ngon-ngu-lap-trinh-python" title="Permanent link">&para;</a></h3>
 <p>Ngày nay, Python là một trong những ngôn ngữ lập trình được sử dụng rộng rãi nhất trên thế giới. Các ưu điểm nổi bật của Python là:</p>
 <ul>
