@@ -7,17 +7,17 @@
         
         <meta name="author" content="Hung Nguyen">
         
-        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
         <title>Python cơ bản - Lập trình Python</title>
-        <link href="../../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../../css/fontawesome.min.css" rel="stylesheet">
-        <link href="../../css/brands.min.css" rel="stylesheet">
-        <link href="../../css/solid.min.css" rel="stylesheet">
-        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
-        <link href="../../css/base.css" rel="stylesheet">
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
         <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
         <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
-        <link href="../../css/extra.css" rel="stylesheet">
+        <link href="../../../css/extra.css" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/django.min.js"></script>
@@ -27,7 +27,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="../..">Lập trình Python</a>
+                <a class="navbar-brand" href="../../..">Lập trình Python</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -42,44 +42,44 @@
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../overview/" class="dropdown-item">Tổng quan về lập trình</a>
+    <a href="../../overview/" class="dropdown-item">Tổng quan về lập trình</a>
 </li>
                                     
 <li>
-    <a href="." class="dropdown-item">Python cơ bản</a>
+    <a href=".." class="dropdown-item">Python cơ bản</a>
 </li>
                                     
 <li>
-    <a href="../advanced-python" class="dropdown-item">Python nâng cao</a>
+    <a href="../../advanced-python" class="dropdown-item">Python nâng cao</a>
 </li>
                                     
 <li>
-    <a href="../python-oop" class="dropdown-item">Lập trình hướng đối tượng với Python</a>
+    <a href="../../python-oop" class="dropdown-item">Lập trình hướng đối tượng với Python</a>
 </li>
                                     
 <li>
-    <a href="../" class="dropdown-item">Một số thư viện Python thông dụng</a>
+    <a href="../../" class="dropdown-item">Một số thư viện Python thông dụng</a>
 </li>
                                     
 <li>
-    <a href="../gui" class="dropdown-item">Tạo ứng dụng GUI</a>
+    <a href="../../gui" class="dropdown-item">Tạo ứng dụng GUI</a>
 </li>
                                     
 <li>
-    <a href="../" class="dropdown-item">Phát triển ứng dụng với Python</a>
+    <a href="../../" class="dropdown-item">Phát triển ứng dụng với Python</a>
 </li>
                                     
 <li>
-    <a href="../" class="dropdown-item">Xây dựng giải pháp học máy, khoa học dữ liệu</a>
+    <a href="../../" class="dropdown-item">Xây dựng giải pháp học máy, khoa học dữ liệu</a>
 </li>
                                     
 <li>
-    <a href="../../labs/" class="dropdown-item">Bài thực hành</a>
+    <a href="../../../labs/" class="dropdown-item">Bài thực hành</a>
 </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="../../author/about/" class="nav-link">About</a>
+                                <a href="../../../author/about/" class="nav-link">About</a>
                             </li>
                         </ul>
 
@@ -90,7 +90,7 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a href="https://github.com/nd-hung/python-programming/tree/main/docs/topics/python-basic/README.md" class="nav-link"><i class="fa-brands fa-github"></i> Edit on GitHub</a>
+                                <a href="https://github.com/nd-hung/python-programming/tree/main/docs/topics/python-basic/README-Hung-Desktop.md" class="nav-link"><i class="fa-brands fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -169,21 +169,25 @@
 <li>Nhập <code>python</code> (hoặc <code>python3</code>) và nhấn <code>Enter</code> để mở Python chế độ tương tác.</li>
 <li>Nhập từng dòng lệnh để thực thi.</li>
 </ul>
+<p>Ví dụ:</p>
 <p><img src="./img/python_shell.PNG" alt="Python interactive mode" style="width:300px;"></p>
 <h3 id="chay-file-ma-nguon-tu-che-o-dong-lenh">Chạy file mã nguồn từ chế độ dòng lệnh<a class="headerlink" href="#chay-file-ma-nguon-tu-che-o-dong-lenh" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Mở cửa sổ dòng lệnh (terminal).</li>
 <li>Nhập <code>python &lt;[path_to/]python_script_file_name.py&gt;</code> và nhấn <code>Enter</code> để thực thi. Trình thông dịch sẽ lần lượt thực hiện các lệnh trong file mã nguồn.</li>
 </ul>
-<h3 id="su-dung-ide">Sử dụng IDE<a class="headerlink" href="#su-dung-ide" title="Permanent link">&para;</a></h3>
+<h3 id="chay-chuong-trinh-python-tu-moi-truong-phat-trien-tich-hop-ide">Chạy chương trình Python từ môi trường phát triển tích hợp (IDE)<a class="headerlink" href="#chay-chuong-trinh-python-tu-moi-truong-phat-trien-tich-hop-ide" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Mở IDE lập trình Python (PyCharm, VS Code, Spyder, IDLE,...).</li>
 <li>Tạo (hoặc mở) file chương trình Python.</li>
 <li>Nhấn lệnh <code>Run</code> để thực thi chương trình.</li>
 </ul>
 <h2 id="bien-va-kieu-du-lieu">Biến và kiểu dữ liệu<a class="headerlink" href="#bien-va-kieu-du-lieu" title="Permanent link">&para;</a></h2>
-<p>Mọi biến trong Python đều là đối tượng, không cần phải khai báo biến trước khi sử dụng.
-Kiểu dữ liệu của một biến được xác định khi gán giá trị cho nó.</p>
+<ul>
+<li>Mọi biến trong Python đều là đối tượng.</li>
+<li>Không cần phải khai báo biến trước khi sử dụng.</li>
+<li>Kiểu dữ liệu của một biến được xác định khi gán giá trị cho nó.</li>
+</ul>
 <p>Python có các kiểu dữ liệu cơ sở sau:</p>
 <h3 id="kieu-chuoi-text">Kiểu chuỗi (text)<a class="headerlink" href="#kieu-chuoi-text" title="Permanent link">&para;</a></h3>
 <p>Chuỗi là dãy ký tự đặt trong cặp dấu nháy kép "" hoặc nháy đơn ''.</p>
@@ -448,13 +452,13 @@ for ch in st:
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
-        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
         <script>
-            var base_url = "../..",
+            var base_url = "../../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../../js/base.js"></script>
-        <script src="../../search/main.js"></script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">

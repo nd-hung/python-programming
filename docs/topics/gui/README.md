@@ -6,7 +6,7 @@ Python GUI development
 
 ## Giới thiệu
 
-Có nhiều thư viện GUI cho Python, trong đó Tkinter là thư viện chuẩn và được sử dụng rộng rãi. Các ưu điểm của Tkinter hỗ trợ đa nền tảng (cross-platform: hoạt động tốt trên Windows, macOS và Linux) và gọn nhẹ.
+Có nhiều thư viện GUI cho Python, trong đó Tkinter là thư viện chuẩn và được sử dụng rộng rãi. Các ưu điểm của Tkinter bao gồm hỗ trợ đa nền tảng (cross-platform: hoạt động tốt trên Windows, macOS và Linux) và gọn nhẹ.
 
 ## Tạo ứng dụng GUI đầu tiên
 
