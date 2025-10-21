@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Hung Nguyen">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Lập trình hướng đối tượng với Python - Lập trình Python</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link href="../../css/extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "L\u1eadp tr\u00ecnh h\u01b0\u1edbng \u0111\u1ed1i t\u01b0\u1ee3ng v\u1edbi Python";
+    var mkdocs_page_input_path = "topics\\python-oop\\README.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/django.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Lập trình Python</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="tocbase current">
+    
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Các chủ đề</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../overview/">Giới thiệu ngôn ngữ lập trình Python</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../python-basic">Python cơ bản</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../advanced-python">Python nâng cao</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href=".">Lập trình hướng đối tượng với Python</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../">Một số thư viện Python thông dụng</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../gui">Tạo ứng dụng GUI</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../">Phát triển ứng dụng web với Python</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../">Xây dựng, triển khai ứng dụng AI</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../labs/">Bài thực hành</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../author/about/">About</a>
+  </li>
+    
+  </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Lập trình Python</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Lập trình hướng đối tượng với Python</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/nd-hung/python-programming/tree/main/docs/topics/python-oop/README.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="lap-trinh-huong-oi-tuong-voi-python">Lập trình hướng đối tượng với Python<a class="headerlink" href="#lap-trinh-huong-oi-tuong-voi-python" title="Permanent link">&para;</a></h1>
+<p>Python OOP</p>
+<hr />
+<h2 id="cac-khai-niem-co-ban">Các khái niệm cơ bản<a class="headerlink" href="#cac-khai-niem-co-ban" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Lớp (class): Là cấu trúc dữ liệu mô tả các đối tượng giống nhau về tính chất (properties) và phương thức (methods).</li>
+<li>Đối tượng (object): là thực thể được tạo ra từ một lớp. Một lớp có thể tạo ra nhiều đối tượng khác nhau.</li>
+</ul>
+<h2 id="inh-nghia-lop">Định nghĩa lớp<a class="headerlink" href="#inh-nghia-lop" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Cú pháp</li>
+</ul>
+<pre><code class="language-python">class ClassName:
+   &lt;Các biến thành viên&gt;
+   &lt;Các hàm thành viên&gt;
+</code></pre>
+<h2 id="phuong-thuc-__init__">Phương thức <code>__init__()</code><a class="headerlink" href="#phuong-thuc-__init__" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Hàm thiết lập (constructor) của lớp Python có tên là <code>__init__()</code>.</li>
+<li>Hàm thiết lập được gọi mỗi khi đối tượng được tạo ra. Vì thế, thường dùng hàm này để khởi tạo các giá trị ban đầu cho đối tượng.</li>
+<li>Ví dụ:</li>
+</ul>
+<pre><code class="language-python"># Khai báo lớp học sinh
+class Student:
+    # Khai báo hàm khởi tạo
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def PrintInfo(self):
+        print('{}, {}'.format(self.name, self.age))
+
+# Tạo đối tượng và khởi tạo giá trị
+sv1 = Student(&quot;Trung&quot;, 18)
+sv2 = Student('Thực', 19)
+sv1.PrintInfo()
+sv2.PrintInfo()
+</code></pre>
+<h2 id="lop-ben-trong-lop">Lớp bên trong lớp<a class="headerlink" href="#lop-ben-trong-lop" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Ví dụ:</li>
+</ul>
+<pre><code class="language-python"># Minh họa cài đặt lớp bên trong lớp
+# Lớp Laptop (outer class)
+import datetime
+
+class Laptop:
+    # Phương thức khởi tạo của lớp ngoài
+    def __init__(self, model, year=datetime.datetime.now().year, btr_voltage=None, btr_capacity=None):
+        assert isinstance(year, int) and year &gt; 0, 'Năm phải là số nguyên dương'
+        self.Model = model  # model    
+        self.Year = year    # năm sản xuất
+        self.Battery = self.Battery(btr_voltage, btr_capacity)
+
+    # Phương thức in thông tin của lớp ngoài
+    def PrintInfo(self):
+        print('Laptop model: {}, Year: {}'.format(self.Model, self.Year))
+        # Gọi phương thức in thông tin của lớp trong
+        self.Battery.PrintInfo()
+
+    # Cài đặt lớp Battery (inner class) bên trong lớp Laptop
+    class Battery:
+        # Phương thức khởi tạo của lớp trong
+        def __init__(self, volate, capacity):
+            self.Voltage = volate       # Điện thế
+            self.Capacity = capacity    # Dung lượng
+
+        # Phương thức in thông tin của lớp trong
+        def PrintInfo(self):
+            print('Battery info: Voltage: {}, Capacity: {}'.format(self.Voltage, self.Capacity))
+
+# Chương trình chính
+if __name__ == '__main__':
+    lap1 = Laptop('Dell', 2020, '12V', '55kWh')
+    lap1.PrintInfo()
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/nd-hung/python-programming" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

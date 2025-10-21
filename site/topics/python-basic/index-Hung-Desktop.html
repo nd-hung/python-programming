@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Hung Nguyen">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Python cơ bản - Lập trình Python</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link href="../../css/extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Python c\u01a1 b\u1ea3n";
+    var mkdocs_page_input_path = "topics\\python-basic\\README.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/django.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Lập trình Python</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="tocbase current">
+    
+    
+      
+  <li class="navtree toctree-l1 label">
+    <p class="caption">Các chủ đề</p>
+  </li>
+
+
+  
+
+  
+    <li class="navtree toctree-l1 group">
+      <ul class="navtree subnav-l1 current">
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../overview/">Giới thiệu ngôn ngữ lập trình Python</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href=".">Python cơ bản</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../advanced-python">Python nâng cao</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../python-oop">Lập trình hướng đối tượng với Python</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../">Một số thư viện Python thông dụng</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../gui">Tạo ứng dụng GUI</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../">Phát triển ứng dụng web với Python</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../">Xây dựng, triển khai ứng dụng AI</a>
+  </li>
+        
+          
+
+
+  <li class="navtree toctree-l2 inactive">
+    <a class="" href="../../labs/">Bài thực hành</a>
+  </li>
+        
+      </ul>
+    </li>
+    
+      
+
+
+  <li class="navtree toctree-l1 inactive">
+    <a class="" href="../../author/about/">About</a>
+  </li>
+    
+  </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Lập trình Python</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Python cơ bản</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        <a href="https://github.com/nd-hung/python-programming/tree/main/docs/topics/python-basic/README.md"
+          class="icon icon-github"> Edit on GitHub</a>
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="python-co-ban">Python cơ bản<a class="headerlink" href="#python-co-ban" title="Permanent link">&para;</a></h1>
+<p>Python Basics</p>
+<hr />
+<h2 id="hello-world">Hello, World<a class="headerlink" href="#hello-world" title="Permanent link">&para;</a></h2>
+<script type="text/javascript" src="//cdn.datacamp.com/dcl-react.js.gz">  
+</script>
+
+<div data-datacamp-exercise data-lang="python" data-height="5">
+  <code data-type="sample-code">
+    # Chương trình đầu tiên: In ra màn hình câu "Hello, World!"
+    print("Hello, World!")
+  </code>
+</div>
+
+<h2 id="thuc-thi-chuong-trinh-python">Thực thi chương trình Python<a class="headerlink" href="#thuc-thi-chuong-trinh-python" title="Permanent link">&para;</a></h2>
+<h3 id="chay-tung-dong-lenh">Chạy từng dòng lệnh<a class="headerlink" href="#chay-tung-dong-lenh" title="Permanent link">&para;</a></h3>
+<p>Các bước thực hiện:</p>
+<ul>
+<li>Mở cửa sổ chế độ dòng lệnh (terminal).</li>
+<li>Nhập <code>python</code> (hoặc <code>python3</code>) và nhấn <code>Enter</code> để mở Python chế độ tương tác.</li>
+<li>Nhập từng dòng lệnh để thực thi.</li>
+</ul>
+<p>Ví dụ:</p>
+<p><img src="./img/python_shell.PNG" alt="Python interactive mode" style="width:300px;"></p>
+<h3 id="chay-file-ma-nguon-tu-che-o-dong-lenh">Chạy file mã nguồn từ chế độ dòng lệnh<a class="headerlink" href="#chay-file-ma-nguon-tu-che-o-dong-lenh" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Mở cửa sổ dòng lệnh (terminal).</li>
+<li>Nhập <code>python &lt;[path_to/]python_script_file_name.py&gt;</code> và nhấn <code>Enter</code> để thực thi. Trình thông dịch sẽ lần lượt thực hiện các lệnh trong file mã nguồn.</li>
+</ul>
+<h3 id="thuc-thi-chuong-trinh-python-tu-moi-truong-phat-trien-tich-hop-ide">Thực thi chương trình Python từ môi trường phát triển tích hợp (IDE)<a class="headerlink" href="#thuc-thi-chuong-trinh-python-tu-moi-truong-phat-trien-tich-hop-ide" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Mở IDE lập trình Python ưa thích (PyCharm, VS Code, Spyder, IDLE,...).</li>
+<li>Tạo (hoặc mở) file chương trình Python.</li>
+<li>Nhấn lệnh <code>Run</code> để thực thi chương trình.</li>
+</ul>
+<h2 id="khoi-lenh">Khối lệnh<a class="headerlink" href="#khoi-lenh" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Python sử dụng khoảng canh lề (indentation) để giới hạn khối lệnh.</li>
+<li>Số khoảng trắng trước khối lệnh ít nhất là 1, thông dụng nhất là 4.</li>
+<li>Trong một khối lệnh, số khoảng trắng đứng trước mỗi dòng lệnh phải bằng nhau.</li>
+</ul>
+<p>Ví dụ:</p>
+<div data-datacamp-exercise data-lang="python" data-height="10">
+<code data-type="sample-code">
+n = 123
+
+if n % 2 == 0:
+    print("%d là số chẵn" % n)
+else:
+    print("%d là số lẻ" % n)
+</code>
+</div>
+
+<h2 id="kieu-du-lieu-va-bien">Kiểu dữ liệu và biến<a class="headerlink" href="#kieu-du-lieu-va-bien" title="Permanent link">&para;</a></h2>
+<h3 id="bien">Biến<a class="headerlink" href="#bien" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Biến là đối tượng dùng để lưu dữ liệu.</li>
+<li>Giá trị của biến có thể thay đổi khi chương trình hoạt động.</li>
+<li>
+<p>Python không có lệnh khai báo biến, biến được tạo ra khi gán giá trị cho nó.</p>
+</li>
+<li>
+<p>Tên biến đặt theo quy tắc sau:</p>
+</li>
+<li>Tên biến chỉ gồm các ký tự chữ cái, chữ số và dấu gạch dưới '_'.</li>
+<li>Tên biến phải bắt đầu bằng chữ cái hoặc ký tự gạch dưới.</li>
+<li>Không được đặt tên biến trùng với <a href="https://docs.python.org/3/reference/lexical_analysis.html#keywords">từ khóa của Python</a>.</li>
+</ul>
+<p>Ví dụ:</p>
+<ul>
+<li>
+<p>Tên biến hợp lệ: <code>delta</code>, <code>x1</code>, <code>don_gia</code>, <code>_123abc</code></p>
+</li>
+<li>
+<p>Tên biến không hợp lệ:</p>
+<p><code>3VanChinNghin</code>: bắt đầu bằng chữ số</p>
+<p><code>Don Gia</code>: chứa khoảng trắng</p>
+<p><code>except</code>: trùng với từ khóa của Python</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+</div>
+<ul>
+<li>Ngôn ngữ Python phân biệt chữ hoa chữ thường (case-sensitive), nên các tên sau là khác nhau: <code>TinHoc</code>, <code>Tinhoc</code>, <code>tinHoc</code>.</li>
+<li>Nên đặt tên biến ngắn gọn, có nghĩa (diễn tả nội dung nó chứa). Ví dụ, để viết lệnh tính quãng đường đi dựa vào vận tốc và thời gian, thay vì viết <code>d = v*t</code>, nên viết <code>distance = velocity * traveled_time</code> hoặc <code>quang_duong = van_toc * thoi_gian</code>, sẽ giúp câu lệnh dễ hiểu hơn.</li>
+<li>Với Python 3, có thể đặt tên biến bằng ký tự Unicode (gồm cả tiếng Việt), chẳng hạn: <code>Ba_Vạn_Chín_Nghìn = 39000</code> là một khai báo hợp lệ. Tuy nhiên, chỉ nên đặt tên biến bằng các ký tự ASCII.</li>
+</ul>
+<h3 id="kieu-du-lieu">Kiểu dữ liệu<a class="headerlink" href="#kieu-du-lieu" title="Permanent link">&para;</a></h3>
+<p>Kiểu dữ liệu của một biến được xác định khi gán giá trị cho nó.</p>
+<p>Python có các kiểu dữ liệu cơ sở sau:</p>
+<h4 id="kieu-chuoi-text">Kiểu chuỗi (text)<a class="headerlink" href="#kieu-chuoi-text" title="Permanent link">&para;</a></h4>
+<p>Chuỗi là dãy ký tự đặt trong cặp dấu nháy kép "" hoặc nháy đơn ''.</p>
+<p>Ví dụ:</p>
+<div data-datacamp-exercise data-lang="python" data-height="50">
+<code data-type="sample-code">
+    # Dạng chuỗi 1: đặt giữa cặp dấu nháy kép
+    ntu_slogan1 = "Lựa chọn đúng để thành công!"
+    print(ntu_slogan1)
+
+    # Dạng chuỗi 2: đặt giữa cặp dấu nháy đơn
+    ntu_slogan2 = 'Căng buồm tri thức vươn khơi.'
+    print(ntu_slogan2)
+
+    # Dạng chuỗi 3: chuỗi gồm nhiều dòng
+    verses = """
+    'Trải qua một cuộc bể dâu
+    Những điều trông thấy mà đau đớn lòng.'
+    \t\t- trích Truyện Kiều (Nguyễn Du)
+    """
+    print(verses)
+  </code>
+</div>
+
+<h4 id="kieu-so-numeric">Kiểu số (numeric)<a class="headerlink" href="#kieu-so-numeric" title="Permanent link">&para;</a></h4>
+<p>Python có các kiểu số nguyên (int), số thực (float) và số phức (complex).</p>
+<p>Ví dụ:</p>
+<div data-datacamp-exercise data-lang="python" data-height="50">
+    <code data-type="sample-code">
+        # Kiểu số nguyên
+        n = 3721
+        print("n = %d" % n)
+
+        # Kiểu số thực
+        pi = 3.14159
+        print("PI = %.2f" % pi)
+
+        # Số phức
+        z = 3 + 5j
+        print("z = ", z)
+  </code>
+</div>
+
+<h4 id="kieu-tuan-tu-sequence">Kiểu tuần tự (sequence)<a class="headerlink" href="#kieu-tuan-tu-sequence" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Kiểu danh sách (sequence): list, tuple, range</li>
+<li>Kiểu từ điển (mapping): dict</li>
+<li>Kiểu tập hợp (set): set, frozenset</li>
+</ul>
+<h4 id="kieu-boolean-bool">Kiểu Boolean: bool<a class="headerlink" href="#kieu-boolean-bool" title="Permanent link">&para;</a></h4>
+<p>Kiểu bool có giá trị <code>True</code> hoặc <code>False</code>.</p>
+<p>Ví dụ:</p>
+<div data-datacamp-exercise data-lang="python" data-height="50">
+    <code data-type="sample-code">
+        fruits = {'bưởi', 'táo', 'đu đủ', 'cam'}
+
+        is_apple_in_fruits = 'táo' in fruits
+        print(is_apple_in_fruits)
+
+        is_durian_in_fruits = 'durian' in fruits
+        print(is_durian_in_fruits)  
+    </code>
+</div>
+
+<h4 id="kieu-none-nonetype">Kiểu None (NoneType)<a class="headerlink" href="#kieu-none-nonetype" title="Permanent link">&para;</a></h4>
+<p>Kiểu dữ liệu <code>None</code> dùng để chỉ một biến hoặc đối tượng không có giá trị.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Dùng hàm <code>type()</code> để lấy kiểu dữ liệu của một biến hoặc biểu thức.</p>
+</div>
+<p>Ví dụ:</p>
+<div data-datacamp-exercise data-lang="python" data-height="100">
+
+  <code data-type="sample-code">
+
+    n = 3721
+    print("Kiểu dữ liệu là ", type(n).__name__)
+
+    PI = 3.1416
+    print("Kiểu dữ liệu là ", type(PI).__name__)
+
+    four_seasons = ['Xuân', 'Hạ', 'Thu', 'Đông']
+    print("Kiểu dữ liệu là ", type(four_seasons).__name__)
+
+    fruits = {"bưởi", "táo", "cam", "chanh"}
+    print("Kiểu dữ liệu là ", type(fruits).__name__)
+
+    student_info = {'ID':'65131234', 'grades':{'python':8.5, 'maths':7.8}}
+    print("Kiểu dữ liệu là ", type(student_info).__name__)
+
+    numbers = (3,7,2,1)
+    print("Kiểu dữ liệu là ", type(numbers).__name__)
+
+    greeting_message = 'Welcome to Nha Trang!'
+    print("Kiểu dữ liệu là ", type(greeting_message).__name__)
+</div>
+
+<h2 id="cac-cau-lenh-ieu-khien">Các câu lệnh điều khiển<a class="headerlink" href="#cac-cau-lenh-ieu-khien" title="Permanent link">&para;</a></h2>
+<h3 id="lenh-re-nhanh-if">Lệnh rẽ nhánh if<a class="headerlink" href="#lenh-re-nhanh-if" title="Permanent link">&para;</a></h3>
+<h4 id="dang-1-lenh-if-thieu">Dạng 1: Lệnh if thiếu<a class="headerlink" href="#dang-1-lenh-if-thieu" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Nếu <code>&lt;BT logic&gt;</code> có giá trị đúng (True) thì thực hiện <code>&lt;Lệnh đơn&gt;</code> hoặc <code>&lt;Khối lệnh&gt;</code></li>
+</ul>
+<pre><code class="language-python">if &lt;BT logic&gt;: &lt;Lệnh đơn&gt;
+hoặc
+if &lt;BT logic&gt;: 
+    &lt;Khối lệnh&gt;
+</code></pre>
+<p>Ví dụ:</p>
+<pre><code class="language-python">n = 5
+if n % 2 != 0: print(f'{n} là số lẻ.')
+m = 69
+if m &gt; 0:
+    print(f'm = {m}')
+    print(f'{m} là số dương.')
+</code></pre>
+<h4 id="dang-2-lenh-if-u">Dạng 2: Lệnh if đủ<a class="headerlink" href="#dang-2-lenh-if-u" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Nếu <code>&lt;BT logic&gt;</code> có giá trị đúng (True) thì thực hiện <code>&lt;Khối lệnh 1&gt;</code>, ngược lại thực hiện <code>&lt;Khối lệnh 2&gt;</code></li>
+</ul>
+<pre><code class="language-python">if &lt;BT logic&gt;: 
+    &lt;Khối lệnh 1&gt;
+else:
+    &lt;Khối lệnh 2&gt;
+</code></pre>
+<p>Hoặc viết gọn hơn khi chỉ có lệnh đơn:</p>
+<pre><code class="language-python">&lt;Lệnh 1&gt; if &lt;BT logic&gt; else &lt;Lệnh 2&gt;
+</code></pre>
+<p>Ví dụ:</p>
+<pre><code class="language-python">n = 5
+if n % 2 != 0: 
+    print(f'{n} là số lẻ.')
+else:
+    print(f'{n} là số chẵn.')
+
+a, b = 6, 9
+print(f'{a} &gt; {b}') if a &gt; b else print(f'{b} &gt; {a}')    
+</code></pre>
+<h4 id="elif">elif<a class="headerlink" href="#elif" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Trong lệnh if, muốn kiểm tra điều kiện mới khi điều kiện trước không thỏa mãn thì dùng từ khóa <code>elif</code></li>
+</ul>
+<pre><code class="language-python">if &lt;BT logic 1&gt;:        
+    &lt;Khối lệnh 1&gt;
+elif &lt;BT logic 2&gt;:
+    &lt;Khối lệnh 2&gt;
+    ...
+elif &lt;BT logic n&gt;:
+    &lt;Khối lệnh n&gt;
+else:
+    &lt;Khối lệnh n+1&gt;
+</code></pre>
+<h3 id="lenh-lap">Lệnh lặp<a class="headerlink" href="#lenh-lap" title="Permanent link">&para;</a></h3>
+<h4 id="lenh-lap-while">Lệnh lặp while<a class="headerlink" href="#lenh-lap-while" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Lệnh lặp <code>while</code> lặp lại khối lệnh chừng nào <code>BT điều kiện</code> còn đúng.</li>
+</ul>
+<pre><code class="language-python">while &lt;BT điều kiện&gt;:
+    &lt;Khối lệnh&gt;
+</code></pre>
+<p>Ví dụ: Tính tổng các chữ số của số tự nhiên n:</p>
+<pre><code>n = 123
+sum_digits = 0
+while n &gt; 0:
+    sum_digits += n % 10
+    n = n // 10
+print(f'Tổng chữ số = {sum_digits}')
+</code></pre>
+<h4 id="lenh-break">Lệnh break<a class="headerlink" href="#lenh-break" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Lệnh `break' khi được gọi sẽ dừng vòng lặp.</li>
+<li>Trong ví dụ sau, dù điều kiện lặp là <code>i &lt; 100</code>, nhưng nếu i bằng 5 thì dừng vòng lặp, nên chương trình chỉ in ra các số nguyên liên tiếp từ 1 đến 4.</li>
+</ul>
+<pre><code class="language-python">i = 1
+while i &lt; 100:
+    print(i, end= ' ')
+    i += 1
+    if i == 5: break
+</code></pre>
+<h4 id="lenh-continue">Lệnh continue<a class="headerlink" href="#lenh-continue" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Lệnh `continue' khi được gọi sẽ chuyển sang vòng lặp kế tiếp.</li>
+<li>Trong ví dụ sau, biến i khởi đầu bằng 0, chừng nào i còn thỏa <code>&lt; 10</code> thì tăng i thêm 1 và in ra giá trị của i, nhưng nếu i là số chẵn thì lệnh <code>continue</code> được gọi, chương trình chuyển sang xử lý bước lặp tiếp theo mà bỏ qua lệnh <code>print(i, end=' ')</code>. Kết quả là chương trình chỉ in ra các số lẻ từ 1 đến 9.</li>
+</ul>
+<pre><code class="language-python">i = 0
+while i &lt; 10:
+    i += 1
+    if i % 2 == 0: continue
+    print(i, end= ' ')
+</code></pre>
+<h4 id="lenh-lap-for">Lệnh lặp for<a class="headerlink" href="#lenh-lap-for" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Lệnh lặp <code>for</code> dùng để duyệt từng phần tử trong một dãy (list, tuple, dictionary, set, string).</li>
+</ul>
+<h5 id="duyet-danh-sach">Duyệt danh sách<a class="headerlink" href="#duyet-danh-sach" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Cú pháp</li>
+</ul>
+<pre><code class="language-python">for &lt;biến chạy&gt; in &lt;danh sách&gt;:
+    &lt;Khối lệnh&gt;
+</code></pre>
+<ul>
+<li>Ví dụ</li>
+</ul>
+<pre><code class="language-python">Tứ_Linh = ['Long', 'Ly', 'Quy', 'Phượng']
+# Cách 1: duyệt từng phần tử của danh sách
+for tl in Tứ_Linh:
+    print(tl, end=' ')
+# Cách 2: duyệt từng phần tử thông qua vị trí trong danh sách    
+for i in range(len(Tứ_Linh)):
+    print(Tứ_Linh[i], end=' ')
+</code></pre>
+<h5 id="duyet-chuoi-ky-tu">Duyệt chuỗi ký tự<a class="headerlink" href="#duyet-chuoi-ky-tu" title="Permanent link">&para;</a></h5>
+<ul>
+<li>Chuỗi là một dãy ký tự vì thế có thể duyệt từng ký tự của chuỗi bằng lệnh for.</li>
+<li>Cú pháp</li>
+</ul>
+<pre><code class="language-python">for ch in &lt;chuỗi&gt;:
+    &lt;Lệnh&gt;
+</code></pre>
+<ul>
+<li>Ví dụ</li>
+</ul>
+<pre><code class="language-python">st = 'Nha Trang Khánh Hòa'
+for ch in st:
+    print(ch) 
+</code></pre>
+<h4 id="ham-range">Hàm range()<a class="headerlink" href="#ham-range" title="Permanent link">&para;</a></h4>
+<ul>
+<li>hàm <code>range(&lt;start_value&gt;, &lt;end_value&gt;, &lt;step&gt;)</code> thường được kết hợp khi muốn thực hiện lệnh lặp với số bước lặp xác định.</li>
+<li>Ví dụ: In 10 dòng 'Hello world'</li>
+</ul>
+<pre><code class="language-python">for i in range(10): # range(0, 10, 1)
+    print('Hello world')
+</code></pre>
+<h4 id="lenh-lap-long-nhau-nested-loop">Lệnh lặp lồng nhau (nested loop)<a class="headerlink" href="#lenh-lap-long-nhau-nested-loop" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Lệnh lặp lồng nhau: Trong một lệnh lặp chứa lệnh lặp khác.</li>
+<li>Với mỗi bước lặp của vòng lặp ngoài, lệnh lặp bên trong sẽ thực hiện hết một lượt.</li>
+<li>Ví dụ: In bảng cửu chương</li>
+</ul>
+<pre><code class="language-python">for i in range(2, 10):
+    for j in range(1, 11):
+        print('%3d x %3d = %3d'  % (i, j, i*j))
+</code></pre>
+<h2 id="ham-python">Hàm Python<a class="headerlink" href="#ham-python" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Hàm là một đoạn mã lệnh được lập trình để thực hiện một chức năng chuyên biệt.</li>
+<li>Một hàm có tên gọi, đầu vào và đầu ra.</li>
+<li>Hàm chỉ thực thi khi nó được gọi.</li>
+<li>Một hàm có thể được gọi nhiều lần với các giá trị khác nhau của đối số.</li>
+</ul>
+<p>Ví dụ:</p>
+<div data-datacamp-exercise data-lang="python" data-height="20">
+    <code data-type="sample-code">
+    def say_hi():
+        """
+        In ra câu chào "Hi there!"
+        """
+        print("Hi there!")
+
+    # Gọi hàm 
+    say_hi()
+    </code>
+</div>
+
+<p>Hàm <code>say_hi()</code> ở trên không có đầu vào, không trả về giá trị cho lời gọi hàm; khi gọi hàm, máy tính sẽ thực thi các lệnh trong thân hàm, ở đây là lệnh <code>print("Hi there!")</code>.</p>
+<h3 id="truyen-oi-so-cho-ham">Truyền đối số cho hàm<a class="headerlink" href="#truyen-oi-so-cho-ham" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Hàm có thể nhận các giá trị đầu vào để xử lý, gọi là tham số. Các tham số cách nhau dấy phẩy.</li>
+</ul>
+<p>Ví dụ: Sửa lại hàm <code>say_hi()</code> ở trên để khi gọi hàm và truyền cho nó một chuỗi chứa tên bất kỳ thì máy tính sẽ in ra câu chào tên đó.</p>
+<div data-datacamp-exercise data-lang="python" data-height="20">
+   <code data-type="sample-code">
+    def say_hi(name):
+        """
+        Hàm in ra câu chào tên trong chuỗi được truyền vào
+        """
+        print("Hello %s" % name.title())
+
+    # Gọi hàm với các đối số khác nhau
+    say_hi("Nhâm Thìn")
+    say_hi("Cristiano Ronaldo")
+    st = "Việt Nam"
+    say_hi(st)
+
+    </code>
+</div>
+
+<h2 id="mot-so-ham-dung-san-cua-python">Một số hàm dựng sẵn của Python<a class="headerlink" href="#mot-so-ham-dung-san-cua-python" title="Permanent link">&para;</a></h2>
+<p>Trình thông dịch <a href="https://docs.python.org/3/library/functions.html">Python cung cấp nhiều hàm dựng sẵn (built-in functions)</a>. Sau đây là một số hàm thông dụng.</p>
+<h3 id="nhom-ham-toan-hoc">Nhóm hàm toán học<a class="headerlink" href="#nhom-ham-toan-hoc" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Tên hàm</th>
+<th style="text-align: left;">Mô tả</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">abs()</td>
+<td style="text-align: left;">Tính giá trị tuyệt đối của một số</td>
+</tr>
+<tr>
+<td style="text-align: left;">max()</td>
+<td style="text-align: left;">Tìm số lớn nhất trong các đối số hoặc trong danh sách</td>
+</tr>
+<tr>
+<td style="text-align: left;">min()</td>
+<td style="text-align: left;">Tìm số nhỏ nhất trong các đối số hoặc trong danh sách</td>
+</tr>
+<tr>
+<td style="text-align: left;">pow()</td>
+<td style="text-align: left;">Tính lũy thừa</td>
+</tr>
+<tr>
+<td style="text-align: left;">round()</td>
+<td style="text-align: left;">Làm tròn số thập phân</td>
+</tr>
+<tr>
+<td style="text-align: left;">sum()</td>
+<td style="text-align: left;">Tính tổng các giá trị trong danh sách</td>
+</tr>
+</tbody>
+</table>
+<h3 id="nhom-ham-xu-ly-voi-kieu-du-lieu-co-so">Nhóm hàm xử lý với kiểu dữ liệu cơ sở<a class="headerlink" href="#nhom-ham-xu-ly-voi-kieu-du-lieu-co-so" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Hàm</th>
+<th style="text-align: left;">Mô tả</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">int()</td>
+<td style="text-align: left;">Đổi một chuỗi hoặc số sang số nguyên</td>
+</tr>
+<tr>
+<td style="text-align: left;">bin()</td>
+<td style="text-align: left;">Đổi số nguyên sang hệ nhị phân</td>
+</tr>
+<tr>
+<td style="text-align: left;">hex()</td>
+<td style="text-align: left;">Đổi số nguyên sang hệ hexa</td>
+</tr>
+<tr>
+<td style="text-align: left;">float()</td>
+<td style="text-align: left;">Đối chuỗi hoặc số sang số thực</td>
+</tr>
+<tr>
+<td style="text-align: left;">str()</td>
+<td style="text-align: left;">Chuyển đối tượng thành kiểu chuỗi</td>
+</tr>
+<tr>
+<td style="text-align: left;">ord()</td>
+<td style="text-align: left;">Trả về mã Unicode của ký tự</td>
+</tr>
+<tr>
+<td style="text-align: left;">chr()</td>
+<td style="text-align: left;">Trả về ký tự ứng với mã Unicode</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dict-set-list-tuple">dict(), set(), list(), tuple()<a class="headerlink" href="#dict-set-list-tuple" title="Permanent link">&para;</a></h3>
+<p>Trả về kiểu từ điển, tập hợp, danh sách</p>
+<pre><code>                           |
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/nd-hung/python-programming" class="fa fa-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

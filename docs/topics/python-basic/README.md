@@ -49,13 +49,16 @@ Ví dụ:
 
 Ví dụ:
 
+- Khối lệnh đúng:
+
 <div data-datacamp-exercise data-lang="python" data-height="10">
 <code data-type="sample-code">
 n = 123
-
 if n % 2 == 0:
+    print(f"n = {n}")
     print("%d là số chẵn" % n)
 else:
+    print(f"n = {n}")
     print("%d là số lẻ" % n)
 </code>
 </div>
@@ -413,7 +416,7 @@ Hàm `say_hi()` ở trên không có đầu vào, không trả về giá trị c
 
 ### Truyền đối số cho hàm
 
-- Hàm có thể nhận các giá trị đầu vào để xử lý, gọi là tham số. Các tham số cách nhau dấy phẩy.
+- Hàm có thể nhận các giá trị đầu vào để xử lý, gọi là tham số. Các tham số cách nhau dấu phẩy.
 
 Ví dụ: Sửa lại hàm `say_hi()` ở trên để khi gọi hàm và truyền cho nó một chuỗi chứa tên bất kỳ thì máy tính sẽ in ra câu chào tên đó.
 
@@ -436,7 +439,7 @@ Ví dụ: Sửa lại hàm `say_hi()` ở trên để khi gọi hàm và truyề
 
 ## Một số hàm dựng sẵn của Python
 
-Trình thông dịch [Python cung cấp nhiều hàm dựng sẵn (built-in functions)](https://docs.python.org/3/library/functions.html). Sau đây là một số hàm thông dụng.
+[Python cung cấp nhiều hàm dựng sẵn (built-in functions)](https://docs.python.org/3/library/functions.html). Sau đây là một số hàm thông dụng.
 
 ### Nhóm hàm toán học
 
